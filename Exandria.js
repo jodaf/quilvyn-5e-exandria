@@ -108,7 +108,6 @@ function Exandria() {
 Exandria.VERSION = '2.3.1.0';
 
 Exandria.ARMORS_ADDED = {
-  // TODO
 };
 Exandria.BACKGROUNDS_ADDED = {
   'Ashari':
@@ -117,7 +116,7 @@ Exandria.BACKGROUNDS_ADDED = {
     'Features=' +
       '"1:Skill Proficiency (Nature/Choose 1 from Arcana, Survival)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
-      '"1:Elemental Harmony" ' +
+      '"1:Language (Choose 1 from any)","1:Elemental Harmony" ' +
     'Languages=any',
   'Clasp Member':
     'Equipment=' +
@@ -131,14 +130,14 @@ Exandria.BACKGROUNDS_ADDED = {
       '"Fine Clothes","Student Uniform","Writing Kit","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Choose 2 from Arcana, History, Persuasion)",' +
-      '"1:Student Privilege" ' +
+      '"1:Language (Choose 2 from any)","1:Student Privilege" ' +
     'Languages=any,any',
   'Recovered Cultist':
     'Equipment=' +
       '"Vestments","Holy Symbol","Common Clothes","15 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Deception/Religion)",' +
-      '"1:Wicked Awareness" ' +
+      '"1:Language (Choose 1 from any)","1:Wicked Awareness" ' +
     'Languages=any'
 };
 Exandria.CLASSES_SELECTABLES_ADDED = {
@@ -196,7 +195,18 @@ Exandria.FEATS_ADDED = {
 };
 Exandria.FEATURES_ADDED = {
 
-  // Path
+  // Backgrounds
+  'A Favor In Turn':
+    'Section=skill ' +
+    'Note="Ask 20-word favor of contact in return for future favor"',
+  'Elemental Harmony':
+    'Section=magic Note="Produce minor <i>Prestidigitation</i> effects"',
+  'Student Privilege':
+    'Section=skill Note="Have access to school tools and crafting materials"',
+  'Wicked Awareness':
+    'Section=skill Note="Adv on checks to uncover cult activity"',
+
+  // Paths
   'Arcane Exemplar Form':
     'Section=magic ' +
     'Note="Discharge 6 runes for 40\' Fly, +2 spell DC, resistance to spell damage, and regain HP from casting for 3+ rd"',
@@ -219,7 +229,7 @@ Exandria.FEATURES_ADDED = {
     'Note="x2 damage vs. objects, melee weapons +1d8 HP damage vs. constructs"',
   'Essence Runes':
     'Section=magic ' +
-    'Note="Spending Sorcery Points charges %V runes; 5 charged runes emit 5\' light"',
+    'Note="Spending Sorcery Points charges %{levels.Sorcerer} runes; 5 charged runes emit 5\' light"',
   'Extort Truth':
     'Section=combat ' +
     'Note="Spend 2 Ki Points after double hit to prevent foe lying for 1 min instead of damage (Cha neg)"',
@@ -253,7 +263,7 @@ Exandria.FEATURES_ADDED = {
     'Section=combat Note="Cannot be knocked prone during rage"',
   'Thunderous Blows':
     'Section=combat ' +
-    'Note="Successful attack pushes foe 5\', may follow (DC %V Str neg)"',
+    'Note="Successful attack pushes foe 5\', may follow (DC %{8+proficiencyBonus+strengthModifier} Str neg)"',
   'Unstoppable':
     'Section=combat ' +
     'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage"',
@@ -261,52 +271,42 @@ Exandria.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="R30\' Foes suffer 2d6 necrotic HP for 1 min 1/long rest"',
 
-  //
-  'A Favor In Turn':
-    'Section=skill ' +
-    'Note="Ask 20-word favor of contact in return for future favor"',
-  'Ashari':
-    'Section=feature ' +
-    'Note="Ask 20-word favor of contact in return for future favor"',
+  // Feats
   'Cruel':
     'Section=feature,combat,skill ' +
-    'Note="%V cruelty points/long rest",' +
-         '"Spend 1 cruelty point for +1d6 damage, regain 1d6 HP on critical",' +
-         '"Spend 1 cruelty point for Intimidation Adv"',
+    'Note="Use %V Cruelty Points/long rest",' +
+         '"Spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit",'+
+         '"Spend 1 Cruelty Point for Adv on Intimidation"',
   'Dual-Focused':
     'Section=magic ' +
-    'Note="Concentrate on two spells simultaneously (Con to maintain)"',
-  'Elemental Harmony':
-    'Section=magic Note="Minor <i>Prestidigitation</i> effects"',
+    'Note="Concentrate on two spells simultaneously (DC 10 + number of rd Con to maintain)"',
   'Flash Recall':'Section=magic Note="Swap prepared spell 1/short rest"',
   'Gambler':
     'Section=ability,feature,skill ' +
     'Note="+1 Charisma",' +
-         '"Reroll Carousing result",' +
-         '"Tool Proficiency(Choose 2 from any Game)/Adv Deception (games)/' +
-          'Adv Persuasion (games)"',
+         '"Tool Proficiency(Choose 2 from any Game)",' +
+         '"Reroll Carousing/Adv on Deception (games)/Adv on Persuasion (games)"',
   'Mending Affinity':
     'Section=ability,combat ' +
     'Note="+1 Constitution",' +
-         '"+%V HP from healer\'s kit or potion"',
+         '"+%{proficiencyBonus} HP from healer\'s kit, potion, or spell"',
   'Mystic Conflux':
     'Section=skill,magic ' +
-    'Note="Adv Arcana to id magic",' +
+    'Note="Adv on Arcana (investigate magic device)",' +
          '"Attune 4 items"',
   'Rapid Drinker':
     'Section=combat,save ' +
     'Note="Quaff as bonus action",' +
-         '"Adv ingestion saves"',
-  'Ravenite Ability Adjustment':
-    'Section=ability Note="+1 Constitution/+1 Wisdom"',
-  'Spelldriver':'Section=magic Note="Cast multiple spells (1 level 3+)/tn"',
-  'Student Privilege':
-    'Section=skill Note="Access to school tools and crafting materials"',
+         '"Adv on ingestion saves"',
+  'Spelldriver':'Section=magic Note="Cast multiple level 1 - 3 spells/rd"',
   'Thrown Arms Master':
     'Section=ability,combat ' +
-    'Note="+1 abilityBoosts",' +
-         '"Throw any weapon, +20 throw range, light weapon returns after miss"',
-  'Wicked Awareness':'Section=skill Note="Adv checks to uncover cult activity"'
+    'Note="+1 Strength or Dexterity",' +
+         '"Throw any weapon, +20/+40 throw range, light weapon returns after miss"',
+
+  // Races
+  'Ravenite Ability Adjustment':
+    'Section=ability Note="+1 Constitution/+1 Wisdom"'
 
 };
 Exandria.PATHS_ADDED = {
@@ -351,13 +351,10 @@ Exandria.RACES_ADDED = {
       .replace('Features=', 'Features="Fleet Of Foot",')
 };
 Exandria.SPELLS_ADDED = {
-  // TODO
 };
 Exandria.SPELLS_LEVELS_ADDED = {
-  // TODO
 };
 Exandria.TOOLS_ADDED = {
-  // TODO
 };
 
 /*
@@ -377,12 +374,11 @@ Exandria.choiceRules = function(rules, type, name, attrs) {
  * derived directly from the attributes passed to featRules.
  */
 Exandria.featRulesExtra = function(rules, name) {
-  if(name == 'Cruel') {
+  if(name == 'Cruel')
     rules.defineRule('featureNotes.cruel', 'proficiencyBonus', '=', null);
-  } else if(name == 'Mending Affinity') {
+  else if(name == 'Thrown Arms Master')
     rules.defineRule
-      ('combatNotes.mendingAffinity', 'proficiencyBonus', '=', null);
-  }
+      ('abilityBoosts', 'abilityNotes.thrownArmsMaster', '+=', '1');
 };
 
 /*
@@ -401,22 +397,16 @@ Exandria.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.sanguineRecall',
       'levels.Cleric', '=', 'Math.floor(source / 2)'
     );
-  } else if(name == 'Path Of The Juggernaut') {
-    rules.defineRule('combatNotes.thunderousBlows',
-      'strengthModifier', '=', '8 + source',
-      'proficiencyBonus', '+', null
-    );
   } else if(name == 'Runechild Bloodline') {
     rules.defineRule('magicNotes.glyphsOfAegis.1',
       pathLevel, '=', 'source<8 ? "" : ", touch can transfer 1 rune for 1 hr"'
     );
-    rules.defineRule('magicNotes.essenceRunes', 'levels.Sorcerer', '=', null);
   } else if(name == 'Way Of The Cobalt Soul') {
     rules.defineRule('combatNotes.mindOfMercury',
       'intelligenceModifier', '=', 'Math.max(source, 1)'
     );
     rules.defineRule('skillNotes.mysticalErudition',
-      'levels.Monk', '=', 'source >= 17 ? 3 : source >= 11 ? 2 : 1'
+      'levels.Monk', '=', 'source<11 ? 1 : source<17 ? 2 : 3'
     );
   }
 
