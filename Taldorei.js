@@ -58,7 +58,7 @@ function Taldorei() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  Taldorei.ARMORS = Object.assign({}, SRD5E.ARMORS, Taldorei.ARMORS_ADDED);
+  Taldorei.ARMORS = Object.assign({}, SRD5E.ARMORS);
   Taldorei.BACKGROUNDS =
     Object.assign({}, PHB5E.BACKGROUNDS, Taldorei.BACKGROUNDS_ADDED);
   Taldorei.CLASSES = Object.assign({}, PHB5E.CLASSES);
@@ -72,12 +72,8 @@ function Taldorei() {
   Taldorei.PATHS = Object.assign({}, PHB5E.PATHS, Taldorei.PATHS_ADDED);
   Taldorei.RACES = Object.assign({}, PHB5E.RACES, Taldorei.RACES_ADDED);
   delete Taldorei.RACES['Dragonborn'];
-  Taldorei.SPELLS = Object.assign({}, PHB5E.SPELLS, Taldorei.SPELLS_ADDED);
-  for(var s in Taldorei.SPELLS_LEVELS_ADDED) {
-    Taldorei.SPELLS[s] =
-      Taldorei.SPELLS[s].replace('Level=', 'Level=' + Taldorei.SPELLS_LEVELS_ADDED[s] + ',');
-  }
-  Taldorei.TOOLS = Object.assign({}, SRD5E.TOOLS, Taldorei.TOOLS_ADDED);
+  Taldorei.SPELLS = Object.assign({}, PHB5E.SPELLS);
+  Taldorei.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
   SRD5E.abilityRules(rules);
   SRD5E.combatRules(rules, Taldorei.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
@@ -107,8 +103,6 @@ function Taldorei() {
 
 Taldorei.VERSION = '2.3.1.0';
 
-Taldorei.ARMORS_ADDED = {
-};
 Taldorei.BACKGROUNDS_ADDED = {
   'Ashari':
     'Equipment=' +
@@ -349,12 +343,6 @@ Taldorei.RACES_ADDED = {
       .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
       .replace('Dragonborn Damage Resistance', 'Ravenite Damage Resistance')
       .replace('Features=', 'Features="Fleet Of Foot",')
-};
-Taldorei.SPELLS_ADDED = {
-};
-Taldorei.SPELLS_LEVELS_ADDED = {
-};
-Taldorei.TOOLS_ADDED = {
 };
 
 /*
