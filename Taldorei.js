@@ -21,33 +21,33 @@ Place, Suite 330, Boston, MA 02111-1307 USA.
 "use strict";
 
 /*
- * This module loads the rules from the Fifth Edition Exandria campaign setting
- * source books. The Exandria function contains methods that load rules for
+ * This module loads the rules from the Fifth Edition Taldorei campaign setting
+ * source books. The Taldorei function contains methods that load rules for
  * particular parts of the rules; raceRules for character races, magicRules
  * for spells, etc. These member methods can be called independently in order
- * to use a subset of the rules.  Similarly, the constant fields of Exandria
+ * to use a subset of the rules.  Similarly, the constant fields of Taldorei
  * (BACKGROUNDS, PATHS, etc.) can be manipulated to modify the choices.
  */
-function Exandria() {
+function Taldorei() {
 
   if(window.PHB5E == null) {
-    alert('The Exandria module requires use of the PHB5E module');
+    alert('The Taldorei module requires use of the PHB5E module');
     return;
   }
 
-  var rules = new QuilvynRules('Exandria', Exandria.VERSION);
-  Exandria.rules = rules;
+  var rules = new QuilvynRules('Taldorei', Taldorei.VERSION);
+  Taldorei.rules = rules;
 
   rules.defineChoice('choices', SRD5E.CHOICES);
   rules.choiceEditorElements = SRD5E.choiceEditorElements;
-  rules.choiceRules = Exandria.choiceRules;
+  rules.choiceRules = Taldorei.choiceRules;
   rules.editorElements = SRD5E.initialEditorElements();
   rules.getFormats = SRD5E.getFormats;
-  rules.getPlugins = Exandria.getPlugins;
+  rules.getPlugins = Taldorei.getPlugins;
   rules.makeValid = SRD5E.makeValid;
   rules.randomizeOneAttribute = SRD5E.randomizeOneAttribute;
   rules.defineChoice('random', SRD5E.RANDOMIZABLE_ATTRIBUTES);
-  rules.ruleNotes = Exandria.ruleNotes;
+  rules.ruleNotes = Taldorei.ruleNotes;
 
   SRD5E.createViewers(rules, SRD5E.VIEWERS);
   rules.defineChoice('extras',
@@ -58,37 +58,37 @@ function Exandria() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  Exandria.ARMORS = Object.assign({}, SRD5E.ARMORS, Exandria.ARMORS_ADDED);
-  Exandria.BACKGROUNDS =
-    Object.assign({}, PHB5E.BACKGROUNDS, Exandria.BACKGROUNDS_ADDED);
-  Exandria.CLASSES = Object.assign({}, PHB5E.CLASSES);
-  for(var c in Exandria.CLASSES_SELECTABLES_ADDED) {
-    Exandria.CLASSES[c] =
-      Exandria.CLASSES[c].replace('Selectables=', 'Selectables=' + Exandria.CLASSES_SELECTABLES_ADDED[c] + ',');
+  Taldorei.ARMORS = Object.assign({}, SRD5E.ARMORS, Taldorei.ARMORS_ADDED);
+  Taldorei.BACKGROUNDS =
+    Object.assign({}, PHB5E.BACKGROUNDS, Taldorei.BACKGROUNDS_ADDED);
+  Taldorei.CLASSES = Object.assign({}, PHB5E.CLASSES);
+  for(var c in Taldorei.CLASSES_SELECTABLES_ADDED) {
+    Taldorei.CLASSES[c] =
+      Taldorei.CLASSES[c].replace('Selectables=', 'Selectables=' + Taldorei.CLASSES_SELECTABLES_ADDED[c] + ',');
   }
-  Exandria.FEATS = Object.assign({}, PHB5E.FEATS, Exandria.FEATS_ADDED);
-  Exandria.FEATURES =
-    Object.assign({}, PHB5E.FEATURES, Exandria.FEATURES_ADDED);
-  Exandria.PATHS = Object.assign({}, PHB5E.PATHS, Exandria.PATHS_ADDED);
-  Exandria.RACES = Object.assign({}, PHB5E.RACES, Exandria.RACES_ADDED);
-  delete Exandria.RACES['Dragonborn'];
-  Exandria.SPELLS = Object.assign({}, PHB5E.SPELLS, Exandria.SPELLS_ADDED);
-  for(var s in Exandria.SPELLS_LEVELS_ADDED) {
-    Exandria.SPELLS[s] =
-      Exandria.SPELLS[s].replace('Level=', 'Level=' + Exandria.SPELLS_LEVELS_ADDED[s] + ',');
+  Taldorei.FEATS = Object.assign({}, PHB5E.FEATS, Taldorei.FEATS_ADDED);
+  Taldorei.FEATURES =
+    Object.assign({}, PHB5E.FEATURES, Taldorei.FEATURES_ADDED);
+  Taldorei.PATHS = Object.assign({}, PHB5E.PATHS, Taldorei.PATHS_ADDED);
+  Taldorei.RACES = Object.assign({}, PHB5E.RACES, Taldorei.RACES_ADDED);
+  delete Taldorei.RACES['Dragonborn'];
+  Taldorei.SPELLS = Object.assign({}, PHB5E.SPELLS, Taldorei.SPELLS_ADDED);
+  for(var s in Taldorei.SPELLS_LEVELS_ADDED) {
+    Taldorei.SPELLS[s] =
+      Taldorei.SPELLS[s].replace('Level=', 'Level=' + Taldorei.SPELLS_LEVELS_ADDED[s] + ',');
   }
-  Exandria.TOOLS = Object.assign({}, SRD5E.TOOLS, Exandria.TOOLS_ADDED);
+  Taldorei.TOOLS = Object.assign({}, SRD5E.TOOLS, Taldorei.TOOLS_ADDED);
 
   SRD5E.abilityRules(rules);
-  SRD5E.combatRules(rules, Exandria.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
-  SRD5E.magicRules(rules, SRD5E.SCHOOLS, Exandria.SPELLS);
+  SRD5E.combatRules(rules, Taldorei.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
+  SRD5E.magicRules(rules, SRD5E.SCHOOLS, Taldorei.SPELLS);
   SRD5E.identityRules(
-    rules, SRD5E.ALIGNMENTS, Exandria.BACKGROUNDS, Exandria.CLASSES,
-    Exandria.DEITIES, Exandria.PATHS, Exandria.RACES
+    rules, SRD5E.ALIGNMENTS, Taldorei.BACKGROUNDS, Taldorei.CLASSES,
+    Taldorei.DEITIES, Taldorei.PATHS, Taldorei.RACES
   );
   SRD5E.talentRules
-    (rules, Exandria.FEATS, Exandria.FEATURES, SRD5E.GOODIES,
-     SRD5E.LANGUAGES, SRD5E.SKILLS, Exandria.TOOLS);
+    (rules, Taldorei.FEATS, Taldorei.FEATURES, SRD5E.GOODIES,
+     SRD5E.LANGUAGES, SRD5E.SKILLS, Taldorei.TOOLS);
 
   if(window.Tasha != null)
     Tasha('Tasha', rules);
@@ -105,11 +105,11 @@ function Exandria() {
 
 }
 
-Exandria.VERSION = '2.3.1.0';
+Taldorei.VERSION = '2.3.1.0';
 
-Exandria.ARMORS_ADDED = {
+Taldorei.ARMORS_ADDED = {
 };
-Exandria.BACKGROUNDS_ADDED = {
+Taldorei.BACKGROUNDS_ADDED = {
   'Ashari':
     'Equipment=' +
       '"Traveler\'s Clothes","Hunting Gear","Staff","10 GP" ' +
@@ -140,7 +140,7 @@ Exandria.BACKGROUNDS_ADDED = {
       '"1:Language (Choose 1 from any)","1:Wicked Awareness" ' +
     'Languages=any'
 };
-Exandria.CLASSES_SELECTABLES_ADDED = {
+Taldorei.CLASSES_SELECTABLES_ADDED = {
   'Barbarian':
     '"3:Path Of The Juggernaut:Primal Path"',
   'Cleric':
@@ -150,7 +150,7 @@ Exandria.CLASSES_SELECTABLES_ADDED = {
   'Sorcerer':
     '"1:Runechild:Sorcerous Origin"'
 };
-Exandria.DEITIES = {
+Taldorei.DEITIES = {
   'The Allhammer':'Alignment=LG Domain=Knowledge,War',
   'The Archheart':'Alignment=CG Domain=Light,Arcana',
   'The Chained Oblivion':'Alignment=CE Domain=Death,Trickery',
@@ -173,7 +173,7 @@ Exandria.DEITIES = {
   'The Strife Emporer':'Alignment=LE Domain=War',
   'The Wildmother':'Alignment=N Domain=Nature,Tempest'
 };
-Exandria.FEATS_ADDED = {
+Taldorei.FEATS_ADDED = {
   'Cruel':
     'Type=General',
   'Dual-Focused':
@@ -193,7 +193,7 @@ Exandria.FEATS_ADDED = {
   'Thrown Arms Master':
     'Type=General'
 };
-Exandria.FEATURES_ADDED = {
+Taldorei.FEATURES_ADDED = {
 
   // Backgrounds
   'A Favor In Turn':
@@ -309,7 +309,7 @@ Exandria.FEATURES_ADDED = {
     'Section=ability Note="+1 Constitution/+1 Wisdom"'
 
 };
-Exandria.PATHS_ADDED = {
+Taldorei.PATHS_ADDED = {
   'Blood Domain':
     'Group=Cleric ' +
     'Level=levels.Cleric ' +
@@ -342,7 +342,7 @@ Exandria.PATHS_ADDED = {
       '"3:Mystical Erudition","3:Extract Aspects","6:Extort Truth",' +
       '"6:Mind Of Mercury","11:Preternatural Counter","17:Debilitating Barrage"'
 };
-Exandria.RACES_ADDED = {
+Taldorei.RACES_ADDED = {
   'Draconian Dragonborn':PHB5E.RACES['Dragonborn'],
   'Ravenite Dragonborn':
     PHB5E.RACES['Dragonborn']
@@ -350,30 +350,30 @@ Exandria.RACES_ADDED = {
       .replace('Dragonborn Damage Resistance', 'Ravenite Damage Resistance')
       .replace('Features=', 'Features="Fleet Of Foot",')
 };
-Exandria.SPELLS_ADDED = {
+Taldorei.SPELLS_ADDED = {
 };
-Exandria.SPELLS_LEVELS_ADDED = {
+Taldorei.SPELLS_LEVELS_ADDED = {
 };
-Exandria.TOOLS_ADDED = {
+Taldorei.TOOLS_ADDED = {
 };
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules
  * related to selecting that choice.
  */
-Exandria.choiceRules = function(rules, type, name, attrs) {
+Taldorei.choiceRules = function(rules, type, name, attrs) {
   PHB5E.choiceRules(rules, type, name, attrs);
   if(type == 'feat')
-    Exandria.featRulesExtra(rules, name);
+    Taldorei.featRulesExtra(rules, name);
   else if(type == 'path')
-    Exandria.pathRulesExtra(rules, name);
+    Taldorei.pathRulesExtra(rules, name);
 };
 
 /*
  * Defines in #rules# the rules associated with feat #name# that cannot be
  * derived directly from the attributes passed to featRules.
  */
-Exandria.featRulesExtra = function(rules, name) {
+Taldorei.featRulesExtra = function(rules, name) {
   if(name == 'Cruel')
     rules.defineRule('featureNotes.cruel', 'proficiencyBonus', '=', null);
   else if(name == 'Thrown Arms Master')
@@ -385,7 +385,7 @@ Exandria.featRulesExtra = function(rules, name) {
  * Defines in #rules# the rules associated with path #name# that cannot be
  * derived directly from the attributes passed to pathRules.
  */
-Exandria.pathRulesExtra = function(rules, name) {
+Taldorei.pathRulesExtra = function(rules, name) {
 
   var pathLevel =
     name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') +
@@ -413,41 +413,43 @@ Exandria.pathRulesExtra = function(rules, name) {
 };
 
 /* Returns an array of plugins upon which this one depends. */
-Exandria.getPlugins = function() {
+Taldorei.getPlugins = function() {
   var result = [PHB5E, SRD5E];
   if(window.Tasha != null &&
-     QuilvynUtils.getKeys(Exandria.rules.getChoices('selectableFeatures'), /Peace Domain/).length > 0)
+     QuilvynUtils.getKeys(Taldorei.rules.getChoices('selectableFeatures'), /Peace Domain/).length > 0)
     result.unshift(Tasha);
   if(window.Volo != null &&
      (Volo.CHARACTER_RACES_IN_PLAY || Volo.MONSTROUS_RACES_IN_PLAY))
     result.unshift(Volo);
   if(window.Xanathar != null &&
-     QuilvynUtils.getKeys(Exandria.rules.getChoices('selectableFeatures'), /Forge Domain/).length > 0)
+     QuilvynUtils.getKeys(Taldorei.rules.getChoices('selectableFeatures'), /Forge Domain/).length > 0)
     result.unshift(Xanathar);
   return result;
 };
 
 /* Returns HTML body content for user notes associated with this rule set. */
-Exandria.ruleNotes = function() {
+Taldorei.ruleNotes = function() {
   return '' +
-    '<h2>Exandria Quilvyn Plugin Notes</h2>\n' +
-    'Exandria Quilvyn Plugin Version ' + Exandria.VERSION + '\n' +
+    '<h2>Taldorei Quilvyn Plugin Notes</h2>\n' +
+    'Taldorei Quilvyn Plugin Version ' + Taldorei.VERSION + '\n' +
     '<p>\n' +
-    'There are no known bugs, limitations, or usage notes specific to the Exandria Rule Set.\n' +
+    'There are no known bugs, limitations, or usage notes specific to the Taldorei Rule Set.\n' +
     '</p>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +
     '<p>\n' +
-    'Quilvyn\'s Exandria rule set is unofficial Fan Content permitted ' +
-    'under Wizards of the Coast\'s ' +
+    'Portions of Quilvyn\'s Taldorei rule set are unofficial Fan Content\n' +
+    'permitted under Wizards of the Coast\'s ' +
     '<a href="https://company.wizards.com/en/legal/fancontentpolicy">Fan Content Policy</a>.\n' +
     '</p><p>\n' +
     'Quilvyn is not approved or endorsed by Wizards of the Coast. Portions ' +
-    'of the materials used are property of Wizards of the Coast. ©Wizards of ' +
-    'the Coast LLC.\n' +
+    'of the materials used are property of Wizards of the Coast. © Wizards ' +
+    'of the Coast LLC.\n' +
+    '</p><p>\n' +
+    'Quilvyn is not approved or endorsed by Green Ronin Publishing. Portions ' +
+    'of the materials used are property of Green Ronin Publishing. © Green ' +
+    'Ronin Publishing, LLC.\n' +
     '</p><p>\n' +
     'Tal\'dorei Campaign Setting © 2017 Green Ronin Publishing, LLC.\n' +
-    '</p><p>\n' +
-    'Explorer\'s Guide to Wildemount © 2020 Wizards of the Coast LLC.\n' +
     '</p><p>\n' +
     'Dungeons & Dragons Player\'s Handbook © 2014 Wizards of the Coast LLC.\n' +
     '</p>\n';
