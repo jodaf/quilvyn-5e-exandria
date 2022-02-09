@@ -1,0 +1,2592 @@
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Feats</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/feats", "_timestamp":1644378756890, 
+  "alignment":"Lawful Good", "armor":"None", "background":"Outlander", "charisma":14, "constitution":16, 
+  "deity":"The Platinum Dragon", "dexterity":7, "experience":422463, "feats.Cruel":1, "feats.Dual-Focused":1, 
+  "feats.Flash Recall":1, "feats.Gambler":1, "feats.Mending Affinity":1, "feats.Mystic Conflux":1, 
+  "feats.Rapid Drinker":1, "feats.Spelldriver":1, "feats.Thrown Arms Master":1, "gender":"Male", 
+  "hitPoints":75, "intelligence":7, "languages.Draconic":1, "languages.Infernal":1, 
+  "levels.Wizard":20, "name":"Feats", "race":"Human", 
+  "selectableFeatures.Wizard - School Of Abjuration":1, "shield":"None", "skillsChosen.Medicine":1, "skillsChosen.Religion":1, 
+  "spells.Alarm(W1 Abju)":1, "spells.Antipathy/Sympathy(W8 Ench)":1, "spells.Banishment(W4 Abju)":1, 
+  "spells.Chill Touch(W0 Necr)":1, "spells.Clairvoyance(W3 Divi)":1, "spells.Color Spray(W1 Illu)":1, 
+  "spells.Comprehend Languages(W1 Divi)":1, "spells.Continual Flame(W2 Evoc)":1, "spells.Dancing Lights(W0 Evoc)":1, 
+  "spells.Disintegrate(W6 Tran)":1, "spells.Fire Bolt(W0 Evoc)":1, "spells.Foresight(W9 Divi)":1, 
+  "spells.Geas(W5 Ench)":1, "spells.Globe Of Invulnerability(W6 Abju)":1, 
+  "spells.Hold Monster(W5 Ench)":1, "spells.Hypnotic Pattern(W3 Illu)":1, 
+  "spells.Leomund's Secret Chest(W4 Conj)":1, "spells.Locate Object(W2 Divi)":1, "spells.Minor Illusion(W0 Illu)":1, 
+  "spells.Mordenkainen's Sword(W7 Evoc)":1, "spells.Nondetection(W3 Abju)":1, 
+  "spells.Rary's Telepathic Bond(W5 Divi)":1, "spells.Shocking Grasp(W0 Evoc)":1, "spells.Silent Image(W1 Illu)":1, 
+  "spells.Suggestion(W2 Ench)":1, "spells.Teleport(W7 Conj)":1, "spells.Wall Of Fire(W4 Evoc)":1, 
+  "strength":13, "toolsChosen.Jeweler's Tools":1, "toolsChosen.Pan Flute":1, 
+  "toolsChosen.Viol":1, "weapons.Dart":1, "weapons.Light Crossbow":1, "weapons.Quarterstaff":1, 
+  "wisdom":12
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Feats</b> — <b>Male</b> <b>Human</b> <b>Wizard: 20</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 14 (2)</td>
+      <td><b>Dexterity</b>: 8 (-1)</td>
+      <td><b>Constitution</b>: 18 (4)</td>
+      <td><b>Intelligence</b>: 8 (-1)</td>
+      <td><b>Wisdom</b>: 13 (1)</td>
+      <td><b>Charisma</b>: 16 (3)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Outlander</td>
+      <td><b>Alignment</b>: Lawful Good</td>
+      <td><b>Deity</b>: The Platinum Dragon (LG)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 422463/1000000</td>
+      <td><b>Level</b>: 20</td>
+      <td><b>Speed</b>: 30</td>
+      <td><b>Carry/Lift:</b> 210/420</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Gambler: +1 Charisma</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Mending Affinity: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Thrown Arms Master: +1 Strength or Dexterity</i></td>
+    </tr><tr style="text-align:center">
+      <td>Ability Boosts: 1 to distribute</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 6</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feat Count</b>: General: 5</td>
+        <td><b>Selectable Feature Count</b>: Wizard (Arcane Tradition)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feats</b>: Cruel; Dual-Focused; Flash Recall; Gambler; Mending Affinity; Mystic Conflux; Rapid Drinker; Spelldriver; Thrown Arms Master</td>
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Wizard Features</b>: Abjuration Savant; Arcane Recovery; Arcane Ward; Improved Abjuration; Projected Ward; Ritual Casting; Save Proficiency (Intelligence/Wisdom); School Of Abjuration; Signature Spells; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Religion); Spell Mastery; Spell Resistance; Spellcasting; Weapon Proficiency (Dagger/Dart/Light Crossbow/Quarterstaff/Sling)</td>
+        <td><b>Outlander Features</b>: Language (Choose 1 from any); Skill Proficiency (Athletics/Survival); Tool Proficiency (Choose 1 from any Music); Wanderer</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Gambler: Tool Proficiency (Choose 2 from any Game)</i></td>
+      </tr><tr style="text-align:center">
+        <td>Cruel: Use 6 Cruelty Points/long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Wanderer: Have excellent geographic memory, can forage for 6 people</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Athletics; Medicine; Religion; Survival</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) -1</td>
+      <td>Insight: (wis) 1</td>
+      <td>Performance: (cha) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 1</td>
+      <td>Intimidation: (cha) 3</td>
+      <td>Persuasion: (cha) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) -1</td>
+      <td>Investigation: (int) -1</td>
+      <td>Religion: (int) 5</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 8</td>
+      <td>Medicine: (wis) 7</td>
+      <td>Sleight Of Hand: (dex) -1</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 3</td>
+      <td>Nature: (int) -1</td>
+      <td>Stealth: (dex) -1</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) -1</td>
+      <td>Perception: (wis) 1</td>
+      <td>Survival: (wis) 7</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Jeweler's Tools; Pan Flute; Viol</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Draconic; Infernal</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Cruel: Spend 1 Cruelty Point for Adv on Intimidation</td>
+    </tr><tr style="text-align:center">
+      <td>Gambler: Reroll Carousing/Adv on Deception (games)/Adv on Persuasion (games)</td>
+    </tr><tr style="text-align:center">
+      <td>Mystic Conflux: Adv on Arcana (investigate magic device)</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 155</td>
+        <td><b>Initiative</b>: -1</td>
+        <td><b>Armor Class</b>: 9</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Weapon Proficiency</b>: Dagger; Dart; Light Crossbow; Quarterstaff; Sling</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: None</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Dart (+8 1d4+2 R20/60); Light Crossbow (+5 1d8-1 R80/320); Quarterstaff (+8 1d8+2); Unarmed (+8 1d1+2)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: +80</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: -1</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: -1</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: -1</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Attack Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Damage Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td>Cruel: Spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit</td>
+      </tr><tr style="text-align:center">
+        <td>Mending Affinity: Regain +6 HP from healer's kit, potion, or spell</td>
+      </tr><tr style="text-align:center">
+        <td>Rapid Drinker: Quaff as bonus action</td>
+      </tr><tr style="text-align:center">
+        <td>Thrown Arms Master: Throw any weapon, +20/+40 throw range, light weapon returns after miss</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Intelligence; Wisdom</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 3; Constitution: 4; Dexterity: -1; Intelligence: 5; Strength: 2; Wisdom: 7</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Rapid Drinker: Adv on ingestion saves</td>
+      </tr><tr style="text-align:center">
+        <td>Spell Resistance: Adv on saves vs. spells and resistance to spell damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="SpellPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="SpellStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Spell Slots</b>: W0: 5; W1: 4; W2: 3; W3: 3; W4: 3; W5: 3; W6: 2; W7: 2; W8: 1; W9: 1</td>
+        <td><b>Attack</b>: W: 5</td>
+        <td><b>Spell DC</b>: W: 13</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Spells</b>:     <table id="Spells" style="width:100%">
+    <tr style="text-align:left">
+      <td>Alarm (W1 Abju): R30' Entry into 20' cu triggers audible or mental alarm for 8 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Antipathy/Sympathy (W8 Ench): R60' Target object repels or attracts specified creatures for 10 dy</td>
+    </tr><tr style="text-align:left">
+      <td>Banishment (W4 Abju): R60' Banishes target to home or demiplane (Cha neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic, undead also suffer Disadv on self attack for 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Clairvoyance (W3 Divi): R1 mile Self sees or hears remotely through invisible sensor for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Color Spray (W1 Illu): 15' cone blinds 6d10 HP of targets for 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Comprehend Languages (W1 Divi): Self understands all languages for 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Continual Flame (W2 Evoc): Touched emits heatless torch flame</td>
+    </tr><tr style="text-align:left">
+      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights move 60' for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Disintegrate (W6 Tran): R60' Target suffers 10d6+40 HP force, dusts if reduced to 0 HP (Dex neg)</td>
+    </tr><tr style="text-align:left">
+      <td>Fire Bolt (W0 Evoc): R120' Ranged spell inflicts 1d10 HP fire</td>
+    </tr><tr style="text-align:left">
+      <td>Foresight (W9 Divi): Touched gains immunity to surprise and Adv on attack, ability, and saving throws, foes suffer Disadv on attacks for 8 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Geas (W5 Ench): R60' Target obeys command (Wis neg) for 30 dy</td>
+    </tr><tr style="text-align:left">
+      <td>Globe Of Invulnerability (W6 Abju): 10' radius gives immunity to spells up to level 5</td>
+    </tr><tr style="text-align:left">
+      <td>Hold Monster (W5 Ench): R90' Immobilizes target (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Hypnotic Pattern (W3 Illu): R120' creatures in 30' cu charmed (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Leomund's Secret Chest (W4 Conj): Touched chest moves to and from Ethereal Plane for 60+ days</td>
+    </tr><tr style="text-align:left">
+      <td>Locate Object (W2 Divi): Self learns location of named object or type w/in 1000' for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Minor Illusion (W0 Illu): R30' Creates sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Mordenkainen's Sword (W7 Evoc): R60' Self controls force weapon (melee spell attack inflicts 3d10 HP force, moves 20'/rd) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Nondetection (W3 Abju): Touched gains immunity to divination for 8 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Rary's Telepathic Bond (W5 Divi): R30' 8 targets communicate mentally for 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Shocking Grasp (W0 Evoc): Touched suffers 4d8 HP lightning</td>
+    </tr><tr style="text-align:left">
+      <td>Silent Image (W1 Illu): R60' Creates 15' cu illusion (Investigation neg) for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Suggestion (W2 Ench): R30' Target follows reasonable suggestion (Wis neg) for conc or 8 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Teleport (W7 Conj): R10' Object or self and 8 allies teleport any distance</td>
+    </tr><tr style="text-align:left">
+      <td>Wall Of Fire (W4 Evoc): R120' 60'x20' wall inflicts 5d8 HP fire (Dex half) for conc or 1 min</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Abjuration Savant: Copy abjuration spells into spellbook for half cost</td>
+    </tr><tr style="text-align:center">
+      <td>Arcane Recovery: Short rest recovers 10 spell slot levels 1/dy</td>
+    </tr><tr style="text-align:center">
+      <td>Arcane Ward: Abjuration casting creates 39 HP shield around self until long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Dual-Focused: Maintain concentration on two spells simultaneously (DC 10 + number of rd Con to maintain)</td>
+    </tr><tr style="text-align:center">
+      <td>Flash Recall: Swap prepared spell 1/short rest</td>
+    </tr><tr style="text-align:center">
+      <td>Improved Abjuration: Add Proficiency Bonus to abjuration spell ability checks</td>
+    </tr><tr style="text-align:center">
+      <td>Mystic Conflux: May attune 4 items</td>
+    </tr><tr style="text-align:center">
+      <td>Projected Ward: R30' Use Arcane Ward to absorb damage to others</td>
+    </tr><tr style="text-align:center">
+      <td>Ritual Casting: Cast known spell as ritual</td>
+    </tr><tr style="text-align:center">
+      <td>Signature Spells: Cast 2 chosen W3 spells 1/short rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spell Mastery: Cast chosen W1 spell and W2 spell at will</td>
+    </tr><tr style="text-align:center">
+      <td>Spelldriver: Cast additional level 1 - 2 spell/rd</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="ValidationPart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Validation Errors</b>: Feat Allocation: 5 available vs. 9 allocated</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Class-Monk</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/class/monk", "_timestamp":1644375749635, 
+  "alignment":"Neutral Good", "armor":"None", "background":"Outlander", "charisma":16, "constitution":16, 
+  "deity":"The Dawnfather", "dexterity":8, "experience":636844, "feats.Alert":1, "feats.Athlete":1, 
+  "feats.Flash Recall":1, "feats.Magic Initiate (Warlock)":1, "feats.Resilient":1, "gender":"Female", 
+  "hitPoints":72, "intelligence":11, "languages.Abyssal":1, "languages.Dwarvish":1, 
+  "languages.Elvish":1, "languages.Orc":1, "languages.Sylvan":1, "levels.Monk":20, 
+  "name":"Class-Monk", "notes":"* Ability Boost: +1 strength; +1 strength;", "race":"Human", 
+  "selectableFeatures.Monk - Way Of The Cobalt Soul":1, "shield":"None", "skillsChosen.Athletics":1, "skillsChosen.Insight":1, 
+  "spells.Arms Of Hadar(K1 Conj)":1, "spells.Blade Ward(K0 Abju)":1, "spells.Eldritch Blast(K0 Evoc)":1, 
+  "strength":14, "toolsChosen.Dulcimer":1, "toolsChosen.Viol":1, "weapons.Club":1, 
+  "weapons.Greatclub":1, "weapons.Spear":1, "wisdom":17
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Class-Monk</b> — <b>Female</b> <b>Human</b> <b>Monk: 20</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 17 (3)</td>
+      <td><b>Dexterity</b>: 9 (-1)</td>
+      <td><b>Constitution</b>: 17 (3)</td>
+      <td><b>Intelligence</b>: 12 (1)</td>
+      <td><b>Wisdom</b>: 18 (4)</td>
+      <td><b>Charisma</b>: 17 (3)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Outlander</td>
+      <td><b>Alignment</b>: Neutral Good</td>
+      <td><b>Deity</b>: The Dawnfather (NG)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 636844/1000000</td>
+      <td><b>Level</b>: 20</td>
+      <td><b>Speed</b>: 60</td>
+      <td><b>Carry/Lift:</b> 255/510</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Athlete: +1 Dexterity or Strength; standing, long jump, and running high jump each use only 5' move; climb at full speed</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Goodies Strength: +2 Strength</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Resilient: +1 Ability Boosts</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Unarmored Movement: +30 speed in no armor</i></td>
+    </tr><tr style="text-align:center">
+      <td>Ability Boosts: 2 to distribute</td>
+    </tr><tr style="text-align:center">
+      <td>Improved Unarmored Movement: Move across vertical surfaces and liquids</td>
+    </tr><tr style="text-align:center">
+      <td>Slow Fall: Use Reaction for -100 HP falling damage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 6</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feat Count</b>: General: 5</td>
+        <td><b>Selectable Feature Count</b>: Monk (Monastic Tradition)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feats</b>: Alert; Athlete; Flash Recall; Magic Initiate (Warlock); Resilient</td>
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Monk Features</b>: Debilitating Barrage; Deflect Missiles; Diamond Soul; Empty Body; Evasion; Extort Truth; Extra Attack; Extract Aspects; Flurry Of Blows; Improved Unarmored Movement; Ki-Empowered Strikes; Ki; Martial Arts; Mind Of Mercury; Monk Bonus Attack; Monk Timeless Body; Monk Unarmored Defense; Mystical Erudition; Patient Defense; Perfect Self; Preternatural Counter; Purity Of Body; Save Proficiency (Dexterity/Strength); Skill Proficiency (Choose 2 from Acrobatics, Athletics, History, Insight, Religion, Stealth); Slow Fall; Step Of The Wind; Stillness Of Mind; Stunning Strike; Tongue Of The Sun And Moon; Tool Proficiency (Choose 1 from any Artisan, any Music); Unarmored Movement; Way Of The Cobalt Soul; Weapon Proficiency (Simple/Shortsword)</td>
+        <td><b>Outlander Features</b>: Language (Choose 1 from any); Skill Proficiency (Athletics/Survival); Tool Proficiency (Choose 1 from any Music); Wanderer</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Ki: Use 20 Ki Points/short rest</td>
+      </tr><tr style="text-align:center">
+        <td>Monk Timeless Body: No debility from aging, need no food or water</td>
+      </tr><tr style="text-align:center">
+        <td>Tongue Of The Sun And Moon: Communicate in any language</td>
+      </tr><tr style="text-align:center">
+        <td>Wanderer: Have excellent geographic memory, can forage for 6 people</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Athletics; Insight; Survival</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) -1</td>
+      <td>Insight: (wis) 10</td>
+      <td>Performance: (cha) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 4</td>
+      <td>Intimidation: (cha) 3</td>
+      <td>Persuasion: (cha) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 1</td>
+      <td>Investigation: (int) 1</td>
+      <td>Religion: (int) 1</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 9</td>
+      <td>Medicine: (wis) 4</td>
+      <td>Sleight Of Hand: (dex) -1</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 3</td>
+      <td>Nature: (int) 1</td>
+      <td>Stealth: (dex) -1</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 1</td>
+      <td>Perception: (wis) 4</td>
+      <td>Survival: (wis) 10</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Dulcimer; Viol</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Abyssal; Common; Dwarvish; Elvish; Orc; Sylvan</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Notes</b>: <i>Mystical Erudition: Spend 1 Ki Point for Adv on Arcana, History, or Religion/+3 Language Count</i></td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 132</td>
+        <td><b>Initiative</b>: 4</td>
+        <td><b>Armor Class</b>: 13</td>
+        <td><b>Attacks Per Round</b>: 2</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Weapon Proficiency</b>: Shortsword; Simple</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: None</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Club (+9 1d4+3); Greatclub (+9 1d8+3); Spear (+9 1d8+3 R20/60); Unarmed (+9 1d10+3)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Alert: +5 Initiative; cannot be surprised; no Adv to unseen foes</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: +60</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: -1</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: -1</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: -1</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Extra Attack: +1 Attacks Per Round</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Martial Arts: When unarmored, gain +0 attack and damage with monk weapons, raise damage die to 1d10, and gain Monk Bonus Attack</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Monk Unarmored Defense: +4 AC in no armor</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Attack Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Damage Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td>Debilitating Barrage: Spend 3 Ki Points after triple hit for foe Disadv next attack, vulnerability to chosen damage type for 1 min (Con neg)</td>
+      </tr><tr style="text-align:center">
+        <td>Deflect Missiles: Use Reaction to reduce missile damage by 1d10+19</td>
+      </tr><tr style="text-align:center">
+        <td>Extort Truth: Spend 2 Ki Points after dbl hit to prevent foe lying (Cha neg) for 1 min</td>
+      </tr><tr style="text-align:center">
+        <td>Extract Aspects: Spend 1 Ki Point after dbl hit to gain info about foe (Con neg)</td>
+      </tr><tr style="text-align:center">
+        <td>Flurry Of Blows: Spend 1 Ki Point for 2 additional unarmed strikes</td>
+      </tr><tr style="text-align:center">
+        <td>Ki-Empowered Strikes: Unarmed attacks count as magical</td>
+      </tr><tr style="text-align:center">
+        <td>Mind Of Mercury: Spend 1 Ki Points for 1 extra reactions</td>
+      </tr><tr style="text-align:center">
+        <td>Monk Bonus Attack: Bonus unarmed strike after monk weapon attack</td>
+      </tr><tr style="text-align:center">
+        <td>Patient Defense: Spend 1 Ki Point for bonus Dodge</td>
+      </tr><tr style="text-align:center">
+        <td>Perfect Self: Minimum 4 Ki Points after initiative</td>
+      </tr><tr style="text-align:center">
+        <td>Preternatural Counter: Use Reaction for OA after foe miss</td>
+      </tr><tr style="text-align:center">
+        <td>Step Of The Wind: Spend 1 Ki Point for bonus Disengage or Dash and dbl jump</td>
+      </tr><tr style="text-align:center">
+        <td>Stunning Strike: Spend 1 Ki Point to stun foe after hit (DC 18 Con neg) for 1 rd</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Charisma; Constitution; Dexterity; Intelligence; Strength; Wisdom</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 9; Constitution: 9; Dexterity: 5; Intelligence: 7; Strength: 9; Wisdom: 10</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Diamond Soul: Proficient all saves, spend 1 Ki Point to re-roll</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Resilient: Save Proficiency (Choose 1 from any)</i></td>
+      </tr><tr style="text-align:center">
+        <td>Evasion: Dex save yields no damage instead of half</td>
+      </tr><tr style="text-align:center">
+        <td>Mind Of Mercury: Spend 1 Ki Point for Adv on Investigation</td>
+      </tr><tr style="text-align:center">
+        <td>Purity Of Body: Immune to disease and poison</td>
+      </tr><tr style="text-align:center">
+        <td>Stillness Of Mind: End self charm and fright at will</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="SpellPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="SpellStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Spell Slots</b>: K0: 2; K1: 1</td>
+        <td><b>Attack</b>: K: 9; M: 10</td>
+        <td><b>Spell DC</b>: K: 17; M: 18</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Spells</b>:     <table id="Spells" style="width:100%">
+    <tr style="text-align:left">
+      <td>Arms Of Hadar (K1 Conj): 10' radius inflicts 2d6 HP necrotic and no Reaction (Str half, no loss of Reaction) for 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Astral Projection (M9 [Empty Body] Necr): R10' Self and 8 willing targets project to astral plane</td>
+    </tr><tr style="text-align:left">
+      <td>Blade Ward (K0 Abju): Self gains resistance to bludgeoning, piercing, and slashing damage for 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Eldritch Blast (K0 Evoc): R120' Ranged spell creates 4 rays that inflict 1d10 HP force each</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Magic Initiate (Warlock): Know 2 K0 spells, cast 1 K1 spell/long rest</i></td>
+    </tr><tr style="text-align:center">
+      <td>Empty Body: Spend 4 Ki Points for 1 min invisibility w/resistance to all damage but force, 8 Ki Points for <i>Astral Projection</i></td>
+    </tr><tr style="text-align:center">
+      <td>Flash Recall: Swap prepared spell 1/short rest</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="NotesPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>* Ability Boost: +1 strength; +1 strength;</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Background-Ashari</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/background/lyceum student", 
+  "_timestamp":1644376895700, "alignment":"Lawful Neutral", "armor":"Studded Leather", 
+  "background":"Ashari", "charisma":10, "constitution":6, "deity":"The Wildmother", "dexterity":16, 
+  "experience":232, "gender":"Female", "hitPoints":6, "intelligence":14, "languages.Infernal":1, 
+  "languages.Orc":1, "levels.Barbarian":1, "name":"Background-Ashari", "race":"Human", 
+  "shield":"None", "skillsChosen.Athletics":1, "skillsChosen.Intimidation":1, 
+  "skillsChosen.Survival":1, "strength":10, "weapons.Greataxe":1, "weapons.Halberd":1, 
+  "weapons.Longbow":1, "wisdom":12
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Background-Ashari</b> — <b>Female</b> <b>Human</b> <b>Barbarian</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 11 (0)</td>
+      <td><b>Dexterity</b>: 17 (3)</td>
+      <td><b>Constitution</b>: 7 (-2)</td>
+      <td><b>Intelligence</b>: 15 (2)</td>
+      <td><b>Wisdom</b>: 13 (1)</td>
+      <td><b>Charisma</b>: 11 (0)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Ashari</td>
+      <td><b>Alignment</b>: Lawful Neutral</td>
+      <td><b>Deity</b>: The Wildmother (N)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 232/300</td>
+      <td><b>Level</b>: 1</td>
+      <td><b>Speed</b>: 30</td>
+      <td><b>Carry/Lift:</b> 165/330</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Adv on Str checks</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 2</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Barbarian Features</b>: Armor Proficiency (Medium/Shield); Barbarian Unarmored Defense; Rage; Save Proficiency (Constitution/Strength); Skill Proficiency (Choose 2 from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival); Weapon Proficiency (Martial)</td>
+        <td><b>Ashari Features</b>: Elemental Harmony; Language (Choose 1 from any); Skill Proficiency (Nature/Choose 1 from Arcana, Survival); Tool Proficiency (Herbalism Kit)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>: Rage: Rage advantages for 1 min 2/long rest (heavy armor neg)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Athletics; Intimidation; Nature; Survival</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 3</td>
+      <td>Insight: (wis) 1</td>
+      <td>Performance: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 1</td>
+      <td>Intimidation: (cha) 2</td>
+      <td>Persuasion: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 2</td>
+      <td>Investigation: (int) 2</td>
+      <td>Religion: (int) 2</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 2</td>
+      <td>Medicine: (wis) 1</td>
+      <td>Sleight Of Hand: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 0</td>
+      <td>Nature: (int) 4</td>
+      <td>Stealth: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 2</td>
+      <td>Perception: (wis) 1</td>
+      <td>Survival: (wis) 3</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Herbalism Kit</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Infernal; Orc</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 4</td>
+        <td><b>Initiative</b>: 3</td>
+        <td><b>Armor Class</b>: 15</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor Proficiency</b>: Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Martial</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: Studded Leather</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Greataxe (+2 1d12); Halberd (+2 1d10); Longbow (+5 1d8+3 R150/600); Unarmed (+2 1d1)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Barbarian Unarmored Defense: +-2 AC in no armor</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: -2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td>Rage: +2 melee damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Constitution; Strength</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 0; Constitution: 0; Dexterity: 3; Intelligence: 2; Strength: 2; Wisdom: 1</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>: Rage: Adv on Str saves, resistance to bludgeoning, piercing, and slashing damage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Elemental Harmony: Produce minor elemental effects</td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Cannot cast or concentrate during rage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Background-Fate-Touched</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/background/fate-touched", "_timestamp":1644377845082, 
+  "alignment":"Lawful Neutral", "armor":"Studded Leather", "background":"Fate-Touched", "charisma":10, 
+  "constitution":6, "deity":"The Wildmother", "dexterity":16, "experience":232, 
+  "gender":"Female", "hitPoints":6, "intelligence":14, "languages.Orc":1, "levels.Barbarian":1, 
+  "name":"Background-Fate-Touched", "race":"Human", "shield":"None", "skillsChosen.Athletics":1, 
+  "skillsChosen.Insight":1, "strength":10, "weapons.Greataxe":1, "weapons.Halberd":1, 
+  "weapons.Longbow":1, "wisdom":12
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Background-Fate-Touched</b> — <b>Female</b> <b>Human</b> <b>Barbarian</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 11 (0)</td>
+      <td><b>Dexterity</b>: 17 (3)</td>
+      <td><b>Constitution</b>: 7 (-2)</td>
+      <td><b>Intelligence</b>: 15 (2)</td>
+      <td><b>Wisdom</b>: 13 (1)</td>
+      <td><b>Charisma</b>: 11 (0)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Fate-Touched</td>
+      <td><b>Alignment</b>: Lawful Neutral</td>
+      <td><b>Deity</b>: The Wildmother (N)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 232/300</td>
+      <td><b>Level</b>: 1</td>
+      <td><b>Speed</b>: 30</td>
+      <td><b>Carry/Lift:</b> 165/330</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Adv on Str checks</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 2</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Barbarian Features</b>: Armor Proficiency (Medium/Shield); Barbarian Unarmored Defense; Rage; Save Proficiency (Constitution/Strength); Skill Proficiency (Choose 2 from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival); Weapon Proficiency (Martial)</td>
+        <td><b>Fate-Touched Features</b>: Fortune's Grace</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Fortune's Grace: Adv on attack, ability, or saving throw or foe Disadv on self attack 1/long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Rage: Rage advantages for 1 min 2/long rest (heavy armor neg)</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Athletics; Insight</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 3</td>
+      <td>Insight: (wis) 3</td>
+      <td>Performance: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 1</td>
+      <td>Intimidation: (cha) 0</td>
+      <td>Persuasion: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 2</td>
+      <td>Investigation: (int) 2</td>
+      <td>Religion: (int) 2</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 2</td>
+      <td>Medicine: (wis) 1</td>
+      <td>Sleight Of Hand: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 0</td>
+      <td>Nature: (int) 2</td>
+      <td>Stealth: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 2</td>
+      <td>Perception: (wis) 1</td>
+      <td>Survival: (wis) 1</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Orc</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 4</td>
+        <td><b>Initiative</b>: 3</td>
+        <td><b>Armor Class</b>: 15</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor Proficiency</b>: Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Martial</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: Studded Leather</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Greataxe (+2 1d12); Halberd (+2 1d10); Longbow (+5 1d8+3 R150/600); Unarmed (+2 1d1)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Barbarian Unarmored Defense: +-2 AC in no armor</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: -2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td>Rage: +2 melee damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Constitution; Strength</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 0; Constitution: 0; Dexterity: 3; Intelligence: 2; Strength: 2; Wisdom: 1</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>: Rage: Adv on Str saves, resistance to bludgeoning, piercing, and slashing damage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Magic Notes</b>: Rage: Cannot cast or concentrate during rage</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Background-Clasp Member</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/background/clasp member", "_timestamp":1644376525815, 
+  "alignment":"Lawful Neutral", "armor":"Studded Leather", "background":"Clasp Member", "charisma":10, 
+  "constitution":6, "deity":"The Wildmother", "dexterity":16, "experience":232, 
+  "gender":"Female", "hitPoints":6, "intelligence":14, "languages.Dwarvish":1, 
+  "levels.Barbarian":1, "name":"Background-Clasp Member", "race":"Human", "shield":"None", 
+  "skillsChosen.Animal Handling":1, "skillsChosen.Athletics":1, "skillsChosen.Stealth":1, "strength":10, 
+  "toolsChosen.Thieves' Tools":1, "weapons.Greataxe":1, "weapons.Halberd":1, "weapons.Longbow":1, "wisdom":12
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Background-Clasp Member</b> — <b>Female</b> <b>Human</b> <b>Barbarian</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 11 (0)</td>
+      <td><b>Dexterity</b>: 17 (3)</td>
+      <td><b>Constitution</b>: 7 (-2)</td>
+      <td><b>Intelligence</b>: 15 (2)</td>
+      <td><b>Wisdom</b>: 13 (1)</td>
+      <td><b>Charisma</b>: 11 (0)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Clasp Member</td>
+      <td><b>Alignment</b>: Lawful Neutral</td>
+      <td><b>Deity</b>: The Wildmother (N)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 232/300</td>
+      <td><b>Level</b>: 1</td>
+      <td><b>Speed</b>: 30</td>
+      <td><b>Carry/Lift:</b> 165/330</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Adv on Str checks</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 2</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Barbarian Features</b>: Armor Proficiency (Medium/Shield); Barbarian Unarmored Defense; Rage; Save Proficiency (Constitution/Strength); Skill Proficiency (Choose 2 from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival); Weapon Proficiency (Martial)</td>
+        <td><b>Clasp Member Features</b>: A Favor In Turn; Skill Proficiency (Deception/Choose 1 from Sleight Of Hand, Stealth); Thieves' Cant; Tool Proficiency (Choose 1 from Disguise Kit, Forgery Kit, Thieves' Tools)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>: Rage: Rage advantages for 1 min 2/long rest (heavy armor neg)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Animal Handling; Athletics; Deception; Stealth</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 3</td>
+      <td>Insight: (wis) 1</td>
+      <td>Performance: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 3</td>
+      <td>Intimidation: (cha) 0</td>
+      <td>Persuasion: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 2</td>
+      <td>Investigation: (int) 2</td>
+      <td>Religion: (int) 2</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 2</td>
+      <td>Medicine: (wis) 1</td>
+      <td>Sleight Of Hand: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 2</td>
+      <td>Nature: (int) 2</td>
+      <td>Stealth: (dex) 5</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 2</td>
+      <td>Perception: (wis) 1</td>
+      <td>Survival: (wis) 1</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Thieves' Tools</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Dwarvish</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>A Favor In Turn: Ask 20-word favor of contact in return for future favor</td>
+    </tr><tr style="text-align:center">
+      <td>Thieves'Cant: Signs and symbols known only by rogues</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 4</td>
+        <td><b>Initiative</b>: 3</td>
+        <td><b>Armor Class</b>: 15</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor Proficiency</b>: Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Martial</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: Studded Leather</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Greataxe (+2 1d12); Halberd (+2 1d10); Longbow (+5 1d8+3 R150/600); Unarmed (+2 1d1)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Barbarian Unarmored Defense: +-2 AC in no armor</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: -2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td>Rage: +2 melee damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Constitution; Strength</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 0; Constitution: 0; Dexterity: 3; Intelligence: 2; Strength: 2; Wisdom: 1</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>: Rage: Adv on Str saves, resistance to bludgeoning, piercing, and slashing damage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Magic Notes</b>: Rage: Cannot cast or concentrate during rage</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Class-Cleric</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/class/cleric", "_timestamp":1644374329873, 
+  "alignment":"Neutral Good", "armor":"Scale Mail", "background":"Hermit", "charisma":10, 
+  "constitution":11, "deity":"The Archheart", "dexterity":14, "experience":589587, 
+  "feats.Great Weapon Master":1, "feats.Keen Mind":1, "feats.Skilled":1, "feats.Skulker":1, 
+  "feats.War Caster":1, "gender":"Female", "hitPoints":79, "intelligence":11, "languages.Giant":1, 
+  "languages.Primordial":1, "levels.Cleric":20, "name":"Class-Cleric", "race":"Human", 
+  "selectableFeatures.Cleric - Blood Domain":1, "shield":"None", "skillsChosen.Animal Handling":1, "skillsChosen.Insight":1, 
+  "skillsChosen.Intimidation":1, "skillsChosen.Medicine":1, "skillsChosen.Religion":1, 
+  "spells.Aid(C2 Abju)":1, "spells.Blade Barrier(C6 Evoc)":1, "spells.Bless(C1 Ench)":1, 
+  "spells.Clairvoyance(C3 Divi)":1, "spells.Contagion(C5 Necr)":1, "spells.Daylight(C3 Evoc)":1, 
+  "spells.Death Ward(C4 Abju)":1, "spells.Detect Evil And Good(C1 Divi)":1, "spells.Divination(C4 Divi)":1, 
+  "spells.Forbiddance(C6 Abju)":1, "spells.Geas(C5 Ench)":1, "spells.Guidance(C0 Divi)":1, 
+  "spells.Holy Aura(C8 Abju)":1, "spells.Locate Object(C2 Divi)":1, "spells.Mending(C0 Tran)":1, 
+  "spells.Plane Shift(C7 Conj)":1, "spells.Prayer Of Healing(C2 Evoc)":1, 
+  "spells.Protection From Evil And Good(C1 Abju)":1, "spells.Raise Dead(C5 Necr)":1, "spells.Resistance(C0 Abju)":1, 
+  "spells.Sanctuary(C1 Abju)":1, "spells.Sending(C3 Evoc)":1, "spells.Spare The Dying(C0 Necr)":1, 
+  "spells.Stone Shape(C4 Tran)":1, "spells.Symbol(C7 Abju)":1, "spells.Thaumaturgy(C0 Tran)":1, 
+  "spells.True Resurrection(C9 Necr)":1, "strength":5, "weapons.Dagger":1, "weapons.Handaxe":1, "weapons.Javelin":1, 
+  "wisdom":6
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Class-Cleric</b> — <b>Female</b> <b>Human</b> <b>Cleric: 20</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 6 (-2)</td>
+      <td><b>Dexterity</b>: 15 (2)</td>
+      <td><b>Constitution</b>: 12 (1)</td>
+      <td><b>Intelligence</b>: 13 (1)</td>
+      <td><b>Wisdom</b>: 7 (-2)</td>
+      <td><b>Charisma</b>: 11 (0)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Hermit</td>
+      <td><b>Alignment</b>: Neutral Good</td>
+      <td><b>Deity</b>: The Archheart (CG)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 589587/1000000</td>
+      <td><b>Level</b>: 20</td>
+      <td><b>Speed</b>: 30</td>
+      <td><b>Carry/Lift:</b> 90/180</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Keen Mind: +1 Intelligence</i></td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 6</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feat Count</b>: General: 5</td>
+        <td><b>Selectable Feature Count</b>: Cleric (Divine Domain)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feats</b>: Great Weapon Master; Keen Mind; Skilled; Skulker; War Caster</td>
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Cleric Features</b>: Armor Proficiency (Medium/Shield); Blood Domain Bonus Proficiencies; Blood Domain; Blood Puppet; Bloodletting Focus; Channel Divinity; Crimson Bond; Destroy Undead; Divine Intervention; Ritual Casting; Sanguine Recall; Save Proficiency (Charisma/Wisdom); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; Vascular Corruption Aura; Weapon Proficiency (Simple)</td>
+        <td><b>Hermit Features</b>: Discovery; Language (Choose 1 from any); Skill Proficiency (Medicine/Religion); Tool Proficiency (Herbalism Kit)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Blood Domain Bonus Proficiencies: Weapon Proficiency (Martial)</i></td>
+      </tr><tr style="text-align:center">
+        <td>Channel Divinity: Use effect 3/short rest</td>
+      </tr><tr style="text-align:center">
+        <td>Discovery: Know unique and powerful truth</td>
+      </tr><tr style="text-align:center">
+        <td>Keen Mind: Always know direction of north and hours until sunrise or sunset; recall anything seen or heard during the past month</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Animal Handling; Insight; Intimidation; Medicine; Religion</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 2</td>
+      <td>Insight: (wis) 4</td>
+      <td>Performance: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 4</td>
+      <td>Intimidation: (cha) 6</td>
+      <td>Persuasion: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 1</td>
+      <td>Investigation: (int) 1</td>
+      <td>Religion: (int) 7</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) -2</td>
+      <td>Medicine: (wis) 4</td>
+      <td>Sleight Of Hand: (dex) 2</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 0</td>
+      <td>Nature: (int) 1</td>
+      <td>Stealth: (dex) 2</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 1</td>
+      <td>Perception: (wis) -2</td>
+      <td>Survival: (wis) -2</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Herbalism Kit</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Giant; Primordial</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Skilled: Skill Proficiency (Choose 3 from any)</i></td>
+    </tr><tr style="text-align:center">
+      <td>Bulky Armor: Disadv on Stealth</td>
+    </tr><tr style="text-align:center">
+      <td>Skulker: Hide when lightly obscured, ranged miss does not reveal position, no Disadv on Perception in dim light</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 99</td>
+        <td><b>Initiative</b>: 2</td>
+        <td><b>Armor Class</b>: 16</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor Proficiency</b>: Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Martial; Simple</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: Scale Mail</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Dagger (+8 1d4+2 R20/60); Handaxe (+4 1d6-2 R20/60); Javelin (+4 1d6-2 R30/120); Unarmed (+4 1d1-2)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: +20</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Attack Adjustment: -2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Damage Adjustment: -2</i></td>
+      </tr><tr style="text-align:center">
+        <td>Destroy Undead: Turning destroys undead up to CR 4</td>
+      </tr><tr style="text-align:center">
+        <td>Great Weapon Master: Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage</td>
+      </tr><tr style="text-align:center">
+        <td>Turn Undead: R30' Channel Divinity makes undead flee (DC 12 Wis neg) for 1 min</td>
+      </tr><tr style="text-align:center">
+        <td>Vascular Corruption Aura: R30' Foes suffer 2d6 HP necrotic and half healing for 1 min 1/long rest</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Charisma; Wisdom</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 6; Constitution: 1; Dexterity: 2; Intelligence: 1; Strength: -2; Wisdom: 4</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="SpellPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="SpellStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Spell Slots</b>: C0: 5; C1: 4; C2: 3; C3: 3; C4: 3; C5: 3; C6: 2; C7: 2; C8: 1; C9: 1</td>
+        <td><b>Attack</b>: C: 4</td>
+        <td><b>Spell DC</b>: C: 12</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Spells</b>:     <table id="Spells" style="width:100%">
+    <tr style="text-align:left">
+      <td>Aid (C2 Abju): R30' 3 targets gain +5 temporary HP for 8 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Blade Barrier (C6 Evoc): R90' 100'x20'x5' blade wall provides 3/4 cover and inflicts 6d10 HP slashing (Dex half) for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Bless (C1 Ench): R30' 3 targets gain +1d4 on attacks and saving throws for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Blight (C4 [Blood Domain] Necr): R30' target suffers 8d8 HP necrotic (Con half (plant Disadv, 64 HP on fail))</td>
+    </tr><tr style="text-align:left">
+      <td>Clairvoyance (C3 Divi): R1 mile Self sees or hears remotely through invisible sensor for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Contagion (C5 Necr): Touched poisoned, diseased for 7 dy after failing 3 Con saves (3 successes neg)</td>
+    </tr><tr style="text-align:left">
+      <td>Crown Of Madness (C2 [Blood Domain] Ench): R120' Self directs target's attacks (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Daylight (C3 Evoc): R60' Target centers 60' radius bright light for 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Death Ward (C4 Abju): Touched keeps 1 HP when next reduced to 0 HP for 8 hrs</td>
+    </tr><tr style="text-align:left">
+      <td>Detect Evil And Good (C1 Divi): R30' Self senses aligned outsider, consecration, and desecration for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Divination (C4 Divi): Self gains truthful answer about event up to 7 dy in the future</td>
+    </tr><tr style="text-align:left">
+      <td>Dominate Person (C5 [Blood Domain] Ench): R60' Target obeys self telepathic commands (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Forbiddance (C6 Abju): Touched 40000' sq bars teleport and portals, inflicts 5d10 HP radiant or necrotic on transit to chosen type for 1 dy</td>
+    </tr><tr style="text-align:left">
+      <td>Geas (C5 Ench): R60' Target obeys command (Wis neg) for 30 dy</td>
+    </tr><tr style="text-align:left">
+      <td>Guidance (C0 Divi): Touched gains +1d4 on 1 ability check w/in conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Haste (C3 [Blood Domain] Tran): R30' Willing target gains dbl Speed, +2 AC, Adv on Dex, and bonus action for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Hold Monster (C5 [Blood Domain] Ench): R90' Immobilizes target (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Holy Aura (C8 Abju): 30' radius targets gain Adv on saves and blind fiends and undead with melee hit (Con neg); foes suffer Disadv on attacks</td>
+    </tr><tr style="text-align:left">
+      <td>Locate Object (C2 Divi): Self learns location of named object or type w/in 1000' for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Mending (C0 Tran): Touch repairs small tear</td>
+    </tr><tr style="text-align:left">
+      <td>Plane Shift (C7 Conj): Target or self and 8 willing others travel to another plane (Cha neg)</td>
+    </tr><tr style="text-align:left">
+      <td>Prayer Of Healing (C2 Evoc): R60' 6 targets regain 2d8 + -2 HP</td>
+    </tr><tr style="text-align:left">
+      <td>Protection From Evil And Good (C1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead, and those creatures suffer Disadv on attack on touched</td>
+    </tr><tr style="text-align:left">
+      <td>Raise Dead (C5 Necr): Restores touched 10-day-old corpse to life</td>
+    </tr><tr style="text-align:left">
+      <td>Ray Of Enfeeblement (C2 [Blood Domain] Necr): R60' Ranged spell inflicts half damage on Str weapons (Con neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Ray Of Sickness (C1 [Blood Domain] Necr): R60' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)</td>
+    </tr><tr style="text-align:left">
+      <td>Resistance (C0 Abju): Touched gains +1d4 on 1 save w/in conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Sanctuary (C1 Abju): R30' Foes of target attack another (Wis neg) for 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Sending (C3 Evoc): Self exchanges 25-word message with known target</td>
+    </tr><tr style="text-align:left">
+      <td>Sleep (C1 [Blood Domain] Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first</td>
+    </tr><tr style="text-align:left">
+      <td>Slow (C3 [Blood Domain] Tran): R120' 6 targets in 40' cu suffer half Speed, -2 AC and Dex saves, and 1 action/rd (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Spare The Dying (C0 Necr): Touched creature becomes stable</td>
+    </tr><tr style="text-align:left">
+      <td>Stone Shape (C4 Tran): Reshapes touched medium-sized stone</td>
+    </tr><tr style="text-align:left">
+      <td>Stoneskin (C4 [Blood Domain] Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Symbol (C7 Abju): Inscribes touched w/permanent glyph that invokes magic effects</td>
+    </tr><tr style="text-align:left">
+      <td>Thaumaturgy (C0 Tran): R30' Creates minor magic effects for 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>True Resurrection (C9 Necr): Restores touched or named 200-year-old corpse to life</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Blood Puppet: R60' Use Channel Divinity to force Huge target to move half speed and attack (Con neg)</td>
+    </tr><tr style="text-align:center">
+      <td>Bloodletting Focus: Harming spells inflict +(spell level + 2) HP necrotic</td>
+    </tr><tr style="text-align:center">
+      <td>Crimson Bond: Channel Divinity with target blood to learn distance, direction, HP, and conditions for conc or 1 hr, suffer 2d6 HP necrotic to share sight or sound for 1 rd (Con ends)</td>
+    </tr><tr style="text-align:center">
+      <td>Divine Intervention: 100% chance of deity help 1/wk</td>
+    </tr><tr style="text-align:center">
+      <td>Ritual Casting: Cast known spell as ritual</td>
+    </tr><tr style="text-align:center">
+      <td>Sanguine Recall: Recover up to 10 spell levels, suffer equal d6 HP damage</td>
+    </tr><tr style="text-align:center">
+      <td>War Caster: Adv on concentration to maintain spell, cast when holding shield and/or weapon, use Reaction to cast as OA</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="ValidationPart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Validation Errors</b>: Cleric-Blood Domain Selectable Feature: Requires deity domains (currently Light/Arcana) matches 'Blood' and cleric level (currently 20)</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Background-Ashari</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/background/ashari", "_timestamp":1644377772152, 
+  "alignment":"Lawful Neutral", "armor":"Studded Leather", "background":"Ashari", "charisma":10, 
+  "constitution":6, "deity":"The Wildmother", "dexterity":16, "experience":232, 
+  "gender":"Female", "hitPoints":6, "intelligence":14, "languages.Abyssal":1, "languages.Orc":1, 
+  "levels.Barbarian":1, "name":"Background-Ashari", "race":"Human", "shield":"None", 
+  "skillsChosen.Athletics":1, "skillsChosen.Insight":1, "skillsChosen.Survival":1, "strength":10, 
+  "weapons.Greataxe":1, "weapons.Halberd":1, "weapons.Longbow":1, "wisdom":12
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Background-Ashari</b> — <b>Female</b> <b>Human</b> <b>Barbarian</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 11 (0)</td>
+      <td><b>Dexterity</b>: 17 (3)</td>
+      <td><b>Constitution</b>: 7 (-2)</td>
+      <td><b>Intelligence</b>: 15 (2)</td>
+      <td><b>Wisdom</b>: 13 (1)</td>
+      <td><b>Charisma</b>: 11 (0)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Ashari</td>
+      <td><b>Alignment</b>: Lawful Neutral</td>
+      <td><b>Deity</b>: The Wildmother (N)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 232/300</td>
+      <td><b>Level</b>: 1</td>
+      <td><b>Speed</b>: 30</td>
+      <td><b>Carry/Lift:</b> 165/330</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Adv on Str checks</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 2</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Barbarian Features</b>: Armor Proficiency (Medium/Shield); Barbarian Unarmored Defense; Rage; Save Proficiency (Constitution/Strength); Skill Proficiency (Choose 2 from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival); Weapon Proficiency (Martial)</td>
+        <td><b>Ashari Features</b>: Elemental Harmony; Language (Choose 1 from any); Skill Proficiency (Nature/Choose 1 from Arcana, Survival); Tool Proficiency (Herbalism Kit)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>: Rage: Rage advantages for 1 min 2/long rest (heavy armor neg)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Athletics; Insight; Nature; Survival</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 3</td>
+      <td>Insight: (wis) 3</td>
+      <td>Performance: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 1</td>
+      <td>Intimidation: (cha) 0</td>
+      <td>Persuasion: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 2</td>
+      <td>Investigation: (int) 2</td>
+      <td>Religion: (int) 2</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 2</td>
+      <td>Medicine: (wis) 1</td>
+      <td>Sleight Of Hand: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 0</td>
+      <td>Nature: (int) 4</td>
+      <td>Stealth: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 2</td>
+      <td>Perception: (wis) 1</td>
+      <td>Survival: (wis) 3</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Herbalism Kit</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Abyssal; Common; Orc</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 4</td>
+        <td><b>Initiative</b>: 3</td>
+        <td><b>Armor Class</b>: 15</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor Proficiency</b>: Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Martial</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: Studded Leather</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Greataxe (+2 1d12); Halberd (+2 1d10); Longbow (+5 1d8+3 R150/600); Unarmed (+2 1d1)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Barbarian Unarmored Defense: +-2 AC in no armor</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: -2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td>Rage: +2 melee damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Constitution; Strength</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 0; Constitution: 0; Dexterity: 3; Intelligence: 2; Strength: 2; Wisdom: 1</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>: Rage: Adv on Str saves, resistance to bludgeoning, piercing, and slashing damage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Elemental Harmony: Produce minor elemental effects</td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Cannot cast or concentrate during rage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Class-Sorcerer</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/class/sorcerer", "_timestamp":1644375080221, 
+  "alignment":"Chaotic Neutral", "armor":"None", "background":"Folk Hero", "charisma":17, "constitution":10, 
+  "deity":"The Everlight", "dexterity":14, "experience":539275, "feats.Actor":1, 
+  "feats.Dual Wielder":1, "feats.Magic Initiate (Bard)":1, "feats.Magic Initiate (Sorcerer)":1, 
+  "feats.Tough":1, "gender":"Female", "hitPoints":65, "intelligence":12, "levels.Sorcerer":20, 
+  "name":"Class-Sorcerer", "race":"Stout Halfling", "selectableFeatures.Sorcerer - Careful Spell":1, 
+  "selectableFeatures.Sorcerer - Quickened Spell":1, "selectableFeatures.Sorcerer - Runechild":1, 
+  "selectableFeatures.Sorcerer - Subtle Spell":1, "selectableFeatures.Sorcerer - Twinned Spell":1, "shield":"", 
+  "skillsChosen.Deception":1, "skillsChosen.Insight":1, "spells.Acid Splash(S0 Conj)":1, 
+  "spells.Cloud Of Daggers(S2 Conj)":1, "spells.Color Spray(S1 Illu)":1, "spells.Cone Of Cold(S5 Evoc)":1, 
+  "spells.Confusion(S4 Ench)":1, "spells.Crown Of Madness(S2 Ench)":1, "spells.Disguise Self(B1 Illu)":1, 
+  "spells.Disintegrate(S6 Tran)":1, "spells.Dominate Beast(S4 Ench)":1, "spells.Fear(S3 Illu)":1, 
+  "spells.Feather Fall(S1 Tran)":1, "spells.Fireball(S3 Evoc)":1, "spells.Friends(B0 Ench)":1, 
+  "spells.Friends(S0 Ench)":1, "spells.Incendiary Cloud(S8 Conj)":1, "spells.Lightning Bolt(S3 Evoc)":1, 
+  "spells.Mage Armor(S1 Abju)":1, "spells.Mage Hand(S0 Conj)":1, "spells.Mending(S0 Tran)":1, 
+  "spells.Message(S0 Tran)":1, "spells.Meteor Swarm(S9 Evoc)":1, "spells.Minor Illusion(S0 Illu)":1, 
+  "spells.Move Earth(S6 Tran)":1, "spells.Poison Spray(S0 Conj)":1, "spells.Polymorph(S4 Tran)":1, 
+  "spells.Ray Of Frost(S0 Evoc)":1, "spells.Ray Of Sickness(S1 Necr)":1, "spells.Reverse Gravity(S7 Tran)":1, 
+  "spells.Seeming(S5 Illu)":1, "spells.Shatter(S2 Evoc)":1, "spells.Telekinesis(S5 Tran)":1, 
+  "spells.Teleport(S7 Conj)":1, "spells.True Strike(B0 Divi)":1, "spells.Witch Bolt(S1 Evoc)":1, 
+  "strength":14, "toolsChosen.Jeweler's Tools":1, "weapons.Dagger":1, "weapons.Dart":1, 
+  "weapons.Sling":1, "wisdom":15
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Class-Sorcerer</b> — <b>Female</b> <b>Stout Halfling</b> <b>Sorcerer: 20</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 14 (2)</td>
+      <td><b>Dexterity</b>: 16 (3)</td>
+      <td><b>Constitution</b>: 11 (0)</td>
+      <td><b>Intelligence</b>: 12 (1)</td>
+      <td><b>Wisdom</b>: 15 (2)</td>
+      <td><b>Charisma</b>: 18 (4)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Folk Hero</td>
+      <td><b>Alignment</b>: Chaotic Neutral</td>
+      <td><b>Deity</b>: The Everlight (NG)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 539275/1000000</td>
+      <td><b>Level</b>: 20</td>
+      <td><b>Speed</b>: 25</td>
+      <td><b>Carry/Lift:</b> 210/420</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Actor: +1 Charisma</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Slow: -5 Speed</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Stout Halfling Ability Adjustment: +2 Dexterity/+1 Constitution</i></td>
+    </tr><tr style="text-align:center">
+      <td>Halfling Nimbleness: Move through space occupied by larger creature</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 6</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feat Count</b>: General: 5</td>
+        <td><b>Selectable Feature Count</b>: Sorcerer (Metamagic): 4; Sorcerer (Sorcerous Origin): 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feats</b>: Actor; Dual Wielder; Magic Initiate (Bard); Magic Initiate (Sorcerer); Tough</td>
+        <td><b>Stout Halfling Features</b>: Brave; Halfling Nimbleness; Lucky Halfling; Slow; Small; Stout Halfling Ability Adjustment; Stout Resilience</td>
+        <td><b>Sorcerer Features</b>: Arcane Exemplar Form; Careful Spell; Essence Runes; Flexible Casting; Font Of Magic; Glyphs Of Aegis; Manifest Inscriptions; Quickened Spell; Runechild; Runic Torrent; Save Proficiency (Charisma/Constitution); Sigilic Augmentation; Skill Proficiency (Choose 2 from Arcana, Deception, Insight, Intimidation, Persuasion, Religion); Sorcerous Restoration; Spellcasting; Subtle Spell; Twinned Spell; Weapon Proficiency (Dagger/Dart/Sling/Quarterstaff/Light Crossbow)</td>
+        <td><b>Folk Hero Features</b>: Rustic Hospitality; Skill Proficiency (Animal Handling/Survival); Tool Proficiency (Vehicles (Land)/Choose 1 from any Artisan)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Lucky Halfling: May re-roll 1s on attack, ability, and saving throws</td>
+      </tr><tr style="text-align:center">
+        <td>Rustic Hospitality: Receive shelter from common folk</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Animal Handling; Deception; Insight; Survival</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 3</td>
+      <td>Insight: (wis) 8</td>
+      <td>Performance: (cha) 4</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 8</td>
+      <td>Intimidation: (cha) 4</td>
+      <td>Persuasion: (cha) 4</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 1</td>
+      <td>Investigation: (int) 1</td>
+      <td>Religion: (int) 1</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 2</td>
+      <td>Medicine: (wis) 2</td>
+      <td>Sleight Of Hand: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 10</td>
+      <td>Nature: (int) 1</td>
+      <td>Stealth: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 1</td>
+      <td>Perception: (wis) 2</td>
+      <td>Survival: (wis) 8</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Jeweler's Tools; Vehicles (Land)</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Halfling</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Notes</b>: Actor: Adv on Deception (Cha) and Performance (Cha) (impersonating), mimic others' speech or sounds</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 105</td>
+        <td><b>Initiative</b>: 3</td>
+        <td><b>Armor Class</b>: 13</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Weapon Proficiency</b>: Dagger; Dart; Light Crossbow; Quarterstaff; Sling</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: None</td>
+        <td><b>Shield</b>: </td>
+        <td><b>Weapons</b>: Dagger (+9 1d4+3 R20/60); Dart (+9 1d4+3 R20/60); Sling (+9 1d4+3 R30/120); Unarmed (+8 1d1+2)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Attack Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Damage Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Tough: +40 HP</i></td>
+      </tr><tr style="text-align:center">
+        <td>Dual Wielder: +1 AC w/two weapons; use two-weapon fighting w/any one-handed weapons; draw or stow two weapons at once</td>
+      </tr><tr style="text-align:center">
+        <td>Small: Disadv on attacks w/heavy weapons</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Charisma; Constitution</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 10; Constitution: 6; Dexterity: 3; Intelligence: 1; Strength: 2; Wisdom: 2</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Brave: Adv on saves vs. fright</td>
+      </tr><tr style="text-align:center">
+        <td>Stout Resilience: Adv on saves vs. poison, resistance to poison damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="SpellPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="SpellStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Spell Slots</b>: B0: 2; B1: 1; S0: 8; S1: 5; S2: 3; S3: 3; S4: 3; S5: 3; S6: 2; S7: 2; S8: 1; S9: 1</td>
+        <td><b>Attack</b>: B: 10; S: 10</td>
+        <td><b>Spell DC</b>: B: 18; S: 18</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Spells</b>:     <table id="Spells" style="width:100%">
+    <tr style="text-align:left">
+      <td>Acid Splash (S0 Conj): R60' Ranged touch inflicts 4d6 HP acid (Dex neg)</td>
+    </tr><tr style="text-align:left">
+      <td>Cloud Of Daggers (S2 Conj): R60' 5' cu inflicts 4d4 HP slashing for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Color Spray (S1 Illu): 15' cone blinds 6d10 HP of targets for 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Cone Of Cold (S5 Evoc): 60' cone inflicts 8d8 HP cold (Con half)</td>
+    </tr><tr style="text-align:left">
+      <td>Confusion (S4 Ench): R90' Creatures in 10' radius randomly 10% wander/50% do nothing/20% attack adjacent/20% act normally (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Crown Of Madness (S2 Ench): R120' Self directs target's attacks (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Disguise Self (B1 Illu): Self clothing and body appear different for 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Disintegrate (S6 Tran): R60' Target suffers 10d6+40 HP force, dusts if reduced to 0 HP (Dex neg)</td>
+    </tr><tr style="text-align:left">
+      <td>Dominate Beast (S4 Ench): R60' Target obeys self telepathic commands (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Fear (S3 Illu): Creatures in 30' cone flee (Wis neg) for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Feather Fall (S1 Tran): R60' 5 falling targets slow to 60'/rd for 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Fireball (S3 Evoc): R150' 20' radius inflicts 8d6 HP fire (Dex half)</td>
+    </tr><tr style="text-align:left">
+      <td>Friends (B0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Friends (S0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Incendiary Cloud (S8 Conj): R150' 20' radius inflicts 10d8 HP fire (Dex half), moves away 10'/rd for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Lightning Bolt (S3 Evoc): 100'x5' line inflicts 8d6 HP lightning (Dex half)</td>
+    </tr><tr style="text-align:left">
+      <td>Mage Armor (S1 Abju): Touched gains AC 13 + DexMod in no armor for 8 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Mage Hand (S0 Conj): R30' Spectral hand performs minor tasks moving up to 10 lb for 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Mending (S0 Tran): Touch repairs small tear</td>
+    </tr><tr style="text-align:left">
+      <td>Message (S0 Tran): R120' Self and target have whispered conversation for 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Meteor Swarm (S9 Evoc): R1 mile 40' radius inflicts 20d6 HP fire and 20d6 HP bludgeoning (Dex half)</td>
+    </tr><tr style="text-align:left">
+      <td>Minor Illusion (S0 Illu): R30' Creates sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Move Earth (S6 Tran): R120' Reshapes 40' cu of earth for conc or 2 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Poison Spray (S0 Conj): R10' Target suffers 4d12 HP poison (Con neg)</td>
+    </tr><tr style="text-align:left">
+      <td>Polymorph (S4 Tran): R60' Transforms target creature (Wis neg) for conc or 1 hr or until reduced to 0 HP</td>
+    </tr><tr style="text-align:left">
+      <td>Ray Of Frost (S0 Evoc): R60' Ranged spell inflicts 4d8 HP cold and -10' Speed for 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Ray Of Sickness (S1 Necr): R60' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)</td>
+    </tr><tr style="text-align:left">
+      <td>Reverse Gravity (S7 Tran): R50' Items in 50' radius fall upward for conc or 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Seeming (S5 Illu): R30' Changes appearance of targets (Cha neg) for 8 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Shatter (S2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (Con half)</td>
+    </tr><tr style="text-align:left">
+      <td>Telekinesis (S5 Tran): R60' Moves 1000 lb 30'/rd (Str neg) for conc or 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Teleport (S7 Conj): R10' Object or self and 8 allies teleport any distance</td>
+    </tr><tr style="text-align:left">
+      <td>True Strike (B0 Divi): R30' Self gains Adv on next attack on target w/in 1 rd</td>
+    </tr><tr style="text-align:left">
+      <td>Witch Bolt (S1 Evoc): R30' Ranged spell inflicts 1d12 HP lightning/rd for conc or 1 min</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Magic Initiate (Bard): Know 2 B0 spells, cast 1 B1 spell/long rest</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Magic Initiate (Sorcerer): Know 2 S0 spells, cast 1 S1 spell/long rest</i></td>
+    </tr><tr style="text-align:center">
+      <td>Arcane Exemplar Form: Discharge 6 runes for 40' Fly, +2 spell DC, resistance to spell damage, and regain HP from casting for 3 rd</td>
+    </tr><tr style="text-align:center">
+      <td>Careful Spell: Spend 1 Sorcery Point to protect 4 creature(s) from self spell</td>
+    </tr><tr style="text-align:center">
+      <td>Essence Runes: Spending Sorcery Points charges 20 runes; 5 charged runes emit 5' light</td>
+    </tr><tr style="text-align:center">
+      <td>Flexible Casting: Convert Sorcery Points to and from spell slots</td>
+    </tr><tr style="text-align:center">
+      <td>Font Of Magic: Use 20 Sorcery Points/long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Glyphs Of Aegis: Discharge runes to negate 1d6 damage each, touch can transfer 1 rune for 1 hr</td>
+    </tr><tr style="text-align:center">
+      <td>Manifest Inscriptions: R15' Discharge 1 rune to reveal hidden glyphs</td>
+    </tr><tr style="text-align:center">
+      <td>Quickened Spell: Spend 2 Sorcery Points to cast spell as bonus action</td>
+    </tr><tr style="text-align:center">
+      <td>Runic Torrent: Discharge spell level runes to overcome target resistance and immunity</td>
+    </tr><tr style="text-align:center">
+      <td>Sigilic Augmentation: Discharge rune for Adv on Str, Dex, or Con checks for 1 rd</td>
+    </tr><tr style="text-align:center">
+      <td>Sorcerous Restoration: Regain 4 Sorcery Points/short rest</td>
+    </tr><tr style="text-align:center">
+      <td>Subtle Spell: Spend 1 Sorcery Point to cast w/out somatic or verbal components</td>
+    </tr><tr style="text-align:center">
+      <td>Twinned Spell: Spend spell level Sorcery Points to add second target</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Class-Barbarian</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/class/barbarian", "_timestamp":1644374573940, 
+  "alignment":"Lawful Good", "armor":"Padded", "background":"Urchin", "charisma":11, "constitution":6, 
+  "deity":"The Dawnfather", "dexterity":9, "experience":871982, "feats.Dungeon Delver":1, 
+  "feats.Lightly Armored":1, "feats.Mending Affinity":1, "feats.Polearm Master":1, "feats.Sentinel":1, 
+  "gender":"Male", "hitPoints":73, "intelligence":11, "languages.Deep Speech":1, 
+  "levels.Barbarian":20, "name":"Class-Barbarian", "notes":"* Ability Boost: +1 wisdom;", 
+  "race":"Human", "selectableFeatures.Barbarian - Path Of The Juggernaut":1, 
+  "shield":"Shield", "skillsChosen.Intimidation":1, "skillsChosen.Survival":1, "strength":15, 
+  "weapons.Heavy Crossbow":1, "weapons.Javelin":1, "weapons.Mace":1, "wisdom":11
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Class-Barbarian</b> — <b>Male</b> <b>Human</b> <b>Barbarian: 20</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 20 (5)</td>
+      <td><b>Dexterity</b>: 10 (0)</td>
+      <td><b>Constitution</b>: 12 (1)</td>
+      <td><b>Intelligence</b>: 12 (1)</td>
+      <td><b>Wisdom</b>: 13 (1)</td>
+      <td><b>Charisma</b>: 12 (1)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Urchin</td>
+      <td><b>Alignment</b>: Lawful Good</td>
+      <td><b>Deity</b>: The Dawnfather (NG)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 871982/1000000</td>
+      <td><b>Level</b>: 20</td>
+      <td><b>Speed</b>: 40</td>
+      <td><b>Carry/Lift:</b> 300/600</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Fast Movement: +10 Speed (heavy armor neg)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Goodies Wisdom: +1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Lightly Armored: +1 Dexterity or Strength</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Mending Affinity: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Primal Champion: +4 Strength/+4 Constitution</i></td>
+    </tr><tr style="text-align:center">
+      <td>Ability Boosts: 1 to distribute</td>
+    </tr><tr style="text-align:center">
+      <td>Indomitable Might: Use Str score instead of roll for Str check</td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Adv on Str checks</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 6</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feat Count</b>: General: 5</td>
+        <td><b>Selectable Feature Count</b>: Barbarian (Primal Path)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Feats</b>: Dungeon Delver; Lightly Armored; Mending Affinity; Polearm Master; Sentinel</td>
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Barbarian Features</b>: Armor Proficiency (Medium/Shield); Barbarian Unarmored Defense; Brutal Critical; Danger Sense; Demolishing Might; Extra Attack; Fast Movement; Feral Instinct; Indomitable Might; Overwhelming Cleave; Path Of The Juggernaut; Persistent Rage; Primal Champion; Rage; Reckless Attack; Relentless Rage; Save Proficiency (Constitution/Strength); Skill Proficiency (Choose 2 from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival); Stance Of The Mountain; Thunderous Blows; Unstoppable; Weapon Proficiency (Martial)</td>
+        <td><b>Urchin Features</b>: City Secrets; Skill Proficiency (Sleight Of Hand/Stealth); Tool Proficiency (Disguise Kit/Thieves' Tools)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>City Secrets: Travel through city at dbl speed</td>
+      </tr><tr style="text-align:center">
+        <td>Rage: Rage advantages for 1 min unlimited/long rest (heavy armor neg)</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Intimidation; Sleight Of Hand; Stealth; Survival</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 0</td>
+      <td>Insight: (wis) 1</td>
+      <td>Performance: (cha) 1</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 1</td>
+      <td>Intimidation: (cha) 7</td>
+      <td>Persuasion: (cha) 1</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 1</td>
+      <td>Investigation: (int) 1</td>
+      <td>Religion: (int) 1</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 5</td>
+      <td>Medicine: (wis) 1</td>
+      <td>Sleight Of Hand: (dex) 6</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 1</td>
+      <td>Nature: (int) 1</td>
+      <td>Stealth: (dex) 6</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 1</td>
+      <td>Perception: (wis) 1</td>
+      <td>Survival: (wis) 7</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Disguise Kit; Thieves' Tools</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Deep Speech</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Bulky Armor: Disadv on Stealth</td>
+    </tr><tr style="text-align:center">
+      <td>Dungeon Delver: Adv on secret door detection and search for traps at full speed</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 93</td>
+        <td><b>Initiative</b>: 0</td>
+        <td><b>Armor Class</b>: 13</td>
+        <td><b>Attacks Per Round</b>: 2</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor Proficiency</b>: Light; Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Martial</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: Padded</td>
+        <td><b>Shield</b>: Shield</td>
+        <td><b>Weapons</b>: Heavy Crossbow (+6 1d10 R100/400); Javelin (+11 1d6+5 R30/120); Mace (+11 1d6+5); Unarmed (+11 1d1+5)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Barbarian Unarmored Defense: +1 AC in no armor</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: +20</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Extra Attack: +1 Attacks Per Round</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Lightly Armored: Armor Proficiency (Light)</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Attack Adjustment: +5</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Damage Adjustment: +5</i></td>
+      </tr><tr style="text-align:center">
+        <td>Brutal Critical: Add 3 dice to crit damage</td>
+      </tr><tr style="text-align:center">
+        <td>Demolishing Might: Melee weapons x2 damage vs. objects, +1d8 HP damage vs. constructs</td>
+      </tr><tr style="text-align:center">
+        <td>Feral Instinct: Adv on Initiative, rage and then act when surprised</td>
+      </tr><tr style="text-align:center">
+        <td>Mending Affinity: Regain +6 HP from healer's kit, potion, or spell</td>
+      </tr><tr style="text-align:center">
+        <td>Overwhelming Cleave: Bonus attack on second foe adjacent to first</td>
+      </tr><tr style="text-align:center">
+        <td>Persistent Rage: Continue raging when unengaged w/foe</td>
+      </tr><tr style="text-align:center">
+        <td>Polearm Master: Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach</td>
+      </tr><tr style="text-align:center">
+        <td>Rage: +4 melee damage</td>
+      </tr><tr style="text-align:center">
+        <td>Reckless Attack: Trade Adv on melee Str attacks for foe Adv on all attacks</td>
+      </tr><tr style="text-align:center">
+        <td>Relentless Rage: DC 10+ Con to keep 1 HP when brought to 0 HP</td>
+      </tr><tr style="text-align:center">
+        <td>Sentinel: OA strike halts foe; OA on adjacent foe Disengage; use Reaction to attack when adjacent foe targets other</td>
+      </tr><tr style="text-align:center">
+        <td>Stance Of The Mountain: Cannot be knocked prone during rage</td>
+      </tr><tr style="text-align:center">
+        <td>Thunderous Blows: Successful attack pushes foe 5' (DC 19 Str neg)</td>
+      </tr><tr style="text-align:center">
+        <td>Unstoppable: Cannot be slowed, frightened, paralyzed, or stunned during rage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Constitution; Strength</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 1; Constitution: 7; Dexterity: 0; Intelligence: 1; Strength: 11; Wisdom: 1</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Danger Sense: Adv on Dex checks vs. visible dangers</td>
+      </tr><tr style="text-align:center">
+        <td>Dungeon Delver: Adv on trap detection and avoidance and resistance to trap damage</td>
+      </tr><tr style="text-align:center">
+        <td>Rage: Adv on Str saves, resistance to bludgeoning, piercing, and slashing damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Magic Notes</b>: Rage: Cannot cast or concentrate during rage</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="NotesPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>* Ability Boost: +1 wisdom;</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<!-- Generated Tue Feb 08 2022 19:55:16 GMT-0800 (Pacific Standard Time) by Quilvyn version 2.3.7; Taldorei version 2.3.1.0; PHB5E version 2.3.3.0; SRD5E version 2.3.3.0 -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Background-Recovered Cultist</title>
+  <script>
+var attributes = {
+  "_path":"ztest/taldorei/background/recovered cultist", 
+  "_timestamp":1644377613541, "alignment":"Lawful Neutral", "armor":"Studded Leather", 
+  "background":"Recovered Cultist", "charisma":10, "constitution":6, "deity":"The Wildmother", "dexterity":16, 
+  "experience":232, "gender":"Female", "hitPoints":6, "intelligence":14, "languages.Halfling":1, 
+  "languages.Undercommon":1, "levels.Barbarian":1, "name":"Background-Recovered Cultist", "race":"Human", 
+  "shield":"None", "skillsChosen.Animal Handling":1, "skillsChosen.Survival":1, "strength":10, 
+  "weapons.Greataxe":1, "weapons.Halberd":1, "weapons.Longbow":1, "wisdom":12
+};
+  </script>
+</head>
+<body>
+<table id="_top" style="border:1px solid black; width:100%">
+<tr style="text-align:center">
+  <td style="border:1px solid black"><b>Background-Recovered Cultist</b> — <b>Female</b> <b>Human</b> <b>Barbarian</b></td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="Abilities" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Strength</b>: 11 (0)</td>
+      <td><b>Dexterity</b>: 17 (3)</td>
+      <td><b>Constitution</b>: 7 (-2)</td>
+      <td><b>Intelligence</b>: 15 (2)</td>
+      <td><b>Wisdom</b>: 13 (1)</td>
+      <td><b>Charisma</b>: 11 (0)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="Description" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Background</b>: Recovered Cultist</td>
+      <td><b>Alignment</b>: Lawful Neutral</td>
+      <td><b>Deity</b>: The Wildmother (N)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="AbilityStats" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Experience</b>: 232/300</td>
+      <td><b>Level</b>: 1</td>
+      <td><b>Speed</b>: 30</td>
+      <td><b>Carry/Lift:</b> 165/330</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
+    </tr><tr style="text-align:center">
+      <td>Rage: Adv on Str checks</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Features/Skills</b><br/>  <table id="FeaturesAndSkills" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Proficiency Bonus</b>: 2</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="FeaturePart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="FeatLists" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Human Features</b>: Human Ability Adjustment</td>
+        <td><b>Barbarian Features</b>: Armor Proficiency (Medium/Shield); Barbarian Unarmored Defense; Rage; Save Proficiency (Constitution/Strength); Skill Proficiency (Choose 2 from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival); Weapon Proficiency (Martial)</td>
+        <td><b>Recovered Cultist Features</b>: Language (Choose 1 from any); Skill Proficiency (Deception/Religion); Wicked Awareness</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Feature Notes</b>: Rage: Rage advantages for 1 min 2/long rest (heavy armor neg)</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: Animal Handling; Deception; Religion; Survival</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skills</b>:     <table id="Skills" style="width:100%">
+    <col style="width:33%"/>
+    <col style="width:33%"/>
+    <col style="width:34%"/>
+    <tr style="text-align:left">
+      <td>Acrobatics: (dex) 3</td>
+      <td>Insight: (wis) 1</td>
+      <td>Performance: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Animal Handling: (wis) 3</td>
+      <td>Intimidation: (cha) 0</td>
+      <td>Persuasion: (cha) 0</td>
+    </tr><tr style="text-align:left">
+      <td>Arcana: (int) 2</td>
+      <td>Investigation: (int) 2</td>
+      <td>Religion: (int) 4</td>
+    </tr><tr style="text-align:left">
+      <td>Athletics: (str) 0</td>
+      <td>Medicine: (wis) 1</td>
+      <td>Sleight Of Hand: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>Deception: (cha) 2</td>
+      <td>Nature: (int) 2</td>
+      <td>Stealth: (dex) 3</td>
+    </tr><tr style="text-align:left">
+      <td>History: (int) 2</td>
+      <td>Perception: (wis) 1</td>
+      <td>Survival: (wis) 3</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Halfling; Undercommon</td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Notes</b>: Wicked Awareness: Adv on checks to uncover cult activity</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Combat</b><br/>  <table id="Combat" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="CombatPart" style="width:100%">
+    <tr style="text-align:center">
+      <td>      <table id="CombatStats" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Hit Points</b>: 4</td>
+        <td><b>Initiative</b>: 3</td>
+        <td><b>Armor Class</b>: 15</td>
+        <td><b>Attacks Per Round</b>: 1</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="CombatProfs" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor Proficiency</b>: Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Martial</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td>      <table id="Gear" style="width:100%">
+      <tr style="text-align:center">
+        <td><b>Armor</b>: Studded Leather</td>
+        <td><b>Shield</b>: None</td>
+        <td><b>Weapons</b>: Greataxe (+2 1d12); Halberd (+2 1d10); Longbow (+5 1d8+3 R150/600); Unarmed (+2 1d1)</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
+      <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Barbarian Unarmored Defense: +-2 AC in no armor</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: -2</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Armor Class Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Attack Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Dexterity Damage Adjustment: +3</i></td>
+      </tr><tr style="text-align:center">
+        <td>Rage: +2 melee damage</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
+  </tr><tr style="text-align:center">
+    <td>    <table id="SavePart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Save Proficiency</b>: Constitution; Strength</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save</b>: Charisma: 0; Constitution: 0; Dexterity: 3; Intelligence: 2; Strength: 2; Wisdom: 1</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>: Rage: Adv on Str saves, resistance to bludgeoning, piercing, and slashing damage</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Magic</b><br/>  <table id="Magic" style="width:100%">
+  <tr style="text-align:center">
+    <td><b>Magic Notes</b>: Rage: Cannot cast or concentrate during rage</td>
+  </tr></table>
+</td>
+</tr></table>
+
+</body>
+</html>
+
