@@ -9,17 +9,17 @@ var attributes = {
   "_path":"ztest/taldoreireborn/feats", 
   "alignment":"Neutral", "armor":"None", "background":"Sailor", "charisma":14, "constitution":16, 
   "deity":"The Knowing Mentor", "dexterity":11, "experience":688759, "feats.Cruel":1, 
-  "feats.Flash Recall":1, "feats.Fortune's Grace":1, "feats.Mystic Conflux":1, 
-  "feats.Remarkable Recovery":1, "feats.Spelldriver":1, "feats.Thrown Arms Master":1, 
-  "feats.Vital Sacrifice":1, "gender":"Male", "hitPoints":61, "intelligence":15, "languages.Sylvan":1, 
-  "levels.Wizard":20, "name":"Feats", "race":"Human", 
-  "selectableFeatures.Wizard - School Of Evocation":1, "shield":"", "skillsChosen.History":1, "skillsChosen.Investigation":1, 
-  "spells.Arcane Gate(W6 Conj)":1, "spells.Blight(W4 Necr)":1, "spells.Blindness/Deafness(W2 Necr)":1, 
-  "spells.Chill Touch(W0 Necr)":1, "spells.Cloudkill(W5 Conj)":1, "spells.Cone Of Cold(W5 Evoc)":1, 
-  "spells.Confusion(W4 Ench)":1, "spells.Dancing Lights(W0 Evoc)":1, "spells.Expeditious Retreat(W1 Tran)":1, 
-  "spells.Feeblemind(W8 Ench)":1, "spells.Finger Of Death(W7 Necr)":1, "spells.Fire Bolt(W0 Evoc)":1, 
-  "spells.Gust Of Wind(W2 Evoc)":1, "spells.Hypnotic Pattern(W3 Illu)":1, "spells.Longstrider(W1 Tran)":1, 
-  "spells.Magic Jar(W6 Necr)":1, "spells.Magic Weapon(W2 Tran)":1, "spells.Minor Illusion(W0 Illu)":1, 
+  "feats.Flash Recall":1, "feats.Mystic Conflux":1, "feats.Remarkable Recovery":1, 
+  "feats.Spelldriver":1, "feats.Thrown Arms Master":1, "feats.Vital Sacrifice":1, "gender":"Male", 
+  "hitPoints":61, "intelligence":15, "languages.Sylvan":1, "levels.Wizard":20, "name":"Feats", 
+  "race":"Human", "selectableFeatures.Wizard - School Of Evocation":1, "shield":"", 
+  "skillsChosen.History":1, "skillsChosen.Investigation":1, "spells.Arcane Gate(W6 Conj)":1, 
+  "spells.Blight(W4 Necr)":1, "spells.Blindness/Deafness(W2 Necr)":1, "spells.Chill Touch(W0 Necr)":1, 
+  "spells.Cloudkill(W5 Conj)":1, "spells.Cone Of Cold(W5 Evoc)":1, "spells.Confusion(W4 Ench)":1, 
+  "spells.Dancing Lights(W0 Evoc)":1, "spells.Expeditious Retreat(W1 Tran)":1, "spells.Feeblemind(W8 Ench)":1, 
+  "spells.Finger Of Death(W7 Necr)":1, "spells.Fire Bolt(W0 Evoc)":1, "spells.Gust Of Wind(W2 Evoc)":1, 
+  "spells.Hypnotic Pattern(W3 Illu)":1, "spells.Longstrider(W1 Tran)":1, "spells.Magic Jar(W6 Necr)":1, 
+  "spells.Magic Weapon(W2 Tran)":1, "spells.Minor Illusion(W0 Illu)":1, 
   "spells.Mordenkainen's Faithful Hound(W4 Conj)":1, "spells.Prismatic Spray(W7 Evoc)":1, "spells.Shocking Grasp(W0 Evoc)":1, 
   "spells.Silent Image(W1 Illu)":1, "spells.Stinking Cloud(W3 Conj)":1, 
   "spells.Teleportation Circle(W5 Conj)":1, "spells.Tenser's Floating Disk(W1 Conj)":1, "spells.Time Stop(W9 Tran)":1, 
@@ -92,7 +92,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Cruel; Flash Recall; Fortune's Grace; Mystic Conflux; Remarkable Recovery; Spelldriver; Thrown Arms Master; Vital Sacrifice</td>
+        <td><b>Feats</b>: Cruel; Flash Recall; Mystic Conflux; Remarkable Recovery; Spelldriver; Thrown Arms Master; Vital Sacrifice</td>
         <td><b>Human Features</b>: Human Ability Adjustment</td>
         <td><b>Wizard Features</b>: Arcane Recovery; Empowered Evocation; Evocation Savant; Overchannel; Potent Cantrip; Ritual Casting; Save Proficiency (Intelligence/Wisdom); School Of Evocation; Sculpt Spells; Signature Spells; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Religion); Spell Mastery; Spellcasting; Weapon Proficiency (Dagger/Dart/Light Crossbow/Quarterstaff/Sling)</td>
         <td><b>Sailor Features</b>: Ship's Passage; Skill Proficiency (Athletics/Perception); Tool Proficiency (Navigator's Tools/Vehicles (Water))</td>
@@ -102,8 +102,6 @@ var attributes = {
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
         <td>Cruel: Use 6 Cruelty Points/long rest</td>
-      </tr><tr style="text-align:center">
-        <td>Fortune's Grace: May reroll attack, ability, or save or force foe reroll 1/long rest</td>
       </tr><tr style="text-align:center">
         <td>Ship's Passage: Receive water passage for self and companions in exchange for labor</td>
       </tr><tr style="text-align:center">
@@ -323,7 +321,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Feat Allocation: 5 available vs. 8 allocated</td>
+      <td><b>Validation Errors</b>: Feat Allocation: 5 available vs. 7 allocated</td>
     </tr></table>
 </td>
   </tr></table>
