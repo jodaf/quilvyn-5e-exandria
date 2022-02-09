@@ -177,12 +177,84 @@ Wildemount.FEATURES_ADDED = {
   'Violent Attraction':'Section=feature Note="TODO"',
 
   // Races
+  'Aaracokra Ability Adjustment':'Section=ability Note="+1 Dexterity/+2 Wisdom"',
+  'Acid Resistance':'Section=save Note="Resistance to acid damage"',
   'Ageless':'Section=feature Note="Immune to aging"',
+  'Air Genasi Ability Adjustment':
+    'Section=ability Note="+1 Constitution/+1 Dexterity"',
+  'Amphibious':'Section=feature Note="Breathe air and water"',
+  'Blessing Of The Moon Weaver':
+    'Section=magic Note="Know <i>Light</i> cantrip%1"',
+  'Call Into The Wave':'Section=magic Note="Know <i>Shape Water</i> cantrip%1"',
+  'Child Of The Sea':'Section=ability Note="30\' Swim, breathe water"',
+  'Child Of The Wood':'Section=magic Note="Know <i>Druidcraft</i> cantrip%1"',
+  'Claws':'Section=combat Note="Use claws as natural slashing weapon"',
   'Cling To Life':
     'Section=combat Note="Successful death saving throw restores 1 HP"',
+  'Dragonblood Ability Adjustment':
+    'Section=ability Note="+2 Intelligence/+1 Charisma"',
+  'Earth Genasi Ability Adjustment':
+    'Section=ability Note="+2 Constitution/+1 Strength"',
+  'Earth Walk':
+    'Section=ability Note="Normal movement over difficult earth and stone"',
+  'Fire Genasi Ability Adjustment':
+    'Section=ability Note="+2 Constitution/+1 Intelligence"',
+  'Fire Resistance':'Section=save Note="Resistance to fire damage"',
+  'Flight':'Section=ability Note="50\' Fly"',
+  'Forceful Presence':
+    'Section=skill Note="Adv on Intimidation or Persuasion 1/short rest"',
+  'Friend Of The Sea':
+    'Section=feature Note="May communicate w/swimming creatures"',
+  'Goliath Ability Adjustment':
+    'Section=ability Note="+2 Strength/+1 Constitution"',
+  'Hold Breath':'Section=feature Note="May hold breath for 1 hr"',
+  'Incisive Sense':'Section=skill Note="Adv on Investigation and Insight"',
+  'Lotusden Halfling Ability Adjustment':
+    'Section=ability Note="+2 Dexterity/+1 Wisdom"',
+  'Mingle With The Wind':
+     'Section=magic Note="Cast <i>Levitate</i> 1/long rest"',
+  'Mountain Born':
+    'Section=feature Note="Adapted to high elevations and cold environments"',
+  'Natural Armor':'Section=combat Note="Shell gives AC 17, cannot wear armor"',
+  'Natural Athlete':'Section=skill Note="Skill Proficiency (Athletics)"',
+  'Pallid Elf Ability Adjustment':'Section=ability Note="+2 Dexterity/+1 Wisdom"',
+  'Pass Without Trace':
+    'Section=magic Note="Cast <i>Pass Without Trace</i> 1/long rest"',
+  'Primal Intuition':
+    'Section=feature ' +
+    'Note="Skill Proficiency (Choose 2 from Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, Survival)"',
+  'Powerful Build':'Section=ability Note="x2 Carry/x2 Lift"',
+  'Ravenite Ability Adjustment':
+    'Section=ability Note="+2 Strength/+1 Constitution"',
+  'Reach Into The Blaze':
+    'Section=magic Note="Know <i>Produce Flame</i> cantrip%1"',
   'Revenance':'Section=feature Note="Detect as undead"',
-  'Unsettling Presence':
-    'Section=combat Note="R15\' Inflict Disadv on next target save 1/long rest"'
+  'Sea Elf Ability Adjustment':
+    'Section=ability Note="+2 Dexterity/+1 Constitution"',
+  'Sea Elf Training':
+    'Section=combat ' +
+    'Note="Weapon Proficiency (Light Crossbow/Net/Spear/Trident)"',
+  'Shell Defense':
+    'Section=combat ' +
+    'Note="Withdrawl into shell gives +4 AC and Adv on Str and Con, inflicts Disadv Dex and no actions or reactions"',
+  'Survival Instinct':'Section=skill Note="Skill Proficiency (Survival)"',
+  "Stone's Endurance":
+    'Section=combat ' +
+    'Note="Reduce damage by 1d12+%{constitutionModifier} 1/short rest"',
+  'Swim':'Section=ability Note="30\' Swim"',
+  'Talons':'Section=combat Note="Use talons as natural slashing weapon"',
+  'Timberwalk':
+    'Section=ability,feature ' +
+    'Note="Normal movement through difficult undergrowth",' +
+         '"Trackers suffer Disadv"',
+  'Tortle Ability Adjustment':'Section=ability Note="+2 Strength/+1 Wisdom"',
+  'Unending Breath':'Section=feature Note="May hold breath indefinitely"',
+  'Unsettling Presence':'Section=combat Note="R15\' Inflict Disadv on next target save 1/long rest"',
+  'Vengeful Assault':
+    'Section=combat ' +
+    'Note="Use Reaction to attack after taking damage 1/short rest"',
+  'Water Genasi Ability Adjustment':
+    'Section=ability Note="+2 Constitution/+1 Wisdom"'
 
 };
 Wildemount.PATHS_ADDED = {
@@ -206,10 +278,73 @@ Wildemount.PATHS_ADDED = {
       '"14:Event Horizon"'
 };
 Wildemount.RACES_ADDED = {
+  'Aaracokra':
+    'Features=' +
+      '"Aaracokra Ability Adjustment",Flight,Slow,Talons ' +
+    'Languages=Aarakocra,Auran,Common',
+  'Air Genasi':
+    'Features=' +
+      '"Air Genasi Ability Adjustment","Mingle With The Wind",' +
+      '"Unending Breath" ' +
+    'Languages=Common,Primordial',
+  'Dragonblood':SRD5E.RACES.Dragonborn
+    .replace('Dragonborn Ability Adjustment', 'Dragonblood Ability Adjustment')
+    .replace('Dragonborn Damage Resistance', 'Forceful Presence')
+    .replace('Features=', 'Features=Darkvision,'),
+  'Earth Genasi':
+    'Features=' +
+      '"Earth Genasi Ability Adjustment","Earth Walk","Pass Without Trace" ' +
+    'Languages=Common,Primordial',
+  'Fire Genasi':
+    'Features=' +
+      'Darkvision,"Fire Genasi Ability Adjustment","Fire Resistance",' +
+      '"Reach Into The Blaze" ' +
+    'Languages=Common,Primordial',
+  'Goliath':
+    'Features=' +
+      '"Goliath Ability Adjustment","Mountain Born","Natural Athlete",' +
+      '"Powerful Build","Stone\'s Endurance" ' +
+    'Languages=Common,Giant',
   'Hollow One':
     'Features=' +
-      '1:Ageless,"1:Cling To Life",1:Revenance,"1:Unsettling Presence"'
+      'Ageless,"Cling To Life",Revenance,"Unsettling Presence"',
+  'Lotusden Halfling':
+    'Features=' +
+      'Brave,"Child Of The Wood","Halfling Nimbleness",' +
+      '"Lotusden Halfling Ability Adjustment","Lucky Halfling",Slow,Small,' +
+      'Timberwalk ' +
+    'Languages=Common,Halfling',
+  'Pallid Elf':
+    'Features=' +
+      '"Blessing Of The Moon Weaver",Darkvision,"Elf Weapon Training",' +
+      '"Fey Ancestry","Incisive Sense","Keen Senses",' +
+      '"Pallid Elf Ability Adjustment",Trance ' +
+    'Languages=Common,Elvish',
+  'Ravenite':SRD5E.RACES.Dragonborn
+    .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
+    .replace('Dragonborn Damage Resistance', 'Vengeful Assault')
+    .replace('Features=', 'Features=Darkvision,'),
+  'Sea Elf':
+    'Features=' +
+      '"Child Of The Sea",Darkvision,"Elf Weapon Training","Fey Ancestry",' +
+      '"Friend Of The Sea","Incisive Sense","Keen Senses",' +
+      '"Sea Elf Ability Adjustment","Sea Elf Training",Trance ' +
+    'Languages=Aquan,Common,Elvish',
+  'Tortle':
+    'Features=' +
+      'Claws,"Hold Breath","Natural Armor","Shell Defense",' +
+      '"Survival Instinct","Tortle Ability Adjustment" ' +
+    'Languages=Aquan,Common',
+  'Water Genasi':
+    'Features=' +
+      '"Acid Resistance",Amphibious,"Call Into The Wave",Swim,' +
+      '"Water Genasi Ability Adjustment" ' +
+    'Languages=Common,Primordial'
 };
+if(window.Volo != null) {
+  Wildemount.RACES_ADDED['Orc'] =
+    Volo.MONSTROUS_RACES['Orc'].replace('Menacing', '"Primal Intuition"');
+}
 Wildemount.SPELLS_ADDED = {
   'Dark Star':
     'School=Evocation ' +
@@ -255,6 +390,10 @@ Wildemount.SPELLS_ADDED = {
     'School=Necromancy ' +
     'Level=W0 ' +
     'Description="TODO"',
+  'Shape Water': // Copied from Xanathar's
+    'School=Transmutation ' +
+    'Level=D0,S0,W0 ' +
+    'Description="R30\' 5\' cu water moves 5\' or forms animated shapes, changes color or opacity, or freezes for 1 hr"',
   'Temporal Shunt':
     'School=Transmutation ' +
     'Level=W5 ' +
@@ -279,22 +418,10 @@ Wildemount.SPELLS_ADDED = {
  */
 Wildemount.choiceRules = function(rules, type, name, attrs) {
   PHB5E.choiceRules(rules, type, name, attrs);
-  if(type == 'Feat')
-    Wildemount.featRulesExtra(rules, name);
-  else if(type == 'Path')
+  if(type == 'Path')
     Wildemount.pathRulesExtra(rules, name);
-};
-
-/*
- * Defines in #rules# the rules associated with feat #name# that cannot be
- * derived directly from the attributes passed to featRules.
- */
-Wildemount.featRulesExtra = function(rules, name) {
-  if(name == 'Cruel')
-    rules.defineRule('featureNotes.cruel', 'proficiencyBonus', '=', null);
-  else if(name == 'Thrown Arms Master')
-    rules.defineRule
-      ('abilityBoosts', 'abilityNotes.thrownArmsMaster', '+=', '1');
+  else if(type == 'Race')
+    Wildemount.raceRulesExtra(rules, name);
 };
 
 /*
@@ -307,25 +434,47 @@ Wildemount.pathRulesExtra = function(rules, name) {
     name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') +
     'Level';
 
-  if(name == 'Blood Domain') {
-    rules.defineRule
-      ('magicNotes.bloodPuppet', pathLevel, '=', 'source<8 ? "Large" : "Huge"');
-    rules.defineRule('magicNotes.sanguineRecall',
-      'levels.Cleric', '=', 'Math.floor(source / 2)'
-    );
-  } else if(name == 'Runechild') {
+  if(name == 'Runechild') {
     rules.defineRule('magicNotes.glyphsOfAegis.1',
       pathLevel, '=', 'source<8 ? "" : ", touch can transfer 1 rune for 1 hr"'
     );
-  } else if(name == 'Way Of The Cobalt Soul') {
-    rules.defineRule('combatNotes.mindOfMercury',
-      'intelligenceModifier', '=', 'Math.max(source, 1)'
-    );
-    rules.defineRule('skillNotes.mysticalErudition',
-      'levels.Monk', '=', 'source<11 ? 1 : source<17 ? 2 : 3'
-    );
   }
 
+};
+
+/*
+ * Defines in #rules# the rules associated with race #name# that cannot be
+ * derived directly from the attributes passed to raceRules.
+ */
+Wildemount.raceRulesExtra = function(rules, name) {
+  if(name == 'Aaracokra') {
+    SRD5E.weaponRules(rules, 'Talons', 0, ['Un'], '1d4', null);
+    rules.defineRule('weapons.Talons', 'combatNotes.talons', '=', '1');
+  } else if(name == 'Fire Genasi') {
+    rules.defineRule('magicNotes.reachIntoTheBlaze.1',
+      'features.Reach Into The Blaze', '?', null,
+      'level', '=', 'source<3 ? "" : ", cast <i>Burning Hands</i> 1/long rest"'
+    );
+  } else if(name == 'Lotusden Halfling') {
+    rules.defineRule('magicNotes.childOfTheWood.1',
+      'features.Child Of The Wood', '?', null,
+      'level', '=', 'source<3 ? "" : source<5 ? ", cast <i>Entangle</i> 1/long rest" : ", cast <i>Entangle</i> and <i>Spike Growth</i> 1/long rest"'
+    );
+  } else if(name == 'Pallid Elf') {
+    rules.defineRule('magicNotes.blessingOfTheMoonWeaver.1',
+      'features.Blessing Of The Moon Weaver', '?', null,
+      'level', '=', 'source<3 ? "" : source<5 ? ", cast <i>Sleep</i> 1/long rest" : ", cast <i>Sleep</i> and <i>Invisibility</i> 1/long rest"'
+    );
+  } else if(name == 'Tortle') {
+    rules.defineRule('armorClass', 'combatNotes.naturalArmor', '=', '17');
+    SRD5E.weaponRules(rules, 'Claws', 0, ['Un'], '1d4', null);
+    rules.defineRule('weapons.Claws', 'combatNotes.claws', '=', '1');
+  } else if(name == 'Water Genasi') {
+    rules.defineRule('magicNotes.callIntoTheWaves.1',
+      'features.Call Into The Waves', '?', null,
+      'level', '=', 'source<3 ? "" : ", cast <i>Destroy Water</i> 1/long rest"'
+    );
+  }
 };
 
 /* Returns an array of plugins upon which this one depends. */
