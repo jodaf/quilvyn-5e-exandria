@@ -159,43 +159,40 @@ TaldoreiReborn.CLASSES_SELECTABLES_ADDED = {
   'Wizard':'"2:Blood Magic:Arcane Tradition"'
 };
 TaldoreiReborn.DEITIES = {
-  'The Allhammer':'Alignment=LG Domain=Knowledge,War',
-  'The Archheart':'Alignment=CG Domain=Light,Arcana',
-  'The Chained Oblivion':'Alignment=CE Domain=Death,Trickery',
-  'The Changebringer':'Alignment=CG Domain=Trickery,Nature',
-  'The Cloaked Serpent':'Alignment=CE Domain=Trickery,Blood',
-  'The Crawling King':'Alignment=NE Domain=Death,Blood',
-  'The Dawnfather':'Alignment=NG Domain=Life,Light',
-  'The Everlight':'Alignment=NG Domain=Life,Light',
-  'The Knowing Mistress':'Alignment=N Domain=Knowledge,Arcana',
-  'The Lawbearer':'Alignment=LN Domain=Knowledge',
-  'The Lord Of The Hells':'Alignment=LE Domain=Trickery,Blood',
-  'The Matron Of Ravens':'Alignment=LN Domain=Life,Death,Blood',
-  'The Moonweaver':'Alignment=CG Domain=Trickery',
-  'The Platinum Dragon':'Alignment=LG Domain=Life,War',
-  'The Ruiner':'Alignment=CE Domain=Tempest,War',
-  'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War',
-  'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War',
-  'The Spider Queen':'Alignment=CE Domain=Trickery,Knowledge',
+  'The Changebringer':'Alignment=CG Domain=Moon,Nature,Trickery',
+  'The Platinum Dragon':'Alignment=LG Domain=Life,Order,War',
+  'The Arch Heart':'Alignment=CG Domain=Arcana,Light,Nature',
+  'The Lawbearer':'Alignment=LN Domain=Knowledge,Order',
+  'The Knowing Mentor':'Alignment=N Domain=Arcana,Knowledge,Twilight',
   'The Stormlord':'Alignment=CN Domain=Tempest,War',
-  'The Strife Emporer':'Alignment=LE Domain=War',
-  'The Wildmother':'Alignment=N Domain=Nature,Tempest'
+  'The Wildmother':'Alignment=N Domain=Life,Nature,Tempest',
+  'The All-Hammer':'Alignment=LG Domain=Forge,Knowledge,War',
+  'The Dawnfather':'Alignment=NG Domain=Life,Light,Nature',
+  'The Everlight':'Alignment=NG Domain=Life,Light,Peace',
+  'The Matron Of Ravens':'Alignment=LN Domain=Death,Grave,Twilight,Blood',
+  'The Moonweaver':'Alignment=CG Domain=Arcana,Moon,Twilight',
+
+  'The Lord Of The Hells':'Alignment=LE Domain=Order,Trickery,War',
+  'The Strife Emperor':'Alignment=LE Domain=Forge,Order,War',
+  'The Ruiner':'Alignment=CE Domain=Death,Tempest,War,Blood',
+  'The Spider Queen':'Alignment=CE Domain=Knowledge,Trickery',
+  'The Chained Oblivion':'Alignment=CE Domain=Death,Grave,Trickery',
+  'The Scaled Tyrant':'Alignment=LE Domain=Order,Trickery,War',
+  'The Crawling King':'Alignment=NE Domain=Death,Trickery',
+  'The Whispered One':'Alignment=NE Domain=Arcana,Death,Knowledge',
+  'The Cloaked Serpent':'Alignment=CE Domain=Nature,Trickery'
 };
 TaldoreiReborn.FEATS_ADDED = {
-  'Cruel':
-    'Type=General',
-  'Flash Recall':
-    'Type=General Require="casterLevel >= 1"',
-  'Mystic Conflux':
-    'Type=General',
-  'Remarkable Recovery':
-    'Type=General',
+  'Cruel':'Type=General',
+  'Flash Recall':'Type=General Require="features.Spellcasting"',
+  "Fortune's Grace":'Type=Special',
+  'Mystic Conflux':'Type=General',
+  'Remarkable Recovery':'Type=General',
   'Spelldriver':
-    'Type=General Require="level >= 8"',
-  'Thrown Arms Master':
-    'Type=General',
-  'Vital Sacrifice':
-    'Type=General'
+    'Type=General ' +
+    'Require="level >= 11","features.Spellcasting || features.Pact Magic"',
+  'Thrown Arms Master':'Type=General',
+  'Vital Sacrifice':'Type=General'
 };
 TaldoreiReborn.FEATURES_ADDED = {
 
@@ -204,65 +201,68 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=skill ' +
     'Note="Ask 20-word favor of contact in return for future favor"',
   'Academic Requisition':
-    'Section=skill Note="Have access to school tools and crafting materials"',
-  'Elemental Harmony':
-    'Section=magic Note="Produce minor <i>Prestidigitation</i> effects"',
+    'Section=skill ' +
+    'Note="Have access to school tools, gain services through school at 25% discount"',
+  'Elemental Harmony':'Section=magic Note="Produce minor elemental effects"',
   'Fell Teachings':
-    'Section=skill Note="Adv on checks to uncover cult activity"',
+    'Section=skill Note="Adv on Religion about chosen Betrayer God"',
   'Legacy Of Secrecy':
-    'Section=feature Note="TODO"',
+    'Section=feature Note="Possession of firearm changes others\' reactions"',
   'Rifle Corps Relationship':
-    'Section=feature Note="TODO"',
+    'Section=feature Note="Has current or past relationships w/in WRC"',
 
   // Paths
   'Arcane Exemplar':
     'Section=magic ' +
-    'Note="Discharge 6 runes for 40\' Fly, +2 spell DC, resistance to spell damage, and regain HP from casting for 3+ rd"',
+    'Note="Discharge rune for 60\' Fly, +2 spell DC, foe Disadv vs. spells, resistance to spell damage, and regain HP from casting for 1 rd 1/long rest"',
   'Aura Of Liberation':
     'Section=magic ' +
     'Note="R%V\' Targets cannot be grappled or restrained, ignore underwater movement and attack penalties"',
   'Blessing Of The Blood-Drenched Moon':
     'Section=magic ' +
-    'Note="R30\' Use Channel Divinity to give target Adv on attack on foe w/in 5\' of an ally"',
+    'Note="R30\' Use Channel Divinity to give target Adv on attack on foe w/in 5\' of an ally for 10 min"',
   'Blessing Of The Watchful Moon':
     'Section=magic ' +
-    'Note="R30\' Use Channel Divinity to give target +10 Speed and Adv on tracking for 1 hr"',
+    'Note="R30\' Use Channel Divinity to give target +10 Speed and Adv on tracking and smell for 1 hr"',
   'Blighted Shape':
     'Section=magic,skill ' +
     'Note="+2 AC and 60\' darkvision during Wild Shape",' +
          '"Skill Proficiency (Intimidation)"',
   'Blood Channeling':
-    'Section=magic Note="TODO"',
+    'Section=magic ' +
+    'Note="When casting, take 1d10 HP necrotic per 50 GP to forego material components"',
   'Blood Domain Bonus Proficiencies':
     'Section=feature Note="Weapon Proficiency (Martial)"',
   'Blood Puppet':
     'Section=magic ' +
     'Note="R60\' Use Channel Divinity to force %V target to move half speed and attack (Wis neg)"',
   'Bloodletting Focus':
-    'Section=magic Note="Harm spells inflict +(spell level + 2) HP necrotic"',
+    'Section=magic ' +
+    'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
   'Bond Of Mutual Suffering':
-    'Section=magic Note="TODO"',
+    'Section=magic ' +
+    'Note="Use Reaction to inflict equal damage on attacker %V/short rest"',
   'Call Of The Shadowseeds':
     'Section=magic ' +
-    'Note="Summon blighted sapling to attack w/in Define Ground %{proficiencyBonus}/long rest"',
+    'Note="After damage w/in Defile Ground area, may use Reaction to summon blighted sapling to attack %{proficiencyBonus}/long rest"',
   'Clarity Of Catha':
     'Section=magic ' +
     'Note="R30\' Target gains Adv on Wis save %{proficiencyBonus}/long rest"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="Channel Divinity with target view or blood to learn distance, direction, HP, and conditions for conc or 1 hr, share sight or sound for %{wisdomModifier>?1} rd (Con neg + 2d6 HP necrotic damage to self)"',
+    'Note="Channel Divinity with target view or blood to learn distance, direction, HP, and conditions for conc or 1 hr, suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} min (Con ends)"',
   'Debilitating Barrage':
     'Section=combat ' +
     'Note="Spend 3 Ki Points after unarmed hit for foe vulnerability to chosen damage type for 1 min"',
   'Defile Ground':
     'Section=magic ' +
-    'Note="R60\' %V\' radius becomes difficult terrain and inflicts +1d%1 HP necrotic for 1 min 1/long rest"',
+    'Note="R60\' %V\' radius becomes difficult terrain for foes and inflicts +1d%1 HP necrotic for 1 min 1/long rest"',
   'Demolishing Might':
     'Section=combat ' +
     'Note="Melee weapons x2 damage vs. objects, +1d8 HP damage vs. constructs"',
   'Eclipse Of Ill Omen':
     'Section=magic ' +
-    'Note="60\' radius red glow blocks other light and targets suffer Disadv on saves for conc or 1 min"',
+    'Note="60\' radius dim red glow blocks other light; targets suffer Disadv on saves for conc or 1 min"',
   'Empowered Cantrips':
     'Section=magic Note="+%{wisdomModifier} HP cantrip damage"',
   'Essence Runes':
@@ -274,28 +274,32 @@ TaldoreiReborn.FEATURES_ADDED = {
   'Extract Aspects':
     'Section=combat ' +
     'Note="Use Reaction after Flurry Of Blows hit to gain info about foe and unarmed attack Reaction to foe miss until next rest"',
+  "Fortune's Grace":
+    'Section=feature ' +
+    'Note="May reroll attack, ability, or save or force foe reroll 1/long rest"',
   'Foul Conjuration':
     'Section=magic ' +
-    'Note="Summoned creatures immune to necrotic damage and poison damage and condition, cause toxic explosion when killed"',
+    'Note="Summoned creatures immune to necrotic damage, poison damage, and poisoned condition and explode in a toxic shower when killed"',
   'Fury Of The Tides':
     'Section=combat ' +
-    'Note="Hit pushes 10\' (+{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
+    'Note="Hit pushes 10\' (inflicts %{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
   'Glyph Of Hemorrhaging':
-    'Section=magic Note="TODO"',
-  'Glyphs Of Aegis':
-    'Section=magic Note="Discharge runes to negate 1d6 damage each%1"',
+    'Section=magic ' +
+    'Note="May curse successful spell attack target to suffer +1d6 HP necrotic from each attack for 1 min (Con ends)"',
+  'Glyph Of Aegis':
+    'Section=magic Note="Discharge runes to negate 1d%V damage each%1"',
   'Hurricane Strike':
     'Section=combat ' +
-    'Note="Pushing foe allows ally to use Reaction for melee attack, or leap knocks prone (DC %{8 + proficiencyBonus + strengthModifier} Str neg)"',
+    'Note="Pushing foe allows ally to use Reaction for melee attack, and leap knocks prone (DC %{8 + proficiencyBonus + strengthModifier} Str neg)"',
   'Impending Misfortune':
     'Section=feature ' +
     'Note="Trade +10 on immediate attack or save for -10 on next attack or save"',
   'Incarnation Of Corruption':
     'Section=combat,save ' +
-    'Note="+2 AC/Gain %{proficiencyBonus} HP from Defile Ground",' +
+    'Note="+2 AC/Gain %{proficiencyBonus} temporary HP from Defile Ground",' +
          '"Resistance to necrotic damage"',
   'Manifest Inscriptions':
-    'Section=magic Note="R15\' Discharge 1 rune to reveal hidden glyphs"',
+    'Section=magic Note="R60\' Discharge 1 rune to reveal hidden glyphs"',
   'Marine Layer':
     'Section=magic Note="20\' radius obscures vision for 10 min"',
   'Mind Of Mercury':
@@ -309,7 +313,7 @@ TaldoreiReborn.FEATURES_ADDED = {
   'Mythic Swashbuckler':
     'Section=ability,combat,save,skill ' +
     'Note="Adv on Dexterity and %{speed} climb speed for 1 min 1/long rest",' +
-         '"Adv on attacks vs. adjacent foe when no other adjacent for 1 min 1/long rest",' +
+         '"Adv on attacks vs. adjacent foe when no other adjacent and Dash or Disengage as bonus action for 1 min 1/long rest",' +
          '"Adv on Dexterity for 1 min 1/long rest",' +
          '"Adv on Athletics 1/long rest"',
   'Nimbus Of Pathos':
@@ -323,18 +327,19 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May trade Disadv on attacks for grapple immunity and foe Disadv on attacks"',
   'Runic Torrent':
     'Section=magic ' +
-    'Note="Discharge spell level runes to overcome target resistance and immunity"',
+    'Note="Discharge 2 runes to change spell damage to force and push 15\' or knock prone (Str neg)"',
   'Sanguine Burst':
-    'Section=magic Note="TODO"',
+    'Section=magic ' +
+    'Note="May take spell level HP necrotic to reroll %{intelligenceModifier>?1} spell damage dice"',
   'Sanguine Recall':
     'Section=magic ' +
-    'Note="Recover up to %V spell levels, suffer equal d8 HP damage"',
+    'Note="Recover up to %V spell levels (level 6 max), suffer equal d8 HP damage"',
   'Sigilic Augmentation':
     'Section=magic ' +
-    'Note="Discharge rune for Adv on Str, Dex, or Con checks for 1 rd"',
+    'Note="Discharge rune for Adv on Str, Dex, or Con checks for 1 rd, use Reaction for same 1/long rest"',
   'Sorrowful Fate':
     'Section=combat ' +
-    'Note="Spend 1 Bardic Inpsiration die to change foe save to Charisma, failure inflicts die HP psychic"',
+    'Note="Spend 1 Bardic Inspiration die to change foe save to Charisma, failure inflicts die HP psychic"',
   'Spirit Of The Mountain':
     'Section=combat Note="Cannot be knocked prone or pushed during rage"',
   'Stormy Waters':
@@ -344,13 +349,15 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="R60\' On foe critical hit, spend 1 Bardic Inspiration die to inflict %V-20 crit range until critical hit or 1 min"',
   'Thicker Than Water':
-    'Section=magic Note="TODO"',
+    'Section=combat,magic ' +
+    'Note="Regain +%{proficiencyBonus} HP from healing spells",' +
+         '"Resistance to nonmagical bludgeoning, piercing, and slashing damage during spell concentration"',
   'Thunderous Blows':
     'Section=combat ' +
-    'Note="Successful attack pushes foe 5\' (Huge foe DC %{8+proficiencyBonus+strengthModifier} Str neg)"',
+    'Note="Successful attack pushes foe %V\' (Huge foe DC %{8+proficiencyBonus+strengthModifier} Str neg)"',
   'Unstoppable':
     'Section=combat ' +
-    'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage"',
+    'Note="Cannot be slowed, frightened, knocked prone, paralyzed, or stunned during rage"',
   'Vascular Corruption Aura':
     'Section=combat ' +
     'Note="R30\' Foes suffer 3d6 HP necrotic and half healing for 1 min 1/long rest"',
@@ -359,20 +366,23 @@ TaldoreiReborn.FEATURES_ADDED = {
   'Cruel':
     'Section=feature,combat,skill ' +
     'Note="Use %V Cruelty Points/long rest",' +
-         '"Spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit",'+
-         '"Spend 1 Cruelty Point for Adv on Intimidation"',
+         '"Spend 1 Cruelty Point for +1d6 damage or to gain 1d6 temporary HP on crit",'+
+         '"Spend 1 Cruelty Point for +1d6 on Intimidation"',
   'Flash Recall':'Section=magic Note="Swap prepared spell 1/short rest"',
   'Mystic Conflux':
-    'Section=skill,magic ' +
-    'Note="Adv on Arcana (investigate magic device)",' +
-         '"Attune 4 items"',
-  'Remarkable Recovery':'Section=feature Note="TODO"',
-  'Spelldriver':'Section=magic Note="Cast multiple level 1 - 3 spells/rd"',
+    'Section=magic Note="May attune 4 items, cast <i>Identify</i> 1/long rest"',
+  'Remarkable Recovery':
+    'Section=ability,combat ' +
+    'Note="+1 Constitution",' +
+         '"Healing and stabilization restore +%{constitutionModifier>?1} HP"',
+  'Spelldriver':'Section=magic Note="Cast additional level 1 - 2 spell/rd"',
   'Thrown Arms Master':
     'Section=ability,combat ' +
     'Note="+1 Strength or Dexterity",' +
          '"Throw any weapon, +20/+40 throw range, light weapon returns after miss"',
-  'Vital Sacrifice':'Section=feature Note="TODO"'
+  'Vital Sacrifice':
+    'Section=feature ' +
+    'Note="Take 1d6 HP necrotic to gain +1d6 attack or +2d6 HP necrotic damage, or to inflict -1d4 on foe Str, Dex, or Con save"'
 
 };
 TaldoreiReborn.PATHS_ADDED = {
@@ -400,20 +410,20 @@ TaldoreiReborn.PATHS_ADDED = {
     'Level=levels.Druid ' +
     'Features=' +
       '"2:Defile Ground","2:Blighted Shape","6:Call Of The Shadowseeds",' +
-      '"10:Foul Conjuration","14:Reincarnation Of Corruption"',
+      '"10:Foul Conjuration","14:Incarnation Of Corruption"',
   'College Of Tragedy':
     'Group=Bard ' +
     'Level=levels.Bard ' +
     'Features=' +
       '"3:Poetry In Misery","3:Sorrowful Fate","6:Tale Of Hubris",' +
-      '"6:Impending Misforune","14:Nimbus Of Pathos"',
+      '"6:Impending Misfortune","14:Nimbus Of Pathos"',
   'Moon Domain':
     'Group=Cleric ' +
     'Level=levels.Cleric ' +
     'Features=' +
       '"1:Clarity Of Catha","2:Blessing Of The Watchful Moon",' +
       '"2:Blessing Of The Blood-Drenched Moon","6:Mind Of Two Moons",' +
-      '"8:Empowered Cantrips","17:Eclipse Of Ill Oment" ' +
+      '"8:Empowered Cantrips","17:Eclipse Of Ill Omen" ' +
     'Spells=' +
       '"1:Faerie Fire,Silent Image",' +
       '"2:Invisibility,Moonbeam",' +
@@ -438,11 +448,11 @@ TaldoreiReborn.PATHS_ADDED = {
     'Features=' +
       '"3:Thunderous Blows","3:Spirit Of The Mountain","6:Demolishing Might",' +
       '"6:Resolute Stance","10:Hurricane Strike",14:Unstoppable',
-  'Runechild Bloodline':
+  'Runechild':
     'Group=Sorcerer ' +
     'Level=levels.Sorcerer ' +
     'Features=' +
-      '"1:Essence Runes","1:Glyphs Of Aegis","6:Manifest Inscriptions",' +
+      '"1:Essence Runes","1:Glyph Of Aegis","6:Manifest Inscriptions",' +
       '"6:Sigilic Augmentation","14:Runic Torrent","18:Arcane Exemplar" ' +
     'Spells=' +
       '"1:Longstrider,Protection From Evil And Good",' +
@@ -476,9 +486,9 @@ TaldoreiReborn.SPELLS_ADDED = {
  */
 TaldoreiReborn.choiceRules = function(rules, type, name, attrs) {
   PHB5E.choiceRules(rules, type, name, attrs);
-  if(type == 'feat')
+  if(type == 'Feat')
     TaldoreiReborn.featRulesExtra(rules, name);
-  else if(type == 'path')
+  else if(type == 'Path')
     TaldoreiReborn.pathRulesExtra(rules, name);
 };
 
@@ -489,6 +499,11 @@ TaldoreiReborn.choiceRules = function(rules, type, name, attrs) {
 TaldoreiReborn.featRulesExtra = function(rules, name) {
   if(name == 'Cruel')
     rules.defineRule('featureNotes.cruel', 'proficiencyBonus', '=', null);
+  else if(name == "Fortune's Grace")
+    // Ensure that a goody note will be able to bump feat count before
+    // character level 4.
+    rules.defineRule
+      ('featCount.General', "features.Fortune's Grace", '+=', '0');
   else if(name == 'Thrown Arms Master')
     rules.defineRule
       ('abilityBoosts', 'abilityNotes.thrownArmsMaster', '+=', '1');
@@ -506,9 +521,16 @@ TaldoreiReborn.pathRulesExtra = function(rules, name) {
 
   if(name == 'Blood Domain') {
     rules.defineRule
+      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
+    rules.defineRule
+      ('combatNotes.divineStrike.1', pathLevel, '=', '"necrotic"');
+    rules.defineRule
       ('magicNotes.bloodPuppet', pathLevel, '=', 'source<17?"Large":"Huge"');
     rules.defineRule
       ('magicNotes.sanguineRecall', pathLevel, '=', 'Math.floor(source / 2)');
+  } else if(name == 'Blood Magic') {
+    rules.defineRule
+      ('magicNotes.bondOfMutualSuffering', pathLevel, '=', 'source<14 ? 1 : 2');
   } else if(name == 'Circle Of The Blighted') {
     rules.defineRule
       ('magicNotes.defileGround', pathLevel, '=', 'source<10 ? 10 : 20');
@@ -522,9 +544,18 @@ TaldoreiReborn.pathRulesExtra = function(rules, name) {
   } else if(name == 'Oath Of The Open Sea') {
     rules.defineRule
       ('magicNotes.auraOfLiberation', pathLevel, '=', 'source<18 ? 10 : 30');
-  } else if(name == 'Runechild Bloodline') {
-    rules.defineRule('magicNotes.glyphsOfAegis.1',
-      pathLevel, '=', 'source<8 ? "" : ", touch can transfer 1 rune for 1 hr"'
+    // After using the new spell definitions to create the oath versions,
+    // remove the generic versions from the selection list.
+    delete rules.getChoices('spells')['Freedom Of The Waves(P3 Conj)'];
+    delete rules.getChoices('spells')['Freedom Of The Winds(P5 Abju)'];
+  } else if(name == 'Path Of The Juggernaut') {
+    rules.defineRule
+      ('combatNotes.thunderousBlows', pathLevel, '=', 'source<10 ? 5 : 10');
+  } else if(name == 'Runechild') {
+    rules.defineRule
+      ('magicNotes.glyphOfAegis', pathLevel, '=', 'source<14 ? 6 : 8');
+    rules.defineRule('magicNotes.glyphOfAegis.1',
+      pathLevel, '=', 'source<8 ? "" : ", touch can transfer up to 3 runes for 1 hr"'
     );
   } else if(name == 'Way Of The Cobalt Soul') {
     rules.defineRule('combatNotes.mindOfMercury',
@@ -555,14 +586,22 @@ TaldoreiReborn.getPlugins = function() {
 /* Returns HTML body content for user notes associated with this rule set. */
 TaldoreiReborn.ruleNotes = function() {
   return '' +
-    '<h2>TaldoreiReborn Quilvyn Plugin Notes</h2>\n' +
-    'TaldoreiReborn Quilvyn Plugin Version ' + TaldoreiReborn.VERSION + '\n' +
+    '<h2>Taldorei Reborn Quilvyn Plugin Notes</h2>\n' +
     '<p>\n' +
-    'There are no known bugs, limitations, or usage notes specific to the TaldoreiReborn Rule Set.\n' +
+    'Taldorei Reborn Quilvyn Plugin Version ' + TaldoreiReborn.VERSION + '\n' +
     '</p>\n' +
+    '<h3>Usage Notes</h3>\n' +
+    '<ul>\n' +
+    '  <li>\n' +
+    '    Quilvyn makes the Fortune\'s Grace feature of the Fate Touched\n' +
+    '    blessing available as a special feat. To use it, add the line\n' +
+    '    "* +1 Feat" to the character notes, then select Fortune\'s Grace\n' +
+    '    in the Feats pull-down.\n' +
+    '  </li>\n' +
+    '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +
     '<p>\n' +
-    'Portions of Quilvyn\'s TaldoreiReborn rule set are unofficial Fan Content\n' +
+    'Portions of Quilvyn\'s Taldorei Reborn rule set are unofficial Fan Content\n' +
     'permitted under Wizards of the Coast\'s ' +
     '<a href="https://company.wizards.com/en/legal/fancontentpolicy">Fan Content Policy</a>.\n' +
     '</p><p>\n' +
@@ -570,11 +609,11 @@ TaldoreiReborn.ruleNotes = function() {
     'of the materials used are property of Wizards of the Coast. © Wizards ' +
     'of the Coast LLC.\n' +
     '</p><p>\n' +
-    'Quilvyn is not approved or endorsed by Green Ronin Publishing. Portions ' +
-    'of the materials used are property of Green Ronin Publishing. © Green ' +
-    'Ronin Publishing, LLC.\n' +
+    'Quilvyn is not approved or endorsed by Darrington Press LLC. Portions ' +
+    'of the materials used are property of Darrington Press LLC. © Darrington ' +
+    'Press LLC.\n' +
     '</p><p>\n' +
-    'Tal\'dorei Campaign Setting © 2017 Green Ronin Publishing, LLC.\n' +
+    'Tal\'dorei Campaign Setting Reborn © 2021 Darrington Press LLC.\n' +
     '</p><p>\n' +
     'Dungeons & Dragons Player\'s Handbook © 2014 Wizards of the Coast LLC.\n' +
     '</p>\n';

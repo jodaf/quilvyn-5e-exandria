@@ -119,6 +119,9 @@ Taldorei.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Deception/Choose 1 from Sleight Of Hand, Stealth)",' +
       '"1:Tool Proficiency (Choose 1 from Disguise Kit, Forgery Kit, Thieves\' Tools)",' +
       '"1:A Favor In Turn","1:Thieves\' Cant"',
+  'Fate-Touched':
+    'Features=' +
+      '"1:Fortune\'s Grace"',
   'Lyceum Student':
     'Equipment=' +
       '"Fine Clothes","Student Uniform","Writing Kit","10 GP" ' +
@@ -145,27 +148,27 @@ Taldorei.CLASSES_SELECTABLES_ADDED = {
     '"1:Runechild:Sorcerous Origin"'
 };
 Taldorei.DEITIES = {
-  'The Allhammer':'Alignment=LG Domain=Knowledge,War',
   'The Archheart':'Alignment=CG Domain=Light,Arcana',
-  'The Chained Oblivion':'Alignment=CE Domain=Death,Trickery',
+  'The Allhammer':'Alignment=LG Domain=Knowledge,War',
   'The Changebringer':'Alignment=CG Domain=Trickery,Nature',
-  'The Cloaked Serpent':'Alignment=CE Domain=Trickery,Blood',
-  'The Crawling King':'Alignment=NE Domain=Death,Blood',
   'The Dawnfather':'Alignment=NG Domain=Life,Light',
   'The Everlight':'Alignment=NG Domain=Life,Light',
   'The Knowing Mistress':'Alignment=N Domain=Knowledge,Arcana',
   'The Lawbearer':'Alignment=LN Domain=Knowledge',
-  'The Lord Of The Hells':'Alignment=LE Domain=Trickery,Blood',
   'The Matron Of Ravens':'Alignment=LN Domain=Life,Death,Blood',
   'The Moonweaver':'Alignment=CG Domain=Trickery',
   'The Platinum Dragon':'Alignment=LG Domain=Life,War',
-  'The Ruiner':'Alignment=CE Domain=Tempest,War',
-  'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War',
-  'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War',
-  'The Spider Queen':'Alignment=CE Domain=Trickery,Knowledge',
   'The Stormlord':'Alignment=CN Domain=Tempest,War',
-  'The Strife Emporer':'Alignment=LE Domain=War',
-  'The Wildmother':'Alignment=N Domain=Nature,Tempest'
+  'The Wildmother':'Alignment=N Domain=Nature,Tempest',
+
+  'The Chained Oblivion':'Alignment=CE Domain=Death,Trickery',
+  'The Cloaked Serpent':'Alignment=CE Domain=Trickery,Blood',
+  'The Crawling King':'Alignment=NE Domain=Death,Blood',
+  'The Lord Of The Hells':'Alignment=LE Domain=Trickery,Blood',
+  'The Ruiner':'Alignment=CE Domain=Tempest,War',
+  'The Spider Queen':'Alignment=CE Domain=Trickery,Knowledge',
+  'The Strife Emperor':'Alignment=LE Domain=War',
+  'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War'
 };
 Taldorei.FEATS_ADDED = {
   'Cruel':
@@ -193,8 +196,10 @@ Taldorei.FEATURES_ADDED = {
   'A Favor In Turn':
     'Section=skill ' +
     'Note="Ask 20-word favor of contact in return for future favor"',
-  'Elemental Harmony':
-    'Section=magic Note="Produce minor <i>Prestidigitation</i> effects"',
+  'Elemental Harmony':'Section=magic Note="Produce minor elemental effects"',
+  "Fortune's Grace":
+    'Section=feature ' +
+    'Note="Adv on attack, ability, or saving throw or foe Disadv on self attack 1/long rest"',
   'Student Privilege':
     'Section=skill Note="Have access to school tools and crafting materials"',
   'Wicked Awareness':
@@ -203,33 +208,33 @@ Taldorei.FEATURES_ADDED = {
   // Paths
   'Arcane Exemplar Form':
     'Section=magic ' +
-    'Note="Discharge 6 runes for 40\' Fly, +2 spell DC, resistance to spell damage, and regain HP from casting for 3+ rd"',
+    'Note="Discharge 6 runes for 40\' Fly, +2 spell DC, resistance to spell damage, and regain HP from casting for 3 rd"',
   'Blood Domain Bonus Proficiencies':
     'Section=feature Note="Weapon Proficiency (Martial)"',
   'Blood Puppet':
     'Section=magic ' +
-    'Note="R60\' Channel Divinity to force %V target to move half speed and attack (Con neg)"',
+    'Note="R60\' Use Channel Divinity to force %V target to move half speed and attack (Con neg)"',
   'Bloodletting Focus':
     'Section=magic ' +
-    'Note="+(spell level + 2) HP necrotic damage on harming spells"',
+    'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="Study 2 oz target blood to learn distance, direction, health for conc or 1 hr, share sight or sound for %{wisdomModifier>?1} rd (Con neg + 2d6 HP necrotic damage to self)"',
+    'Note="Channel Divinity with target blood to learn distance, direction, HP, and conditions for conc or 1 hr, suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} rd (Con ends)"',
   'Debilitating Barrage':
     'Section=combat ' +
-    'Note="Spend 3 Ki Points after triple hit for foe DisAdv next attack, vulnerability to damage type for 1 min (Con neg)"',
+    'Note="Spend 3 Ki Points after triple hit for foe Disadv next attack, vulnerability to chosen damage type for 1 min (Con neg)"',
   'Demolishing Might':
     'Section=combat ' +
-    'Note="x2 damage vs. objects, melee weapons +1d8 HP damage vs. constructs"',
+    'Note="Melee weapons x2 damage vs. objects, +1d8 HP damage vs. constructs"',
   'Essence Runes':
     'Section=magic ' +
     'Note="Spending Sorcery Points charges %{levels.Sorcerer} runes; 5 charged runes emit 5\' light"',
   'Extort Truth':
     'Section=combat ' +
-    'Note="Spend 2 Ki Points after double hit to prevent foe lying for 1 min instead of damage (Cha neg)"',
+    'Note="Spend 2 Ki Points after dbl hit to prevent foe lying (Cha neg) for 1 min"',
   'Extract Aspects':
     'Section=combat ' +
-    'Note="Spend 1 Ki Point after double hit to gain info about foe (Con neg)"',
+    'Note="Spend 1 Ki Point after dbl hit to gain info about foe (Con neg)"',
   'Glyphs Of Aegis':
     'Section=magic Note="Discharge runes to negate 1d6 damage each%1"',
   'Manifest Inscriptions':
@@ -240,16 +245,17 @@ Taldorei.FEATURES_ADDED = {
          '"Spend 1 Ki Point for Adv on Investigation"',
   'Mystical Erudition':
     'Section=skill ' +
-    'Note="Spend 1 Ki Point for Adv on Arcana, History, and Religion/+%V Language Count"',
+    'Note="Spend 1 Ki Point for Adv on Arcana, History, or Religion/+%V Language Count"',
   'Overwhelming Cleave':
     'Section=combat Note="Bonus attack on second foe adjacent to first"',
-  'Preternatural Counter':'Section=combat Note="OA after foe miss"',
+  'Preternatural Counter':
+    'Section=combat Note="Use Reaction for OA after foe miss"',
   'Runic Torrent':
     'Section=magic ' +
     'Note="Discharge spell level runes to overcome target resistance and immunity"',
   'Sanguine Recall':
     'Section=magic ' +
-    'Note="Self suffer %Vd6 HP damage to recover %V spell slot levels 1/long rest"',
+    'Note="Recover up to %V spell levels, suffer equal d6 HP damage"',
   'Sigilic Augmentation':
     'Section=magic ' +
     'Note="Discharge rune for Adv on Str, Dex, or Con checks for 1 rd"',
@@ -257,13 +263,13 @@ Taldorei.FEATURES_ADDED = {
     'Section=combat Note="Cannot be knocked prone during rage"',
   'Thunderous Blows':
     'Section=combat ' +
-    'Note="Successful attack pushes foe 5\', may follow (DC %{8+proficiencyBonus+strengthModifier} Str neg)"',
+    'Note="Successful attack pushes foe 5\' (DC %{8+proficiencyBonus+strengthModifier} Str neg)"',
   'Unstoppable':
     'Section=combat ' +
     'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage"',
   'Vascular Corruption Aura':
     'Section=combat ' +
-    'Note="R30\' Foes suffer 2d6 necrotic HP for 1 min 1/long rest"',
+    'Note="R30\' Foes suffer 2d6 HP necrotic and half healing for 1 min 1/long rest"',
 
   // Feats
   'Cruel':
@@ -273,26 +279,26 @@ Taldorei.FEATURES_ADDED = {
          '"Spend 1 Cruelty Point for Adv on Intimidation"',
   'Dual-Focused':
     'Section=magic ' +
-    'Note="Concentrate on two spells simultaneously (DC 10 + number of rd Con to maintain)"',
+    'Note="Maintain concentration on two spells simultaneously (DC 10 + number of rd Con to maintain)"',
   'Flash Recall':'Section=magic Note="Swap prepared spell 1/short rest"',
   'Gambler':
     'Section=ability,feature,skill ' +
     'Note="+1 Charisma",' +
-         '"Tool Proficiency(Choose 2 from any Game)",' +
+         '"Tool Proficiency (Choose 2 from any Game)",' +
          '"Reroll Carousing/Adv on Deception (games)/Adv on Persuasion (games)"',
   'Mending Affinity':
     'Section=ability,combat ' +
     'Note="+1 Constitution",' +
-         '"+%{proficiencyBonus} HP from healer\'s kit, potion, or spell"',
+         '"Regain +%{proficiencyBonus} HP from healer\'s kit, potion, or spell"',
   'Mystic Conflux':
     'Section=skill,magic ' +
     'Note="Adv on Arcana (investigate magic device)",' +
-         '"Attune 4 items"',
+         '"May attune 4 items"',
   'Rapid Drinker':
     'Section=combat,save ' +
     'Note="Quaff as bonus action",' +
          '"Adv on ingestion saves"',
-  'Spelldriver':'Section=magic Note="Cast multiple level 1 - 3 spells/rd"',
+  'Spelldriver':'Section=magic Note="Cast additional level 1 - 2 spell/rd"',
   'Thrown Arms Master':
     'Section=ability,combat ' +
     'Note="+1 Strength or Dexterity",' +
@@ -300,7 +306,9 @@ Taldorei.FEATURES_ADDED = {
 
   // Races
   'Ravenite Ability Adjustment':
-    'Section=ability Note="+1 Constitution/+1 Wisdom"'
+    'Section=ability Note="+1 Constitution/+1 Wisdom"',
+  'Ravenite Damage Resistance':
+    'Section=save Note="Resistance to non-magical slashing damage"'
 
 };
 Taldorei.PATHS_ADDED = {
@@ -323,7 +331,7 @@ Taldorei.PATHS_ADDED = {
     'Features=' +
       '"3:Stance Of The Mountain","3:Thunderous Blows","6:Demolishing Might",' +
       '"10:Overwhelming Cleave",14:Unstoppable',
-  'Runechild Bloodline':
+  'Runechild':
     'Group=Sorcerer ' +
     'Level=levels.Sorcerer ' +
     'Features=' +
@@ -351,9 +359,9 @@ Taldorei.RACES_ADDED = {
  */
 Taldorei.choiceRules = function(rules, type, name, attrs) {
   PHB5E.choiceRules(rules, type, name, attrs);
-  if(type == 'feat')
+  if(type == 'Feat')
     Taldorei.featRulesExtra(rules, name);
-  else if(type == 'path')
+  else if(type == 'Path')
     Taldorei.pathRulesExtra(rules, name);
 };
 
@@ -385,7 +393,7 @@ Taldorei.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.sanguineRecall',
       'levels.Cleric', '=', 'Math.floor(source / 2)'
     );
-  } else if(name == 'Runechild Bloodline') {
+  } else if(name == 'Runechild') {
     rules.defineRule('magicNotes.glyphsOfAegis.1',
       pathLevel, '=', 'source<8 ? "" : ", touch can transfer 1 rune for 1 hr"'
     );
@@ -419,7 +427,9 @@ Taldorei.getPlugins = function() {
 Taldorei.ruleNotes = function() {
   return '' +
     '<h2>Taldorei Quilvyn Plugin Notes</h2>\n' +
+    '<p>\n' +
     'Taldorei Quilvyn Plugin Version ' + Taldorei.VERSION + '\n' +
+    '</p>\n' +
     '<p>\n' +
     'There are no known bugs, limitations, or usage notes specific to the Taldorei Rule Set.\n' +
     '</p>\n' +
