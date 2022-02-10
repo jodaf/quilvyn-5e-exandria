@@ -125,7 +125,8 @@ Wildemount.CLASSES_SELECTABLES_ADDED = {
   'Fighter':
     '"3:Echo Knight:Martial Archetype"',
   'Wizard':
-    '"1:Runechild:Sorcerous Origin"'
+    '"2:Chronurgy Magic:Arcane Tradition",' +
+    '"2:Graviturgy Magic:Arcane Tradition"'
 };
 Wildemount.DEITIES = {
   'Avandra, The Change Bringer':'Alignment=CG Domain=Nature,Trickery',
@@ -160,21 +161,46 @@ Wildemount.FEATURES_ADDED = {
     'Section=feature Note="May write to distant Volstrucker members"',
 
   // Paths
-  'Adjust Density':'Section=feature Note="TODO"',
-  'Arcane Abeyance':'Section=feature Note="TODO"',
-  'Chronal Shift':'Section=feature Note="TODO"',
-  'Convergent Future':'Section=feature Note="TODO"',
-  'Echo Avatar':'Section=feature Note="TODO"',
-  'Event Horizon':'Section=feature Note="TODO"',
-  'Gravity Well':'Section=feature Note="TODO"',
-  'Legion Of One':'Section=feature Note="TODO"',
-  'Manifest Echo':'Section=feature Note="TODO"',
-  'Momentary Statis':'Section=feature Note="TODO"',
-  'Reclaim Potential':'Section=feature Note="TODO"',
-  'Shadow Martyr':'Section=feature Note="TODO"',
-  'Temporal Awareness':'Section=feature Note="TODO"',
-  'Unleash Incarnation':'Section=feature Note="TODO"',
-  'Violent Attraction':'Section=feature Note="TODO"',
+  'Adjust Density':
+    'Section=magic Note="R30\' Dbl or halve weight of %V target (-10/+10 Speed, Adv/Disadv on Str) for conc or 1 min"',
+  'Arcane Abeyance':
+    'Section=magic ' +
+    'Note="Store level 1 - 4 spell in bead for use w/in 1 hr 1/short rest"',
+  'Chronal Shift':
+    'Section=combat ' +
+    'Note="R30\' Use Reaction to force attack, ability, or save reroll 2/long rest"',
+  'Convergent Future':
+    'Section=combat ' +
+    'Note="R60\' Suffer exhaustion to dictate whether attack, ability, or save roll succeeds 1/long rest"',
+  'Echo Avatar':
+    'Section=magic Note="May see and hear via Manifest Echo for 10 min"',
+  'Event Horizon':
+    'Section=magic ' +
+    'Note="30\' radius inflicts 2d10 force and holds foes (Str half damage, 1/3 Speed) 1/long rest (level 3 spell slot refreshes)"',
+  'Gravity Well':
+    'Section=magic Note="Successful targeted spell moves target 5\'"',
+  'Legion Of One':
+    'Section=combat ' +
+    'Note="Minimum 1 Manifest Echo use after initiative/May create 2 Manifest Echos simultaneously"',
+  'Manifest Echo':
+    'Section=combat ' +
+    'Note="R30\' Copy of self (AC %{14+proficiencyBonus}, HP 1, MV 30\') can swap places and transmit attacks and opportunity attacks"',
+  'Momentary Statis':
+    'Section=magic ' +
+    'Note="R60\' Incapacitates target for 1 rd %{intelligenceModifier>?1}/long rest"',
+  'Reclaim Potential':
+    'Section=combat ' +
+    'Note="Gain 2d6+%{constitutionModifier} temporary HP when Manifest Echo destroyed"',
+  'Shadow Martyr':
+    'Section=combat ' +
+    'Note="May place Manifest Echo in front of attack 1/short rest"',
+  'Temporal Awareness':'Section=combat Note="+%V Initiative"',
+  'Unleash Incarnation':
+    'Section=combat ' +
+    'Note="May make extra attack through Manifest Echo %{constitutionModifier>?1}/long rest"',
+  'Violent Attraction':
+    'Section=combat ' +
+    'Note="R60\' Use Reaction to give target attack +1d10 HP or inflict +2d10 HP on falling target %{intelligenceModifier>?1}/long rest"',
 
   // Races
   'Aaracokra Ability Adjustment':'Section=ability Note="+1 Dexterity/+2 Wisdom"',
@@ -434,9 +460,12 @@ Wildemount.pathRulesExtra = function(rules, name) {
     name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') +
     'Level';
 
-  if(name == 'Runechild') {
-    rules.defineRule('magicNotes.glyphsOfAegis.1',
-      pathLevel, '=', 'source<8 ? "" : ", touch can transfer 1 rune for 1 hr"'
+  if(name == 'Chronurgy Magic') {
+    rules.defineRule
+      ('combatNotes.temporalAwareness', 'intelligenceModifier', '=', null);
+  } else if(name == 'Chronurgy Magic') {
+    rules.defineRule('magicNotes.adjustDensity',
+      pathLevel, '=', 'source<10 ? "large" : "huge"'
     );
   }
 
@@ -499,9 +528,15 @@ Wildemount.ruleNotes = function() {
     '<p>\n' +
     'Wildemount Quilvyn Plugin Version ' + Wildemount.VERSION + '\n' +
     '</p>\n' +
-    '<p>\n' +
-    'There are no known bugs, limitations, or usage notes specific to the Wildemount Rule Set.\n' +
-    '</p>\n' +
+    '<h3>Usage Notes</h3>\n' +
+    '<ul>\n' +
+    '  <li>\n' +
+    '  Races from the Wildemount rule book that are also defined in Volo\'s\n' +
+    '  Guide to Monsters are available only if the Volo module is also\n' +
+    '  selected. These races are Aasimar, Firbolg, Bugbear, Goblin,\n' +
+    '  Hobgoblin, Kenku, Orc, and Tabaxi.\n' +
+    '  </li>\n' +
+    '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +
     '<p>\n' +
     'Portions of Quilvyn\'s Wildemount rule set are unofficial Fan Content\n' +
