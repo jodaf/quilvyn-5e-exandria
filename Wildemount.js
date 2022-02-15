@@ -165,7 +165,7 @@ Wildemount.FEATURES_ADDED = {
   // Feats
   'Hollow One':
     'Section=feature ' +
-    'Note="Returned from death, has Ageless, Cling To Life, Revenance, and Unsettling Presence features"',
+    'Note="Returned from death/Has Ageless, Cling To Life, Revenance, and Unsettling Presence features"',
 
   // Paths
   'Adjust Density':
@@ -178,13 +178,13 @@ Wildemount.FEATURES_ADDED = {
     'Note="R30\' Use Reaction to force attack, ability, or save reroll 2/long rest"',
   'Convergent Future':
     'Section=combat ' +
-    'Note="R60\' Suffer exhaustion to dictate whether attack, ability, or save roll succeeds 1/long rest"',
+    'Note="R60\' Suffer exhaustion to dictate whether attack, ability, or save roll succeeds"',
   'Echo Avatar':
     'Section=magic ' +
     'Note="R1000\' May see and hear via Manifest Echo for 10 min"',
   'Event Horizon':
     'Section=magic ' +
-    'Note="30\' radius inflicts 2d10 HP force and holds foes (Str half damage, 1/3 Speed) 1/long rest (level 3 spell slot refreshes)"',
+    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (Str half damage, 1/3 Speed) for conc or 1 min 1/long rest (level 3 spell slot refreshes)"',
   'Gravity Well':
     'Section=magic Note="Successful targeted spell moves target 5\'"',
   'Legion Of One':
@@ -195,10 +195,10 @@ Wildemount.FEATURES_ADDED = {
     'Note="R30\' Copy of self (AC %{14+proficiencyBonus}, HP 1, MV 30\') can swap places and transmit attacks and opportunity attacks"',
   'Momentary Stasis':
     'Section=magic ' +
-    'Note="R60\' Incapacitates target for 1 rd (Con neg) %{intelligenceModifier>?1}/long rest"',
+    'Note="R60\' Incapacitates large target for 1 rd (Con neg) %{intelligenceModifier>?1}/long rest"',
   'Reclaim Potential':
     'Section=combat ' +
-    'Note="Gain 2d6+%{constitutionModifier} temporary HP when Manifest Echo destroyed"',
+    'Note="Gain 2d6+%{constitutionModifier} temporary HP when Manifest Echo destroyed %{constitutionModifier>?1}/long rest"',
   'Shadow Martyr':
     'Section=combat Note="May use Manifest Echo to absorb attack 1/short rest"',
   'Temporal Awareness':'Section=combat Note="+%V Initiative"',
@@ -207,7 +207,7 @@ Wildemount.FEATURES_ADDED = {
     'Note="May make extra attack through Manifest Echo %{constitutionModifier>?1}/long rest"',
   'Violent Attraction':
     'Section=combat ' +
-    'Note="R60\' Use Reaction to inflict +1d10 HP on attack target or +2d10 HP on falling target %{intelligenceModifier>?1}/long rest"',
+    'Note="R60\' Use Reaction to inflict +1d10 HP on weapon target or +2d10 HP on falling target %{intelligenceModifier>?1}/long rest"',
 
   // Races
   'Aarakocra Ability Adjustment':
@@ -261,7 +261,7 @@ Wildemount.FEATURES_ADDED = {
   'Powerful Build':'Section=ability Note="x2 Carry/x2 Lift"',
   'Ravenite Ability Adjustment':
     'Section=ability Note="+2 Strength/+1 Constitution"',
-  'Reach Into The Blaze':
+  'Reach To The Blaze':
     'Section=magic Note="Know <i>Produce Flame</i> cantrip%1"',
   'Revenance':'Section=feature Note="Detects as undead"',
   'Sea Elf Ability Adjustment':
@@ -333,7 +333,7 @@ Wildemount.RACES_ADDED = {
   'Fire Genasi':
     'Features=' +
       'Darkvision,"Fire Genasi Ability Adjustment","Fire Resistance",' +
-      '"Reach Into The Blaze" ' +
+      '"Reach To The Blaze" ' +
     'Languages=Common,Primordial',
   'Goliath':
     'Features=' +
@@ -399,7 +399,7 @@ Wildemount.SPELLS_ADDED = {
   'Immovable Object':
     'School=Transmutation ' +
     'Level=W2 ' +
-    'Description="Touched object movable only by specified creatures (Str move 10\') for 1 hr"',
+    'Description="Touched 10 lb object movable only by specified creatures (Str move 10\') for 1 hr"',
   'Magnify Gravity':
     'School=Transmutation ' +
     'Level=W1 ' +
@@ -411,7 +411,7 @@ Wildemount.SPELLS_ADDED = {
   'Ravenous Void':
     'School=Evocation ' +
     'Level=W9 ' +
-    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains, destroys nonmagical objects, and creates 120\' radius difficult terrain that pulls to center for conc or 1 min"',
+    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains, destroys dead and nonmagical objects, and creates 120\' radius difficult terrain that pulls to center for conc or 1 min"',
   'Reality Break':
     'School=Conjuration ' +
     'Level=W8 ' +
@@ -502,9 +502,13 @@ Wildemount.raceRulesExtra = function(rules, name) {
   if(name == 'Aarakocra') {
     SRD5E.weaponRules(rules, 'Talons', 0, ['Un'], '1d4', null);
     rules.defineRule('weapons.Talons', 'combatNotes.talons', '=', '1');
+  } else if(name == 'Draconblood') {
+    rules.defineRule('selectableFeatureCount.Draconblood',
+      'race', '=', 'source == "Draconblood" ? 1 : null'
+    );
   } else if(name == 'Fire Genasi') {
-    rules.defineRule('magicNotes.reachIntoTheBlaze.1',
-      'features.Reach Into The Blaze', '?', null,
+    rules.defineRule('magicNotes.reachToTheBlaze.1',
+      'features.Reach To The Blaze', '?', null,
       'level', '=', 'source<3 ? "" : ", cast <i>Burning Hands</i> 1/long rest"'
     );
   } else if(name == 'Lotusden Halfling') {
@@ -516,6 +520,10 @@ Wildemount.raceRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.blessingOfTheMoonWeaver.1',
       'features.Blessing Of The Moon Weaver', '?', null,
       'level', '=', 'source<3 ? "" : source<5 ? ", cast <i>Sleep</i> 1/long rest" : ", cast <i>Sleep</i> and <i>Invisibility</i> 1/long rest"'
+    );
+  } else if(name == 'Ravenite') {
+    rules.defineRule('selectableFeatureCount.Ravenite',
+      'race', '=', 'source == "Ravenite" ? 1 : null'
     );
   } else if(name == 'Tortle') {
     rules.defineRule('armorClass', 'combatNotes.naturalArmor', '=', '17');
