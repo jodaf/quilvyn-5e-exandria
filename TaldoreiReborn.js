@@ -214,7 +214,7 @@ TaldoreiReborn.FEATURES_ADDED = {
   // Paths
   'Arcane Exemplar':
     'Section=magic ' +
-    'Note="Discharge rune for 60\' Fly, +2 spell DC, foe Disadv vs. spells, resistance to spell damage, and regain HP from casting for 1 rd 1/long rest"',
+    'Note="Discharge rune for 60\' Fly, foe Disadv vs. spells, resistance to spell damage, and regain HP from casting for 1 rd 1/long rest"',
   'Aura Of Liberation':
     'Section=magic ' +
     'Note="R%V\' Targets cannot be grappled or restrained, ignore underwater movement and attack penalties"',
@@ -226,11 +226,11 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="R30\' Use Channel Divinity to give target +10 Speed and Adv on tracking and smell for 1 hr"',
   'Blighted Shape':
     'Section=magic,skill ' +
-    'Note="+2 AC and 60\' darkvision during Wild Shape",' +
+    'Note="Wild Shape gives +2 AC and 60\' darkvision",' +
          '"Skill Proficiency (Intimidation)"',
   'Blood Channeling':
     'Section=magic ' +
-    'Note="When casting, take 1d10 HP necrotic per 50 GP to forego material components"',
+    'Note="May suffer 1d10 HP necrotic per 50 GP to forego material components when casting"',
   'Blood Domain Bonus Proficiencies':
     'Section=feature Note="Weapon Proficiency (Martial)"',
   'Blood Puppet':
@@ -244,25 +244,25 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="Use Reaction to inflict equal damage on attacker %V/short rest"',
   'Call Of The Shadowseeds':
     'Section=magic ' +
-    'Note="After damage w/in Defile Ground area, may use Reaction to summon blighted sapling to attack %{proficiencyBonus}/long rest"',
+    'Note="May use Reaction after damage w/in Defile Ground area to summon blighted sapling to attack %{proficiencyBonus}/long rest"',
   'Clarity Of Catha':
     'Section=magic ' +
-    'Note="R30\' Target gains Adv on Wis save %{proficiencyBonus}/long rest"',
+    'Note="R30\' Use Reaction to give target Adv on Wis save %{proficiencyBonus}/long rest"',
   'Crimson Bond':
     'Section=magic ' +
     'Note="Channel Divinity with target view or blood to learn distance, direction, HP, and conditions for conc or 1 hr, suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} min (Con ends)"',
   'Debilitating Barrage':
     'Section=combat ' +
-    'Note="Spend 3 Ki Points after unarmed hit for foe vulnerability to chosen damage type for 1 min"',
+    'Note="Spend 3 Ki Points after unarmed hit for foe vulnerability to chosen damage type for 1 min or until damaged"',
   'Defile Ground':
     'Section=magic ' +
-    'Note="R60\' %V\' radius becomes difficult terrain for foes and inflicts +1d%1 HP necrotic for 1 min 1/long rest"',
+    'Note="R60\' %V\' radius becomes difficult terrain for foes and inflicts +1d%1 HP necrotic for 1 min 1/short rest"',
   'Demolishing Might':
     'Section=combat ' +
     'Note="Melee weapons x2 damage vs. objects, +1d8 HP damage vs. constructs"',
   'Eclipse Of Ill Omen':
     'Section=magic ' +
-    'Note="60\' radius dim red glow blocks other light; targets suffer Disadv on saves for conc or 1 min"',
+    'Note="60\' radius dim red glow blocks other light; targets suffer Disadv on saves, half speed, and no HP recovery for conc or 1 min 1/long rest"',
   'Empowered Cantrips':
     'Section=magic Note="+%{wisdomModifier} HP cantrip damage"',
   'Essence Runes':
@@ -270,7 +270,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="Spending Sorcery Points charges %{levels.Sorcerer} runes; 5 charged runes emit 5\' light"',
   'Extort Truth':
     'Section=combat ' +
-    'Note="Spend 1 Ki Point after unarmed hit to prevent foe lying and gain Adv on Charisma for 10 min (Cha neg)"',
+    'Note="Spend 1 Ki Point after unarmed hit to prevent foe lying and give all Adv on Charisma for 10 min (Cha neg)"',
   'Extract Aspects':
     'Section=combat ' +
     'Note="Use Reaction after Flurry Of Blows hit to gain info about foe and unarmed attack Reaction to foe miss until next rest"',
@@ -285,21 +285,22 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="Hit pushes 10\' (inflicts %{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
   'Glyph Of Hemorrhaging':
     'Section=magic ' +
-    'Note="May curse successful spell attack target to suffer +1d6 HP necrotic from each attack for 1 min (Con ends)"',
+    'Note="May curse successful spell attack target to suffer +1d6 HP necrotic from each attack for 1 min (Con ends) 1/short rest"',
   'Glyph Of Aegis':
-    'Section=magic Note="Discharge runes to negate 1d%V damage each%1"',
+    'Section=magic ' +
+    'Note="Use Reaction to discharge runes to negate 1d%V damage each%1"',
   'Hurricane Strike':
     'Section=combat ' +
     'Note="Pushing foe allows ally to use Reaction for melee attack, and leap knocks prone (DC %{8 + proficiencyBonus + strengthModifier} Str neg)"',
   'Impending Misfortune':
     'Section=feature ' +
-    'Note="Trade +10 on immediate attack or save for -10 on next attack or save"',
+    'Note="Trade +10 on immediate attack or save for -10 on next attack or save 1/short rest"',
   'Incarnation Of Corruption':
     'Section=combat,save ' +
     'Note="+2 AC/Gain %{proficiencyBonus} temporary HP from Defile Ground",' +
          '"Resistance to necrotic damage"',
   'Manifest Inscriptions':
-    'Section=magic Note="R60\' Discharge 1 rune to reveal hidden glyphs"',
+    'Section=magic Note="R60\' Discharge 1 rune to reveal hidden glyphs and Adv on Arcana to understand"',
   'Marine Layer':
     'Section=magic Note="20\' radius obscures vision for 10 min"',
   'Mind Of Mercury':
@@ -313,21 +314,21 @@ TaldoreiReborn.FEATURES_ADDED = {
   'Mythic Swashbuckler':
     'Section=ability,combat,save,skill ' +
     'Note="Adv on Dexterity and %{speed} climb speed for 1 min 1/long rest",' +
-         '"Adv on attacks vs. adjacent foe when no other adjacent and Dash or Disengage as bonus action for 1 min 1/long rest",' +
+         '"Adv on attacks vs. adjacent foe when no other adjacent/Dash or Disengage as bonus action for 1 min 1/long rest",' +
          '"Adv on Dexterity for 1 min 1/long rest",' +
          '"Adv on Athletics 1/long rest"',
   'Nimbus Of Pathos':
     'Section=magic ' +
-    'Note="Touched gains +4 AC, Adv on attack, and +1d10 HP radiant damage and suffers crit on 18-20 for 1 min 1/long rest"',
+    'Note="Touched gains +4 AC, Adv on attack and saves, and +1d10 HP radiant damage and suffers crit on 18-20 for 1 min 1/long rest"',
   'Poetry In Misery':
     'Section=feature ' +
-    'Note="R30\' Regain 1 use of Bardic Inspiration when self or ally rolls a 1 on attack, ability, or save"',
+    'Note="R30\' Use Reaction to regain 1 use of Bardic Inspiration when self or ally rolls a 1 on attack, ability, or save"',
   'Resolute Stance':
     'Section=combat ' +
-    'Note="May trade Disadv on attacks for grapple immunity and foe Disadv on attacks"',
+    'Note="May trade Disadv on weapon attacks for grapple immunity and foe Disadv on attacks"',
   'Runic Torrent':
     'Section=magic ' +
-    'Note="Discharge 2 runes to change spell damage to force and push 15\' or knock prone (Str neg)"',
+    'Note="Discharge 2 runes to change spell damage to force and push 15\' or knock prone (Str neg) 1/short rest"',
   'Sanguine Burst':
     'Section=magic ' +
     'Note="May take spell level HP necrotic to reroll %{intelligenceModifier>?1} spell damage dice"',
@@ -336,18 +337,18 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="Recover up to %V spell levels (level 6 max), suffer equal d8 HP damage"',
   'Sigilic Augmentation':
     'Section=magic ' +
-    'Note="Discharge rune for Adv on Str, Dex, or Con checks for 1 rd, use Reaction for same 1/long rest"',
+    'Note="Use Reaction to discharge rune for Adv on Str, Dex, or Con checks or save for 1 rd 1/long rest"',
   'Sorrowful Fate':
     'Section=combat ' +
-    'Note="Spend 1 Bardic Inspiration die to change foe save to Charisma, failure inflicts die HP psychic"',
+    'Note="Spend 1 Bardic Inspiration die to change foe save to Charisma, failure inflicts die HP psychic 1/short rest"',
   'Spirit Of The Mountain':
     'Section=combat Note="Cannot be knocked prone or pushed during rage"',
   'Stormy Waters':
     'Section=combat ' +
-    'Note="Foe moving into or out of range suffers 1d12 HP bludgeoning, knocked prone (Str damage only)"',
+    'Note="Foe moving into or out of reach suffers 1d12 HP bludgeoning, knocked prone (Str damage only)"',
   'Tale Of Hubris':
     'Section=combat ' +
-    'Note="R60\' On foe critical hit, spend 1 Bardic Inspiration die to inflict %V-20 crit range until critical hit or 1 min"',
+    'Note="R60\' On foe critical hit, use Reaction to spend 1 Bardic Inspiration die to inflict %V-20 crit range until critical hit or 1 min"',
   'Thicker Than Water':
     'Section=combat,magic ' +
     'Note="Regain +%{proficiencyBonus} HP from healing spells",' +
@@ -382,7 +383,7 @@ TaldoreiReborn.FEATURES_ADDED = {
          '"Throw any weapon, +20/+40 throw range, light weapon returns after miss"',
   'Vital Sacrifice':
     'Section=feature ' +
-    'Note="Take 1d6 HP necrotic to gain +1d6 attack or +2d6 HP necrotic damage, or to inflict -1d4 on foe Str, Dex, or Con save"'
+    'Note="Take 1d6 HP necrotic to gain +1d6 attack or +2d6 HP necrotic damage, or to inflict -1d4 on foe Str, Dex, or Con save w/in 1 hr"'
 
 };
 TaldoreiReborn.PATHS_ADDED = {
