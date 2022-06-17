@@ -101,7 +101,7 @@ function Taldorei() {
 
 }
 
-Taldorei.VERSION = '2.3.1.0';
+Taldorei.VERSION = '2.3.1.1';
 
 Taldorei.BACKGROUNDS_ADDED = {
   'Ashari':
@@ -301,7 +301,7 @@ Taldorei.FEATURES_ADDED = {
   'Spelldriver':'Section=magic Note="Cast additional level 1 - 2 spell/rd"',
   'Thrown Arms Master':
     'Section=ability,combat ' +
-    'Note="+1 Strength or Dexterity",' +
+    'Note="Ability Boost (Choose 1 from Strength, Dexterity)",' +
          '"Throw any weapon, +20/+40 throw range, light weapon returns after miss"',
 
   // Races
@@ -372,9 +372,6 @@ Taldorei.choiceRules = function(rules, type, name, attrs) {
 Taldorei.featRulesExtra = function(rules, name) {
   if(name == 'Cruel')
     rules.defineRule('featureNotes.cruel', 'proficiencyBonus', '=', null);
-  else if(name == 'Thrown Arms Master')
-    rules.defineRule
-      ('abilityBoosts', 'abilityNotes.thrownArmsMaster', '+=', '1');
 };
 
 /*

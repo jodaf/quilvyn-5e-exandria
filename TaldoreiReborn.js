@@ -104,7 +104,7 @@ function TaldoreiReborn() {
 
 }
 
-TaldoreiReborn.VERSION = '2.3.1.0';
+TaldoreiReborn.VERSION = '2.3.1.1';
 
 TaldoreiReborn.BACKGROUNDS_ADDED = {
   'Ashari':
@@ -379,7 +379,7 @@ TaldoreiReborn.FEATURES_ADDED = {
   'Spelldriver':'Section=magic Note="Cast additional level 1 - 2 spell/rd"',
   'Thrown Arms Master':
     'Section=ability,combat ' +
-    'Note="+1 Strength or Dexterity",' +
+    'Note="Ability Boost (Choose 1 from Strength, Dexterity)",' +
          '"Throw any weapon, +20/+40 throw range, light weapon returns after miss"',
   'Vital Sacrifice':
     'Section=feature ' +
@@ -505,9 +505,6 @@ TaldoreiReborn.featRulesExtra = function(rules, name) {
     // character level 4.
     rules.defineRule
       ('featCount.General', "features.Fortune's Grace", '+=', '0');
-  else if(name == 'Thrown Arms Master')
-    rules.defineRule
-      ('abilityBoosts', 'abilityNotes.thrownArmsMaster', '+=', '1');
 };
 
 /*
