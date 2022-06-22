@@ -100,7 +100,7 @@ function Wildemount() {
 
 }
 
-Wildemount.VERSION = '2.3.1.0';
+Wildemount.VERSION = '2.3.1.1';
 
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
@@ -315,10 +315,12 @@ Wildemount.PATHS_ADDED = {
 Wildemount.RACES_ADDED = {
   'Aarakocra':
     'Features=' +
+      '"Language (Common/Aarakocra/Auran)",' +
       '"Aarakocra Ability Adjustment",Flight,Slow,Talons ' +
     'Languages=Aarakocra,Auran,Common',
   'Air Genasi':
     'Features=' +
+      '"Language (Common/Primordial)",' +
       '"Air Genasi Ability Adjustment","Mingle With The Wind",' +
       '"Unending Breath" ' +
     'Languages=Common,Primordial',
@@ -328,26 +330,31 @@ Wildemount.RACES_ADDED = {
     .replace('Features=', 'Features=Darkvision,'),
   'Earth Genasi':
     'Features=' +
+      '"Language (Common/Primordial)",' +
       '"Earth Genasi Ability Adjustment","Earth Walk","Pass Without Trace" ' +
     'Languages=Common,Primordial',
   'Fire Genasi':
     'Features=' +
+      '"Language (Common/Primordial)",' +
       'Darkvision,"Fire Genasi Ability Adjustment","Fire Resistance",' +
       '"Reach To The Blaze" ' +
     'Languages=Common,Primordial',
   'Goliath':
     'Features=' +
+      '"Language (Common/Giant)",' +
       '"Goliath Ability Adjustment","Mountain Born","Natural Athlete",' +
       '"Powerful Build","Stone\'s Endurance" ' +
     'Languages=Common,Giant',
   'Lotusden Halfling':
     'Features=' +
+      '"Language (Common/Halfling)",' +
       'Brave,"Child Of The Wood","Halfling Nimbleness",' +
       '"Lotusden Halfling Ability Adjustment","Lucky Halfling",Slow,Small,' +
       'Timberwalk ' +
     'Languages=Common,Halfling',
   'Pallid Elf':
     'Features=' +
+      '"Language (Common/Elvish)",' +
       '"Blessing Of The Moon Weaver",Darkvision,"Fey Ancestry",' +
       '"Incisive Sense","Keen Senses","Pallid Elf Ability Adjustment",Trance ' +
     'Languages=Common,Elvish',
@@ -357,16 +364,19 @@ Wildemount.RACES_ADDED = {
     .replace('Features=', 'Features=Darkvision,'),
   'Sea Elf':
     'Features=' +
+      '"Language (Common/Aquan/Elvish)",' +
       '"Child Of The Sea",Darkvision,"Fey Ancestry","Friend Of The Sea",' +
       '"Keen Senses","Sea Elf Ability Adjustment","Sea Elf Training",Trance ' +
     'Languages=Aquan,Common,Elvish',
   'Tortle':
     'Features=' +
+      '"Language (Common/Aquan)",' +
       'Claws,"Hold Breath","Natural Armor","Shell Defense",' +
       '"Survival Instinct","Tortle Ability Adjustment" ' +
     'Languages=Aquan,Common',
   'Water Genasi':
     'Features=' +
+      '"Language (Common/Primordial)",' +
       '"Acid Resistance",Amphibious,"Call To The Wave",Swim,' +
       '"Water Genasi Ability Adjustment" ' +
     'Languages=Common,Primordial'
