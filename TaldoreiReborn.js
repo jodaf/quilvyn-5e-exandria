@@ -35,8 +35,7 @@ function TaldoreiReborn() {
     return;
   }
 
-  var rules =
-    new QuilvynRules('Taldorei Reborn Campaign Setting',TaldoreiReborn.VERSION);
+  var rules = new QuilvynRules('Taldorei Reborn', TaldoreiReborn.VERSION);
   TaldoreiReborn.rules = rules;
 
   rules.defineChoice('choices', SRD5E.CHOICES);
@@ -104,7 +103,7 @@ function TaldoreiReborn() {
 
 }
 
-TaldoreiReborn.VERSION = '2.3.1.1';
+TaldoreiReborn.VERSION = '2.3.1.2';
 
 TaldoreiReborn.BACKGROUNDS_ADDED = {
   'Ashari':
