@@ -103,7 +103,7 @@ function TaldoreiReborn() {
 
 }
 
-TaldoreiReborn.VERSION = '2.3.1.2';
+TaldoreiReborn.VERSION = '2.3.2.0';
 
 TaldoreiReborn.BACKGROUNDS_ADDED = {
   'Ashari':
@@ -112,8 +112,7 @@ TaldoreiReborn.BACKGROUNDS_ADDED = {
     'Features=' +
       '"1:Skill Proficiency (Nature/Choose 1 from Arcana, Survival)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
-      '"1:Language (Primordial)","1:Elemental Harmony" ' +
-    'Languages=Primordial',
+      '"1:Language (Primordial)","1:Elemental Harmony"',
   'Clasp Member':
     'Equipment=' +
       '"Common Clothes","Tool Set","10 GP" ' +
@@ -126,15 +125,13 @@ TaldoreiReborn.BACKGROUNDS_ADDED = {
       '"Fine Clothes","Student Uniform","Writing Kit","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Choose 2 from Arcana, History, Persuasion)",' +
-      '"1:Language (Choose 2 from any)","1:Academic Requisition" ' +
-    'Languages=any,any',
+      '"1:Language (Choose 2 from any)","1:Academic Requisition"',
   'Reformed Cultist':
     'Equipment=' +
       '"Vestments","Holy Symbol","Common Clothes","15 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Deception/Religion)",' +
-      '"1:Language (Choose 1 from any)","1:Fell Teachings" ' +
-    'Languages=any',
+      '"1:Language (Choose 1 from any)","1:Fell Teachings"',
   'Whitestone Rifle Corps':
     'Equipment=' +
       '"Vestments","Holy Symbol","Common Clothes","15 GP" ' +
@@ -142,8 +139,7 @@ TaldoreiReborn.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Choose 2 from Athletics, Perception, Survival)",' +
       '"1:Weapon Proficiency (Firearms)",' +
       '"1:Language (Choose 1 from any)",' +
-      '"1:Legacy Of Secrecy","1:Rifle Corps Relationship" ' +
-    'Languages=any'
+      '"1:Legacy Of Secrecy","1:Rifle Corps Relationship"'
 };
 TaldoreiReborn.CLASSES_SELECTABLES_ADDED = {
   'Barbarian':'"3:Path Of The Juggernaut:Primal Path"',
@@ -309,7 +305,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="Use Channel Divinity to concentrate on two domain spells simultaneously"',
   'Mystical Erudition':
     'Section=skill ' +
-    'Note="Skill Proficiency (Choose %V from Arcana, History, Investigation, Nature, Religion)/+%V Language Count"',
+    'Note="Skill Proficiency (Choose %V from Arcana, History, Investigation, Nature, Religion)/Language (Choose %V from any)"',
   'Mythic Swashbuckler':
     'Section=ability,combat,save,skill ' +
     'Note="Adv on Dexterity and %{speed} climb speed for 1 min 1/long rest",' +

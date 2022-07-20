@@ -101,7 +101,7 @@ function Taldorei() {
 
 }
 
-Taldorei.VERSION = '2.3.1.1';
+Taldorei.VERSION = '2.3.2.0';
 
 Taldorei.BACKGROUNDS_ADDED = {
   'Ashari':
@@ -110,8 +110,7 @@ Taldorei.BACKGROUNDS_ADDED = {
     'Features=' +
       '"1:Skill Proficiency (Nature/Choose 1 from Arcana, Survival)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
-      '"1:Language (Choose 1 from any)","1:Elemental Harmony" ' +
-    'Languages=any',
+      '"1:Language (Choose 1 from any)","1:Elemental Harmony"',
   'Clasp Member':
     'Equipment=' +
       '"Dark Hooded Clothing","10 GP" ' +
@@ -127,15 +126,13 @@ Taldorei.BACKGROUNDS_ADDED = {
       '"Fine Clothes","Student Uniform","Writing Kit","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Choose 2 from Arcana, History, Persuasion)",' +
-      '"1:Language (Choose 2 from any)","1:Student Privilege" ' +
-    'Languages=any,any',
+      '"1:Language (Choose 2 from any)","1:Student Privilege"',
   'Recovered Cultist':
     'Equipment=' +
       '"Vestments","Holy Symbol","Common Clothes","15 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Deception/Religion)",' +
-      '"1:Language (Choose 1 from any)","1:Wicked Awareness" ' +
-    'Languages=any'
+      '"1:Language (Choose 1 from any)","1:Wicked Awareness"'
 };
 Taldorei.CLASSES_SELECTABLES_ADDED = {
   'Barbarian':
@@ -245,7 +242,7 @@ Taldorei.FEATURES_ADDED = {
          '"Spend 1 Ki Point for Adv on Investigation"',
   'Mystical Erudition':
     'Section=skill ' +
-    'Note="Spend 1 Ki Point for Adv on Arcana, History, or Religion/+%V Language Count"',
+    'Note="Spend 1 Ki Point for Adv on Arcana, History, or Religion/Language (Choose %V from any)"',
   'Overwhelming Cleave':
     'Section=combat Note="Bonus attack on second foe adjacent to first"',
   'Preternatural Counter':

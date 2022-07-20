@@ -100,7 +100,7 @@ function Wildemount() {
 
 }
 
-Wildemount.VERSION = '2.3.1.1';
+Wildemount.VERSION = '2.3.2.0';
 
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
@@ -117,8 +117,7 @@ Wildemount.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Deception/Stealth)",' +
       '"1:Tool Proficiency (Poisoner\'s Kit)",' +
       '"1:Language (Choose 1 from any)",' +
-      '"1:Shadow Network" ' +
-    'Languages=any'
+      '"1:Shadow Network"'
 };
 Wildemount.CLASSES_SELECTABLES_ADDED = {
   'Fighter':
@@ -316,14 +315,12 @@ Wildemount.RACES_ADDED = {
   'Aarakocra':
     'Features=' +
       '"Language (Common/Aarakocra/Auran)",' +
-      '"Aarakocra Ability Adjustment",Flight,Slow,Talons ' +
-    'Languages=Aarakocra,Auran,Common',
+      '"Aarakocra Ability Adjustment",Flight,Slow,Talons',
   'Air Genasi':
     'Features=' +
       '"Language (Common/Primordial)",' +
       '"Air Genasi Ability Adjustment","Mingle With The Wind",' +
-      '"Unending Breath" ' +
-    'Languages=Common,Primordial',
+      '"Unending Breath"',
   'Draconblood':SRD5E.RACES.Dragonborn
     .replace('Dragonborn Ability Adjustment', 'Draconblood Ability Adjustment')
     .replace('Dragonborn Damage Resistance', 'Forceful Presence')
@@ -331,33 +328,28 @@ Wildemount.RACES_ADDED = {
   'Earth Genasi':
     'Features=' +
       '"Language (Common/Primordial)",' +
-      '"Earth Genasi Ability Adjustment","Earth Walk","Pass Without Trace" ' +
-    'Languages=Common,Primordial',
+      '"Earth Genasi Ability Adjustment","Earth Walk","Pass Without Trace"',
   'Fire Genasi':
     'Features=' +
       '"Language (Common/Primordial)",' +
       'Darkvision,"Fire Genasi Ability Adjustment","Fire Resistance",' +
-      '"Reach To The Blaze" ' +
-    'Languages=Common,Primordial',
+      '"Reach To The Blaze"',
   'Goliath':
     'Features=' +
       '"Language (Common/Giant)",' +
       '"Goliath Ability Adjustment","Mountain Born","Natural Athlete",' +
-      '"Powerful Build","Stone\'s Endurance" ' +
-    'Languages=Common,Giant',
+      '"Powerful Build","Stone\'s Endurance"',
   'Lotusden Halfling':
     'Features=' +
       '"Language (Common/Halfling)",' +
       'Brave,"Child Of The Wood","Halfling Nimbleness",' +
       '"Lotusden Halfling Ability Adjustment","Lucky Halfling",Slow,Small,' +
-      'Timberwalk ' +
-    'Languages=Common,Halfling',
+      'Timberwalk',
   'Pallid Elf':
     'Features=' +
       '"Language (Common/Elvish)",' +
       '"Blessing Of The Moon Weaver",Darkvision,"Fey Ancestry",' +
-      '"Incisive Sense","Keen Senses","Pallid Elf Ability Adjustment",Trance ' +
-    'Languages=Common,Elvish',
+      '"Incisive Sense","Keen Senses","Pallid Elf Ability Adjustment",Trance',
   'Ravenite':SRD5E.RACES.Dragonborn
     .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
     .replace('Dragonborn Damage Resistance', 'Vengeful Assault')
@@ -366,20 +358,17 @@ Wildemount.RACES_ADDED = {
     'Features=' +
       '"Language (Common/Aquan/Elvish)",' +
       '"Child Of The Sea",Darkvision,"Fey Ancestry","Friend Of The Sea",' +
-      '"Keen Senses","Sea Elf Ability Adjustment","Sea Elf Training",Trance ' +
-    'Languages=Aquan,Common,Elvish',
+      '"Keen Senses","Sea Elf Ability Adjustment","Sea Elf Training",Trance',
   'Tortle':
     'Features=' +
       '"Language (Common/Aquan)",' +
       'Claws,"Hold Breath","Natural Armor","Shell Defense",' +
-      '"Survival Instinct","Tortle Ability Adjustment" ' +
-    'Languages=Aquan,Common',
+      '"Survival Instinct","Tortle Ability Adjustment"',
   'Water Genasi':
     'Features=' +
       '"Language (Common/Primordial)",' +
       '"Acid Resistance",Amphibious,"Call To The Wave",Swim,' +
-      '"Water Genasi Ability Adjustment" ' +
-    'Languages=Common,Primordial'
+      '"Water Genasi Ability Adjustment"'
 };
 if(window.Volo != null) {
   Wildemount.RACES_ADDED['Orc'] =
