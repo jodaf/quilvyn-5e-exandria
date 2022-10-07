@@ -100,7 +100,7 @@ function Wildemount() {
 
 }
 
-Wildemount.VERSION = '2.3.2.0';
+Wildemount.VERSION = '2.3.2.1';
 
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
@@ -382,6 +382,7 @@ Wildemount.SPELLS_ADDED = {
   "Fortune's Favor":
     'School=Divination ' +
     'Level=W2 ' +
+    'AtHigherLevels="affects +1 target" ' +
     'Description="R60\' Target gains Adv on 1 attack, ability, or save, or foe Disadv on 1 attack, within 1 hr"',
   'Gift Of Alacrity':
     'School=Divination ' +
@@ -390,22 +391,27 @@ Wildemount.SPELLS_ADDED = {
   'Gravity Fissure':
     'School=Evocation ' +
     'Level=W6 ' +
+    'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description="5\'x100\' line inflicts 8d8 HP force (Con half), pulls and inflicts 8d8 HP force on creatures w/in 10\' (Con neg)"',
   'Gravity Sinkhole':
     'School=Evocation ' +
     'Level=W4 ' +
+    'AtHigherLevels="inflicts +1d10 HP" ' +
     'Description="R120\' 20\' radius inflicts 5d10 HP force and pulls to center (Con half HP only)"',
   'Immovable Object':
     'School=Transmutation ' +
     'Level=W2 ' +
-    'Description="Touched 10 lb object movable only by specified creatures (Str move 10\') for 1 hr"',
+    'AtHigherLevels="increases Str DC +5/+10, increases object support to 8,000/20,000 lb, and extends duration to 24 hr/permanent at level 4/6" ' +
+    'Description="Touched 10 lb object movable only by specified creatures (Str move 10\'), can support 4000 lb for 1 hr"',
   'Magnify Gravity':
     'School=Transmutation ' +
     'Level=W1 ' +
+    'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description="R60\' 10\' radius inflicts 2d8 HP force and half speed (Con half HP only) for 1 rd"',
   'Pulse Wave':
     'School=Evocation ' +
     'Level=W3 ' +
+    'AtHigherLevels="inflicts +1d6 HP and increases move distance +5\'" ' +
     'Description="30\' cone inflicts 6d6 HP force and pulls or pushes 15\' (Con half HP only)"',
   'Ravenous Void':
     'School=Evocation ' +
@@ -426,6 +432,7 @@ Wildemount.SPELLS_ADDED = {
   'Temporal Shunt':
     'School=Transmutation ' +
     'Level=W5 ' +
+    'AtHigherLevels="affects +1 target" ' +
     'Description="R120\' Target disappears for 1 rd, losing action (Wis neg)"',
   'Tether Essence':
     'School=Necromancy ' +
