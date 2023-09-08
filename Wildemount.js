@@ -100,7 +100,7 @@ function Wildemount() {
 
 }
 
-Wildemount.VERSION = '2.3.2.1';
+Wildemount.VERSION = '2.3.2.2';
 
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
@@ -506,7 +506,7 @@ Wildemount.pathRulesExtra = function(rules, name) {
  */
 Wildemount.raceRulesExtra = function(rules, name) {
   if(name == 'Aarakocra') {
-    SRD5E.weaponRules(rules, 'Talons', 0, ['Un'], '1d4', null);
+    SRD5E.weaponRules(rules, 'Talons', 'Unarmed', [], '1d4', null);
     rules.defineRule('weapons.Talons', 'combatNotes.talons', '=', '1');
   } else if(name == 'Draconblood') {
     rules.defineRule('selectableFeatureCount.Draconblood',
@@ -535,7 +535,7 @@ Wildemount.raceRulesExtra = function(rules, name) {
     rules.defineRule('armorClass', 'combatNotes.naturalArmor', '=', '17');
     rules.defineRule
       ('combatNotes.dexterityArmorClassAdjustment', 'tortleLevel', '*', '0');
-    SRD5E.weaponRules(rules, 'Claws', 0, ['Un'], '1d4', null);
+    SRD5E.weaponRules(rules, 'Claws', 'Unarmed', [], '1d4', null);
     rules.defineRule('weapons.Claws', 'combatNotes.claws', '=', '1');
   } else if(name == 'Water Genasi') {
     rules.defineRule('magicNotes.callToTheWave.1',
