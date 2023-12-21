@@ -274,7 +274,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May discharge 1 rune to gain 60\' fly speed, inflict Disadv vs. self spells, gain resistance to spell damage, and regain spell level HP from casting for 1 rd 1/long rest; stunned afterward for 1 rd"',
   'Aura Of Liberation':
     'Section=magic ' +
-    'Note="R%V\' Targets cannot be grappled or restrained, ignore underwater movement and attack penalties"',
+    'Note="R%{levels.Paladin<18?10:30}\' Targets cannot be grappled or restrained, ignore underwater movement and attack penalties"',
   'Blessing Of The Blood-Drenched Moon':
     'Section=magic ' +
     'Note="R30\' May use Channel Divinity to give target Adv on attacks on foes that are adjacent to an ally for 10 min"',
@@ -298,13 +298,13 @@ TaldoreiReborn.FEATURES_ADDED = {
       '"9:Dominate Person","9:Hold Monster"',
   'Blood Puppet':
     'Section=magic ' +
-    'Note="R60\' May use Channel Divinity to force a %V target to move at half speed and attack or to interact with an object (Wisdom ends) for conc up to 1 min"',
+    'Note="R60\' May use Channel Divinity to force a %{levels.Cleric<17?\'Large\':\'Huge\'} target to move at half speed and attack or to interact with an object (Wisdom ends) for conc up to 1 min"',
   'Bloodletting Focus':
     'Section=magic ' +
     'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
   'Bond Of Mutual Suffering':
     'Section=magic ' +
-    'Note="May use Reaction to inflict equal damage on attacker %V/short rest"',
+    'Note="May use Reaction to inflict equal damage on attacker %{levels.Wizard<14?1:2}/short rest"',
   'Bonus Proficiencies (Blood Domain)':
     'Section=feature Note="Weapon Proficiency (Martial)"',
   'Call Of The Shadowseeds':
@@ -321,7 +321,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May spend 3 Ki Points after an unarmed hit to inflict vulnerability (or to suppress resistance) to chosen damage type for 1 min or until damaged"',
   'Defile Ground':
     'Section=magic ' +
-    'Note="R60\' %V\' radius inflicts difficult terrain and +1d%1 HP necrotic on foes for 1 min 1/short rest"',
+    'Note="R60\' %{levels.Druid<10?10:20}\' radius inflicts difficult terrain and +1d%{levels.Druid<10?4:levels.Druid<14?6:8} HP necrotic on foes for 1 min 1/short rest"',
   'Demolishing Might':
     'Section=combat ' +
     'Note="Melee weapons inflict x2 damage vs. objects and +1d8 HP damage vs. constructs"',
@@ -350,7 +350,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May use Channel Divinity to inflict 10\' push w/successful weapon attack (+%{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
   'Glyph Of Aegis':
     'Section=magic ' +
-    'Note="May use Reaction and discharge runes, negating 1d%V damage each%1"',
+    'Note="May use Reaction and discharge runes, negating 1d%{levels.Sorcerer<14?6:8} damage each%{levels.Sorcerer<8?\'\':\'; touch may transfer the protection of up to 3 runes for 1 hr\'}"',
   'Glyph Of Hemorrhaging':
     'Section=magic ' +
     'Note="May curse a successful spell attack target to suffer +1d6 HP necrotic from each attack for 1 min (Constitution ends) 1/short rest"',
@@ -425,7 +425,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May take spell level HP necrotic to reroll %{intelligenceModifier>?1} spell damage dice"',
   'Sanguine Recall':
     'Section=magic ' +
-    'Note="May suffer up to %Vd8 HP necrotic to recover an equal number of spell levels (level 6 max) 1/long rest"',
+    'Note="May suffer up to %{levels.Cleric//2}d8 HP necrotic to recover an equal number of spell levels (level 6 max) 1/long rest"',
   'Sigilic Augmentation':
     'Section=magic ' +
     'Note="May use Reaction and discharge 1 rune to gain Adv on a Strength, Dexterity, or Constitution check or save 1/long rest"',
@@ -439,7 +439,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May use Reaction to inflict 1d12 HP bludgeoning and knocked prone (DC %{spellDifficultyClass.P} Strength HP only) on a target moving into or out of reach"',
   'Tale Of Hubris':
     'Section=combat ' +
-    'Note="R60\' Upon a foe critical hit, may use Reaction and spend 1 Bardic Inspiration die to inflict %V-20 crit range for attacks on foe for 1 min or until critical hit"',
+    'Note="R60\' Upon a foe critical hit, may use Reaction and spend 1 Bardic Inspiration die to inflict %{levels.Bard<14?18:17}-20 crit range for attacks on foe for 1 min or until critical hit"',
   'Thicker Than Water':
     'Section=combat,save ' +
     'Note=' +
@@ -447,7 +447,7 @@ TaldoreiReborn.FEATURES_ADDED = {
       '"Resistance to nonmagical bludgeoning, piercing, and slashing damage during spell concentration"',
   'Thunderous Blows':
     'Section=combat ' +
-    'Note="May push foe %V\' w/a successful attack (Huge foe DC %{8+proficiencyBonus+strengthModifier} Strength neg)"',
+    'Note="May push foe %{levels.Barbarian<10?5:10}\' w/a successful attack (Huge foe DC %{8+proficiencyBonus+strengthModifier} Strength neg)"',
   'Unstoppable':
     'Section=combat ' +
     'Note="Cannot be slowed, frightened, knocked prone, paralyzed, or stunned during rage"',
@@ -459,7 +459,7 @@ TaldoreiReborn.FEATURES_ADDED = {
   'Cruel':
     'Section=feature,combat,skill ' +
     'Note=' +
-      '"May use %V Cruelty Points/long rest",' +
+      '"May use %{proficiencyBonus} Cruelty Points/long rest",' +
       '"May spend 1 Cruelty Point for +1d6 damage or to gain 1d6 temporary HP on crit",'+
       '"May spend 1 Cruelty Point for +1d6 on Intimidation"',
   'Flash Recall':
@@ -516,53 +516,17 @@ TaldoreiReborn.choiceRules = function(rules, type, name, attrs) {
  * derived directly from the attributes passed to classRules.
  */
 TaldoreiReborn.classRulesExtra = function(rules, name) {
-
   let classLevel = 'levels.' + name;
-
-  if(name == 'Barbarian') {
-    rules.defineRule
-      ('combatNotes.thunderousBlows', classLevel, '=', 'source<10 ? 5 : 10');
-  } else if(name == 'Bard') {
-    rules.defineRule
-      ('combatNotes.taleOfHubris', classLevel, '=', 'source<14 ? 18 : 17');
-  } else if(name == 'Cleric') {
+  if(name == 'Cleric') {
     rules.defineRule
       ('clericHasDivineStrike', 'features.Blood Domain', '=', '1');
     rules.defineRule
       ('divineStrikeDamageType', 'features.Blood Domain', '=', '"necrotic"');
-    rules.defineRule
-      ('magicNotes.bloodPuppet', classLevel, '=', 'source<17?"Large":"Huge"');
-    rules.defineRule
-      ('magicNotes.sanguineRecall', classLevel, '=', 'Math.floor(source / 2)');
-  } else if(name == 'Druid') {
-    rules.defineRule
-      ('magicNotes.defileGround', classLevel, '=', 'source<10 ? 10 : 20');
-    rules.defineRule('magicNotes.defileGround.1',
-      'features.Defile Ground', '?', null,
-      classLevel, '=', 'source<10 ? 4 : source<14 ? 6 : 8'
-    );
   } else if(name == 'Monk') {
-    rules.defineRule('combatNotes.mindOfMercury',
-      'intelligenceModifier', '=', 'Math.max(source, 1)'
-    );
     rules.defineRule('skillNotes.mysticalErudition',
-      'levels.Monk', '=', 'source<11 ? 1 : source<17 ? 2 : 3'
-    );
-  } else if(name == 'Paladin') {
-    rules.defineRule
-      ('magicNotes.auraOfLiberation', classLevel, '=', 'source<18 ? 10 : 30');
-  } else if(name == 'Sorcerer') {
-    rules.defineRule
-      ('magicNotes.glyphOfAegis', classLevel, '=', 'source<14 ? 6 : 8');
-    rules.defineRule('magicNotes.glyphOfAegis.1',
-      classLevel, '=', 'source<8 ? "" : "; touch may transfer the protection of up to 3 runes for 1 hr"'
-    );
-  } else if(name == 'Wizard') {
-    rules.defineRule('magicNotes.bondOfMutualSuffering',
-      classLevel, '=', 'source<14 ? 1 : 2'
+      classLevel, '=', 'source<11 ? 1 : source<17 ? 2 : 3'
     );
   }
-
 };
 
 /*
@@ -570,9 +534,7 @@ TaldoreiReborn.classRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to featRules.
  */
 TaldoreiReborn.featRulesExtra = function(rules, name) {
-  if(name == 'Cruel')
-    rules.defineRule('featureNotes.cruel', 'proficiencyBonus', '=', null);
-  else if(name == "Fortune's Grace")
+  if(name == "Fortune's Grace")
     // Ensure that a goody note will be able to bump feat count before
     // character level 4.
     rules.defineRule
