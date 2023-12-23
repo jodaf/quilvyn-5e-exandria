@@ -26,7 +26,7 @@ Place, Suite 330, Boston, MA 02111-1307 USA.
  * particular parts of the rules; raceRules for character races, magicRules
  * for spells, etc. These member methods can be called independently in order
  * to use a subset of the rules.  Similarly, the constant fields of Taldorei
- * (BACKGROUNDS, PATHS, etc.) can be manipulated to modify the choices.
+ * (BACKGROUNDS, SPELLS, etc.) can be manipulated to modify the choices.
  */
 function Taldorei() {
 
@@ -37,16 +37,19 @@ function Taldorei() {
 
   var rules = new QuilvynRules('Taldorei', Taldorei.VERSION);
   Taldorei.rules = rules;
+  rules.plugin = Taldorei;
 
   rules.defineChoice('choices', SRD5E.CHOICES);
   rules.choiceEditorElements = SRD5E.choiceEditorElements;
   rules.choiceRules = Taldorei.choiceRules;
+  rules.removeChoice = SRD35.removeChoice;
   rules.editorElements = SRD5E.initialEditorElements();
   rules.getFormats = SRD5E.getFormats;
   rules.getPlugins = Taldorei.getPlugins;
   rules.makeValid = SRD5E.makeValid;
   rules.randomizeOneAttribute = SRD5E.randomizeOneAttribute;
   rules.defineChoice('random', SRD5E.RANDOMIZABLE_ATTRIBUTES);
+  rules.getChoices = SRD5E.getChoices;
   rules.ruleNotes = Taldorei.ruleNotes;
 
   SRD5E.createViewers(rules, SRD5E.VIEWERS);
@@ -62,14 +65,15 @@ function Taldorei() {
   Taldorei.BACKGROUNDS =
     Object.assign({}, PHB5E.BACKGROUNDS, Taldorei.BACKGROUNDS_ADDED);
   Taldorei.CLASSES = Object.assign({}, PHB5E.CLASSES);
-  for(var c in Taldorei.CLASSES_SELECTABLES_ADDED) {
+  for(let c in Taldorei.CLASSES_FEATURES_ADDED)
+    Taldorei.CLASSES[c] =
+      Taldorei.CLASSES[c].replace('Features=', 'Features=' + Taldorei.CLASSES_FEATURES_ADDED[c] + ',');
+  for(var c in Taldorei.CLASSES_SELECTABLES_ADDED)
     Taldorei.CLASSES[c] =
       Taldorei.CLASSES[c].replace('Selectables=', 'Selectables=' + Taldorei.CLASSES_SELECTABLES_ADDED[c] + ',');
-  }
   Taldorei.FEATS = Object.assign({}, PHB5E.FEATS, Taldorei.FEATS_ADDED);
   Taldorei.FEATURES =
     Object.assign({}, PHB5E.FEATURES, Taldorei.FEATURES_ADDED);
-  Taldorei.PATHS = Object.assign({}, PHB5E.PATHS, Taldorei.PATHS_ADDED);
   Taldorei.RACES = Object.assign({}, PHB5E.RACES, Taldorei.RACES_ADDED);
   delete Taldorei.RACES['Dragonborn'];
   Taldorei.SPELLS = Object.assign({}, PHB5E.SPELLS);
@@ -80,7 +84,7 @@ function Taldorei() {
   SRD5E.magicRules(rules, SRD5E.SCHOOLS, Taldorei.SPELLS);
   SRD5E.identityRules(
     rules, SRD5E.ALIGNMENTS, Taldorei.BACKGROUNDS, Taldorei.CLASSES,
-    Taldorei.DEITIES, Taldorei.PATHS, Taldorei.RACES
+    Taldorei.DEITIES, {}, Taldorei.RACES
   );
   SRD5E.talentRules
     (rules, Taldorei.FEATS, Taldorei.FEATURES, SRD5E.GOODIES,
@@ -101,7 +105,7 @@ function Taldorei() {
 
 }
 
-Taldorei.VERSION = '2.3.2.0';
+Taldorei.VERSION = '2.4.1.0';
 
 Taldorei.BACKGROUNDS_ADDED = {
   'Ashari':
@@ -133,6 +137,35 @@ Taldorei.BACKGROUNDS_ADDED = {
     'Features=' +
       '"1:Skill Proficiency (Deception/Religion)",' +
       '"1:Language (Choose 1 from any)","1:Wicked Awareness"'
+};
+Taldorei.CLASSES_FEATURES_ADDED = {
+  'Barbarian':
+    '"features.Path Of The Juggernaut ? 3:Stance Of The Mountain",' +
+    '"features.Path Of The Juggernaut ? 3:Thunderous Blows",' +
+    '"features.Path Of The Juggernaut ? 6:Demolishing Might",' +
+    '"features.Path Of The Juggernaut ? 10:Overwhelming Cleave",' +
+    '"features.Path Of The Juggernaut ? 14:Unstoppable"',
+  'Cleric':
+    '"features.Blood Domain ? 1:Blood Domain Bonus Proficiencies",' +
+    '"features.Blood Domain ? 1:Bloodletting Focus",' +
+    '"features.Blood Domain ? 2:Blood Puppet",' +
+    '"features.Blood Domain ? 6:Crimson Bond",' +
+    '"features.Blood Domain ? 8:Sanguine Recall",' +
+    '"features.Blood Domain ? 17:Vascular Corruption Aura"',
+  'Monk':
+    '"features.Way Of The Cobalt Soul ? 3:Mystical Erudition",' +
+    '"features.Way Of The Cobalt Soul ? 3:Extract Aspects",' +
+    '"features.Way Of The Cobalt Soul ? 6:Extort Truth",' +
+    '"features.Way Of The Cobalt Soul ? 6:Mind Of Mercury",' +
+    '"features.Way Of The Cobalt Soul ? 11:Preternatural Counter",' +
+    '"features.Way Of The Cobalt Soul ? 17:Debilitating Barrage"',
+  'Sorcerer':
+    '"features.Runechild ? 1:Essence Runes",' +
+    '"features.Runechild ? 1:Glyphs Of Aegis",' +
+    '"features.Runechild ? 6:Manifest Inscriptions",' +
+    '"features.Runechild ? 6:Sigilic Augmentation",' +
+    '"features.Runechild ? 14:Runic Torrent",' +
+    '"features.Runechild ? 18:Arcane Exemplar Form"'
 };
 Taldorei.CLASSES_SELECTABLES_ADDED = {
   'Barbarian':
@@ -206,20 +239,27 @@ Taldorei.FEATURES_ADDED = {
   'Arcane Exemplar Form':
     'Section=magic ' +
     'Note="Discharge 6 runes for 40\' Fly, +2 spell DC, resistance to spell damage, and regain HP from casting for 3 rd"',
+  'Blood Domain':
+    'Spells=' +
+      '"1:Ray Of Sickness",1:Sleep,' +
+      '"3:Crown Of Madness","3:Ray Of Enfeeblement",' +
+      '5:Haste,5:Slow,' +
+      '7:Blight,7:Stoneskin,' +
+      '"9:Dominate Person","9:Hold Monster"',
   'Blood Domain Bonus Proficiencies':
     'Section=feature Note="Weapon Proficiency (Martial)"',
   'Blood Puppet':
     'Section=magic ' +
-    'Note="R60\' Use Channel Divinity to force %V target to move half speed and attack (Con neg)"',
+    'Note="R60\' Use Channel Divinity to force %{levels.Cleric<8?\'Large\':\'Huge\'} target to move half speed and attack (Constitution neg)"',
   'Bloodletting Focus':
     'Section=magic ' +
     'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="Channel Divinity with target blood to learn distance, direction, HP, and conditions for conc or 1 hr, suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} rd (Con ends)"',
+    'Note="Channel Divinity with target blood to learn distance, direction, HP, and conditions for conc or 1 hr, suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} rd (Constitution ends)"',
   'Debilitating Barrage':
     'Section=combat ' +
-    'Note="Spend 3 Ki Points after triple hit for foe Disadv next attack, vulnerability to chosen damage type for 1 min (Con neg)"',
+    'Note="Spend 3 Ki Points after triple hit for foe Disadv next attack, vulnerability to chosen damage type for 1 min (Constitution neg)"',
   'Demolishing Might':
     'Section=combat ' +
     'Note="Melee weapons x2 damage vs. objects, +1d8 HP damage vs. constructs"',
@@ -228,18 +268,20 @@ Taldorei.FEATURES_ADDED = {
     'Note="Spending Sorcery Points charges %{levels.Sorcerer} runes; 5 charged runes emit 5\' light"',
   'Extort Truth':
     'Section=combat ' +
-    'Note="Spend 2 Ki Points after dbl hit to prevent foe lying (Cha neg) for 1 min"',
+    'Note="Spend 2 Ki Points after dbl hit to prevent foe lying (Charisma neg) for 1 min"',
   'Extract Aspects':
     'Section=combat ' +
-    'Note="Spend 1 Ki Point after dbl hit to gain info about foe (Con neg)"',
+    'Note="Spend 1 Ki Point after dbl hit to gain info about foe (Constitution neg)"',
   'Glyphs Of Aegis':
-    'Section=magic Note="Discharge runes to negate 1d6 damage each%1"',
+    'Section=magic ' +
+    'Note="Discharge runes to negate 1d6 damage each%{levels.Sorcerer<8?\'\':\', touch can transfer 1 rune for 1 hr\'}"',
   'Manifest Inscriptions':
     'Section=magic Note="R15\' Discharge 1 rune to reveal hidden glyphs"',
   'Mind Of Mercury':
     'Section=combat,save ' +
-    'Note="Spend %V Ki Points for %V extra reactions",' +
-         '"Spend 1 Ki Point for Adv on Investigation"',
+    'Note=' +
+      '"Spend %{intelligenceModifier>?1} Ki Points for %{intelligenceModifier>?1} extra reactions",' +
+      '"Spend 1 Ki Point for Adv on Investigation"',
   'Mystical Erudition':
     'Section=skill ' +
     'Note="Spend 1 Ki Point for Adv on Arcana, History, or Religion/Language (Choose %V from any)"',
@@ -252,15 +294,15 @@ Taldorei.FEATURES_ADDED = {
     'Note="Discharge spell level runes to overcome target resistance and immunity"',
   'Sanguine Recall':
     'Section=magic ' +
-    'Note="Recover up to %V spell levels, suffer equal d6 HP damage"',
+    'Note="Recover up to %{levels.Cleric//2} spell levels, suffer equal d6 HP damage"',
   'Sigilic Augmentation':
     'Section=magic ' +
-    'Note="Discharge rune for Adv on Str, Dex, or Con checks for 1 rd"',
+    'Note="Discharge rune for Adv on Strength, Dexterity, or Constitution checks for 1 rd"',
   'Stance Of The Mountain':
     'Section=combat Note="Cannot be knocked prone during rage"',
   'Thunderous Blows':
     'Section=combat ' +
-    'Note="Successful attack pushes foe 5\' (DC %{8+proficiencyBonus+strengthModifier} Str neg)"',
+    'Note="Successful attack pushes foe 5\' (DC %{8+proficiencyBonus+strengthModifier} Strength neg)"',
   'Unstoppable':
     'Section=combat ' +
     'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage"',
@@ -271,12 +313,12 @@ Taldorei.FEATURES_ADDED = {
   // Feats
   'Cruel':
     'Section=feature,combat,skill ' +
-    'Note="Use %V Cruelty Points/long rest",' +
+    'Note="Use %{proficiencyBonus} Cruelty Points/long rest",' +
          '"Spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit",'+
          '"Spend 1 Cruelty Point for Adv on Intimidation"',
   'Dual-Focused':
     'Section=magic ' +
-    'Note="Maintain concentration on two spells simultaneously (DC 10 + number of rd Con to maintain)"',
+    'Note="Maintain concentration on two spells simultaneously (DC 10 + number of rd Constitution to maintain)"',
   'Flash Recall':'Section=magic Note="Swap prepared spell 1/short rest"',
   'Gambler':
     'Section=ability,feature,skill ' +
@@ -308,39 +350,6 @@ Taldorei.FEATURES_ADDED = {
     'Section=save Note="Resistance to non-magical slashing damage"'
 
 };
-Taldorei.PATHS_ADDED = {
-  'Blood Domain':
-    'Group=Cleric ' +
-    'Level=levels.Cleric ' +
-    'Features=' +
-      '"1:Blood Domain Bonus Proficiencies","1:Bloodletting Focus",' +
-      '"2:Blood Puppet","6:Crimson Bond","8:Sanguine Recall",' +
-      '"17:Vascular Corruption Aura" ' +
-    'Spells=' +
-      '"1:Ray Of Sickness,Sleep",' +
-      '"2:Crown Of Madness,Ray Of Enfeeblement",' +
-      '"3:Haste,Slow",' +
-      '"4:Blight,Stoneskin",' +
-      '"5:Dominate Person,Hold Monster"',
-  'Path Of The Juggernaut':
-    'Group=Barbarian ' +
-    'Level=levels.Barbarian ' +
-    'Features=' +
-      '"3:Stance Of The Mountain","3:Thunderous Blows","6:Demolishing Might",' +
-      '"10:Overwhelming Cleave",14:Unstoppable',
-  'Runechild':
-    'Group=Sorcerer ' +
-    'Level=levels.Sorcerer ' +
-    'Features=' +
-      '"1:Essence Runes","1:Glyphs Of Aegis","6:Manifest Inscriptions",' +
-      '"6:Sigilic Augmentation","14:Runic Torrent","18:Arcane Exemplar Form"',
-  'Way Of The Cobalt Soul':
-    'Group=Monk ' +
-    'Level=levels.Monk ' +
-    'Features=' +
-      '"3:Mystical Erudition","3:Extract Aspects","6:Extort Truth",' +
-      '"6:Mind Of Mercury","11:Preternatural Counter","17:Debilitating Barrage"'
-};
 Taldorei.RACES_ADDED = {
   'Draconian Dragonborn':PHB5E.RACES['Dragonborn'],
   'Ravenite Dragonborn':
@@ -356,50 +365,20 @@ Taldorei.RACES_ADDED = {
  */
 Taldorei.choiceRules = function(rules, type, name, attrs) {
   PHB5E.choiceRules(rules, type, name, attrs);
-  if(type == 'Feat')
-    Taldorei.featRulesExtra(rules, name);
-  else if(type == 'Path')
-    Taldorei.pathRulesExtra(rules, name);
+  if(type == 'Class')
+    Taldorei.classRulesExtra(rules, name);
 };
 
 /*
- * Defines in #rules# the rules associated with feat #name# that cannot be
- * derived directly from the attributes passed to featRules.
+ * Defines in #rules# the rules associated with class #name# that cannot be
+ * derived directly from the attributes passed to classRules.
  */
-Taldorei.featRulesExtra = function(rules, name) {
-  if(name == 'Cruel')
-    rules.defineRule('featureNotes.cruel', 'proficiencyBonus', '=', null);
-};
-
-/*
- * Defines in #rules# the rules associated with path #name# that cannot be
- * derived directly from the attributes passed to pathRules.
- */
-Taldorei.pathRulesExtra = function(rules, name) {
-
-  var pathLevel =
-    name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') +
-    'Level';
-
-  if(name == 'Blood Domain') {
-    rules.defineRule
-      ('magicNotes.bloodPuppet', pathLevel, '=', 'source<8 ? "Large" : "Huge"');
-    rules.defineRule('magicNotes.sanguineRecall',
-      'levels.Cleric', '=', 'Math.floor(source / 2)'
-    );
-  } else if(name == 'Runechild') {
-    rules.defineRule('magicNotes.glyphsOfAegis.1',
-      pathLevel, '=', 'source<8 ? "" : ", touch can transfer 1 rune for 1 hr"'
-    );
-  } else if(name == 'Way Of The Cobalt Soul') {
-    rules.defineRule('combatNotes.mindOfMercury',
-      'intelligenceModifier', '=', 'Math.max(source, 1)'
-    );
+Taldorei.classRulesExtra = function(rules, name) {
+  if(name == 'Monk') {
     rules.defineRule('skillNotes.mysticalErudition',
       'levels.Monk', '=', 'source<11 ? 1 : source<17 ? 2 : 3'
     );
   }
-
 };
 
 /* Returns an array of plugins upon which this one depends. */
@@ -424,9 +403,13 @@ Taldorei.ruleNotes = function() {
     '<p>\n' +
     'Taldorei Quilvyn Plugin Version ' + Taldorei.VERSION + '\n' +
     '</p>\n' +
-    '<p>\n' +
-    'There are no known bugs, limitations, or usage notes specific to the Taldorei Rule Set.\n' +
-    '</p>\n' +
+    '<h3>Usage Notes</h3>\n' +
+    '<ul>\n' +
+    '  <li>\n' +
+    '  The Taldorei rule set allows you to add homebrew choices for' +
+    '  all of the same types discussed in the <a href="plugins/homebrew-srd5e.html">SRD 5E Homebrew Examples document</a>.' +
+    '  </li>\n' +
+    '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +
     '<p>\n' +
     'Portions of Quilvyn\'s Taldorei rule set are unofficial Fan Content\n' +
