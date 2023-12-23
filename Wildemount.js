@@ -26,7 +26,7 @@ Place, Suite 330, Boston, MA 02111-1307 USA.
  * particular parts of the rules; raceRules for character races, magicRules
  * for spells, etc. These member methods can be called independently in order
  * to use a subset of the rules.  Similarly, the constant fields of Wildemount
- * (BACKGROUNDS, PATHS, etc.) can be manipulated to modify the choices.
+ * (BACKGROUNDS, SPELLS, etc.) can be manipulated to modify the choices.
  */
 function Wildemount() {
 
@@ -37,16 +37,19 @@ function Wildemount() {
 
   var rules = new QuilvynRules('Wildemount', Wildemount.VERSION);
   Wildemount.rules = rules;
+  rules.plugin = Wildemount;
 
   rules.defineChoice('choices', SRD5E.CHOICES);
   rules.choiceEditorElements = SRD5E.choiceEditorElements;
   rules.choiceRules = Wildemount.choiceRules;
+  rules.removeChoice = SRD5E.removeChoice;
   rules.editorElements = SRD5E.initialEditorElements();
   rules.getFormats = SRD5E.getFormats;
   rules.getPlugins = Wildemount.getPlugins;
   rules.makeValid = SRD5E.makeValid;
   rules.randomizeOneAttribute = SRD5E.randomizeOneAttribute;
   rules.defineChoice('random', SRD5E.RANDOMIZABLE_ATTRIBUTES);
+  rules.getChoices = SRD5E.getChoices;
   rules.ruleNotes = Wildemount.ruleNotes;
 
   SRD5E.createViewers(rules, SRD5E.VIEWERS);
@@ -62,6 +65,10 @@ function Wildemount() {
   Wildemount.BACKGROUNDS =
     Object.assign({}, PHB5E.BACKGROUNDS, Wildemount.BACKGROUNDS_ADDED);
   Wildemount.CLASSES = Object.assign({}, PHB5E.CLASSES);
+  for(var c in Wildemount.CLASSES_FEATURES_ADDED) {
+    Wildemount.CLASSES[c] =
+      Wildemount.CLASSES[c].replace('Features=', 'Features=' + Wildemount.CLASSES_FEATURES_ADDED[c] + ',');
+  }
   for(var c in Wildemount.CLASSES_SELECTABLES_ADDED) {
     Wildemount.CLASSES[c] =
       Wildemount.CLASSES[c].replace('Selectables=', 'Selectables=' + Wildemount.CLASSES_SELECTABLES_ADDED[c] + ',');
@@ -69,7 +76,6 @@ function Wildemount() {
   Wildemount.FEATS = Object.assign({}, PHB5E.FEATS, Wildemount.FEATS_ADDED);
   Wildemount.FEATURES =
     Object.assign({}, PHB5E.FEATURES, Wildemount.FEATURES_ADDED);
-  Wildemount.PATHS = Object.assign({}, PHB5E.PATHS, Wildemount.PATHS_ADDED);
   Wildemount.RACES = Object.assign({}, PHB5E.RACES, Wildemount.RACES_ADDED);
   Wildemount.SPELLS = Object.assign({}, PHB5E.SPELLS, Wildemount.SPELLS_ADDED);
   Wildemount.TOOLS = Object.assign({}, SRD5E.TOOLS);
@@ -79,7 +85,7 @@ function Wildemount() {
   SRD5E.magicRules(rules, SRD5E.SCHOOLS, Wildemount.SPELLS);
   SRD5E.identityRules(
     rules, SRD5E.ALIGNMENTS, Wildemount.BACKGROUNDS, Wildemount.CLASSES,
-    Wildemount.DEITIES, Wildemount.PATHS, Wildemount.RACES
+    Wildemount.DEITIES, {}, Wildemount.RACES
   );
   SRD5E.talentRules
     (rules, Wildemount.FEATS, Wildemount.FEATURES, SRD5E.GOODIES,
@@ -100,7 +106,7 @@ function Wildemount() {
 
 }
 
-Wildemount.VERSION = '2.3.2.2';
+Wildemount.VERSION = '2.4.1.0';
 
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
@@ -108,7 +114,7 @@ Wildemount.BACKGROUNDS_ADDED = {
       '"Fine Clothes","Disguise Kit","Musical Instrument","Gold Ring","15 GP" '+
     'Features=' +
       '"1:Skill Proficiency (Deception/Performance)",' +
-      '"1:Tool Proficiency (Thieves\' Tools/Choose 1 from any Music)",' +
+      '"1:Tool Proficiency (Thieves\' Tools/Choose 1 from any Musical)",' +
       '"1:Ballad Of The Grinning Fool"',
   'Volstrucker Agent':
     'Equipment=' +
@@ -125,6 +131,25 @@ Wildemount.CLASSES_SELECTABLES_ADDED = {
   'Wizard':
     '"2:Chronurgy Magic:Arcane Tradition",' +
     '"2:Graviturgy Magic:Arcane Tradition"'
+};
+Wildemount.CLASSES_FEATURES_ADDED = {
+  'Fighter':
+    '"features.Echo Knight ? 3:Manifest Echo",' +
+    '"features.Echo Knight ? 3:Unleash Incarnation",' +
+    '"features.Echo Knight ? 7:Echo Avatar",' +
+    '"features.Echo Knight ? 10:Shadow Martyr",' +
+    '"features.Echo Knight ? 15:Reclaim Potential",' +
+    '"features.Echo Knight ? 18:Legion Of One"',
+  'Wizard':
+    '"features.Chronurgy Magic ? 2:Chronal Shift",' +
+    '"features.Chronurgy Magic ? 2:Temporal Awareness",' +
+    '"features.Chronurgy Magic ? 6:Momentary Stasis",' +
+    '"features.Chronurgy Magic ? 10:Arcane Abeyance",' +
+    '"features.Chronurgy Magic ? 14:Convergent Future",' +
+    '"features.Graviturgy Magic ? 2:Adjust Density",' +
+    '"features.Graviturgy Magic ? 6:Gravity Well",' +
+    '"features.Graviturgy Magic ? 10:Violent Attraction",' +
+    '"features.Graviturgy Magic ? 14:Event Horizon"'
 };
 Wildemount.DEITIES = {
   'Avandra, The Change Bringer':'Alignment=CG Domain=Nature,Trickery',
@@ -157,56 +182,60 @@ Wildemount.FEATURES_ADDED = {
 
   // Backgrounds
   'Ballad Of The Grinning Fool':
-    'Section=feature Note="May find shelter in city for self and companions"',
+    'Section=feature ' +
+    'Note="May obtain shelter for self and companions in a Menagerie Coast or Dwendallian Empire city"',
   'Shadow Network':
-    'Section=feature Note="May write to distant Volstrucker members"',
+    'Section=feature Note="May write magically to distant Volstrucker members"',
 
   // Feats
   'Hollow One':
     'Section=feature ' +
-    'Note="Returned from death/Has Ageless, Cling To Life, Revenance, and Unsettling Presence features"',
+    'Note="Has returned from death/Has Ageless, Cling To Life, Revenance, and Unsettling Presence features"',
 
   // Paths
   'Adjust Density':
-    'Section=magic Note="R30\' Dbl or halve weight of %V target (-10/+10 Speed, Adv/Disadv on Str) for conc or 1 min"',
+    'Section=magic ' +
+    'Note="R30\' May dbl or halve the weight of a %{levels.Wizard<10?\'Large\':\'Huge\'} target (-10/+10 Speed, Adv/Disadv on Strength) for conc or 1 min"',
   'Arcane Abeyance':
     'Section=magic ' +
-    'Note="Store level 1 - 4 spell in bead for use w/in 1 hr 1/short rest"',
+    'Note="May store a level 1 - 4 spell in a bead (AC 15; HP 1) for 1 hr 1/short rest"',
   'Chronal Shift':
     'Section=combat ' +
-    'Note="R30\' Use Reaction to force attack, ability, or save reroll 2/long rest"',
+    'Note="R30\' May use Reaction to force an attack, ability, or save reroll 2/long rest"',
   'Convergent Future':
     'Section=combat ' +
-    'Note="R60\' Suffer exhaustion to dictate whether attack, ability, or save roll succeeds"',
+    'Note="R60\' May suffer 1 level of exhaustion to dictate whether an attack, ability, or save roll succeeds; exhaustion requires a long rest to remove"',
   'Echo Avatar':
     'Section=magic ' +
     'Note="R1000\' May see and hear via Manifest Echo for 10 min"',
   'Event Horizon':
     'Section=magic ' +
-    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (Str half damage, 1/3 Speed) for conc or 1 min 1/long rest (level 3 spell slot refreshes)"',
+    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (Strength half HP and one-third Speed) for conc or 1 min 1/long rest (level 3 spell slot refreshes)"',
   'Gravity Well':
-    'Section=magic Note="Successful targeted spell moves target 5\'"',
+    'Section=magic Note="May move the target of a successful spell 5\'"',
   'Legion Of One':
     'Section=combat ' +
-    'Note="Minimum 1 Unleash Incarnation use after initiative/May create 2 Manifest Echos simultaneously"',
+    'Note="Has a minimum 1 Unleash Incarnation use after initiative/May create 2 Manifest Echos simultaneously"',
   'Manifest Echo':
     'Section=combat ' +
     'Note="R30\' Copy of self (AC %{14+proficiencyBonus}, HP 1, MV 30\') can swap places and transmit attacks and opportunity attacks"',
   'Momentary Stasis':
     'Section=magic ' +
-    'Note="R60\' Incapacitates large target for 1 rd (Con neg) %{intelligenceModifier>?1}/long rest"',
+    'Note="R60\' May incapacitate a Large target for 1 rd (Constitution neg) %{intelligenceModifier>?1}/long rest"',
   'Reclaim Potential':
     'Section=combat ' +
-    'Note="Gain 2d6+%{constitutionModifier} temporary HP when Manifest Echo destroyed %{constitutionModifier>?1}/long rest"',
+    'Note="May gain 2d6+%{constitutionModifier} temporary HP when Manifest Echo is destroyed %{constitutionModifier>?1}/long rest"',
   'Shadow Martyr':
-    'Section=combat Note="May use Manifest Echo to absorb attack 1/short rest"',
-  'Temporal Awareness':'Section=combat Note="+%V Initiative"',
+    'Section=combat ' +
+    'Note="May use Reaction to have Manifest Echo absorb an attack 1/short rest"',
+  'Temporal Awareness':
+    'Section=combat Note="+%{intelligenceModifier} Initiative"',
   'Unleash Incarnation':
     'Section=combat ' +
-    'Note="May make extra attack through Manifest Echo %{constitutionModifier>?1}/long rest"',
+    'Note="May make an extra attack through Manifest Echo %{constitutionModifier>?1}/long rest"',
   'Violent Attraction':
     'Section=combat ' +
-    'Note="R60\' Use Reaction to inflict +1d10 HP on weapon target or +2d10 HP on falling target %{intelligenceModifier>?1}/long rest"',
+    'Note="R60\' May use Reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling target %{intelligenceModifier>?1}/long rest"',
 
   // Races
   'Aarakocra Ability Adjustment':
@@ -215,25 +244,37 @@ Wildemount.FEATURES_ADDED = {
   'Ageless':'Section=feature Note="Immune to aging"',
   'Air Genasi Ability Adjustment':
     'Section=ability Note="+2 Constitution/+1 Dexterity"',
-  'Amphibious':'Section=feature Note="Breathe air and water"',
+  'Amphibious':'Section=feature Note="May breathe water"',
   'Blessing Of The Moon Weaver':
-    'Section=magic Note="Know <i>Light</i> cantrip%1"',
-  'Call To The Wave':'Section=magic Note="Know <i>Shape Water</i> cantrip%1"',
-  'Child Of The Sea':'Section=ability Note="30\' Swim, can breathe water"',
-  'Child Of The Wood':'Section=magic Note="Know <i>Druidcraft</i> cantrip%1"',
-  'Claws':'Section=combat Note="Use claws as natural slashing weapon"',
+    'Section=magic ' +
+    'Note="Knows <i>Light</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Sleep</i> 1/long rest\':\', may cast <i>Sleep</i> and self <i>Invisibility</i> 1/long rest\'}" ' +
+    'SpellAbility=Wisdom ' +
+    'Spells=Light,3:Sleep,5:Invisibility',
+  'Call To The Wave':
+    'Section=magic ' +
+    'Note="Knows <i>Shape Water</i> cantrip%{level<3?\'\':\', cast <i>Destroy Water</i> 1/long rest\'}" ' +
+    'SpellAbility=Constitution ' +
+    'Spells="Shape Water","3:Create Or Destroy Water"',
+  'Child Of The Sea':'Section=ability Note="30\' swim speed/May breathe water"',
+  'Child Of The Wood':
+    'Section=magic ' +
+    'Note="Knows <i>Druidcraft</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Entangle</i> 1/long rest\':\', may cast <i>Entangle<i> and <i>Spike Growth</i> 1/long rest\'}" ' +
+    'SpellAbility=Wisdom ' +
+    'Spells=Druidcraft,3:Entangle,"5:Spike Growth"',
+  'Claws':'Section=combat Note="Claws are a natural weapon"',
   'Cling To Life':
-    'Section=combat Note="Successful death saving throw restores 1 HP"',
+    'Section=combat ' +
+    'Note="Regains 1 HP from a successful death saving throw above 15"',
   'Draconblood Ability Adjustment':
     'Section=ability Note="+2 Intelligence/+1 Charisma"',
   'Earth Genasi Ability Adjustment':
     'Section=ability Note="+2 Constitution/+1 Strength"',
   'Earth Walk':
-    'Section=ability Note="Normal movement over difficult earth and stone"',
+    'Section=ability Note="May move normally over difficult earth and stone"',
   'Fire Genasi Ability Adjustment':
     'Section=ability Note="+2 Constitution/+1 Intelligence"',
   'Fire Resistance':'Section=save Note="Resistance to fire damage"',
-  'Flight':'Section=ability Note="50\' Fly"',
+  'Flight':'Section=ability Note="50\' fly speed"',
   'Forceful Presence':
     'Section=skill Note="Adv on Intimidation or Persuasion 1/short rest"',
   'Friend Of The Sea':
@@ -245,15 +286,21 @@ Wildemount.FEATURES_ADDED = {
   'Lotusden Halfling Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Wisdom"',
   'Mingle With The Wind':
-     'Section=magic Note="Cast <i>Levitate</i> 1/long rest"',
+     'Section=magic ' +
+     'Note="May cast <i>Levitate</i> 1/long rest" ' +
+     'SpellAbility=Constitution ' +
+     'Spells=Levitate',
   'Mountain Born':
     'Section=feature ' +
     'Note="Acclimated to high elevations and cold environments"',
-  'Natural Armor':'Section=combat Note="Shell gives AC 17, cannot wear armor"',
+  'Natural Armor':'Section=combat Note="Shell gives AC 17; cannot wear armor"',
   'Natural Athlete':'Section=skill Note="Skill Proficiency (Athletics)"',
   'Pallid Elf Ability Adjustment':'Section=ability Note="+2 Dexterity/+1 Wisdom"',
   'Pass Without Trace':
-    'Section=magic Note="Cast <i>Pass Without Trace</i> 1/long rest"',
+    'Section=magic ' +
+    'Note="May cast <i>Pass Without Trace</i> 1/long rest" ' +
+    'SpellAbility=Constitution ' +
+    'Spells="Pass Without Trace"',
   'Primal Intuition':
     'Section=feature ' +
     'Note="Skill Proficiency (Choose 2 from Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, Survival)"',
@@ -261,7 +308,10 @@ Wildemount.FEATURES_ADDED = {
   'Ravenite Ability Adjustment':
     'Section=ability Note="+2 Strength/+1 Constitution"',
   'Reach To The Blaze':
-    'Section=magic Note="Know <i>Produce Flame</i> cantrip%1"',
+    'Section=magic ' +
+    'Note="Knows <i>Produce Flame</i> cantrip%{level<3?\'\':\', may cast <i>Burning Hands</i> 1/long rest\'}" ' +
+    'SpellAbility=Constitution ' +
+    'Spells="Produce Flame","3:Burning Hands"',
   'Revenance':'Section=feature Note="Detects as undead"',
   'Sea Elf Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Constitution"',
@@ -270,46 +320,29 @@ Wildemount.FEATURES_ADDED = {
     'Note="Weapon Proficiency (Light Crossbow/Net/Spear/Trident)"',
   'Shell Defense':
     'Section=combat ' +
-    'Note="Withdrawal into shell gives +4 AC and Adv on Str and Con saves, inflicts immobility, Disadv on Dex saves, and no actions or reactions"',
+    'Note="Withdrawal into shell gives +4 AC and Adv on Strength and Constitution saves; inflicts prone, immobility, Disadv on Dexterity saves, and no actions or reactions"',
   'Survival Instinct':'Section=skill Note="Skill Proficiency (Survival)"',
   "Stone's Endurance":
     'Section=combat ' +
-    'Note="Reduce damage by 1d12+%{constitutionModifier} 1/short rest"',
-  'Swim':'Section=ability Note="30\' Swim"',
-  'Talons':'Section=combat Note="Use talons as natural slashing weapon"',
+    'Note="May reduce damage to self by 1d12+%{constitutionModifier} 1/short rest"',
+  'Swim':'Section=ability Note="30\' swim speed"',
+  'Talons':'Section=combat Note="Talons are a natural weapon"',
   'Timberwalk':
     'Section=ability,feature ' +
-    'Note="Normal movement through difficult undergrowth",' +
-         '"Trackers suffer Disadv"',
+    'Note=' +
+      '"May move normally through difficult undergrowth",' +
+      '"Trackers suffer Disadv"',
   'Tortle Ability Adjustment':'Section=ability Note="+2 Strength/+1 Wisdom"',
   'Unending Breath':'Section=feature Note="May hold breath indefinitely"',
-  'Unsettling Presence':'Section=combat Note="R15\' Inflict Disadv on next target save for 1 min 1/long rest"',
+  'Unsettling Presence':
+    'Section=combat ' +
+    'Note="R15\' May inflict Disadv on next target save for 1 min 1/long rest"',
   'Vengeful Assault':
     'Section=combat ' +
-    'Note="Use Reaction to attack after taking damage 1/short rest"',
+    'Note="May use Reaction to attack after taking damage 1/short rest"',
   'Water Genasi Ability Adjustment':
     'Section=ability Note="+2 Constitution/+1 Wisdom"'
 
-};
-Wildemount.PATHS_ADDED = {
-  'Echo Knight':
-    'Group=Fighter ' +
-    'Level=levels.Fighter ' +
-    'Features=' +
-      '"3:Manifest Echo","3:Unleash Incarnation","7:Echo Avatar",' +
-      '"10:Shadow Martyr","15:Reclaim Potential","18:Legion Of One"',
-  'Chronurgy Magic':
-    'Group=Wizard ' +
-    'Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Chronal Shift","2:Temporal Awareness","6:Momentary Stasis",' +
-      '"10:Arcane Abeyance","14:Convergent Future"',
-  'Graviturgy Magic':
-    'Group=Wizard ' +
-    'Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Adjust Density","6:Gravity Well","10:Violent Attraction",' +
-      '"14:Event Horizon"'
 };
 Wildemount.RACES_ADDED = {
   'Aarakocra':
@@ -323,7 +356,7 @@ Wildemount.RACES_ADDED = {
       '"Unending Breath"',
   'Draconblood':SRD5E.RACES.Dragonborn
     .replace('Dragonborn Ability Adjustment', 'Draconblood Ability Adjustment')
-    .replace('Dragonborn Damage Resistance', 'Forceful Presence')
+    .replace('Damage Resistance', 'Forceful Presence')
     .replace('Features=', 'Features=Darkvision,'),
   'Earth Genasi':
     'Features=' +
@@ -343,7 +376,7 @@ Wildemount.RACES_ADDED = {
     'Features=' +
       '"Language (Common/Halfling)",' +
       'Brave,"Child Of The Wood","Halfling Nimbleness",' +
-      '"Lotusden Halfling Ability Adjustment","Lucky Halfling",Slow,Small,' +
+      '"Lotusden Halfling Ability Adjustment","Lucky (Halfling)",Slow,Small,' +
       'Timberwalk',
   'Pallid Elf':
     'Features=' +
@@ -352,7 +385,7 @@ Wildemount.RACES_ADDED = {
       '"Incisive Sense","Keen Senses","Pallid Elf Ability Adjustment",Trance',
   'Ravenite':SRD5E.RACES.Dragonborn
     .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
-    .replace('Dragonborn Damage Resistance', 'Vengeful Assault')
+    .replace('Damage Resistance', 'Vengeful Assault')
     .replace('Features=', 'Features=Darkvision,'),
   'Sea Elf':
     'Features=' +
@@ -378,7 +411,7 @@ Wildemount.SPELLS_ADDED = {
   'Dark Star':
     'School=Evocation ' +
     'Level=W8 ' +
-    'Description="R150\' 40\' radius sphere inflicts 8d10 HP force (Con half), disintegrates dead, negates sight and sound for conc or 1 min"',
+    'Description="R150\' 40\' radius sphere inflicts 8d10 HP force (Constitution half), disintegrates dead, negates sight and sound for conc or 1 min"',
   "Fortune's Favor":
     'School=Divination ' +
     'Level=W2 ' +
@@ -392,27 +425,27 @@ Wildemount.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=W6 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="5\'x100\' line inflicts 8d8 HP force (Con half), pulls and inflicts 8d8 HP force on creatures w/in 10\' (Con neg)"',
+    'Description="5\'x100\' line inflicts 8d8 HP force (Constitution half), pulls and inflicts 8d8 HP force on creatures w/in 10\' (Constitution neg)"',
   'Gravity Sinkhole':
     'School=Evocation ' +
     'Level=W4 ' +
     'AtHigherLevels="inflicts +1d10 HP" ' +
-    'Description="R120\' 20\' radius inflicts 5d10 HP force and pulls to center (Con half HP only)"',
+    'Description="R120\' 20\' radius inflicts 5d10 HP force and pulls to center (Constitution half HP only)"',
   'Immovable Object':
     'School=Transmutation ' +
     'Level=W2 ' +
-    'AtHigherLevels="increases Str DC +5/+10, increases object support to 8,000/20,000 lb, and extends duration to 24 hr/permanent at level 4/6" ' +
-    'Description="Touched 10 lb object movable only by specified creatures (Str move 10\'), can support 4000 lb for 1 hr"',
+    'AtHigherLevels="increases Strength DC +5/+10, increases object support to 8,000/20,000 lb, and extends duration to 24 hr/permanent at level 4/6" ' +
+    'Description="Touched 10 lb object movable only by specified creatures (Strength move 10\'), can support 4000 lb for 1 hr"',
   'Magnify Gravity':
     'School=Transmutation ' +
     'Level=W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="R60\' 10\' radius inflicts 2d8 HP force and half speed (Con half HP only) for 1 rd"',
+    'Description="R60\' 10\' radius inflicts 2d8 HP force and half speed (Constitution half HP only) for 1 rd"',
   'Pulse Wave':
     'School=Evocation ' +
     'Level=W3 ' +
     'AtHigherLevels="inflicts +1d6 HP and increases move distance +5\'" ' +
-    'Description="30\' cone inflicts 6d6 HP force and pulls or pushes 15\' (Con half HP only)"',
+    'Description="30\' cone inflicts 6d6 HP force and pulls or pushes 15\' (Constitution half HP only)"',
   'Ravenous Void':
     'School=Evocation ' +
     'Level=W9 ' +
@@ -420,11 +453,11 @@ Wildemount.SPELLS_ADDED = {
   'Reality Break':
     'School=Conjuration ' +
     'Level=W8 ' +
-    'Description="R60\' Target loses reactions and suffers random effects (Wis neg) for conc or 1 min"',
+    'Description="R60\' Target loses reactions and suffers random effects (Wisdom neg) for conc or 1 min"',
   'Sapping Sting':
     'School=Necromancy ' +
     'Level=W0 ' +
-    'Description="R30\' Target suffers %{(level+7)//6}d4 HP and knocked prone (Con neg)"',
+    'Description="R30\' Target suffers %{(level+7)//6}d4 HP and knocked prone (Constitution neg)"',
   'Shape Water': // Copied from Xanathar's
     'School=Transmutation ' +
     'Level=D0,S0,W0 ' +
@@ -433,15 +466,15 @@ Wildemount.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=W5 ' +
     'AtHigherLevels="affects +1 target" ' +
-    'Description="R120\' Target disappears for 1 rd, losing action (Wis neg)"',
+    'Description="R120\' Target disappears for 1 rd, losing action (Wisdom neg)"',
   'Tether Essence':
     'School=Necromancy ' +
     'Level=W7 ' +
-    'Description="R60\' Two targets lose/gain HP identically for conc or 1 hr or until 0 HP (Con neg, Disadv if w/in 30\')"',
+    'Description="R60\' Two targets lose/gain HP identically for conc or 1 hr or until 0 HP (Constitution neg, Disadv if w/in 30\')"',
   'Time Ravage':
     'School=Necromancy ' +
     'Level=W9 ' +
-    'Description="R90\' Target aged to near-death, suffers 10d12 HP necrotic (Con half HP only)"',
+    'Description="R90\' Target aged to near-death, suffers 10d12 HP necrotic (Constitution half HP only)"',
   'Wristpocket':
     'School=Conjuration ' +
     'Level=W2 ' +
@@ -456,8 +489,6 @@ Wildemount.choiceRules = function(rules, type, name, attrs) {
   PHB5E.choiceRules(rules, type, name, attrs);
   if(type == 'Feat')
     Wildemount.featRulesExtra(rules, name);
-  else if(type == 'Path')
-    Wildemount.pathRulesExtra(rules, name);
   else if(type == 'Race')
     Wildemount.raceRulesExtra(rules, name);
 };
@@ -481,26 +512,6 @@ Wildemount.featRulesExtra = function(rules, name) {
 };
 
 /*
- * Defines in #rules# the rules associated with path #name# that cannot be
- * derived directly from the attributes passed to pathRules.
- */
-Wildemount.pathRulesExtra = function(rules, name) {
-
-  var pathLevel =
-    name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') +
-    'Level';
-
-  if(name == 'Chronurgy Magic') {
-    rules.defineRule
-      ('combatNotes.temporalAwareness', 'intelligenceModifier', '=', null);
-    rules.defineRule('magicNotes.adjustDensity',
-      pathLevel, '=', 'source<10 ? "large" : "huge"'
-    );
-  }
-
-};
-
-/*
  * Defines in #rules# the rules associated with race #name# that cannot be
  * derived directly from the attributes passed to raceRules.
  */
@@ -512,21 +523,6 @@ Wildemount.raceRulesExtra = function(rules, name) {
     rules.defineRule('selectableFeatureCount.Draconblood',
       'race', '=', 'source == "Draconblood" ? 1 : null'
     );
-  } else if(name == 'Fire Genasi') {
-    rules.defineRule('magicNotes.reachToTheBlaze.1',
-      'features.Reach To The Blaze', '?', null,
-      'level', '=', 'source<3 ? "" : ", cast <i>Burning Hands</i> 1/long rest"'
-    );
-  } else if(name == 'Lotusden Halfling') {
-    rules.defineRule('magicNotes.childOfTheWood.1',
-      'features.Child Of The Wood', '?', null,
-      'level', '=', 'source<3 ? "" : source<5 ? ", cast <i>Entangle</i> 1/long rest" : ", cast <i>Entangle</i> and <i>Spike Growth</i> 1/long rest"'
-    );
-  } else if(name == 'Pallid Elf') {
-    rules.defineRule('magicNotes.blessingOfTheMoonWeaver.1',
-      'features.Blessing Of The Moon Weaver', '?', null,
-      'level', '=', 'source<3 ? "" : source<5 ? ", cast <i>Sleep</i> 1/long rest" : ", cast <i>Sleep</i> and <i>Invisibility</i> 1/long rest"'
-    );
   } else if(name == 'Ravenite') {
     rules.defineRule('selectableFeatureCount.Ravenite',
       'race', '=', 'source == "Ravenite" ? 1 : null'
@@ -537,11 +533,6 @@ Wildemount.raceRulesExtra = function(rules, name) {
       ('combatNotes.dexterityArmorClassAdjustment', 'tortleLevel', '*', '0');
     SRD5E.weaponRules(rules, 'Claws', 'Unarmed', [], '1d4', null);
     rules.defineRule('weapons.Claws', 'combatNotes.claws', '=', '1');
-  } else if(name == 'Water Genasi') {
-    rules.defineRule('magicNotes.callToTheWave.1',
-      'features.Call To The Wave', '?', null,
-      'level', '=', 'source<3 ? "" : ", cast <i>Destroy Water</i> 1/long rest"'
-    );
   }
 };
 
@@ -570,14 +561,17 @@ Wildemount.ruleNotes = function() {
     '<h3>Usage Notes</h3>\n' +
     '<ul>\n' +
     '  <li>\n' +
-    '    Races from the Wildemount rule book that are also defined in\n' +
-    '    Volo\'s Guide to Monsters are available only if the Volo module is\n' +
-    '    also selected. These races are Aasimar, Firbolg, Bugbear, Goblin,\n' +
-    '    Hobgoblin, Kenku, Orc, and Tabaxi.\n' +
+    '  Races from the Wildemount rule book that are also defined in' +
+    '  Volo\'s Guide to Monsters are available only if the Volo module is' +
+    '  also selected. These races are Aasimar, Firbolg, Bugbear, Goblin,' +
+    '  Hobgoblin, Kenku, Orc, and Tabaxi.\n' +
     '  </li><li>\n' +
-    '    Quilvyn makes the Hollow One feature available as a special feat.\n' +
-    '    To use it, add the line "* +1 Feat" to the character notes, then\n' +
-    '    select Hollow One in the Feats pull-down.\n' +
+    '  Quilvyn makes the Hollow One feature available as a special feat.' +
+    '  To use it, add the line "* +1 Feat" to the character notes, then' +
+    '  select Hollow One in the Feats pull-down.\n' +
+    '  </li><li>\n' +
+    '  The Wildemount rule set allows you to add homebrew choices for' +
+    '  all of the same types discussed in the <a href="plugins/homebrew-srd5e.html">SRD 5E Homebrew Examples document</a>.' +
     '  </li>\n' +
     '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +

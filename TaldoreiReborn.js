@@ -37,16 +37,19 @@ function TaldoreiReborn() {
 
   let rules = new QuilvynRules('Taldorei Reborn', TaldoreiReborn.VERSION);
   TaldoreiReborn.rules = rules;
+  rules.plugin = TaldoreiReborn;
 
   rules.defineChoice('choices', SRD5E.CHOICES);
   rules.choiceEditorElements = SRD5E.choiceEditorElements;
   rules.choiceRules = TaldoreiReborn.choiceRules;
+  rules.removeChoice = SRD5E.removeChoice;
   rules.editorElements = SRD5E.initialEditorElements();
   rules.getFormats = SRD5E.getFormats;
   rules.getPlugins = TaldoreiReborn.getPlugins;
   rules.makeValid = SRD5E.makeValid;
   rules.randomizeOneAttribute = SRD5E.randomizeOneAttribute;
   rules.defineChoice('random', SRD5E.RANDOMIZABLE_ATTRIBUTES);
+  rules.getChoices = SRD5E.getChoices;
   rules.ruleNotes = TaldoreiReborn.ruleNotes;
 
   SRD5E.createViewers(rules, SRD5E.VIEWERS);
@@ -582,7 +585,7 @@ TaldoreiReborn.ruleNotes = function() {
     '  "* +1 Feat" to the character notes, then select Fortune\'s Grace\n' +
     '  in the Feats pull-down.\n' +
     '  </li><li>\n' +
-    '  The Midnight Legacy rule set allows you to add homebrew choices for' +
+    '  The Taldorei Reborn rule set allows you to add homebrew choices for' +
     '  all of the same types discussed in the <a href="plugins/homebrew-srd5e.html">SRD 5E Homebrew Examples document</a>.' +
     '  </li>\n' +
     '</ul>\n' +
