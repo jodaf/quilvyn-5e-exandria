@@ -35,7 +35,7 @@ function Wildemount() {
     return;
   }
 
-  var rules = new QuilvynRules('Wildemount', Wildemount.VERSION);
+  let rules = new QuilvynRules('Wildemount', Wildemount.VERSION);
   Wildemount.rules = rules;
   rules.plugin = Wildemount;
 
@@ -65,11 +65,11 @@ function Wildemount() {
   Wildemount.BACKGROUNDS =
     Object.assign({}, PHB5E.BACKGROUNDS, Wildemount.BACKGROUNDS_ADDED);
   Wildemount.CLASSES = Object.assign({}, PHB5E.CLASSES);
-  for(var c in Wildemount.CLASSES_FEATURES_ADDED) {
+  for(let c in Wildemount.CLASSES_FEATURES_ADDED) {
     Wildemount.CLASSES[c] =
       Wildemount.CLASSES[c].replace('Features=', 'Features=' + Wildemount.CLASSES_FEATURES_ADDED[c] + ',');
   }
-  for(var c in Wildemount.CLASSES_SELECTABLES_ADDED) {
+  for(let c in Wildemount.CLASSES_SELECTABLES_ADDED) {
     Wildemount.CLASSES[c] =
       Wildemount.CLASSES[c].replace('Selectables=', 'Selectables=' + Wildemount.CLASSES_SELECTABLES_ADDED[c] + ',');
   }
@@ -404,8 +404,8 @@ Wildemount.RACES_ADDED = {
       '"Water Genasi Ability Adjustment"'
 };
 if(window.Volo != null) {
-  Wildemount.RACES_ADDED['Orc'] =
-    Volo.MONSTROUS_RACES['Orc'].replace('Menacing', '"Primal Intuition"');
+  Wildemount.RACES_ADDED.Orc =
+    Volo.MONSTROUS_RACES.Orc.replace('Menacing', '"Primal Intuition"');
 }
 Wildemount.SPELLS_ADDED = {
   'Dark Star':
@@ -538,7 +538,7 @@ Wildemount.raceRulesExtra = function(rules, name) {
 
 /* Returns an array of plugins upon which this one depends. */
 Wildemount.getPlugins = function() {
-  var result = [PHB5E, SRD5E];
+  let result = [PHB5E, SRD5E];
   if(window.Tasha != null &&
      QuilvynUtils.getKeys(Wildemount.rules.getChoices('selectableFeatures'), /Peace Domain/).length > 0)
     result.unshift(Tasha);
