@@ -195,7 +195,7 @@ Wildemount.FEATURES_ADDED = {
   // Paths
   'Adjust Density':
     'Section=magic ' +
-    'Note="R30\' May dbl or halve the weight of a %{levels.Wizard<10?\'Large\':\'Huge\'} target (-10/+10 Speed, Adv/Disadv on Strength) for conc or 1 min"',
+    'Note="R30\' May dbl or halve the weight of a %{levels.Wizard<10?\'Large\':\'Huge\'} target (-10/+10 Speed, Adv/Disadv on Strength) for conc up to 1 min"',
   'Arcane Abeyance':
     'Section=magic ' +
     'Note="May store a level 1 - 4 spell in a bead (AC 15; HP 1) for 1 hr 1/short rest"',
@@ -210,7 +210,7 @@ Wildemount.FEATURES_ADDED = {
     'Note="R1000\' May see and hear via Manifest Echo for 10 min"',
   'Event Horizon':
     'Section=magic ' +
-    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (Strength half HP and one-third Speed) for conc or 1 min 1/long rest (level 3 spell slot refreshes)"',
+    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (Strength half HP and one-third Speed) for conc up to 1 min 1/long rest (level 3 spell slot refreshes)"',
   'Gravity Well':
     'Section=magic Note="May move the target of a successful spell 5\'"',
   'Legion Of One':
@@ -411,7 +411,7 @@ Wildemount.SPELLS_ADDED = {
   'Dark Star':
     'School=Evocation ' +
     'Level=W8 ' +
-    'Description="R150\' 40\' radius sphere inflicts 8d10 HP force (Constitution half), disintegrates dead, negates sight and sound for conc or 1 min"',
+    'Description="R150\' 40\' radius sphere inflicts 8d10 HP force (Constitution half), disintegrates dead, and negates sight and sound for conc up to 1 min"',
   "Fortune's Favor":
     'School=Divination ' +
     'Level=W2 ' +
@@ -425,7 +425,7 @@ Wildemount.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=W6 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="5\'x100\' line inflicts 8d8 HP force (Constitution half), pulls and inflicts 8d8 HP force on creatures w/in 10\' (Constitution neg)"',
+    'Description="5\'x100\' line inflicts 8d8 HP force (Constitution half) and pulls and inflicts 8d8 HP force on creatures w/in 10\' (Constitution neg)"',
   'Gravity Sinkhole':
     'School=Evocation ' +
     'Level=W4 ' +
@@ -435,7 +435,7 @@ Wildemount.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=W2 ' +
     'AtHigherLevels="increases Strength DC +5/+10, increases object support to 8,000/20,000 lb, and extends duration to 24 hr/permanent at level 4/6" ' +
-    'Description="Touched 10 lb object movable only by specified creatures (Strength move 10\'), can support 4000 lb for 1 hr"',
+    'Description="Touched 10 lb object movable only by specified creatures (Strength move 10\') and can support 4000 lb for 1 hr"',
   'Magnify Gravity':
     'School=Transmutation ' +
     'Level=W1 ' +
@@ -444,16 +444,16 @@ Wildemount.SPELLS_ADDED = {
   'Pulse Wave':
     'School=Evocation ' +
     'Level=W3 ' +
-    'AtHigherLevels="inflicts +1d6 HP and increases move distance +5\'" ' +
+    'AtHigherLevels="inflicts +1d6 HP and moves +5\'" ' +
     'Description="30\' cone inflicts 6d6 HP force and pulls or pushes 15\' (Constitution half HP only)"',
   'Ravenous Void':
     'School=Evocation ' +
     'Level=W9 ' +
-    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains, destroys dead and nonmagical objects, and creates 120\' radius difficult terrain that pulls to center for conc or 1 min"',
+    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains, destroys dead and nonmagical objects, and creates 120\' radius difficult terrain that pulls to center for conc up to 1 min"',
   'Reality Break':
     'School=Conjuration ' +
     'Level=W8 ' +
-    'Description="R60\' Target loses reactions and suffers random effects (Wisdom neg) for conc or 1 min"',
+    'Description="R60\' Target loses reactions and suffers random effects (Wisdom ends) for conc up to 1 min"',
   'Sapping Sting':
     'School=Necromancy ' +
     'Level=W0 ' +
@@ -466,19 +466,19 @@ Wildemount.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=W5 ' +
     'AtHigherLevels="affects +1 target" ' +
-    'Description="R120\' Target disappears for 1 rd, losing action (Wisdom neg)"',
+    'Description="R120\' May cast as a reaction to cause target to disappear for 1 rd, negating attack or spell cast (Wisdom neg)"',
   'Tether Essence':
     'School=Necromancy ' +
     'Level=W7 ' +
-    'Description="R60\' Two targets lose/gain HP identically for conc or 1 hr or until 0 HP (Constitution neg, Disadv if w/in 30\')"',
+    'Description="R60\' Two targets lose and gain HP identically for conc up to 1 hr or until 0 HP (Constitution neg, Disadv if w/in 30\')"',
   'Time Ravage':
     'School=Necromancy ' +
     'Level=W9 ' +
-    'Description="R90\' Target aged to near-death, suffers 10d12 HP necrotic (Constitution half HP only)"',
+    'Description="R90\' Target suffers 10d12 HP necrotic and aging to near-death (Constitution half HP only)"',
   'Wristpocket':
     'School=Conjuration ' +
     'Level=W2 ' +
-    'Description="Touched 5 lb object moves to/from extradimensional space for conc or 1 hr"'
+    'Description="Self may move touched 5 lb object to and from an extradimensional space for conc up to 1 hr"'
 };
 
 /*
