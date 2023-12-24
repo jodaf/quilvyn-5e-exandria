@@ -341,7 +341,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May spend 1 Ki Point after an unarmed hit to prevent target lying and to give all Adv on Charisma vs. foe for 10 min (Charisma neg)"',
   'Extract Aspects':
     'Section=combat ' +
-    'Note="May use Reaction after a Flurry Of Blows hit to gain info about target; may use Reaction for unarmed attack when target misses until next rest"',
+    'Note="May use Reaction after a Flurry Of Blows hit to gain info about target; may use Reaction for an unarmed attack when target misses until next rest"',
   "Fortune's Grace":
     'Section=feature ' +
     'Note="May reroll an attack, ability, or save or force a foe reroll 1/long rest"',
@@ -353,7 +353,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May use Channel Divinity to inflict 10\' push w/successful weapon attack (+%{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
   'Glyph Of Aegis':
     'Section=magic ' +
-    'Note="May use Reaction and discharge runes, negating 1d%{levels.Sorcerer<14?6:8} damage each%{levels.Sorcerer<8?\'\':\'; touch may transfer the protection of up to 3 runes for 1 hr\'}"',
+    'Note="May use Reaction to discharge runes, negating 1d%{levels.Sorcerer<14?6:8} damage each%{levels.Sorcerer<8?\'\':\'; touch may transfer the protection of up to 3 runes for 1 hr\'}"',
   'Glyph Of Hemorrhaging':
     'Section=magic ' +
     'Note="May curse a successful spell attack target to suffer +1d6 HP necrotic from each attack for 1 min (Constitution ends) 1/short rest"',
@@ -428,10 +428,10 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May take spell level HP necrotic to reroll %{intelligenceModifier>?1} spell damage dice"',
   'Sanguine Recall':
     'Section=magic ' +
-    'Note="May suffer up to %{levels.Cleric//2}d8 HP necrotic to recover an equal number of spell levels (level 6 max) 1/long rest"',
+    'Note="May suffer up to %{(levels.Cleric+1)//2}d8 HP necrotic to recover an equal number of spell slot levels (level 5 max) 1/long rest"',
   'Sigilic Augmentation':
     'Section=magic ' +
-    'Note="May use Reaction and discharge 1 rune to gain Adv on a Strength, Dexterity, or Constitution check or save 1/long rest"',
+    'Note="May use Reaction to discharge 1 rune, gaining Adv on a Strength, Dexterity, or Constitution check or save 1/long rest"',
   'Sorrowful Fate':
     'Section=combat ' +
     'Note="May spend 1 Bardic Inspiration die to change a foe save to Charisma; failure inflicts Bardic Inspiration die HP psychic 1/short rest"',
