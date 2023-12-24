@@ -122,9 +122,6 @@ Taldorei.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Deception/Choose 1 from Sleight Of Hand, Stealth)",' +
       '"1:Tool Proficiency (Choose 1 from Disguise Kit, Forgery Kit, Thieves\' Tools)",' +
       '"1:A Favor In Turn","1:Thieves\' Cant"',
-  'Fate-Touched':
-    'Features=' +
-      '"1:Fortune\'s Grace"',
   'Lyceum Student':
     'Equipment=' +
       '"Fine Clothes","Student Uniform","Writing Kit","10 GP" ' +
@@ -201,44 +198,37 @@ Taldorei.DEITIES = {
   'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War'
 };
 Taldorei.FEATS_ADDED = {
-  'Cruel':
-    'Type=General',
-  'Dual-Focused':
-    'Type=General Require="casterLevel >= 1"',
-  'Flash Recall':
-    'Type=General Require="casterLevel >= 1"',
-  'Gambler':
-    'Type=General',
-  'Mending Affinity':
-    'Type=General',
-  'Mystic Conflux':
-    'Type=General',
-  'Rapid Drinker':
-    'Type=General',
-  'Spelldriver':
-    'Type=General Require="level >= 8"',
-  'Thrown Arms Master':
-    'Type=General'
+  'Cruel':'Type=General',
+  'Dual-Focused':'Type=General Require="casterLevel >= 1"',
+  'Flash Recall':'Type=General Require="casterLevel >= 1"',
+  "Fortune's Grace":'Type=Special',
+  'Gambler':'Type=General',
+  'Mending Affinity':'Type=General',
+  'Mystic Conflux':'Type=General',
+  'Rapid Drinker':'Type=General',
+  'Spelldriver':'Type=General Require="level >= 8"',
+  'Thrown Arms Master':'Type=General'
 };
 Taldorei.FEATURES_ADDED = {
 
   // Backgrounds
   'A Favor In Turn':
     'Section=skill ' +
-    'Note="Ask 20-word favor of contact in return for future favor"',
-  'Elemental Harmony':'Section=magic Note="Produce minor elemental effects"',
+    'Note="May ask a 20-word favor from a contact in return for a future favor"',
+  'Elemental Harmony':
+    'Section=magic Note="May produce minor elemental effects"',
   "Fortune's Grace":
     'Section=feature ' +
-    'Note="Adv on attack, ability, or saving throw or foe Disadv on self attack 1/long rest"',
+    'Note="May gain Adv on an attack, ability, or saving throw or inflict foe Disadv on self attack 1/long rest"',
   'Student Privilege':
-    'Section=skill Note="Have access to school tools and crafting materials"',
+    'Section=skill Note="May access school tools and crafting materials"',
   'Wicked Awareness':
     'Section=skill Note="Adv on checks to uncover cult activity"',
 
   // Paths
   'Arcane Exemplar Form':
     'Section=magic ' +
-    'Note="Discharge 6 runes for 40\' Fly, +2 spell DC, resistance to spell damage, and regain HP from casting for 3 rd"',
+    'Note="May discharge 6 runes to gain 40\' fly speed, +2 spell DC, resistance to spell damage, and regaining HP from casting for 3+ rd 1/long rest"',
   'Blood Domain':
     'Spells=' +
       '"1:Ray Of Sickness",1:Sleep,' +
@@ -250,62 +240,67 @@ Taldorei.FEATURES_ADDED = {
     'Section=feature Note="Weapon Proficiency (Martial)"',
   'Blood Puppet':
     'Section=magic ' +
-    'Note="R60\' Use Channel Divinity to force %{levels.Cleric<8?\'Large\':\'Huge\'} target to move half speed and attack (Constitution neg)"',
+    'Note="R60\' May use Channel Divinity to force a %{levels.Cleric<8?\'Large\':\'Huge\'} target to move at half speed and attack (Constitution neg)"',
   'Bloodletting Focus':
     'Section=magic ' +
     'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="Channel Divinity with target blood to learn distance, direction, HP, and conditions for conc or 1 hr, suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} rd (Constitution ends)"',
+    'Note="May use Channel Divinity with week-old target blood to learn distance, direction, HP, and conditions of target for conc up to 1 hr; may suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} rd (Constitution ends)"',
   'Debilitating Barrage':
     'Section=combat ' +
-    'Note="Spend 3 Ki Points after triple hit for foe Disadv next attack, vulnerability to chosen damage type for 1 min (Constitution neg)"',
+    'Note="May spend 3 Ki Points after a triple hit to inflict vulnerability to chosen damage type for 1 min (Constitution neg) and Disadv on next attack"',
   'Demolishing Might':
     'Section=combat ' +
-    'Note="Melee weapons x2 damage vs. objects, +1d8 HP damage vs. constructs"',
+    'Note="Melee weapons inflict x2 damage vs. objects and +1d8 HP damage vs. constructs"',
   'Essence Runes':
     'Section=magic ' +
-    'Note="Spending Sorcery Points charges %{levels.Sorcerer} runes; 5 charged runes emit 5\' light"',
+    'Note="Spending Sorcery Points charges an equal number of runes (maximum %{levels.Sorcerer}); 5 charged runes emit a bright light in a 5\' radius"',
   'Extort Truth':
     'Section=combat ' +
-    'Note="Spend 2 Ki Points after dbl hit to prevent foe lying (Charisma neg) for 1 min"',
+    'Note="May spend 2 Ki Points after a dbl hit to prevent target from lying (Charisma neg) for 1 min"',
   'Extract Aspects':
     'Section=combat ' +
-    'Note="Spend 1 Ki Point after dbl hit to gain info about foe (Constitution neg)"',
+    'Note="May spend 1 Ki Point after a dbl hit to gain info about target (Constitution neg)"',
   'Glyphs Of Aegis':
     'Section=magic ' +
-    'Note="Discharge runes to negate 1d6 damage each%{levels.Sorcerer<8?\'\':\', touch can transfer 1 rune for 1 hr\'}"',
+    'Note="May use Reaction to discharge runes, negating 1d6 damage each%{levels.Sorcerer<8?\'\':\'; touch may transfer the protection of 1 rune for 1 hr\'}"',
   'Manifest Inscriptions':
-    'Section=magic Note="R15\' Discharge 1 rune to reveal hidden glyphs"',
+    'Section=magic ' +
+    'Note="R15\' May discharge 1 rune to reveal hidden glyphs for 1 rd"',
   'Mind Of Mercury':
     'Section=combat,save ' +
     'Note=' +
-      '"Spend %{intelligenceModifier>?1} Ki Points for %{intelligenceModifier>?1} extra reactions",' +
-      '"Spend 1 Ki Point for Adv on Investigation"',
+      '"May spend up to %{intelligenceModifier>?1} Ki Points for an equal number of extra Reactions",' +
+      '"May spend 1 Ki Point for Adv on Investigation"',
   'Mystical Erudition':
-    'Section=skill ' +
-    'Note="Spend 1 Ki Point for Adv on Arcana, History, or Religion/Language (Choose %V from any)"',
+    'Section=skill,skill ' +
+    'Note=' +
+      '"Language (Choose %V from any)",' +
+      '"May spend 1 Ki Point for Adv on Arcana, History, or Religion"',
   'Overwhelming Cleave':
-    'Section=combat Note="Bonus attack on second foe adjacent to first"',
+    'Section=combat ' +
+    'Note="May use a bonus action after attacking to attack another foe adjacent to target"',
   'Preternatural Counter':
-    'Section=combat Note="Use Reaction for OA after foe miss"',
+    'Section=combat ' +
+    'Note="May use Reaction for a melee attack after a target attack misses self"',
   'Runic Torrent':
     'Section=magic ' +
-    'Note="Discharge spell level runes to overcome target resistance and immunity"',
+    'Note="May discharge spell level runes to overcome target resistance and immunity"',
   'Sanguine Recall':
     'Section=magic ' +
-    'Note="Recover up to %{levels.Cleric//2} spell levels, suffer equal d6 HP damage"',
+    'Note="May suffer up to %{(levels.Cleric+1)//2}d6 HP to recover an equal number of spell slot levels (level 5 max) 1/long rest"',
   'Sigilic Augmentation':
     'Section=magic ' +
-    'Note="Discharge rune for Adv on Strength, Dexterity, or Constitution checks for 1 rd"',
+    'Note="May use a bonus action to discharge 1 rune, gaining Adv on Strength, Dexterity, or Constitution checks for 1 rd"',
   'Stance Of The Mountain':
     'Section=combat Note="Cannot be knocked prone during rage"',
   'Thunderous Blows':
     'Section=combat ' +
-    'Note="Successful attack pushes foe 5\' (DC %{8+proficiencyBonus+strengthModifier} Strength neg)"',
+    'Note="May push foe 5\' w/a successful attack (DC %{8+proficiencyBonus+strengthModifier} Strength neg)"',
   'Unstoppable':
     'Section=combat ' +
-    'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage"',
+    'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage; suffers 1 level of exhaustion when rage ends"',
   'Vascular Corruption Aura':
     'Section=combat ' +
     'Note="R30\' Foes suffer 2d6 HP necrotic and half healing for 1 min 1/long rest"',
@@ -313,41 +308,51 @@ Taldorei.FEATURES_ADDED = {
   // Feats
   'Cruel':
     'Section=feature,combat,skill ' +
-    'Note="Use %{proficiencyBonus} Cruelty Points/long rest",' +
-         '"Spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit",'+
-         '"Spend 1 Cruelty Point for Adv on Intimidation"',
+    'Note=' +
+      '"May use %{proficiencyBonus} Cruelty Points/long rest",' +
+      '"May spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit",'+
+      '"May spend 1 Cruelty Point for Adv on Intimidation"',
   'Dual-Focused':
     'Section=magic ' +
-    'Note="Maintain concentration on two spells simultaneously (DC 10 + number of rd Constitution to maintain)"',
-  'Flash Recall':'Section=magic Note="Swap prepared spell 1/short rest"',
+    'Note="Successful DC 10 + number of rd Constitution allows maintaining concentration on two spells simultaneously"',
+  'Flash Recall':
+    'Section=magic Note="May replace a prepared spell 1/short rest"',
   'Gambler':
     'Section=ability,feature,skill ' +
-    'Note="+1 Charisma",' +
-         '"Tool Proficiency (Choose 2 from any Game)",' +
-         '"Reroll Carousing/Adv on Deception (games)/Adv on Persuasion (games)"',
+    'Note=' +
+      '"+1 Charisma",' +
+      '"Tool Proficiency (Choose 2 from any Game)",' +
+      '"May reroll Carousing/Adv on Deception (games)/Adv on Persuasion (games)"',
   'Mending Affinity':
     'Section=ability,combat ' +
-    'Note="+1 Constitution",' +
-         '"Regain +%{proficiencyBonus} HP from healer\'s kit, potion, or spell"',
+    'Note=' +
+      '"+1 Constitution",' +
+      '"Healing and stabilization restore +%{proficiencyBonus>?1} HP"',
   'Mystic Conflux':
     'Section=skill,magic ' +
-    'Note="Adv on Arcana (investigate magic device)",' +
-         '"May attune 4 items"',
+    'Note=' +
+      '"Adv on Arcana (investigate magic device)",' +
+      '"May attune 4 items"',
   'Rapid Drinker':
     'Section=combat,save ' +
-    'Note="Quaff as bonus action",' +
-         '"Adv on ingestion saves"',
-  'Spelldriver':'Section=magic Note="Cast additional level 1 - 2 spell/rd"',
+    'Note=' +
+      '"May quaff as a bonus action",' +
+      '"Adv on ingestion saves"',
+  'Spelldriver':
+    'Section=magic Note="May cast an additional level 1 - 2 spell/rd"',
   'Thrown Arms Master':
-    'Section=ability,combat ' +
-    'Note="Ability Boost (Choose 1 from Strength, Dexterity)",' +
-         '"Throw any weapon, +20/+40 throw range, light weapon returns after miss"',
+    'Section=ability,combat,combat ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
+      '"+20/+40 throw range",' +
+      '"May throw any weapon (one-handed have range 20/60, two-handed 15/30); light weapon returns after a missed throw"',
 
   // Races
+  'Damage Resistance (Ravenite Dragonborn)':
+    'Section=save Note="Resistance to non-magical slashing damage"',
+  'Fast':'Section=ability Note="+5 Speed"',
   'Ravenite Ability Adjustment':
-    'Section=ability Note="+1 Constitution/+1 Wisdom"',
-  'Ravenite Damage Resistance':
-    'Section=save Note="Resistance to non-magical slashing damage"'
+    'Section=ability Note="+1 Constitution/+1 Wisdom"'
 
 };
 Taldorei.RACES_ADDED = {
@@ -355,8 +360,8 @@ Taldorei.RACES_ADDED = {
   'Ravenite Dragonborn':
     PHB5E.RACES['Dragonborn']
       .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
-      .replace('Dragonborn Damage Resistance', 'Ravenite Damage Resistance')
-      .replace('Features=', 'Features="Fleet Of Foot",')
+      .replace('Damage Resistance', 'Damage Resistance (Ravenite Dragonborn)')
+      .replace('Features=', 'Features=Fast,')
 };
 
 /*
@@ -367,6 +372,10 @@ Taldorei.choiceRules = function(rules, type, name, attrs) {
   PHB5E.choiceRules(rules, type, name, attrs);
   if(type == 'Class')
     Taldorei.classRulesExtra(rules, name);
+  else if(type == 'Feat')
+    Taldorei.featRulesExtra(rules, name);
+  else if(type == 'Race')
+    Taldorei.raceRulesExtra(rules, name);
 };
 
 /*
@@ -377,6 +386,60 @@ Taldorei.classRulesExtra = function(rules, name) {
   if(name == 'Monk') {
     rules.defineRule('skillNotes.mysticalErudition',
       'levels.Monk', '=', 'source<11 ? 1 : source<17 ? 2 : 3'
+    );
+  }
+};
+
+/*
+ * Defines in #rules# the rules associated with feat #name# that cannot be
+ * derived directly from the attributes passed to featRules.
+ */
+Taldorei.featRulesExtra = function(rules, name) {
+  if(name == "Fortune's Grace")
+    // Ensure that a goody note will be able to bump feat count before
+    // character level 4.
+    rules.defineRule
+      ('featCount.General', "features.Fortune's Grace", '+=', '0');
+  else if(name == 'Thrown Arms Master') {
+    let allWeapons = rules.getChoices('weapons');
+    for(let w in allWeapons) {
+      let m = allWeapons[w].match(/range=(\d+)\/(\d+)/i);
+      if(allWeapons[w].match(/thrown/i) && m) {
+        rules.defineRule('weapons.' + w + '.4',
+          'combatNotes.thrownArmsMaster', '=', '"' + ((+m[1]) + 20) + '/' + ((+m[2]) + 40) + '"'
+        );
+      }
+    }
+  }
+};
+
+/*
+ * Defines in #rules# the rules associated with race #name# that cannot be
+ * derived directly from the attributes passed to raceRules.
+ */
+Taldorei.raceRulesExtra = function(rules, name) {
+  if(name.match(/Dragonborn/)) {
+    rules.defineRule('breathWeaponShape',
+      'features.Breath Weapon', '=', '"5\'x30\' line"',
+      'features.Gold Dragon Ancestry', '=', '"15\' cone"',
+      'features.Green Dragon Ancestry', '=', '"15\' cone"',
+      'features.Red Dragon Ancestry', '=', '"15\' cone"',
+      'features.Silver Dragon Ancestry', '=', '"15\' cone"',
+      'features.White Dragon Ancestry', '=', '"15\' cone"'
+    );
+    rules.defineRule('breathWeaponEnergy',
+      'features.Breath Weapon', '=', '"fire"',
+      'features.Black Dragon Ancestry', '=', '"acid"',
+      'features.Blue Dragon Ancestry', '=', '"lightning"',
+      'features.Bronze Dragon Ancestry', '=', '"lightning"',
+      'features.Copper Dragon Ancestry', '=', '"acid"',
+      'features.Green Dragon Ancestry', '=', '"poison"',
+      'features.Silver Dragon Ancestry', '=', '"cold"',
+      'features.White Dragon Ancestry', '=', '"cold"'
+    );
+    rules.defineRule('selectableFeatureCount.' + name + ' (Draconic Ancestry)',
+      'race', '?', 'source == "' + name + '"',
+      'featureNotes.draconicAncestry', '=', '1'
     );
   }
 };
@@ -406,6 +469,11 @@ Taldorei.ruleNotes = function() {
     '<h3>Usage Notes</h3>\n' +
     '<ul>\n' +
     '  <li>\n' +
+    '  Quilvyn makes the Fortune\'s Grace feature of the Fate Touched\n' +
+    '  background available as a special feat. To use it, add the line\n' +
+    '  "* +1 Feat" to the character notes, then select Fortune\'s Grace\n' +
+    '  in the Feats pull-down.\n' +
+    '  </li><li>\n' +
     '  The Taldorei rule set allows you to add homebrew choices for' +
     '  all of the same types discussed in the <a href="plugins/homebrew-srd5e.html">SRD 5E Homebrew Examples document</a>.' +
     '  </li>\n' +

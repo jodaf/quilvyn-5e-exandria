@@ -472,8 +472,9 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May attune 4 items/May cast <i>Identify</i> 1/long rest"',
   'Remarkable Recovery':
     'Section=ability,combat ' +
-    'Note="+1 Constitution",' +
-         '"Healing and stabilization restore +%{constitutionModifier>?1} HP"',
+    'Note=' +
+      '"+1 Constitution",' +
+      '"Healing and stabilization restore +%{constitutionModifier>?1} HP"',
   'Spelldriver':
     'Section=magic Note="May cast an additional level 1 - 2 spell/rd"',
   'Thrown Arms Master':
