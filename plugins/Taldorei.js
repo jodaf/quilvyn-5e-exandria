@@ -42,7 +42,7 @@ function Taldorei() {
   rules.defineChoice('choices', SRD5E.CHOICES);
   rules.choiceEditorElements = SRD5E.choiceEditorElements;
   rules.choiceRules = Taldorei.choiceRules;
-  rules.removeChoice = SRD35.removeChoice;
+  rules.removeChoice = SRD5E.removeChoice;
   rules.editorElements = SRD5E.initialEditorElements();
   rules.getFormats = SRD5E.getFormats;
   rules.getPlugins = Taldorei.getPlugins;
@@ -75,7 +75,7 @@ function Taldorei() {
   Taldorei.FEATURES =
     Object.assign({}, PHB5E.FEATURES, Taldorei.FEATURES_ADDED);
   Taldorei.RACES = Object.assign({}, PHB5E.RACES, Taldorei.RACES_ADDED);
-  delete Taldorei.RACES['Dragonborn'];
+  delete Taldorei.RACES.Dragonborn;
   Taldorei.SPELLS = Object.assign({}, PHB5E.SPELLS);
   Taldorei.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
@@ -356,9 +356,9 @@ Taldorei.FEATURES_ADDED = {
 
 };
 Taldorei.RACES_ADDED = {
-  'Draconian Dragonborn':PHB5E.RACES['Dragonborn'],
+  'Draconian Dragonborn':PHB5E.RACES.Dragonborn,
   'Ravenite Dragonborn':
-    PHB5E.RACES['Dragonborn']
+    PHB5E.RACES.Dragonborn
       .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
       .replace('Damage Resistance', 'Damage Resistance (Ravenite Dragonborn)')
       .replace('Features=', 'Features=Fast,')
