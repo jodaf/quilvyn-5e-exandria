@@ -8,13 +8,15 @@ with Exandria supplements, applying the rules from the following books:
 ### Requirements
 
 quilvyn-5E-exandria relies on the 5th Edition SRD module installed by the
-quilvyn-5E package and the core modules installed by the quilvyn-core package.
+quilvyn-5E package, the PHB5E module installed by the quilvyn-phb5e package,
+and the core modules installed by the quilvyn-core package.
 
 ### Installation
 
-To use quilvyn-5E-exandria, unbundle the release package into the plugins/
-subdirectory within the Quilvyn installation directory, then append the
-following lines to the file plugins/plugins.js:
+To use quilvyn-5e-exandria, unbundle the release package, making sure that the
+contents of the plugins/ subdirectory are placed into the corresponding Quilvyn
+installation subdirectory, then append the following lines to the file
+plugins/plugins.js:
 
 RULESETS['Taldorei Reborn Campaign Setting using D&D 5E rules'] = {
   url:'plugins/TaldoreiReborn.js',
