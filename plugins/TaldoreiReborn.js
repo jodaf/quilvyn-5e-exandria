@@ -61,7 +61,6 @@ function TaldoreiReborn() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  TaldoreiReborn.ARMORS = Object.assign({}, SRD5E.ARMORS);
   TaldoreiReborn.BACKGROUNDS =
     Object.assign({}, PHB5E.BACKGROUNDS, TaldoreiReborn.BACKGROUNDS_ADDED);
   TaldoreiReborn.CLASSES = Object.assign({}, PHB5E.CLASSES);
@@ -78,7 +77,6 @@ function TaldoreiReborn() {
   TaldoreiReborn.RACES = Object.assign({}, PHB5E.RACES);
   TaldoreiReborn.SPELLS =
     Object.assign({}, PHB5E.SPELLS, TaldoreiReborn.SPELLS_ADDED);
-  TaldoreiReborn.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
   SRD5E.abilityRules(rules);
   SRD5E.combatRules(rules, TaldoreiReborn.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
@@ -108,6 +106,7 @@ function TaldoreiReborn() {
 
 TaldoreiReborn.VERSION = '2.4.1.0';
 
+TaldoreiReborn.ARMORS = Object.assign({}, SRD5E.ARMORS);
 TaldoreiReborn.BACKGROUNDS_ADDED = {
   'Ashari':
     'Equipment=' +
@@ -144,6 +143,8 @@ TaldoreiReborn.BACKGROUNDS_ADDED = {
       '"1:Language (Choose 1 from any)",' +
       '"1:Legacy Of Secrecy","1:Rifle Corps Relationship"'
 };
+TaldoreiReborn.BACKGROUNDS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).BACKGROUNDS, TaldoreiReborn.BACKGROUNDS_ADDED);
 TaldoreiReborn.CLASSES_FEATURES_ADDED = {
   'Barbarian':
     '"features.Path Of The Juggernaut ? 3:Thunderous Blows",' +
@@ -216,6 +217,14 @@ TaldoreiReborn.CLASSES_SELECTABLES_ADDED = {
   'Sorcerer':'"1:Runechild:Sorcerous Origin"',
   'Wizard':'"2:Blood Magic:Arcane Tradition"'
 };
+TaldoreiReborn.CLASSES =
+  Object.assign({}, (window.PHB5E||window.SRD5E).CLASSES);
+for(let c in TaldoreiReborn.CLASSES_FEATURES_ADDED)
+  TaldoreiReborn.CLASSES[c] =
+    TaldoreiReborn.CLASSES[c].replace('Features=', 'Features=' + TaldoreiReborn.CLASSES_FEATURES_ADDED[c] + ',');
+for(let c in TaldoreiReborn.CLASSES_SELECTABLES_ADDED)
+  TaldoreiReborn.CLASSES[c] =
+    TaldoreiReborn.CLASSES[c].replace('Selectables=', 'Selectables=' + TaldoreiReborn.CLASSES_SELECTABLES_ADDED[c] + ',');
 TaldoreiReborn.DEITIES = {
   'The Changebringer':'Alignment="Chaotic Good" Domain=Moon,Nature,Trickery',
   'The Platinum Dragon':'Alignment="Lawful Good" Domain=Life,Order,War',
@@ -253,6 +262,8 @@ TaldoreiReborn.FEATS_ADDED = {
   'Thrown Arms Master':'Type=General',
   'Vital Sacrifice':'Type=General'
 };
+TaldoreiReborn.FEATS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, TaldoreiReborn.FEATS_ADDED);
 TaldoreiReborn.FEATURES_ADDED = {
 
   // Backgrounds
@@ -488,6 +499,9 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="May suffer 1d6 HP necrotic to gain +1d6 attack, to inflict +2d6 HP necrotic, or to inflict -1d4 on foe Strength, Dexterity, or Constitution save w/in 1 hr"'
 
 };
+TaldoreiReborn.FEATURES =
+  Object.assign({}, (window.PHB5E||window.SRD5E).FEATURES, TaldoreiReborn.FEATURES_ADDED);
+TaldoreiReborn.RACES = Object.assign({}, (window.PHB5E||window.SRD5E).RACES);
 TaldoreiReborn.SPELLS_ADDED = {
 
   'Freedom Of The Waves':
@@ -502,6 +516,9 @@ TaldoreiReborn.SPELLS_ADDED = {
       '"Self gains 60\' flying speed and Adv vs. grapple, restraint, and paralysis for conc up to 10 min; self may teleport 60\', ending spell"'
 
 };
+TaldoreiReborn.SPELLS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).SPELLS, TaldoreiReborn.SPELLS_ADDED);
+TaldoreiReborn.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules

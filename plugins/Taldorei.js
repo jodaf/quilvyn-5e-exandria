@@ -61,7 +61,6 @@ function Taldorei() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  Taldorei.ARMORS = Object.assign({}, SRD5E.ARMORS);
   Taldorei.BACKGROUNDS =
     Object.assign({}, PHB5E.BACKGROUNDS, Taldorei.BACKGROUNDS_ADDED);
   Taldorei.CLASSES = Object.assign({}, PHB5E.CLASSES);
@@ -77,7 +76,6 @@ function Taldorei() {
   Taldorei.RACES = Object.assign({}, PHB5E.RACES, Taldorei.RACES_ADDED);
   delete Taldorei.RACES.Dragonborn;
   Taldorei.SPELLS = Object.assign({}, PHB5E.SPELLS);
-  Taldorei.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
   SRD5E.abilityRules(rules);
   SRD5E.combatRules(rules, Taldorei.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
@@ -107,6 +105,7 @@ function Taldorei() {
 
 Taldorei.VERSION = '2.4.1.0';
 
+Taldorei.ARMORS = Object.assign({}, SRD5E.ARMORS);
 Taldorei.BACKGROUNDS_ADDED = {
   'Ashari':
     'Equipment=' +
@@ -135,6 +134,8 @@ Taldorei.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Deception/Religion)",' +
       '"1:Language (Choose 1 from any)","1:Wicked Awareness"'
 };
+Taldorei.BACKGROUNDS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).BACKGROUNDS, Taldorei.BACKGROUNDS_ADDED);
 Taldorei.CLASSES_FEATURES_ADDED = {
   'Barbarian':
     '"features.Path Of The Juggernaut ? 3:Stance Of The Mountain",' +
@@ -174,6 +175,13 @@ Taldorei.CLASSES_SELECTABLES_ADDED = {
   'Sorcerer':
     '"1:Runechild:Sorcerous Origin"'
 };
+Taldorei.CLASSES = Object.assign({}, (window.PHB5E||window.SRD5E).CLASSES);
+for(let c in Taldorei.CLASSES_FEATURES_ADDED)
+  Taldorei.CLASSES[c] =
+    Taldorei.CLASSES[c].replace('Features=', 'Features=' + Taldorei.CLASSES_FEATURES_ADDED[c] + ',');
+for(var c in Taldorei.CLASSES_SELECTABLES_ADDED)
+  Taldorei.CLASSES[c] =
+    Taldorei.CLASSES[c].replace('Selectables=', 'Selectables=' + Taldorei.CLASSES_SELECTABLES_ADDED[c] + ',');
 Taldorei.DEITIES = {
   'The Archheart':'Alignment=CG Domain=Light,Arcana',
   'The Allhammer':'Alignment=LG Domain=Knowledge,War',
@@ -209,6 +217,8 @@ Taldorei.FEATS_ADDED = {
   'Spelldriver':'Type=General Require="level >= 8"',
   'Thrown Arms Master':'Type=General'
 };
+Taldorei.FEATS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, Taldorei.FEATS_ADDED);
 Taldorei.FEATURES_ADDED = {
 
   // Backgrounds
@@ -355,6 +365,8 @@ Taldorei.FEATURES_ADDED = {
     'Section=ability Note="+1 Constitution/+1 Wisdom"'
 
 };
+Taldorei.FEATURES =
+  Object.assign({}, (window.PHB5E||window.SRD5E).FEATURES, Taldorei.FEATURES_ADDED);
 Taldorei.RACES_ADDED = {
   'Draconian Dragonborn':PHB5E.RACES.Dragonborn,
   'Ravenite Dragonborn':
@@ -363,6 +375,11 @@ Taldorei.RACES_ADDED = {
       .replace('Damage Resistance', 'Damage Resistance (Ravenite Dragonborn)')
       .replace('Features=', 'Features=Fast,')
 };
+Taldorei.RACES =
+  Object.assign({}, (window.PHB5E||window.SRD5E).RACES, Taldorei.RACES_ADDED);
+delete Taldorei.RACES.Dragonborn;
+Taldorei.SPELLS = Object.assign({}, (window.PHB5E||window.SRD5E).SPELLS);
+Taldorei.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules

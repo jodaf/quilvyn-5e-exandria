@@ -61,24 +61,20 @@ function Wildemount() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  Wildemount.ARMORS = Object.assign({}, SRD5E.ARMORS);
   Wildemount.BACKGROUNDS =
     Object.assign({}, PHB5E.BACKGROUNDS, Wildemount.BACKGROUNDS_ADDED);
   Wildemount.CLASSES = Object.assign({}, PHB5E.CLASSES);
-  for(let c in Wildemount.CLASSES_FEATURES_ADDED) {
+  for(let c in Wildemount.CLASSES_FEATURES_ADDED)
     Wildemount.CLASSES[c] =
       Wildemount.CLASSES[c].replace('Features=', 'Features=' + Wildemount.CLASSES_FEATURES_ADDED[c] + ',');
-  }
-  for(let c in Wildemount.CLASSES_SELECTABLES_ADDED) {
+  for(let c in Wildemount.CLASSES_SELECTABLES_ADDED)
     Wildemount.CLASSES[c] =
       Wildemount.CLASSES[c].replace('Selectables=', 'Selectables=' + Wildemount.CLASSES_SELECTABLES_ADDED[c] + ',');
-  }
   Wildemount.FEATS = Object.assign({}, PHB5E.FEATS, Wildemount.FEATS_ADDED);
   Wildemount.FEATURES =
     Object.assign({}, PHB5E.FEATURES, Wildemount.FEATURES_ADDED);
   Wildemount.RACES = Object.assign({}, PHB5E.RACES, Wildemount.RACES_ADDED);
   Wildemount.SPELLS = Object.assign({}, PHB5E.SPELLS, Wildemount.SPELLS_ADDED);
-  Wildemount.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
   SRD5E.abilityRules(rules);
   SRD5E.combatRules(rules, Wildemount.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
@@ -108,6 +104,7 @@ function Wildemount() {
 
 Wildemount.VERSION = '2.4.1.0';
 
+Wildemount.ARMORS = Object.assign({}, SRD5E.ARMORS);
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
     'Equipment=' +
@@ -125,13 +122,8 @@ Wildemount.BACKGROUNDS_ADDED = {
       '"1:Language (Choose 1 from any)",' +
       '"1:Shadow Network"'
 };
-Wildemount.CLASSES_SELECTABLES_ADDED = {
-  'Fighter':
-    '"3:Echo Knight:Martial Archetype"',
-  'Wizard':
-    '"2:Chronurgy Magic:Arcane Tradition",' +
-    '"2:Graviturgy Magic:Arcane Tradition"'
-};
+Wildemount.BACKGROUNDS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).BACKGROUNDS, Wildemount.BACKGROUNDS_ADDED);
 Wildemount.CLASSES_FEATURES_ADDED = {
   'Fighter':
     '"features.Echo Knight ? 3:Manifest Echo",' +
@@ -151,6 +143,20 @@ Wildemount.CLASSES_FEATURES_ADDED = {
     '"features.Graviturgy Magic ? 10:Violent Attraction",' +
     '"features.Graviturgy Magic ? 14:Event Horizon"'
 };
+Wildemount.CLASSES_SELECTABLES_ADDED = {
+  'Fighter':
+    '"3:Echo Knight:Martial Archetype"',
+  'Wizard':
+    '"2:Chronurgy Magic:Arcane Tradition",' +
+    '"2:Graviturgy Magic:Arcane Tradition"'
+};
+Wildemount.CLASSES = Object.assign({}, PHB5E.CLASSES);
+for(let c in Wildemount.CLASSES_FEATURES_ADDED)
+  Wildemount.CLASSES[c] =
+    Wildemount.CLASSES[c].replace('Features=', 'Features=' + Wildemount.CLASSES_FEATURES_ADDED[c] + ',');
+for(let c in Wildemount.CLASSES_SELECTABLES_ADDED)
+  Wildemount.CLASSES[c] =
+    Wildemount.CLASSES[c].replace('Selectables=', 'Selectables=' + Wildemount.CLASSES_SELECTABLES_ADDED[c] + ',');
 Wildemount.DEITIES = {
   'Avandra, The Change Bringer':'Alignment=CG Domain=Nature,Trickery',
   'Bahamut, The Platinum Dragon':'Alignment=LG Domain=Life,Order,War',
@@ -178,6 +184,8 @@ Wildemount.DEITIES = {
 Wildemount.FEATS_ADDED = {
   'Hollow One':'Type=Special'
 };
+Wildemount.FEATS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, Wildemount.FEATS_ADDED);
 Wildemount.FEATURES_ADDED = {
 
   // Backgrounds
@@ -344,6 +352,8 @@ Wildemount.FEATURES_ADDED = {
     'Section=ability Note="+2 Constitution/+1 Wisdom"'
 
 };
+Wildemount.FEATURES =
+  Object.assign({}, (window.PHB5E||window.SRD5E).FEATURES, Wildemount.FEATURES_ADDED);
 Wildemount.RACES_ADDED = {
   'Aarakocra':
     'Features=' +
@@ -407,6 +417,7 @@ if(window.Volo != null) {
   Wildemount.RACES_ADDED.Orc =
     Volo.MONSTROUS_RACES.Orc.replace('Menacing', '"Primal Intuition"');
 }
+Wildemount.RACES = Object.assign({}, (window.PHB5E||window.SRD5E).RACES, Wildemount.RACES_ADDED);
 Wildemount.SPELLS_ADDED = {
   'Dark Star':
     'School=Evocation ' +
@@ -480,6 +491,9 @@ Wildemount.SPELLS_ADDED = {
     'Level=W2 ' +
     'Description="Self may move touched 5 lb object to and from an extradimensional space for conc up to 1 hr"'
 };
+Wildemount.SPELLS =
+  Object.assign({}, (window.PHB5E||window.SRD5E).SPELLS, Wildemount.SPELLS_ADDED);
+Wildemount.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules
