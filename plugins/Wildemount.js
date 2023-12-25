@@ -61,31 +61,16 @@ function Wildemount() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  Wildemount.BACKGROUNDS =
-    Object.assign({}, PHB5E.BACKGROUNDS, Wildemount.BACKGROUNDS_ADDED);
-  Wildemount.CLASSES = Object.assign({}, PHB5E.CLASSES);
-  for(let c in Wildemount.CLASSES_FEATURES_ADDED)
-    Wildemount.CLASSES[c] =
-      Wildemount.CLASSES[c].replace('Features=', 'Features=' + Wildemount.CLASSES_FEATURES_ADDED[c] + ',');
-  for(let c in Wildemount.CLASSES_SELECTABLES_ADDED)
-    Wildemount.CLASSES[c] =
-      Wildemount.CLASSES[c].replace('Selectables=', 'Selectables=' + Wildemount.CLASSES_SELECTABLES_ADDED[c] + ',');
-  Wildemount.FEATS = Object.assign({}, PHB5E.FEATS, Wildemount.FEATS_ADDED);
-  Wildemount.FEATURES =
-    Object.assign({}, PHB5E.FEATURES, Wildemount.FEATURES_ADDED);
-  Wildemount.RACES = Object.assign({}, PHB5E.RACES, Wildemount.RACES_ADDED);
-  Wildemount.SPELLS = Object.assign({}, PHB5E.SPELLS, Wildemount.SPELLS_ADDED);
-
   SRD5E.abilityRules(rules);
-  SRD5E.combatRules(rules, Wildemount.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
-  SRD5E.magicRules(rules, SRD5E.SCHOOLS, Wildemount.SPELLS);
+  SRD5E.combatRules(rules, PHB5E.ARMORS, PHB5E.SHIELDS, PHB5E.WEAPONS);
+  SRD5E.magicRules(rules, PHB5E.SCHOOLS, Wildemount.SPELLS);
   SRD5E.identityRules(
-    rules, SRD5E.ALIGNMENTS, Wildemount.BACKGROUNDS, Wildemount.CLASSES,
+    rules, PHB5E.ALIGNMENTS, Wildemount.BACKGROUNDS, Wildemount.CLASSES,
     Wildemount.DEITIES, {}, Wildemount.RACES
   );
   SRD5E.talentRules
-    (rules, Wildemount.FEATS, Wildemount.FEATURES, SRD5E.GOODIES,
-     SRD5E.LANGUAGES, SRD5E.SKILLS, Wildemount.TOOLS);
+    (rules, Wildemount.FEATS, Wildemount.FEATURES, PHB5E.GOODIES,
+     PHB5E.LANGUAGES, PHB5E.SKILLS, PHB5E.TOOLS);
 
   if(window.Tasha != null)
     Tasha('Tasha', rules);
@@ -104,7 +89,6 @@ function Wildemount() {
 
 Wildemount.VERSION = '2.4.1.0';
 
-Wildemount.ARMORS = Object.assign({}, SRD5E.ARMORS);
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
     'Equipment=' +
@@ -493,7 +477,6 @@ Wildemount.SPELLS_ADDED = {
 };
 Wildemount.SPELLS =
   Object.assign({}, (window.PHB5E||window.SRD5E).SPELLS, Wildemount.SPELLS_ADDED);
-Wildemount.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules

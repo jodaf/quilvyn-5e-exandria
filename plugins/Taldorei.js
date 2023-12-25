@@ -26,7 +26,7 @@ Place, Suite 330, Boston, MA 02111-1307 USA.
  * particular parts of the rules; raceRules for character races, magicRules
  * for spells, etc. These member methods can be called independently in order
  * to use a subset of the rules.  Similarly, the constant fields of Taldorei
- * (BACKGROUNDS, SPELLS, etc.) can be manipulated to modify the choices.
+ * (BACKGROUNDS, FEATURES, etc.) can be manipulated to modify the choices.
  */
 function Taldorei() {
 
@@ -61,32 +61,16 @@ function Taldorei() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  Taldorei.BACKGROUNDS =
-    Object.assign({}, PHB5E.BACKGROUNDS, Taldorei.BACKGROUNDS_ADDED);
-  Taldorei.CLASSES = Object.assign({}, PHB5E.CLASSES);
-  for(let c in Taldorei.CLASSES_FEATURES_ADDED)
-    Taldorei.CLASSES[c] =
-      Taldorei.CLASSES[c].replace('Features=', 'Features=' + Taldorei.CLASSES_FEATURES_ADDED[c] + ',');
-  for(var c in Taldorei.CLASSES_SELECTABLES_ADDED)
-    Taldorei.CLASSES[c] =
-      Taldorei.CLASSES[c].replace('Selectables=', 'Selectables=' + Taldorei.CLASSES_SELECTABLES_ADDED[c] + ',');
-  Taldorei.FEATS = Object.assign({}, PHB5E.FEATS, Taldorei.FEATS_ADDED);
-  Taldorei.FEATURES =
-    Object.assign({}, PHB5E.FEATURES, Taldorei.FEATURES_ADDED);
-  Taldorei.RACES = Object.assign({}, PHB5E.RACES, Taldorei.RACES_ADDED);
-  delete Taldorei.RACES.Dragonborn;
-  Taldorei.SPELLS = Object.assign({}, PHB5E.SPELLS);
-
   SRD5E.abilityRules(rules);
-  SRD5E.combatRules(rules, Taldorei.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
-  SRD5E.magicRules(rules, SRD5E.SCHOOLS, Taldorei.SPELLS);
+  SRD5E.combatRules(rules, PHB5E.ARMORS, PHB5E.SHIELDS, PHB5E.WEAPONS);
+  SRD5E.magicRules(rules, PHB5E.SCHOOLS, PHB5E.SPELLS);
   SRD5E.identityRules(
-    rules, SRD5E.ALIGNMENTS, Taldorei.BACKGROUNDS, Taldorei.CLASSES,
+    rules, PHB5E.ALIGNMENTS, Taldorei.BACKGROUNDS, Taldorei.CLASSES,
     Taldorei.DEITIES, {}, Taldorei.RACES
   );
   SRD5E.talentRules
-    (rules, Taldorei.FEATS, Taldorei.FEATURES, SRD5E.GOODIES,
-     SRD5E.LANGUAGES, SRD5E.SKILLS, Taldorei.TOOLS);
+    (rules, Taldorei.FEATS, Taldorei.FEATURES, PHB5E.GOODIES, PHB5E.LANGUAGES,
+     PHB5E.SKILLS, PHB5E.TOOLS);
 
   if(window.Tasha != null)
     Tasha('Tasha', rules);
@@ -105,7 +89,6 @@ function Taldorei() {
 
 Taldorei.VERSION = '2.4.1.0';
 
-Taldorei.ARMORS = Object.assign({}, SRD5E.ARMORS);
 Taldorei.BACKGROUNDS_ADDED = {
   'Ashari':
     'Equipment=' +
@@ -378,8 +361,6 @@ Taldorei.RACES_ADDED = {
 Taldorei.RACES =
   Object.assign({}, (window.PHB5E||window.SRD5E).RACES, Taldorei.RACES_ADDED);
 delete Taldorei.RACES.Dragonborn;
-Taldorei.SPELLS = Object.assign({}, (window.PHB5E||window.SRD5E).SPELLS);
-Taldorei.TOOLS = Object.assign({}, SRD5E.TOOLS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules
