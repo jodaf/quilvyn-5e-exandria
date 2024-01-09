@@ -343,7 +343,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="Summoned creatures gain immunity to necrotic damage, poison damage, and poisoned condition and produce a R5\' toxic shower (inflicts 1d4+ HP necrotic; Constitution neg) when killed or on command"',
   'Fury Of The Tides':
     'Section=combat ' +
-    'Note="May use Channel Divinity to inflict 10\' push w/successful weapon attack (+%{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
+    'Note="May use Channel Divinity and a bonus action to inflict 10\' push w/successful weapon attack (+%{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
   'Glyph Of Aegis':
     'Section=magic ' +
     'Note="May use Reaction to discharge runes, negating 1d%{levels.Sorcerer<14?6:8} damage each%{levels.Sorcerer<8?\'\':\'; touch may transfer the protection of up to 3 runes for 1 hr\'}"',

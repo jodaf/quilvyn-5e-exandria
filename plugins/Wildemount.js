@@ -210,7 +210,7 @@ Wildemount.FEATURES_ADDED = {
     'Note="Has a minimum 1 Unleash Incarnation use after initiative/May create 2 Manifest Echos simultaneously"',
   'Manifest Echo':
     'Section=combat ' +
-    'Note="R30\' Copy of self (AC %{14+proficiencyBonus}, HP 1, MV 30\') can swap places and transmit attacks and opportunity attacks"',
+    'Note="R30\' May use a bonus action to create a copy of self (AC %{14+proficiencyBonus}, HP 1, MV 30\'); may swap places and make remote attacks and OAs"',
   'Momentary Stasis':
     'Section=magic ' +
     'Note="R60\' May incapacitate a Large target for 1 rd (Constitution neg) %{intelligenceModifier>?1}/long rest"',
