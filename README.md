@@ -18,16 +18,16 @@ contents of the plugins/ subdirectory are placed into the corresponding Quilvyn
 installation subdirectory, then append the following lines to the file
 plugins/plugins.js:
 
-RULESETS['Taldorei Reborn Campaign Setting using D&D 5E rules'] = {
-  url:'plugins/TaldoreiReborn.js',
-  group:'5E',
-  require:'PHB5E.js'
-};
-RULESETS['Wildemount Campaign Setting using D&D 5E rules'] = {
-  url:'plugins/Wildemount.js',
-  group:'5E',
-  require:'PHB5E.js'
-};
+    RULESETS['Taldorei Reborn Campaign Setting using D&D 5E rules'] = {
+      url:'plugins/TaldoreiReborn.js',
+      group:'5E',
+      require:'PHB5E.js'
+    };
+    RULESETS['Wildemount Campaign Setting using D&D 5E rules'] = {
+      url:'plugins/Wildemount.js',
+      group:'5E',
+      require:'PHB5E.js'
+    };
 
 ### Usage
 
