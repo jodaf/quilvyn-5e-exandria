@@ -1,5 +1,5 @@
 /*
-Copyright 2023, James J. Hayes
+Copyright 2026, James J. Hayes
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
@@ -87,21 +87,21 @@ function Wildemount() {
 
 }
 
-Wildemount.VERSION = '2.4.1.0';
+Wildemount.VERSION = '2.4.2.0';
 
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':
     'Equipment=' +
       '"Fine Clothes","Disguise Kit","Musical Instrument","Gold Ring","15 GP" '+
     'Features=' +
-      '"1:Skill Proficiency (Deception/Performance)",' +
-      '"1:Tool Proficiency (Thieves\' Tools/Choose 1 from any Musical)",' +
+      '"1:Skill Proficiency (Deception; Performance)",' +
+      '"1:Tool Proficiency (Thieves\' Tools; Choose 1 from any Musical)",' +
       '"1:Ballad Of The Grinning Fool"',
   'Volstrucker Agent':
     'Equipment=' +
       '"Common Clothes","Black Cloak","Poisoner\'s Kit","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Deception/Stealth)",' +
+      '"1:Skill Proficiency (Deception; Stealth)",' +
       '"1:Tool Proficiency (Poisoner\'s Kit)",' +
       '"1:Language (Choose 1 from any)",' +
       '"1:Shadow Network"'
@@ -309,7 +309,7 @@ Wildemount.FEATURES_ADDED = {
     'Section=ability Note="+2 Dexterity/+1 Constitution"',
   'Sea Elf Training':
     'Section=combat ' +
-    'Note="Weapon Proficiency (Light Crossbow/Net/Spear/Trident)"',
+    'Note="Weapon Proficiency (Light Crossbow; Net; Spear; Trident)"',
   'Shell Defense':
     'Section=combat ' +
     'Note="Withdrawal into shell gives +4 AC and Adv on Strength and Constitution saves; inflicts prone, immobility, Disadv on Dexterity saves, and no actions or reactions"',
@@ -341,11 +341,11 @@ Wildemount.FEATURES =
 Wildemount.RACES_ADDED = {
   'Aarakocra':
     'Features=' +
-      '"Language (Common/Aarakocra/Auran)",' +
+      '"Language (Common; Aarakocra; Auran)",' +
       '"Aarakocra Ability Adjustment",Flight,Slow,Talons',
   'Air Genasi':
     'Features=' +
-      '"Language (Common/Primordial)",' +
+      '"Language (Common; Primordial)",' +
       '"Air Genasi Ability Adjustment","Mingle With The Wind",' +
       '"Unending Breath"',
   'Draconblood':SRD5E.RACES.Dragonborn
@@ -354,27 +354,27 @@ Wildemount.RACES_ADDED = {
     .replace('Features=', 'Features=Darkvision,'),
   'Earth Genasi':
     'Features=' +
-      '"Language (Common/Primordial)",' +
+      '"Language (Common; Primordial)",' +
       '"Earth Genasi Ability Adjustment","Earth Walk","Pass Without Trace"',
   'Fire Genasi':
     'Features=' +
-      '"Language (Common/Primordial)",' +
+      '"Language (Common; Primordial)",' +
       'Darkvision,"Fire Genasi Ability Adjustment","Fire Resistance",' +
       '"Reach To The Blaze"',
   'Goliath':
     'Features=' +
-      '"Language (Common/Giant)",' +
+      '"Language (Common; Giant)",' +
       '"Goliath Ability Adjustment","Mountain Born","Natural Athlete",' +
       '"Powerful Build","Stone\'s Endurance"',
   'Lotusden Halfling':
     'Features=' +
-      '"Language (Common/Halfling)",' +
+      '"Language (Common; Halfling)",' +
       'Brave,"Child Of The Wood","Halfling Nimbleness",' +
       '"Lotusden Halfling Ability Adjustment","Lucky (Halfling)",Slow,Small,' +
       'Timberwalk',
   'Pallid Elf':
     'Features=' +
-      '"Language (Common/Elvish)",' +
+      '"Language (Common; Elvish)",' +
       '"Blessing Of The Moon Weaver",Darkvision,"Fey Ancestry",' +
       '"Incisive Sense","Keen Senses","Pallid Elf Ability Adjustment",Trance',
   'Ravenite':SRD5E.RACES.Dragonborn
@@ -383,17 +383,17 @@ Wildemount.RACES_ADDED = {
     .replace('Features=', 'Features=Darkvision,'),
   'Sea Elf':
     'Features=' +
-      '"Language (Common/Aquan/Elvish)",' +
+      '"Language (Common; Aquan; Elvish)",' +
       '"Child Of The Sea",Darkvision,"Fey Ancestry","Friend Of The Sea",' +
       '"Keen Senses","Sea Elf Ability Adjustment","Sea Elf Training",Trance',
   'Tortle':
     'Features=' +
-      '"Language (Common/Aquan)",' +
+      '"Language (Common; Aquan)",' +
       'Claws,"Hold Breath","Natural Armor","Shell Defense",' +
       '"Survival Instinct","Tortle Ability Adjustment"',
   'Water Genasi':
     'Features=' +
-      '"Language (Common/Primordial)",' +
+      '"Language (Common; Primordial)",' +
       '"Acid Resistance",Amphibious,"Call To The Wave",Swim,' +
       '"Water Genasi Ability Adjustment"'
 };

@@ -1,5 +1,5 @@
 /*
-Copyright 2023, James J. Hayes
+Copyright 2026, James J. Hayes
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
@@ -94,14 +94,14 @@ Taldorei.BACKGROUNDS_ADDED = {
     'Equipment=' +
       '"Traveler\'s Clothes","Hunting Gear","Staff","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Nature/Choose 1 from Arcana, Survival)",' +
+      '"1:Skill Proficiency (Nature; Choose 1 from Arcana, Survival)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
       '"1:Language (Choose 1 from any)","1:Elemental Harmony"',
   'Clasp Member':
     'Equipment=' +
       '"Dark Hooded Clothing","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Deception/Choose 1 from Sleight Of Hand, Stealth)",' +
+      '"1:Skill Proficiency (Deception; Choose 1 from Sleight Of Hand, Stealth)",' +
       '"1:Tool Proficiency (Choose 1 from Disguise Kit, Forgery Kit, Thieves\' Tools)",' +
       '"1:A Favor In Turn","1:Thieves\' Cant"',
   'Lyceum Student':
@@ -114,7 +114,7 @@ Taldorei.BACKGROUNDS_ADDED = {
     'Equipment=' +
       '"Vestments","Holy Symbol","Common Clothes","15 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Deception/Religion)",' +
+      '"1:Skill Proficiency (Deception; Religion)",' +
       '"1:Language (Choose 1 from any)","1:Wicked Awareness"'
 };
 Taldorei.BACKGROUNDS =
@@ -224,13 +224,13 @@ Taldorei.FEATURES_ADDED = {
     'Note="May discharge 6 runes to gain 40\' fly speed, +2 spell DC, resistance to spell damage, and regaining HP from casting for 3+ rd 1/long rest"',
   'Blood Domain':
     'Spells=' +
-      '"1:Ray Of Sickness",1:Sleep,' +
+      '"1:Ray Of Sickness","1:Sleep",' +
       '"3:Crown Of Madness","3:Ray Of Enfeeblement",' +
-      '5:Haste,5:Slow,' +
-      '7:Blight,7:Stoneskin,' +
+      '"5:Haste","5:Slow",' +
+      '"7:Blight","7:Stoneskin",' +
       '"9:Dominate Person","9:Hold Monster"',
   'Blood Domain Bonus Proficiencies':
-    'Section=feature Note="Weapon Proficiency (Martial)"',
+    'Section=feature Note="Weapon Proficiency (Martial Weapons)"',
   'Blood Puppet':
     'Section=magic ' +
     'Note="R60\' May use Channel Divinity to force a %{levels.Cleric<8?\'Large\':\'Huge\'} target to move at half speed and attack (Constitution neg)"',

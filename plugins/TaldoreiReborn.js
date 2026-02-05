@@ -1,5 +1,5 @@
 /*
-Copyright 2023, James J. Hayes
+Copyright 2026, James J. Hayes
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
@@ -87,21 +87,21 @@ function TaldoreiReborn() {
 
 }
 
-TaldoreiReborn.VERSION = '2.4.1.0';
+TaldoreiReborn.VERSION = '2.4.2.0';
 
 TaldoreiReborn.BACKGROUNDS_ADDED = {
   'Ashari':
     'Equipment=' +
       '"Traveler\'s Clothes","Herbalism Kit","Staff","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Nature/Choose 1 from Arcana, Survival)",' +
+      '"1:Skill Proficiency (Nature; Choose 1 from Arcana, Survival)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
       '"1:Language (Primordial)","1:Elemental Harmony"',
   'Clasp Member':
     'Equipment=' +
       '"Common Clothes","Tool Set","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Deception/Choose 1 from Sleight Of Hand, Stealth)",' +
+      '"1:Skill Proficiency (Deception; Choose 1 from Sleight Of Hand, Stealth)",' +
       '"1:Tool Proficiency (Choose 1 from Disguise Kit, Forgery Kit, Thieves\' Tools)",' +
       '"1:A Favor In Turn","1:Thieves\' Cant"',
   'Lyceum Scholar':
@@ -114,7 +114,7 @@ TaldoreiReborn.BACKGROUNDS_ADDED = {
     'Equipment=' +
       '"Vestments","Holy Symbol","Common Clothes","15 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Deception/Religion)",' +
+      '"1:Skill Proficiency (Deception; Religion)",' +
       '"1:Language (Choose 1 from any)","1:Fell Teachings"',
   'Whitestone Rifle Corps':
     'Equipment=' +
@@ -302,7 +302,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="May use Reaction to inflict equal damage on attacker %{levels.Wizard<14?1:2}/short rest"',
   'Bonus Proficiencies (Blood Domain)':
-    'Section=feature Note="Weapon Proficiency (Martial)"',
+    'Section=feature Note="Weapon Proficiency (Martial Weapons)"',
   'Call Of The Shadowseeds':
     'Section=magic ' +
     'Note="May use Reaction after damage w/in Defile Ground area to summon a blighted sapling (AC %{10+proficiencyBonus}; HP %{levels.Druid*2}; attack +%{spellAttackModifier.D} 2d4+%{proficiencyBonus} HP piercing) %{proficiencyBonus}/long rest"',
