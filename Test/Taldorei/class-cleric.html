@@ -7,8 +7,8 @@
   <script>
 var attributes = {
   "_path":"ztest/taldorei/class/cleric", 
-  "alignment":"Neutral Good", "armor":"Scale Mail", "background":"Hermit", "charisma":10, 
-  "constitution":11, "deity":"The Archheart", "dexterity":14, "experience":589587, 
+  "alignment":"Neutral Evil", "armor":"Scale Mail", "background":"Hermit", "charisma":10, 
+  "constitution":11, "deity":"The Lord Of The Hells", "dexterity":14, "experience":589587, 
   "feats.Great Weapon Master":1, "feats.Keen Mind":1, "feats.Skilled":1, "feats.Skulker":1, 
   "feats.War Caster":1, "gender":"Female", "hitPoints":79, "intelligence":11, 
   "languagesChosen.Giant":1, "languagesChosen.Primordial":1, "levels.Cleric":20, "name":"Class-Cleric", 
@@ -49,8 +49,8 @@ var attributes = {
     <td>    <table id="Description" style="width:100%">
     <tr style="text-align:center">
       <td><b>Background</b>: Hermit</td>
-      <td><b>Alignment</b>: Neutral Good</td>
-      <td><b>Deity</b>: The Archheart (CG)</td>
+      <td><b>Alignment</b>: Neutral Evil</td>
+      <td><b>Deity</b>: The Lord Of The Hells (LE)</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -91,14 +91,14 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Great Weapon Master; Keen Mind; Skilled; Skulker; War Caster</td>
         <td><b>Human Features</b>: Human Ability Adjustment; Language (Common; Choose 1 from any)</td>
-        <td><b>Cleric Features</b>: Armor Proficiency (Light; Medium; Shield); Blood Domain Bonus Proficiencies; Blood Domain; Blood Puppet; Bloodletting Focus; Channel Divinity; Crimson Bond; Destroy Undead; Divine Domain; Divine Intervention; Sanguine Recall; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; Vascular Corruption Aura; Weapon Proficiency (Simple Weapons)</td>
+        <td><b>Cleric Features</b>: Armor Proficiency (Light; Medium; Shield); Blood Domain; Blood Puppet; Bloodletting Focus; Bonus Proficiencies (Blood Domain); Channel Divinity; Crimson Bond; Destroy Undead; Divine Domain; Divine Intervention; Sanguine Recall; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; Vascular Corruption Aura; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Hermit Features</b>: Discovery; Language (Choose 1 from any); Skill Proficiency (Medicine; Religion); Tool Proficiency (Herbalism Kit)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
-        <td><i>Blood Domain Bonus Proficiencies: Weapon Proficiency (Martial Weapons)</i></td>
+        <td><i>Bonus Proficiencies (Blood Domain): Weapon Proficiency (Martial Weapons)</i></td>
       </tr><tr style="text-align:center">
         <td><i>Divine Domain: 1 selection</i></td>
       </tr><tr style="text-align:center">
@@ -207,7 +207,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Turn Undead: R30' Can use Channel Divinity to make undead flee (save DC 12 Wisdom negates) for 1 min</td>
       </tr><tr style="text-align:center">
-        <td>Vascular Corruption Aura: R30' Foes suffer 2d6 HP necrotic and half healing for 1 min 1/long rest</td>
+        <td>Vascular Corruption Aura: R30' Foes suffer 2d6 HP necrotic and half healing for 1 min once per long rest</td>
       </tr></table>
 </td>
     </tr></table>
@@ -317,31 +317,21 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td>Blood Puppet: R60' May use Channel Divinity to force a Huge target to move at half speed and attack (Constitution neg)</td>
+      <td>Blood Puppet: R60' Can use Channel Divinity to force a Huge target to move at half speed and attack (save Constitution negates)</td>
     </tr><tr style="text-align:center">
       <td>Bloodletting Focus: Harming spells inflict +(spell level + 2) HP necrotic</td>
     </tr><tr style="text-align:center">
       <td>Channel Divinity: Can use a Channel Divinity effect 3 times per short rest</td>
     </tr><tr style="text-align:center">
-      <td>Crimson Bond: May use Channel Divinity with week-old target blood to learn distance, direction, HP, and conditions of target for conc up to 1 hr; may suffer 2d6 HP necrotic to share sight or sound for 1 rd (Constitution ends)</td>
+      <td>Crimson Bond: Can use Channel Divinity with the week-old blood of a target to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target's sight or sound for 1 rd (save Constitution ends)</td>
     </tr><tr style="text-align:center">
-      <td>Divine Intervention: Has a 100% chance to gain help from The Archheart once per week</td>
+      <td>Divine Intervention: Has a 100% chance to gain help from The Lord Of The Hells once per week</td>
     </tr><tr style="text-align:center">
-      <td>Sanguine Recall: May suffer up to 10d6 HP to recover an equal number of spell slot levels (level 5 max) 1/long rest</td>
+      <td>Sanguine Recall: Can suffer up to 10d6 HP to recover an equal number of spell slot levels (level 5 maximum) once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the cleric spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
       <td>War Caster: Has advantage on concentration saves to maintain a spell/Can cast when holding a shield or a weapon/Can use a reaction to cast as an opportunity attack in response to movement</td>
-    </tr></table>
-</td>
-  </tr></table>
-</td>
-</tr><tr style="text-align:center">
-  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
-  <tr style="text-align:center">
-    <td>    <table id="ValidationPart" style="width:100%">
-    <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Cleric-Blood Domain Selectable Feature: Requires deity domains (currently Light/Arcana) matches 'Blood' and cleric level (currently 20)</td>
     </tr></table>
 </td>
   </tr></table>

@@ -25,8 +25,8 @@ var attributes = {
   "spells.Mordenkainen's Sword(W7 Evoc)":1, "spells.Nondetection(W3 Abju)":1, 
   "spells.Rary's Telepathic Bond(W5 Divi)":1, "spells.Shocking Grasp(W0 Evoc)":1, "spells.Silent Image(W1 Illu)":1, 
   "spells.Suggestion(W2 Ench)":1, "spells.Teleport(W7 Conj)":1, "spells.Wall Of Fire(W4 Evoc)":1, 
-  "strength":13, "toolsChosen.Jeweler's Tools":1, "toolsChosen.Pan Flute":1, 
-  "toolsChosen.Viol":1, "weapons.Dart":1, "weapons.Light Crossbow":1, "weapons.Quarterstaff":1, 
+  "strength":13, "toolsChosen.Dice Set":1, "toolsChosen.Dragonchess Set":1, 
+  "toolsChosen.Pan Flute":1, "weapons.Dart":1, "weapons.Light Crossbow":1, "weapons.Quarterstaff":1, 
   "wisdom":12
 };
   </script>
@@ -110,12 +110,6 @@ var attributes = {
       <tr style="text-align:center">
         <td><i>Arcane Tradition: 1 selection</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Gambler: Tool Proficiency (Choose 2 from any Game)</i></td>
-      </tr><tr style="text-align:center">
-        <td>Cruel: May use 6 Cruelty Points/long rest</td>
-      </tr><tr style="text-align:center">
-        <td>Fortune's Grace: May gain Adv on an attack, ability, or saving throw or inflict foe Disadv on self attack 1/long rest</td>
-      </tr><tr style="text-align:center">
         <td>Wanderer: Has an excellent geographic memory and can forage for 6 people</td>
       </tr></table>
 </td>
@@ -155,17 +149,19 @@ var attributes = {
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Tool Proficiency</b>: Jeweler's Tools; Pan Flute; Viol</td>
+    <td><b>Tool Proficiency</b>: Dice Set; Dragonchess Set; Pan Flute</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Draconic; Infernal</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td>Cruel: May spend 1 Cruelty Point for Adv on Intimidation</td>
+      <td><i>Gambler: Tool Proficiency (Choose 2 from any Gaming)</i></td>
     </tr><tr style="text-align:center">
-      <td>Gambler: May reroll Carousing/Adv on Deception (games)/Adv on Persuasion (games)</td>
+      <td>Cruel: Can spend 1 cruelty point to gain advantage on Intimidation</td>
     </tr><tr style="text-align:center">
-      <td>Mystic Conflux: Adv on Arcana (investigate magic device)</td>
+      <td>Gambler: Can reroll Carousing/Has advantage on Deception to bluff during games and on Persuasion to convince others to join</td>
+    </tr><tr style="text-align:center">
+      <td>Mystic Conflux: Has advantage on Arcana to investigate a magic device</td>
     </tr></table>
 </td>
   </tr></table>
@@ -214,13 +210,17 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Thrown Arms Master: +20/+40 throw range</i></td>
       </tr><tr style="text-align:center">
-        <td>Cruel: May spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit</td>
+        <td>Cruel: Can spend 1 cruelty point on a critical hit to inflict +1d6 damage or to regain 1d6 hit points</td>
       </tr><tr style="text-align:center">
-        <td>Mending Affinity: Healing and stabilization restore +6 HP</td>
+        <td>Cruel: Can use 6 cruelty points per long rest</td>
       </tr><tr style="text-align:center">
-        <td>Rapid Drinker: May quaff as a bonus action</td>
+        <td>Fortune's Grace: Can gain advantage on an attack, ability, or saving throw, or inflict disadvantage on an attacker, once per long rest</td>
       </tr><tr style="text-align:center">
-        <td>Thrown Arms Master: May throw any weapon (one-handed have range 20/60, two-handed 15/30); light weapon returns after a missed throw</td>
+        <td>Mending Affinity: Use of a Healer's Kit or stabilization on self restores +6 hit points</td>
+      </tr><tr style="text-align:center">
+        <td>Rapid Drinker: Can quaff as a bonus action</td>
+      </tr><tr style="text-align:center">
+        <td>Thrown Arms Master: Can throw any weapon; one-handed wepons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw</td>
       </tr></table>
 </td>
     </tr></table>
@@ -234,7 +234,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Rapid Drinker: Adv on ingestion saves</td>
+        <td>Rapid Drinker: Has advantage on ingestion saves</td>
       </tr><tr style="text-align:center">
         <td>Spell Resistance: Has advantage vs. spells and resistance to spell damage</td>
       </tr></table>
@@ -326,11 +326,11 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Dual-Focused: Successful DC 10 + number of rd Constitution allows maintaining concentration on two spells simultaneously</td>
     </tr><tr style="text-align:center">
-      <td>Flash Recall: May replace a prepared spell 1/short rest</td>
+      <td>Flash Recall: Can replace a prepared spell once per short rest</td>
     </tr><tr style="text-align:center">
       <td>Improved Abjuration: +6 abjuration spell ability checks</td>
     </tr><tr style="text-align:center">
-      <td>Mystic Conflux: May attune 4 items</td>
+      <td>Mystic Conflux: Can attune 4 items</td>
     </tr><tr style="text-align:center">
       <td>Projected Ward: R30' Can use Arcane Ward to absorb damage to others</td>
     </tr><tr style="text-align:center">
@@ -340,7 +340,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
-      <td>Spelldriver: May cast an additional level 1 - 2 spell/rd</td>
+      <td>Spelldriver: Can cast an additional level 1 or 2 spell once per rd</td>
     </tr></table>
 </td>
   </tr></table>

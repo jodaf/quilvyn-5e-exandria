@@ -127,7 +127,7 @@ Taldorei.CLASSES_FEATURES_ADDED = {
     '"features.Path Of The Juggernaut ? 10:Overwhelming Cleave",' +
     '"features.Path Of The Juggernaut ? 14:Unstoppable"',
   'Cleric':
-    '"features.Blood Domain ? 1:Blood Domain Bonus Proficiencies",' +
+    '"features.Blood Domain ? 1:Bonus Proficiencies (Blood Domain)",' +
     '"features.Blood Domain ? 1:Bloodletting Focus",' +
     '"features.Blood Domain ? 2:Blood Puppet",' +
     '"features.Blood Domain ? 6:Crimson Bond",' +
@@ -204,24 +204,25 @@ Taldorei.FEATS =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, Taldorei.FEATS_ADDED);
 Taldorei.FEATURES_ADDED = {
 
-  // Backgrounds
-  'A Favor In Turn':
-    'Section=skill ' +
-    'Note="May ask a 20-word favor from a contact in return for a future favor"',
-  'Elemental Harmony':
-    'Section=magic Note="May produce minor elemental effects"',
-  "Fortune's Grace":
-    'Section=feature ' +
-    'Note="May gain Adv on an attack, ability, or saving throw or inflict foe Disadv on self attack 1/long rest"',
-  'Student Privilege':
-    'Section=skill Note="May access school tools and crafting materials"',
-  'Wicked Awareness':
-    'Section=skill Note="Adv on checks to uncover cult activity"',
+  // Class
 
-  // Paths
-  'Arcane Exemplar Form':
-    'Section=magic ' +
-    'Note="May discharge 6 runes to gain 40\' fly speed, +2 spell DC, resistance to spell damage, and regaining HP from casting for 3+ rd 1/long rest"',
+  // Barbarian - Path Of The Juggernaut
+  'Demolishing Might':
+    'Section=combat ' +
+    'Note="Melee attacks inflict x2 damage vs. objects and +1d8 HP vs. constructs"',
+  'Overwhelming Cleave':
+    'Section=combat ' +
+    'Note="Can use a bonus action after attacking to attack another foe adjacent to the initial target"',
+  'Stance Of The Mountain':
+    'Section=combat Note="Cannot be knocked prone during rage"',
+  'Thunderous Blows':
+    'Section=combat ' +
+    'Note="Can push a foe 5\' with a successful attack (save DC %{8+proficiencyBonus+strengthModifier} Strength negates) and optionally move with it"',
+  'Unstoppable':
+    'Section=save ' +
+    'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage; suffers 1 level of exhaustion when rage ends"',
+
+  // Cleric - Blood Domain
   'Blood Domain':
     'Spells=' +
       '"1:Ray Of Sickness","1:Sleep",' +
@@ -229,121 +230,128 @@ Taldorei.FEATURES_ADDED = {
       '"5:Haste","5:Slow",' +
       '"7:Blight","7:Stoneskin",' +
       '"9:Dominate Person","9:Hold Monster"',
-  'Blood Domain Bonus Proficiencies':
-    'Section=feature Note="Weapon Proficiency (Martial Weapons)"',
   'Blood Puppet':
     'Section=magic ' +
-    'Note="R60\' May use Channel Divinity to force a %{levels.Cleric<8?\'Large\':\'Huge\'} target to move at half speed and attack (Constitution neg)"',
+    'Note="R60\' Can use Channel Divinity to force a %{levels.Cleric<8?\'Large\':\'Huge\'} target to move at half speed and attack (save Constitution negates)"',
   'Bloodletting Focus':
     'Section=magic ' +
     'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
+  'Bonus Proficiencies (Blood Domain)':
+    'Section=feature Note="Weapon Proficiency (Martial Weapons)"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="May use Channel Divinity with week-old target blood to learn distance, direction, HP, and conditions of target for conc up to 1 hr; may suffer 2d6 HP necrotic to share sight or sound for %{wisdomModifier>?1} rd (Constitution ends)"',
+    'Note="Can use Channel Divinity with the week-old blood of a target to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or sound for %{wisdomModifier>?1} rd (save Constitution ends)"',
+  'Sanguine Recall':
+    'Section=magic ' +
+    'Note="Can suffer up to %{(levels.Cleric+1)//2}d6 HP to recover an equal number of spell slot levels (level 5 maximum) once per long rest"',
+  'Vascular Corruption Aura':
+    'Section=combat ' +
+    'Note="R30\' Foes suffer 2d6 HP necrotic and half healing for 1 min once per long rest"',
+
+  // Monk - Cobalt Soul
   'Debilitating Barrage':
     'Section=combat ' +
-    'Note="May spend 3 Ki Points after a triple hit to inflict vulnerability to chosen damage type for 1 min (Constitution neg) and Disadv on next attack"',
-  'Demolishing Might':
-    'Section=combat ' +
-    'Note="Melee weapons inflict x2 damage vs. objects and +1d8 HP damage vs. constructs"',
-  'Essence Runes':
-    'Section=magic ' +
-    'Note="Spending Sorcery Points charges an equal number of runes (maximum %{levels.Sorcerer}); 5 charged runes emit a bright light in a 5\' radius"',
+    'Note="Can spend 3 ki points after hitting a target 3 times to inflict vulnerability to a chosen damage type (save Constitution negates) for 1 min and disadvantage on the target\'s attacks for 1 rd"',
   'Extort Truth':
     'Section=combat ' +
-    'Note="May spend 2 Ki Points after a dbl hit to prevent target from lying (Charisma neg) for 1 min"',
+    'Note="Can spend 2 ki points after hitting a target twice to prevent it from lying (save Charisma negates) for 1 min"',
   'Extract Aspects':
     'Section=combat ' +
-    'Note="May spend 1 Ki Point after a dbl hit to gain info about target (Constitution neg)"',
-  'Glyphs Of Aegis':
-    'Section=magic ' +
-    'Note="May use Reaction to discharge runes, negating 1d6 damage each%{levels.Sorcerer<8?\'\':\'; touch may transfer the protection of 1 rune for 1 hr\'}"',
-  'Manifest Inscriptions':
-    'Section=magic ' +
-    'Note="R15\' May discharge 1 rune to reveal hidden glyphs for 1 rd"',
+    'Note="Can spend 1 ki point after hitting a target twice to gain %{level>6?(level<11?2:level<17?3:4)+\' pieces\':\'1 piece\'} of info about it (save Constitution negates) from among creature type, armor class, senses, highest or lowest save modifier, condition immunities, or damage vulnerabilities, resistances, or immunities"',
   'Mind Of Mercury':
-    'Section=combat,save ' +
+    'Section=combat,skill ' +
     'Note=' +
-      '"May spend up to %{intelligenceModifier>?1} Ki Points for an equal number of extra Reactions",' +
-      '"May spend 1 Ki Point for Adv on Investigation"',
+      '"Can spend %{intelligenceModifier>1?\'up to \'+intelligenceModifier+\' ki points for an equal number of extra reactions\':\'a ki point for an extra reaction\'}",' +
+      '"Can spend 1 ki point to gain advantage on Investigation"',
   'Mystical Erudition':
     'Section=skill,skill ' +
     'Note=' +
       '"Language (Choose %V from any)",' +
-      '"May spend 1 Ki Point for Adv on Arcana, History, or Religion"',
-  'Overwhelming Cleave':
-    'Section=combat ' +
-    'Note="May use a bonus action after attacking to attack another foe adjacent to target"',
+      '"Can spend 1 ki point to gain advantage on Arcana, History, or Religion"',
   'Preternatural Counter':
     'Section=combat ' +
-    'Note="May use Reaction for a melee attack after a target attack misses self"',
+    'Note="Can use a reaction after an attacker misses to make a melee attack on it"',
+
+  // Sorcerer - Runechild
+  'Arcane Exemplar Form':
+    'Section=magic ' +
+    'Note="Can discharge 6+ runes to gain a 40\' fly speed, +2 spell DC, and resistance to spell damage, and to regain hit points equal to the spell\'s level from casting, for 3+ rd once per long rest"',
+  'Essence Runes':
+    'Section=magic ' +
+    'Note="Spending sorcery points charges an equal number of runes (maximum %{levels.Sorcerer}) and can use an action to charge a lone rune when sorcery points are exhausted; 5 charged runes emit bright light in a 5\' radius"',
+  'Glyphs Of Aegis':
+    'Section=combat ' +
+    'Note="Can use a reaction in response to taking damage to discharge runes, negating 1d6 HP each%{levels.Sorcerer<8?\'\':\'; touch can transfer the protection of 1 rune to another creature for 1 hr\'}"',
+  'Manifest Inscriptions':
+    'Section=magic ' +
+    'Note="R15\' Can discharge 1 rune to reveal hidden glyphs for 1 rd"',
   'Runic Torrent':
     'Section=magic ' +
-    'Note="May discharge spell level runes to overcome target resistance and immunity"',
-  'Sanguine Recall':
-    'Section=magic ' +
-    'Note="May suffer up to %{(levels.Cleric+1)//2}d6 HP to recover an equal number of spell slot levels (level 5 max) 1/long rest"',
+    'Note="Can discharge runes equal to a spell\'s level to overcome target resistance and immunity"',
   'Sigilic Augmentation':
     'Section=magic ' +
-    'Note="May use a bonus action to discharge 1 rune, gaining Adv on Strength, Dexterity, or Constitution checks for 1 rd"',
-  'Stance Of The Mountain':
-    'Section=combat Note="Cannot be knocked prone during rage"',
-  'Thunderous Blows':
+    'Note="Can use a bonus action to discharge 1 rune, gaining advantage on Strength, Dexterity, or Constitution checks for 1 rd"',
+
+  // Backgrounds
+  'A Favor In Turn':
+    'Section=feature ' +
+    'Note="Can ask for a 20-word favor through a contact in exchange for a future favor"',
+  'Elemental Harmony':
+    'Section=magic ' +
+    'Note="Can use <i>Prestidigitation</i> to create a minor elemental effect: a puff of wind, a burst of flame, a small rock that lasts 1 min, or a cup of cold or hot water"',
+  "Fortune's Grace":
     'Section=combat ' +
-    'Note="May push foe 5\' w/a successful attack (DC %{8+proficiencyBonus+strengthModifier} Strength neg)"',
-  'Unstoppable':
-    'Section=combat ' +
-    'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage; suffers 1 level of exhaustion when rage ends"',
-  'Vascular Corruption Aura':
-    'Section=combat ' +
-    'Note="R30\' Foes suffer 2d6 HP necrotic and half healing for 1 min 1/long rest"',
+    'Note="Can gain advantage on an attack, ability, or saving throw, or inflict disadvantage on an attacker, once per long rest"',
+  'Student Privilege':
+    'Section=skill Note="Can access school tools and crafting materials"',
+  'Wicked Awareness':
+    'Section=skill Note="Has advantage on checks to uncover cult activity"',
 
   // Feats
   'Cruel':
-    'Section=feature,combat,skill ' +
+    'Section=combat,combat,skill ' +
     'Note=' +
-      '"May use %{proficiencyBonus} Cruelty Points/long rest",' +
-      '"May spend 1 Cruelty Point for +1d6 damage or to regain 1d6 HP on crit",'+
-      '"May spend 1 Cruelty Point for Adv on Intimidation"',
+      '"Can use %{proficiencyBonus} cruelty points per long rest",' +
+      '"Can spend 1 cruelty point on a critical hit to inflict +1d6 damage or to regain 1d6 hit points",'+
+      '"Can spend 1 cruelty point to gain advantage on Intimidation"',
   'Dual-Focused':
     'Section=magic ' +
     'Note="Successful DC 10 + number of rd Constitution allows maintaining concentration on two spells simultaneously"',
   'Flash Recall':
-    'Section=magic Note="May replace a prepared spell 1/short rest"',
+    'Section=magic Note="Can replace a prepared spell once per short rest"',
   'Gambler':
-    'Section=ability,feature,skill ' +
+    'Section=ability,skill,skill ' +
     'Note=' +
       '"+1 Charisma",' +
-      '"Tool Proficiency (Choose 2 from any Game)",' +
-      '"May reroll Carousing/Adv on Deception (games)/Adv on Persuasion (games)"',
+      '"Tool Proficiency (Choose 2 from any Gaming)",' +
+      '"Can reroll Carousing/Has advantage on Deception to bluff during games and on Persuasion to convince others to join"',
   'Mending Affinity':
     'Section=ability,combat ' +
     'Note=' +
       '"+1 Constitution",' +
-      '"Healing and stabilization restore +%{proficiencyBonus>?1} HP"',
+      '"Use of a Healer\'s Kit or stabilization on self restores +%{proficiencyBonus>?1} hit points"',
   'Mystic Conflux':
     'Section=skill,magic ' +
     'Note=' +
-      '"Adv on Arcana (investigate magic device)",' +
-      '"May attune 4 items"',
+      '"Has advantage on Arcana to investigate a magic device",' +
+      '"Can attune 4 items"',
   'Rapid Drinker':
     'Section=combat,save ' +
     'Note=' +
-      '"May quaff as a bonus action",' +
-      '"Adv on ingestion saves"',
+      '"Can quaff as a bonus action",' +
+      '"Has advantage on ingestion saves"',
   'Spelldriver':
-    'Section=magic Note="May cast an additional level 1 - 2 spell/rd"',
+    'Section=magic Note="Can cast an additional level 1 or 2 spell once per rd"',
   'Thrown Arms Master':
     'Section=ability,combat,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
       '"+20/+40 throw range",' +
-      '"May throw any weapon (one-handed have range 20/60, two-handed 15/30); light weapon returns after a missed throw"',
+      '"Can throw any weapon; one-handed wepons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
 
   // Races
   'Damage Resistance (Ravenite Dragonborn)':
-    'Section=save Note="Resistance to non-magical slashing damage"',
-  'Fast':'Section=ability Note="+5 Speed"',
+    'Section=save Note="Has resistance to non-magical slashing damage"',
   'Ravenite Ability Adjustment':
     'Section=ability Note="+1 Constitution/+1 Wisdom"'
 
@@ -354,9 +362,9 @@ Taldorei.RACES_ADDED = {
   'Draconian Dragonborn':PHB5E.RACES.Dragonborn,
   'Ravenite Dragonborn':
     PHB5E.RACES.Dragonborn
+      .replace('Speed=30', 'Speed=35')
       .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
       .replace('Damage Resistance', 'Damage Resistance (Ravenite Dragonborn)')
-      .replace('Features=', 'Features=Fast,')
 };
 Taldorei.RACES =
   Object.assign({}, (window.PHB5E||window.SRD5E).RACES, Taldorei.RACES_ADDED);

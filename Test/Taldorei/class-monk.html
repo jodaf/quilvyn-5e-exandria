@@ -105,7 +105,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><i>Monastic Tradition: 1 selection</i></td>
       </tr><tr style="text-align:center">
-        <td>Ki: Can use 20 Ki Points per short rest</td>
+        <td>Ki: Can use 20 ki points per short rest</td>
       </tr><tr style="text-align:center">
         <td>Timeless Body (Monk): Suffers no debility from aging and needs no food or water</td>
       </tr><tr style="text-align:center">
@@ -156,7 +156,9 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Mystical Erudition: Language (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Mystical Erudition: May spend 1 Ki Point for Adv on Arcana, History, or Religion</td>
+      <td>Mind Of Mercury: Can spend 1 ki point to gain advantage on Investigation</td>
+    </tr><tr style="text-align:center">
+      <td>Mystical Erudition: Can spend 1 ki point to gain advantage on Arcana, History, or Religion</td>
     </tr><tr style="text-align:center">
       <td>Tongue Of The Sun And Moon: Can communicate in any language</td>
     </tr></table>
@@ -215,31 +217,31 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Alert: Cannot be surprised, and unseen foes gain no advantage on attacks on self</td>
       </tr><tr style="text-align:center">
-        <td>Debilitating Barrage: May spend 3 Ki Points after a triple hit to inflict vulnerability to chosen damage type for 1 min (Constitution neg) and Disadv on next attack</td>
+        <td>Debilitating Barrage: Can spend 3 ki points after hitting a target 3 times to inflict vulnerability to a chosen damage type (save Constitution negates) for 1 min and disadvantage on the target's attacks for 1 rd</td>
       </tr><tr style="text-align:center">
-        <td>Deflect Missiles: Can use a reaction to reduce missile damage by 1d10+19 HP; reducing it to 0 hit points allows spending 1 Ki Point to make an immediate attack</td>
+        <td>Deflect Missiles: Can use a reaction to reduce missile damage by 1d10+19 HP; reducing it to 0 hit points allows spending 1 ki point to make an immediate attack</td>
       </tr><tr style="text-align:center">
-        <td>Extort Truth: May spend 2 Ki Points after a dbl hit to prevent target from lying (Charisma neg) for 1 min</td>
+        <td>Extort Truth: Can spend 2 ki points after hitting a target twice to prevent it from lying (save Charisma negates) for 1 min</td>
       </tr><tr style="text-align:center">
-        <td>Extract Aspects: May spend 1 Ki Point after a dbl hit to gain info about target (Constitution neg)</td>
+        <td>Extract Aspects: Can spend 1 ki point after hitting a target twice to gain 4 pieces of info about it (save Constitution negates) from among creature type, armor class, senses, highest or lowest save modifier, condition immunities, or damage vulnerabilities, resistances, or immunities</td>
       </tr><tr style="text-align:center">
-        <td>Flurry Of Blows: Can spend 1 Ki Point to make 2 unarmed strikes as a bonus action</td>
+        <td>Flurry Of Blows: Can spend 1 ki point to make 2 unarmed strikes as a bonus action</td>
       </tr><tr style="text-align:center">
         <td>Ki-Empowered Strikes: Unarmed attacks count as magical</td>
       </tr><tr style="text-align:center">
         <td>Martial Arts: When unarmored, can use a bonus action to make an unarmed strike after a monk weapon attack</td>
       </tr><tr style="text-align:center">
-        <td>Mind Of Mercury: May spend up to 1 Ki Points for an equal number of extra Reactions</td>
+        <td>Mind Of Mercury: Can spend a ki point for an extra reaction</td>
       </tr><tr style="text-align:center">
-        <td>Patient Defense: Can spend 1 Ki Point to Dodge as a bonus action</td>
+        <td>Patient Defense: Can spend 1 ki point to Dodge as a bonus action</td>
       </tr><tr style="text-align:center">
-        <td>Perfect Self: Has a minimum of 4 Ki Points available after initiative</td>
+        <td>Perfect Self: Has a minimum of 4 ki points available after initiative</td>
       </tr><tr style="text-align:center">
-        <td>Preternatural Counter: May use Reaction for a melee attack after a target attack misses self</td>
+        <td>Preternatural Counter: Can use a reaction after an attacker misses to make a melee attack on it</td>
       </tr><tr style="text-align:center">
-        <td>Step Of The Wind: Can spend 1 Ki Point to double jump distance and to Disengage or Dash as a bonus action</td>
+        <td>Step Of The Wind: Can spend 1 ki point to double jump distance and to Disengage or Dash as a bonus action</td>
       </tr><tr style="text-align:center">
-        <td>Stunning Strike: Can spend 1 Ki Point after a successful attack to stun the target (save DC 18 Constitution negates) for 1 rd</td>
+        <td>Stunning Strike: Can spend 1 ki point after a successful attack to stun the target (save DC 18 Constitution negates) for 1 rd</td>
       </tr></table>
 </td>
     </tr></table>
@@ -257,11 +259,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Resilient: Save Proficiency (Choose 1 from any)</i></td>
       </tr><tr style="text-align:center">
-        <td>Diamond Soul: Can spend 1 Ki Point to reroll a save</td>
+        <td>Diamond Soul: Can spend 1 ki point to reroll a save</td>
       </tr><tr style="text-align:center">
         <td>Evasion: Successful Dexterity saves yield no damage instead of half, and failures yield half damage</td>
-      </tr><tr style="text-align:center">
-        <td>Mind Of Mercury: May spend 1 Ki Point for Adv on Investigation</td>
       </tr><tr style="text-align:center">
         <td>Purity Of Body: Has immunity to disease and poison</td>
       </tr><tr style="text-align:center">
@@ -303,9 +303,9 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Magic Initiate (Warlock): Knows 2 warlock cantrips and can cast a chosen K1 spell once per long rest</i></td>
     </tr><tr style="text-align:center">
-      <td>Empty Body: Can spend 4 Ki Points to become invisible and gain resistance to all damage other than force for 1 min/Can spend 8 Ki Points to cast <i>Astral Projection</i> on self</td>
+      <td>Empty Body: Can spend 4 ki points to become invisible and gain resistance to all damage other than force for 1 min/Can spend 8 ki points to cast <i>Astral Projection</i> on self</td>
     </tr><tr style="text-align:center">
-      <td>Flash Recall: May replace a prepared spell 1/short rest</td>
+      <td>Flash Recall: Can replace a prepared spell once per short rest</td>
     </tr></table>
 </td>
   </tr></table>
