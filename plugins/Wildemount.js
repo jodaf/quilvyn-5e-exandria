@@ -181,8 +181,10 @@ Wildemount.FEATURES_ADDED = {
 
   // Feats
   'Hollow One':
-    'Section=feature ' +
-    'Note="Has returned from death/Has Ageless, Cling To Life, Revenance, and Unsettling Presence features"',
+    'Section=feature,feature ' +
+    'Note=' +
+      '"Has the Ageless, Cling To Life, Revenance, and Unsettling Presence features",' +
+      '"Has returned from death"',
 
   // Paths
   'Adjust Density':
@@ -230,176 +232,212 @@ Wildemount.FEATURES_ADDED = {
     'Note="R60\' May use Reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling target %{intelligenceModifier>?1}/long rest"',
 
   // Races
-  'Aarakocra Ability Adjustment':
-    'Section=ability Note="+2 Dexterity/+1 Wisdom"',
-  'Acid Resistance':'Section=save Note="Resistance to acid damage"',
-  'Ageless':'Section=feature Note="Immune to aging"',
-  'Air Genasi Ability Adjustment':
-    'Section=ability Note="+2 Constitution/+1 Dexterity"',
-  'Amphibious':'Section=feature Note="May breathe water"',
+
+  // Elf - Pallid
   'Blessing Of The Moon Weaver':
     'Section=magic ' +
-    'Note="Knows <i>Light</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Sleep</i> 1/long rest\':\', may cast <i>Sleep</i> and self <i>Invisibility</i> 1/long rest\'}" ' +
+    'Note="Knows the <i>Light</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Sleep</i> once per long rest\':\' and can cast <i>Sleep</i> and self <i>Invisibility</i> once per long rest\'}" ' +
     'SpellAbility=Wisdom ' +
     'Spells=Light,3:Sleep,5:Invisibility',
-  'Call To The Wave':
-    'Section=magic ' +
-    'Note="Knows <i>Shape Water</i> cantrip%{level<3?\'\':\', cast <i>Destroy Water</i> 1/long rest\'}" ' +
-    'SpellAbility=Constitution ' +
-    'Spells="Shape Water","3:Create Or Destroy Water"',
-  'Child Of The Sea':'Section=ability Note="30\' swim speed/May breathe water"',
-  'Child Of The Wood':
-    'Section=magic ' +
-    'Note="Knows <i>Druidcraft</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Entangle</i> 1/long rest\':\', may cast <i>Entangle<i> and <i>Spike Growth</i> 1/long rest\'}" ' +
-    'SpellAbility=Wisdom ' +
-    'Spells=Druidcraft,3:Entangle,"5:Spike Growth"',
-  'Claws':'Section=combat Note="Claws are a natural weapon"',
-  'Cling To Life':
-    'Section=combat ' +
-    'Note="Regains 1 HP from a successful death saving throw above 15"',
-  'Draconblood Ability Adjustment':
-    'Section=ability Note="+2 Intelligence/+1 Charisma"',
-  'Earth Genasi Ability Adjustment':
-    'Section=ability Note="+2 Constitution/+1 Strength"',
-  'Earth Walk':
-    'Section=ability Note="May move normally over difficult earth and stone"',
-  'Fire Genasi Ability Adjustment':
-    'Section=ability Note="+2 Constitution/+1 Intelligence"',
-  'Fire Resistance':'Section=save Note="Resistance to fire damage"',
-  'Flight':'Section=ability Note="50\' fly speed"',
-  'Forceful Presence':
-    'Section=skill Note="Adv on Intimidation or Persuasion 1/short rest"',
+  'Incisive Sense':
+    'Section=skill Note="Has advantage on Investigation and Insight"',
+  'Pallid Elf Ability Adjustment':'Section=ability Note="+1 Wisdom"',
+  // Elf - Sea
+  'Child Of The Sea':
+    'Section=ability Note="Has a 30\' swim Speed and can breathe water"',
   'Friend Of The Sea':
-    'Section=feature Note="May communicate w/swimming creatures"',
-  'Goliath Ability Adjustment':
-    'Section=ability Note="+2 Strength/+1 Constitution"',
-  'Hold Breath':'Section=feature Note="May hold breath for 1 hr"',
-  'Incisive Sense':'Section=skill Note="Adv on Investigation and Insight"',
-  'Lotusden Halfling Ability Adjustment':
-    'Section=ability Note="+2 Dexterity/+1 Wisdom"',
-  'Mingle With The Wind':
-     'Section=magic ' +
-     'Note="May cast <i>Levitate</i> 1/long rest" ' +
-     'SpellAbility=Constitution ' +
-     'Spells=Levitate',
-  'Mountain Born':
-    'Section=feature ' +
-    'Note="Acclimated to high elevations and cold environments"',
-  'Natural Armor':'Section=combat Note="Shell gives AC 17; cannot wear armor"',
-  'Natural Athlete':'Section=skill Note="Skill Proficiency (Athletics)"',
-  'Pallid Elf Ability Adjustment':'Section=ability Note="+2 Dexterity/+1 Wisdom"',
-  'Pass Without Trace':
-    'Section=magic ' +
-    'Note="May cast <i>Pass Without Trace</i> 1/long rest" ' +
-    'SpellAbility=Constitution ' +
-    'Spells="Pass Without Trace"',
-  'Primal Intuition':
-    'Section=feature ' +
-    'Note="Skill Proficiency (Choose 2 from Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, Survival)"',
-  'Powerful Build':'Section=ability Note="x2 Carry/x2 Lift"',
-  'Ravenite Ability Adjustment':
-    'Section=ability Note="+2 Strength/+1 Constitution"',
-  'Reach To The Blaze':
-    'Section=magic ' +
-    'Note="Knows <i>Produce Flame</i> cantrip%{level<3?\'\':\', may cast <i>Burning Hands</i> 1/long rest\'}" ' +
-    'SpellAbility=Constitution ' +
-    'Spells="Produce Flame","3:Burning Hands"',
-  'Revenance':'Section=feature Note="Detects as undead"',
-  'Sea Elf Ability Adjustment':
-    'Section=ability Note="+2 Dexterity/+1 Constitution"',
+    'Section=skill Note="Can communicate simple ideas with swimming creatures"',
+  'Sea Elf Ability Adjustment':'Section=ability Note="+1 Constitution"',
   'Sea Elf Training':
     'Section=combat ' +
     'Note="Weapon Proficiency (Light Crossbow; Net; Spear; Trident)"',
-  'Shell Defense':
-    'Section=combat ' +
-    'Note="Withdrawal into shell gives +4 AC and Adv on Strength and Constitution saves; inflicts prone, immobility, Disadv on Dexterity saves, and no actions or reactions"',
-  'Survival Instinct':'Section=skill Note="Skill Proficiency (Survival)"',
-  "Stone's Endurance":
-    'Section=combat ' +
-    'Note="May reduce damage to self by 1d12+%{constitutionModifier} 1/short rest"',
-  'Swim':'Section=ability Note="30\' swim speed"',
-  'Talons':'Section=combat Note="Talons are a natural weapon"',
+
+  // Halfling - Lotusden
+  'Child Of The Wood':
+    'Section=magic ' +
+    'Note="Knows the <i>Druidcraft</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Entangle</i> once per long rest\':\' and can cast <i>Entangle<i> and <i>Spike Growth</i> once per long rest\'}" ' +
+    'SpellAbility=Wisdom ' +
+    'Spells=Druidcraft,3:Entangle,"5:Spike Growth"',
+  'Lotusden Halfling Ability Adjustment':'Section=ability Note="+1 Wisdom"',
   'Timberwalk':
     'Section=ability,feature ' +
     'Note=' +
-      '"May move normally through difficult undergrowth",' +
-      '"Trackers suffer Disadv"',
-  'Tortle Ability Adjustment':'Section=ability Note="+2 Strength/+1 Wisdom"',
-  'Unending Breath':'Section=feature Note="May hold breath indefinitely"',
-  'Unsettling Presence':
-    'Section=combat ' +
-    'Note="R15\' May inflict Disadv on next target save for 1 min 1/long rest"',
+      '"Can move normally through nonmagical difficult undergrowth",' +
+      '"Trackers suffer disadvantage"',
+
+  // Aarakocra
+  'Aarakocra Ability Adjustment':
+    'Section=ability Note="+2 Dexterity/+1 Wisdom"',
+  'Flight':
+    'Section=ability ' +
+    'Note="Has a 50\' fly Speed; medium or heavy armor negates"',
+  'Talons':
+    'Section=combat Note="Talons inflict 1d4+%{strengthModifier} slashing"',
+
+  // Dragonborn - Draconblood
+  // Darkvision as SRD5E
+  'Draconblood Ability Adjustment':
+    'Section=ability Note="+2 Intelligence/+1 Charisma"',
+  'Forceful Presence':
+    'Section=skill ' +
+    'Note="Has advantage on Intimidation or Persuasion once per short rest"',
+  // Dragonborn - Ravenite
+  // Darkvision as SRD5E
+  'Ravenite Ability Adjustment':
+    'Section=ability Note="+2 Strength/+1 Constitution"',
   'Vengeful Assault':
     'Section=combat ' +
-    'Note="May use Reaction to attack after taking damage 1/short rest"',
-  'Water Genasi Ability Adjustment':
-    'Section=ability Note="+2 Constitution/+1 Wisdom"'
+    'Note="Can use a reaction to attack after taking damage once per short rest"',
+
+  // Genasi
+  'Genasi Ability Adjustment':'Section=ability Note="+2 Constitution"',
+  // Genasi - Air
+  'Air Genasi Ability Adjustment':'Section=ability Note="+1 Dexterity"',
+  'Mingle With The Wind':
+     'Section=magic ' +
+     'Note="Can cast <i>Levitate</i> once per long rest" ' +
+     'SpellAbility=Constitution ' +
+     'Spells=Levitate',
+  'Unending Breath':'Section=save Note="Can hold breath indefinitely"',
+  // Genasi - Earth
+  'Earth Genasi Ability Adjustment':'Section=ability Note="+1 Strength"',
+  'Earth Walk':
+    'Section=ability ' +
+    'Note="Can move normally over difficult terrain made of earth and stone"',
+  'Pass Without Trace':
+    'Section=magic ' +
+    'Note="Can cast <i>Pass Without Trace</i> once per long rest" ' +
+    'SpellAbility=Constitution ' +
+    'Spells="Pass Without Trace"',
+  // Genasi - Fire
+  // Darkvision as SRD5E
+  'Fire Genasi Ability Adjustment':'Section=ability Note="+1 Intelligence"',
+  'Fire Resistance':'Section=save Note="Has resistance to fire"',
+  'Reach To The Blaze':
+    'Section=magic ' +
+    'Note="Knows the <i>Produce Flame</i> cantrip%{level<3?\'\':\' and can cast <i>Burning Hands</i> once per long rest\'}" ' +
+    'SpellAbility=Constitution ' +
+    'Spells="Produce Flame","3:Burning Hands"',
+  // Genasi - Water
+  'Acid Resistance':'Section=save Note="Has resistance to acid"',
+  'Amphibious':'Section=ability Note="Can breathe water"',
+  'Call To The Wave':
+    'Section=magic ' +
+    'Note="Knows the <i>Shape Water</i> cantrip%{level<3?\'\':\' and can cast <i>Create Or Destroy Water</i> once per long rest\'}" ' +
+    'SpellAbility=Constitution ' +
+    'Spells="Shape Water","3:Create Or Destroy Water"',
+  'Swim':'Section=ability Note="Has a 30\' swim Speed"',
+  'Water Genasi Ability Adjustment':'Section=ability Note="+1 Wisdom"',
+
+  // Orc
+  'Primal Intuition':
+    'Section=feature ' +
+    'Note="Skill Proficiency (Choose 2 from Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, Survival)"',
+
+  // Tortle
+  'Claws':
+    'Section=combat Note="Claws inflict 1d4+%{strengthModifier} slashing"',
+  'Hold Breath':'Section=save Note="Can hold breath for 1 hr"',
+  'Natural Armor':
+    'Section=combat ' +
+    'Note="Shell gives armor class 17; cannot wear additional armor"',
+  'Shell Defense':
+    'Section=combat ' +
+    'Note="Withdrawal into shell gives +4 armor class and advantage on Strength and Constitution saves while inflicting prone, immobility, disadvantage on Dexterity saves, and loss of actions and reactions"',
+  'Survival Instinct':'Section=skill Note="Skill Proficiency (Survival)"',
+  'Tortle Ability Adjustment':'Section=ability Note="+2 Strength/+1 Wisdom"',
+
+  // Feats
+  'Ageless':'Section=save Note="Has immunity to aging"',
+  'Cling To Life':
+    'Section=combat ' +
+    'Note="Regains 1 hit point from a successful death saving throw above 15"',
+  'Revenance':'Section=feature Note="Detects as undead"',
+  'Unsettling Presence':
+    'Section=combat ' +
+    'Note="R15\' Can inflict disadvantage on the next target save within 1 min once per long rest"'
 
 };
 Wildemount.FEATURES =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATURES, Wildemount.FEATURES_ADDED);
 Wildemount.RACES_ADDED = {
   'Aarakocra':
+    'Size=Medium ' +
+    'Speed=25 ' +
     'Features=' +
-      '"Language (Common; Aarakocra; Auran)",' +
-      '"Aarakocra Ability Adjustment",Flight,Slow,Talons',
+      '"1:Language (Common; Aarakocra; Auran)",' +
+      '"1:Aarakocra Ability Adjustment","1:Flight","1:Talons"',
+  // NOTE: Aasimar requires Volo
   'Air Genasi':
+    'Size=Medium ' +
+    'Speed=30 ' +
     'Features=' +
-      '"Language (Common; Primordial)",' +
-      '"Air Genasi Ability Adjustment","Mingle With The Wind",' +
-      '"Unending Breath"',
+      '"1:Genasi Ability Adjustment","1:Language (Common; Primordial)",' +
+      '"1:Air Genasi Ability Adjustment","1:Mingle With The Wind",' +
+      '"1:Unending Breath"',
+  // NOTE: Bugbear requires Volo
   'Draconblood':SRD5E.RACES.Dragonborn
     .replace('Dragonborn Ability Adjustment', 'Draconblood Ability Adjustment')
     .replace('Damage Resistance', 'Forceful Presence')
-    .replace('Features=', 'Features=Darkvision,'),
+    .replace('Features=', 'Features="1:Darkvision",'),
   'Earth Genasi':
+    'Size=Medium ' +
+    'Speed=30 ' +
     'Features=' +
-      '"Language (Common; Primordial)",' +
-      '"Earth Genasi Ability Adjustment","Earth Walk","Pass Without Trace"',
+      '"1:Genasi Ability Adjustment","1:Language (Common; Primordial)",' +
+      '"1:Earth Genasi Ability Adjustment","1:Earth Walk",' +
+      '"1:Pass Without Trace"',
+  // NOTE: Firbolg requires Volo
   'Fire Genasi':
+    'Size=Medium ' +
+    'Speed=30 ' +
     'Features=' +
-      '"Language (Common; Primordial)",' +
-      'Darkvision,"Fire Genasi Ability Adjustment","Fire Resistance",' +
-      '"Reach To The Blaze"',
-  'Goliath':
-    'Features=' +
-      '"Language (Common; Giant)",' +
-      '"Goliath Ability Adjustment","Mountain Born","Natural Athlete",' +
-      '"Powerful Build","Stone\'s Endurance"',
-  'Lotusden Halfling':
-    'Features=' +
-      '"Language (Common; Halfling)",' +
-      'Brave,"Child Of The Wood","Halfling Nimbleness",' +
-      '"Lotusden Halfling Ability Adjustment","Lucky (Halfling)",Slow,Small,' +
-      'Timberwalk',
-  'Pallid Elf':
-    'Features=' +
-      '"Language (Common; Elvish)",' +
-      '"Blessing Of The Moon Weaver",Darkvision,"Fey Ancestry",' +
-      '"Incisive Sense","Keen Senses","Pallid Elf Ability Adjustment",Trance',
+      '"1:Genasi Ability Adjustment","1:Language (Common; Primordial)",' +
+      '"1:Darkvision","1:Fire Genasi Ability Adjustment","1:Fire Resistance",' +
+      '"1:Reach To The Blaze"',
+  // NOTE: Goblin requires Volo
+  // NOTE: Goliath requires Volo
+  // NOTE: Hobgoblin requires Volo
+  // NOTE: Kenku requires Volo
+  'Lotusden Halfling':SRD5E.RACES['Lightfoot Halfling']
+    .replace('Lightfoot Halfling Ability Adjustment', 'Lotusden Halfling Ability Adjustment')
+    .replace('Naturally Stealthy', 'Child Of The Wood')
+    .replace('Features=', 'Features="1:Timberwalk",'),
+  // NOTE: Orc requires Volo
+  'Pallid Elf':SRD5E.RACES['High Elf']
+    .replace('High Elf Ability Adjustment', 'Pallid Elf Ability Adjustment')
+    .replace('Elf Weapon Training', 'Incisive Sense')
+    .replace('Cantrip (High Elf)', 'Blessing Of The Moon Weaver')
+    .replace(',"1:Extra Language"', ''),
   'Ravenite':SRD5E.RACES.Dragonborn
     .replace('Dragonborn Ability Adjustment', 'Ravenite Ability Adjustment')
     .replace('Damage Resistance', 'Vengeful Assault')
-    .replace('Features=', 'Features=Darkvision,'),
-  'Sea Elf':
-    'Features=' +
-      '"Language (Common; Aquan; Elvish)",' +
-      '"Child Of The Sea",Darkvision,"Fey Ancestry","Friend Of The Sea",' +
-      '"Keen Senses","Sea Elf Ability Adjustment","Sea Elf Training",Trance',
+    .replace('Features=', 'Features="1:Darkvision",'),
+  'Sea Elf':SRD5E.RACES['High Elf']
+    .replace('High Elf Ability Adjustment', 'Sea Elf Ability Adjustment')
+    .replace('Elf Weapon Training', 'Sea Elf Training')
+    .replace('Cantrip (High Elf)', 'Child Of The Sea')
+    .replace('Extra Language', 'Friend Of The Sea')
+    .replace('Common', 'Aquan; Common'),
+  // NOTE: Tabaxi requires Volo
   'Tortle':
+    'Size=Medium ' +
+    'Speed=30 ' +
     'Features=' +
       '"Language (Common; Aquan)",' +
-      'Claws,"Hold Breath","Natural Armor","Shell Defense",' +
-      '"Survival Instinct","Tortle Ability Adjustment"',
+      '"1:Claws","1:Hold Breath","1:Natural Armor","1:Shell Defense",' +
+      '"1:Survival Instinct","1:Tortle Ability Adjustment"',
   'Water Genasi':
+    'Size=Medium ' +
+    'Speed=30 ' +
     'Features=' +
-      '"Language (Common; Primordial)",' +
-      '"Acid Resistance",Amphibious,"Call To The Wave",Swim,' +
-      '"Water Genasi Ability Adjustment"'
+      '"1:Genasi Ability Adjustment","1:Language (Common; Primordial)",' +
+      '"1:Acid Resistance","1:Amphibious","1:Call To The Wave","1:Swim",' +
+      '"1:Water Genasi Ability Adjustment"'
 };
 if(window.Volo != null) {
   Wildemount.RACES_ADDED.Orc =
-    Volo.MONSTROUS_RACES.Orc.replace('Menacing', '"Primal Intuition"');
+    Volo.MONSTROUS_RACES.Orc.replace('Menacing', 'Primal Intuition');
 }
 Wildemount.RACES = Object.assign({}, (window.PHB5E||window.SRD5E).RACES, Wildemount.RACES_ADDED);
 Wildemount.SPELLS_ADDED = {
@@ -561,7 +599,7 @@ Wildemount.ruleNotes = function() {
     '  Races from the Wildemount rule book that are also defined in' +
     '  Volo\'s Guide to Monsters are available only if the Volo module is' +
     '  also selected. These races are Aasimar, Firbolg, Bugbear, Goblin,' +
-    '  Hobgoblin, Kenku, Orc, and Tabaxi.\n' +
+    '  Hobgoblin, Goliath, Kenku, Orc, and Tabaxi.\n' +
     '  </li><li>\n' +
     '  Quilvyn makes the Hollow One feature available as a special feat.' +
     '  To use it, add the line "* +1 Feat" to the character notes, then' +
