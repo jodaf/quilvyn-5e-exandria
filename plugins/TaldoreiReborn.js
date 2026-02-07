@@ -176,6 +176,7 @@ TaldoreiReborn.CLASSES_FEATURES_ADDED = {
   'Sorcerer':
     '"features.Runechild ? 1:Essence Runes",' +
     '"features.Runechild ? 1:Glyph Of Aegis",' +
+    '"features.Runechild ? 1:Runic Magic",' +
     '"features.Runechild ? 6:Manifest Inscriptions",' +
     '"features.Runechild ? 6:Sigilic Augmentation",' +
     '"features.Runechild ? 14:Runic Torrent",' +
@@ -248,237 +249,261 @@ TaldoreiReborn.FEATS =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, TaldoreiReborn.FEATS_ADDED);
 TaldoreiReborn.FEATURES_ADDED = {
 
-  // Backgrounds
-  'A Favor In Turn':
-    'Section=skill ' +
-    'Note="May ask a 20-word favor from a contact in return for a future favor"',
-  'Academic Requisition':
-    'Section=skill ' +
-    'Note="May access school tools and gain services through school at a 25% discount"',
-  'Elemental Harmony':
-    'Section=magic Note="May produce minor elemental effects"',
-  'Fell Teachings':
-    'Section=skill Note="Adv on Religion about chosen Betrayer God"',
-  'Legacy Of Secrecy':
-    'Section=feature Note="Possession of a firearm changes others\' reactions"',
-  'Rifle Corps Relationship':
-    'Section=feature Note="Has current or past relationships w/in WRC"',
+  // Class
 
-  // Paths
-  'Arcane Exemplar':
+  // Barbarian - Path Of The Juggernaut
+  'Demolishing Might':
+    'Section=combat ' +
+    'Note="Melee weapons inflict x2 damage vs. objects and +1d8 HP vs. constructs"',
+  'Hurricane Strike':
+    'Section=combat ' +
+    'Note="Pushing a foe allows an adjacent ally to use a reaction for a melee attack, and self can leap to knock a pushed foe prone (save DC %{8 + proficiencyBonus + strengthModifier} Strength negates)"',
+  'Resolute Stance':
+    'Section=combat ' +
+    'Note="Can suffer disadvantage on weapon attacks to gain immunity to grappling and to inflict disadvantage on foe attacks"',
+  'Spirit Of The Mountain':
+    'Section=combat Note="Cannot be knocked prone or pushed during rage"',
+  'Thunderous Blows':
+    'Section=combat ' +
+    'Note="Can push a foe %{levels.Barbarian<10?5:10}\' with a successful attack (save Huge foe DC %{8+proficiencyBonus+strengthModifier} Strength negates)"',
+  'Unstoppable':
+    'Section=combat ' +
+    'Note="Cannot be slowed, frightened, knocked prone, paralyzed, or stunned during rage"',
+
+  // Bard - College Of Tragedy
+  'Impending Misfortune':
+    'Section=feature ' +
+    'Note="Can gain +10 on an attack or save and suffer -10 on the next attack or save once per short rest"',
+  'Nimbus Of Pathos':
     'Section=magic ' +
-    'Note="May discharge 1 rune to gain 60\' fly speed, inflict Disadv vs. self spells, gain resistance to spell damage, and regain spell level HP from casting for 1 rd 1/long rest; stunned afterward for 1 rd"',
-  'Aura Of Liberation':
-    'Section=magic ' +
-    'Note="R%{levels.Paladin<18?10:30}\' Targets cannot be grappled or restrained, ignore underwater movement and attack penalties"',
-  'Blessing Of The Blood-Drenched Moon':
-    'Section=magic ' +
-    'Note="R30\' May use Channel Divinity to give target Adv on attacks on foes that are adjacent to an ally for 10 min"',
-  'Blessing Of The Watchful Moon':
-    'Section=magic ' +
-    'Note="R30\' May use Channel Divinity to give target +10 Speed and Adv on Perception and Survival (tracking and smell) for 1 hr"',
-  'Blighted Shape':
-    'Section=magic,skill ' +
-    'Note=' +
-      '"Wild Shape gives +2 AC and 60\' darkvision",' +
-      '"Skill Proficiency (Intimidation)"',
-  'Blood Channeling':
-    'Section=magic ' +
-    'Note="May use own damaged body as arcane focus/May suffer 1d10 HP necrotic per 50 GP to forego material components when casting"',
+    'Note="Willing touched gains +4 Armor Class, advantage on attacks and saves, and attacks that inflict +1d10 HP radiant damage for 1 min once per long rest; foe attacks on the target during this time gain a 18-20 crit range, and the target drops to 0 HP afterward"',
+  'Poetry In Misery':
+    'Section=feature ' +
+    'Note="R30\' Can use a reaction when self or an ally rolls a 1 on an attack, ability check, or save to regain 1 use of Bardic Inspiration"',
+  'Sorrowful Fate':
+    'Section=combat ' +
+    'Note="Can spend 1 Bardic Inspiration die to change a foe save to Charisma once per short rest; failure on the save inflicts +%{bardicInspirationDie} HP psychic"',
+  'Tale Of Hubris':
+    'Section=combat ' +
+    'Note="R60\' Can use a reaction upon a foe critical hit and spend 1 Bardic Inspiration die to give attacks on the foe a %{levels.Bard<14?18:17}-20 crit range for for 1 min or until the first critical hit"',
+
+  // Cleric - Blood Domain
   'Blood Domain':
     'Spells=' +
-      '"1:False Life",1:Sleep,' +
+      '"1:False Life","1:Sleep",' +
       '"3:Hold Person","3:Ray Of Enfeeblement",' +
-      '5:Haste,5:Slow,' +
-      '7:Blight,7:Stoneskin,' +
+      '"5:Haste","5:Slow",' +
+      '"7:Blight","7:Stoneskin",' +
       '"9:Dominate Person","9:Hold Monster"',
   'Blood Puppet':
     'Section=magic ' +
-    'Note="R60\' May use Channel Divinity to force a %{levels.Cleric<17?\'Large\':\'Huge\'} target to move at half speed and attack or to interact with an object (Wisdom ends) for conc up to 1 min"',
+    'Note="R60\' Can use Channel Divinity to force a %{levels.Cleric<17?\'Large\':\'Huge\'} target to move at half speed and attack or to interact with an object (save Wisdom ends) for concentration up to 1 min"',
   'Bloodletting Focus':
     'Section=magic ' +
     'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
-  'Bond Of Mutual Suffering':
-    'Section=magic ' +
-    'Note="May use Reaction to inflict equal damage on attacker %{levels.Wizard<14?1:2}/short rest"',
   'Bonus Proficiencies (Blood Domain)':
     'Section=feature Note="Weapon Proficiency (Martial Weapons)"',
-  'Call Of The Shadowseeds':
-    'Section=magic ' +
-    'Note="May use Reaction after damage w/in Defile Ground area to summon a blighted sapling (AC %{10+proficiencyBonus}; HP %{levels.Druid*2}; attack +%{spellAttackModifier.D} 2d4+%{proficiencyBonus} HP piercing) %{proficiencyBonus}/long rest"',
-  'Clarity Of Catha':
-    'Section=magic ' +
-    'Note="R30\' May use Reaction to give target Adv on a Wisdom save %{proficiencyBonus}/long rest"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="May use Channel Divinity to bond with seen target or target blood; knows distance, direction, HP, and conditions for conc up to 1 hr and may suffer 2d6 HP necrotic to share sight or sound (Constitution neg) for %{wisdomModifier>?1} min"',
-  'Debilitating Barrage':
-    'Section=combat ' +
-    'Note="May spend 3 Ki Points after an unarmed hit to inflict vulnerability (or to suppress resistance) to chosen damage type for 1 min or until damaged"',
-  'Defile Ground':
+    'Note="Can use Channel Divinity to bond with a seen target or with a target\'s blood to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or sound for %{wisdomModifier>?1} min (save Constitution neg)"',
+  // Divine Strike as SRD5E
+  'Sanguine Recall':
     'Section=magic ' +
-    'Note="R60\' %{levels.Druid<10?10:20}\' radius inflicts difficult terrain and +1d%{levels.Druid<10?4:levels.Druid<14?6:8} HP necrotic on foes for 1 min 1/short rest"',
-  'Demolishing Might':
+    'Note="Can suffer up to %{(levels.Cleric+1)//2}d8 HP necrotic to recover an equal number of spell slot levels (level 5 maximum) once per long rest"',
+  'Vascular Corruption Aura':
     'Section=combat ' +
-    'Note="Melee weapons inflict x2 damage vs. objects and +1d8 HP damage vs. constructs"',
+    'Note="R30\' Foes suffer 3d6 HP necrotic and half healing for 1 min once per long rest"',
+  // Cleric - Moon Domain
+  'Blessing Of The Blood-Drenched Moon':
+    'Section=magic ' +
+    'Note="R30\' Can use Channel Divinity to give a target advantage on attacks on foes that are adjacent to an ally for 10 min"',
+  'Blessing Of The Watchful Moon':
+    'Section=magic ' +
+    'Note="R30\' Can use Channel Divinity to give a target +10 Speed and advantage on Perception and Survival involving tracking or smell for 1 hr"',
+  'Clarity Of Catha':
+    'Section=magic ' +
+    'Note="R30\' Can use a reaction to give a target advantage on a Wisdom save %{proficiencyBonus} times per long rest"',
   'Eclipse Of Ill Omen':
     'Section=magic ' +
-    'Note="60\' radius dim red glow blocks other light and inflicts Disadv on saves; radiant damage by self also inflicts half speed and no healing on target, for conc up to 1 min 1/long rest"',
+    'Note="60\' radius dim red glow blocks other light and inflicts disadvantage on saves on selected targets, and radiant damage by self also inflicts half speed and no healing to a target within the glow once per rd, for concentration up to 1 min once per long rest"',
   'Empowered Cantrips':
-    'Section=magic Note="+%{wisdomModifier} HP cleric cantrip damage"',
-  'Essence Runes':
+    'Section=magic Note="Cleric cantrips inflict +%{wisdomModifier} HP"',
+  'Mind Of Two Moons':
     'Section=magic ' +
-    'Note="Spending Sorcery Points charges an equal number of runes (maximum %{levels.Sorcerer}); 5 charged runes emit a bright light in a 5\' radius"',
-  'Extort Truth':
-    'Section=combat ' +
-    'Note="May spend 1 Ki Point after an unarmed hit to prevent target lying and to give all Adv on Charisma vs. foe for 10 min (Charisma neg)"',
-  'Extract Aspects':
-    'Section=combat ' +
-    'Note="May use Reaction after a Flurry Of Blows hit to gain info about target; may use Reaction for an unarmed attack when target misses until next rest"',
-  "Fortune's Grace":
-    'Section=feature ' +
-    'Note="May reroll an attack, ability, or save or force a foe reroll 1/long rest"',
+    'Note="Can use Channel Divinity to maintain concentration on two Moon Domain spells simultaneously, suffering disadvantage on concentration Constitution saves"',
+  'Moon Domain':
+    'Spells=' +
+      '"1:Faerie Fire","1:Silent Image",' +
+      '"3:Invisibility","3:Moonbeam",' +
+      '"5:Hypnotic Pattern","5:Major Image",' +
+      '"7:Greater Invisibility","7:Hallucinatory Terrain",' +
+      '"9:Dream","9:Passwall"',
+
+  // Druid - Circle Of The Blighted
+  'Blighted Shape':
+    'Section=magic,skill ' +
+    'Note=' +
+      '"Wild Shape gives +2 armor class and 60\' darkvision",' +
+      '"Skill Proficiency (Intimidation)"',
+  'Call Of The Shadowseeds':
+    'Section=magic ' +
+    'Note="Can use a reaction after a creature takes damage within the Defile Ground area to summon a blighted sapling (armor class %{10+proficiencyBonus}; %{levels.Druid*2} hit points; +%{spellAttackModifier.D} attack inflicts 2d4+%{proficiencyBonus} HP piercing) adjacent to it %{proficiencyBonus} times per long rest"',
+  'Defile Ground':
+    'Section=magic ' +
+    'Note="R60\' %{levels.Druid<10?10:20}\' radius can move 30\' per rd, creates difficult terrain for foes, and inflicts +1d%{levels.Druid<10?4:levels.Druid<14?6:8} HP necrotic from the first hit on each creature each turn, for 1 min once per short rest"',
   'Foul Conjuration':
     'Section=magic ' +
-    'Note="Summoned creatures gain immunity to necrotic damage, poison damage, and poisoned condition and produce a R5\' toxic shower (inflicts 1d4+ HP necrotic; Constitution neg) when killed or on command"',
-  'Fury Of The Tides':
-    'Section=combat ' +
-    'Note="May use Channel Divinity and a bonus action to inflict 10\' push w/successful weapon attack (+%{charismaModifier} HP bludgeoning if obstructed) 1/rd for 1 min"',
-  'Glyph Of Aegis':
-    'Section=magic ' +
-    'Note="May use Reaction to discharge runes, negating 1d%{levels.Sorcerer<14?6:8} damage each%{levels.Sorcerer<8?\'\':\'; touch may transfer the protection of up to 3 runes for 1 hr\'}"',
-  'Glyph Of Hemorrhaging':
-    'Section=magic ' +
-    'Note="May curse a successful spell attack target to suffer +1d6 HP necrotic from each attack for 1 min (Constitution ends) 1/short rest"',
-  'Hurricane Strike':
-    'Section=combat ' +
-    'Note="Pushing foe allows an adjacent ally to use Reaction for a melee attack, and self may leap to knock pushed foe prone (DC %{8 + proficiencyBonus + strengthModifier} Strength neg)"',
-  'Impending Misfortune':
-    'Section=feature ' +
-    'Note="May gain +10 on current attack or save and suffer -10 on next attack or save 1/short rest"',
+    'Note="Summoned creatures gain immunity to necrotic damage, poison damage, and the poisoned condition and produce a R5\' toxic shower that inflicts 1d4+ HP necrotic (save Constitution negates) when killed or commanded"',
   'Incarnation Of Corruption':
     'Section=combat,combat,save ' +
     'Note=' +
       '"+2 Armor Class",' +
-      '"Gains %{proficiencyBonus} temporary HP from Defile Ground",' +
-      '"Resistance to necrotic damage"',
-  'Manifest Inscriptions':
-    'Section=magic ' +
-    'Note="R60\' May discharge 1 rune to reveal hidden glyphs and gain Adv on Arcana to understand"',
-  'Marine Layer':
-    'Section=magic ' +
-    'Note="May use Channel Divinity to create a 20\' radius that obscures vision for 10 min"',
+      '"Can use a bonus action to gain %{proficiencyBonus} temporary hit points when within Defile Ground radius",' +
+      '"Has resistance to necrotic damage"',
+
+  // Monk - Way Of The Cobalt Soul
+  'Debilitating Barrage':
+    'Section=combat ' +
+    'Note="Can spend 3 ki points after an unarmed hit to inflict vulnerability or suppress resistance to a chosen damage type for 1 min or until the target suffers that type of damage"',
+  'Extort Truth':
+    'Section=combat ' +
+    'Note="Can spend 1 ki point after an unarmed hit to prevent the target from lying, and to give advantage on Charisma checks vs. it, (save Charisma negates) for 10 min"',
+  'Extract Aspects':
+    'Section=combat ' +
+    'Note="Flurry Of Blows hits reveal the target\'s condition immunities and damage vulnerabilities, resistance, and immunities and, until the next rest, allow responding to missed attacks on self by the target by using a reaction for an unarmed attack"',
   'Mind Of Mercury':
-    'Section=combat Note="May spend 1 Ki Point to gain an extra Reaction"',
-  'Mind Of Two Moons':
-    'Section=magic ' +
-    'Note="May use Channel Divinity to maintain concentration on two Moon Domain spells simultaneously and to gain Adv on concentration Constitution saves"',
-  'Moon Domain':
-    'Spells=' +
-      '"1:Faerie Fire","1:Silent Image",' +
-      '3:Invisibility,3:Moonbeam,' +
-      '"5:Hypnotic Pattern","5:Major Image",' +
-      '"7:Greater Invisibility","7:Hallucinatory Terrain",' +
-      '9:Dream,9:Passwall',
+    'Section=combat ' +
+    'Note="Can spend 1 ki point to gain an extra reaction once per rd"',
   'Mystical Erudition':
     'Section=skill ' +
     'Note="Skill Proficiency (Choose %V from Arcana, History, Investigation, Nature, Religion)/Language (Choose %V from any)"',
-  'Mythic Swashbuckler':
-    'Section=ability,combat,save,skill ' +
-    'Note=' +
-      '"May gain Adv on Dexterity and %{speed} climb speed for 1 min 1/long rest",' +
-      '"May gain Adv on attacks vs. an adjacent foe when no other foe is adjacent and Dash or Disengage as bonus action for 1 min 1/long rest",' +
-      '"May gain Adv on Dexterity for 1 min 1/long rest",' +
-      '"May gain Adv on Athletics 1/long rest"',
-  'Nimbus Of Pathos':
+
+  // Paladin - Oath Of The Open Sea
+  'Aura Of Liberation':
     'Section=magic ' +
-    'Note="Touched gains +4 AC, Adv on attack and saves, and +1d10 HP radiant damage and suffers foe crit on 18-20 for 1 min 1/long rest; touched drops to 0 HP afterward"',
+    'Note="R%{levels.Paladin<18?10:30}\' Targets cannot be grappled or restrained and ignore underwater movement and attack penalties"',
+  'Fury Of The Tides':
+    'Section=combat ' +
+    'Note="Can use Channel Divinity and a bonus action to inflict a 10\' push with a successful weapon attack once per rd for 1 min; this inflicts %{charismaModifier} HP bludgeoning if obstructed"',
+  'Marine Layer':
+    'Section=magic ' +
+    'Note="Can use Channel Divinity to create a 20\' radius fog around self that obscures vision for 10 min"',
+  'Mythic Swashbuckler':
+    'Section=ability,combat,feature,save,skill ' +
+    'Note=' +
+      '"Gives advantage on Dexterity and a %{speed}\' climb speed",' +
+      '"Gives advantage on attacks vs. an adjacent foe when no other foe is adjacent and allows using Dash or Disengage as bonus action",' +
+      '"Can gain Mythic Swashbuckler effects for 1 min once per long rest",' +
+      '"Gives advantage on Dexterity saves",' +
+      '"Gives advantage on Athletics"',
   'Oath Of The Open Sea':
     'Spells=' +
       '"3:Create Or Destroy Water","3:Expeditious Retreat",' +
-      '5:Augury,"5:Misty Step",' +
+      '"5:Augury","5:Misty Step",' +
       '"9:Call Lightning","9:Freedom Of The Waves",' +
       '"13:Control Water","13:Freedom Of Movement",' +
       '"17:Commune With Nature","17:Freedom Of The Winds"',
-  'Poetry In Misery':
-    'Section=feature ' +
-    'Note="R30\' May use Reaction to regain 1 use of Bardic Inspiration when self or an ally rolls a 1 on an attack, ability, or save"',
-  'Resolute Stance':
+  'Stormy Waters':
     'Section=combat ' +
-    'Note="May suffer Disadv on weapon attacks to gain grapple immunity and inflict Disadv on foe attacks"',
-  'Runechild':
+    'Note="Can use a reaction when a target moves into or out of reach to inflict 1d12 HP bludgeoning and knocked prone (save DC %{spellDifficultyClass.P} Strength HP only)"',
+
+  // Sorcerer - Runechild
+  'Arcane Exemplar':
+    'Section=magic ' +
+    'Note="Can use a bonus action and discharge 1+ runes to gain a 60\' fly speed and resistance to spell damage, inflict disadvantage vs. self spells, and regain hit points equal to the spell\'s level from casting for 1+ rd once per long rest; suffers stunned afterward for 1 rd"',
+  'Essence Runes':
+    'Section=magic ' +
+    'Note="Spending Sorcery Points charges an equal number of runes (maximum %{levels.Sorcerer}) and can use a bonus action and spend a sorcery point to charge 2 runes; 5 charged runes emit a bright light in a 5\' radius"',
+  'Glyph Of Aegis':
+    'Section=magic ' +
+    'Note="Can use a reaction in response to suffering damage to discharge runes, negating 1d%{levels.Sorcerer<14?6:8} HP each%{levels.Sorcerer<8?\'\':\'; touch can transfer the protection of up to 3 runes to another creature for 1 hr\'}"',
+  'Manifest Inscriptions':
+    'Section=magic ' +
+    'Note="R60\' Can discharge 1 rune to reveal hidden glyphs and to gain advantage on Arcana to understand them"',
+  'Runic Magic':
     'Spells=' +
-      '1:Longstrider,"1:Protection From Evil And Good",' +
+      '"1:Longstrider","1:Protection From Evil And Good",' +
       '"3:Lesser Restoration","3:Protection From Poison",' +
       '"5:Glyph Of Warding","5:Magic Circle",' +
       '"7:Death Ward","7:Freedom Of Movement",' +
-      '"9:Greater Restoration",9:Telekinesis',
+      '"9:Greater Restoration","9:Telekinesis"',
   'Runic Torrent':
     'Section=magic ' +
-    'Note="May discharge 2 runes to change spell damage to force and to push 15\' or knock prone (Strength neg) 1/short rest"',
-  'Sanguine Burst':
-    'Section=magic ' +
-    'Note="May take spell level HP necrotic to reroll %{intelligenceModifier>?1} spell damage dice"',
-  'Sanguine Recall':
-    'Section=magic ' +
-    'Note="May suffer up to %{(levels.Cleric+1)//2}d8 HP necrotic to recover an equal number of spell slot levels (level 5 max) 1/long rest"',
+    'Note="Can discharge 2 runes to change a spell\'s damage to force and to push 15\' or knock prone (save Strength negates) once per short rest"',
   'Sigilic Augmentation':
     'Section=magic ' +
-    'Note="May use Reaction to discharge 1 rune, gaining Adv on a Strength, Dexterity, or Constitution check or save 1/long rest"',
-  'Sorrowful Fate':
-    'Section=combat ' +
-    'Note="May spend 1 Bardic Inspiration die to change a foe save to Charisma; failure inflicts Bardic Inspiration die HP psychic 1/short rest"',
-  'Spirit Of The Mountain':
-    'Section=combat Note="Cannot be knocked prone or pushed during rage"',
-  'Stormy Waters':
-    'Section=combat ' +
-    'Note="May use Reaction to inflict 1d12 HP bludgeoning and knocked prone (DC %{spellDifficultyClass.P} Strength HP only) on a target moving into or out of reach"',
-  'Tale Of Hubris':
-    'Section=combat ' +
-    'Note="R60\' Upon a foe critical hit, may use Reaction and spend 1 Bardic Inspiration die to inflict %{levels.Bard<14?18:17}-20 crit range for attacks on foe for 1 min or until critical hit"',
+    'Note="Can use a reaction to discharge 1 rune, gaining advantage on a Strength, Dexterity, or Constitution check or save, once per long rest"',
+
+  // Wizard - Blood Magic
+  'Bond Of Mutual Suffering':
+    'Section=magic ' +
+    'Note="Can use a reaction in response to suffering damage to inflict equal damage on the attacker %{levels.Wizard<14?\'once\':\'2 times\'} per short rest"',
+  'Blood Channeling':
+    'Section=magic ' +
+    'Note="Can use own damaged body as an arcane focus, and can suffer 1d10 HP necrotic per 50 GP to forego material components when casting"',
+  'Glyph Of Hemorrhaging':
+    'Section=magic ' +
+    'Note="Can curse a successful spell attack target to suffer +1d6 HP necrotic from each attack for 1 min (save Constitution ends) once per short rest"',
+  'Sanguine Burst':
+    'Section=magic ' +
+    'Note="Can suffer HP necrotic equal to a spell\'s level to reroll %{intelligenceModifier>1?\'up to \'+intelligenceModifier+\' damage dice\':\'1 damage die\'}"',
   'Thicker Than Water':
-    'Section=combat,save ' +
-    'Note=' +
-      '"Regains +%{proficiencyBonus} HP from healing spells",' +
-      '"Resistance to nonmagical bludgeoning, piercing, and slashing damage during spell concentration"',
-  'Thunderous Blows':
     'Section=combat ' +
-    'Note="May push foe %{levels.Barbarian<10?5:10}\' w/a successful attack (Huge foe DC %{8+proficiencyBonus+strengthModifier} Strength neg)"',
-  'Unstoppable':
+    'Note="Regains +%{proficiencyBonus} hit points from healing spells and has resistance to nonmagical bludgeoning, piercing, and slashing damage during spell concentration"',
+
+  // Backgrounds
+  'A Favor In Turn':
+    'Section=skill ' +
+    'Note="Can ask for a 20-word favor through a contact in exchange for a future favor"',
+  'Academic Requisition':
+    'Section=skill ' +
+    'Note="Can access school tools and gain services through the school at a 25% discount"',
+  'Elemental Harmony':
+    'Section=magic ' +
+    'Note="Can create a minor elemental effect: a puff of wind, a burst of flame, a small rock that lasts 1 min, or a cup of cold or hot water"',
+  'Fell Teachings':
+    'Section=skill Note="Has advantage on Religion about a chosen Betrayer God"',
+  'Legacy Of Secrecy':
+    'Section=feature Note="Possession of a firearm changes others\' reactions"',
+  'Rifle Corps Relationship':
+    'Section=feature ' +
+    'Note="Has current or past relationships within the Rifle Corps"',
+
+  // Blessing
+  "Fortune's Grace":
     'Section=combat ' +
-    'Note="Cannot be slowed, frightened, knocked prone, paralyzed, or stunned during rage"',
-  'Vascular Corruption Aura':
-    'Section=combat ' +
-    'Note="R30\' Foes suffer 3d6 HP necrotic and half healing for 1 min 1/long rest"',
+    'Note="Can reroll an attack, ability, or saving throw, or force a reroll on an attacker, once per long rest"',
 
   // Feats
   'Cruel':
-    'Section=feature,combat,skill ' +
+    'Section=combat,combat,skill ' +
     'Note=' +
-      '"May use %{proficiencyBonus} Cruelty Points/long rest",' +
-      '"May spend 1 Cruelty Point for +1d6 damage or to gain 1d6 temporary HP on crit",'+
-      '"May spend 1 Cruelty Point for +1d6 on Intimidation"',
+      '"Can use %{proficiencyBonus} cruelty dice per long rest",' +
+      '"Can use 1 cruelty die for +1d6 damage on a hit or to gain 1d6 temporary hit points on a critical hit",'+
+      '"Can spend 1 cruelty die to gain +1d6 on Intimidation"',
   'Flash Recall':
-    'Section=magic Note="May replace a prepared spell 1/short rest"',
+    'Section=magic Note="Can replace a prepared spell once per short rest"',
   'Mystic Conflux':
     'Section=magic ' +
-    'Note="May attune 4 items/May cast <i>Identify</i> 1/long rest"',
+    'Note="Can attune 4 items and can cast <i>Identify</i> once per long rest" ' +
+    'Spells=Identify',
   'Remarkable Recovery':
     'Section=ability,combat ' +
     'Note=' +
       '"+1 Constitution",' +
-      '"Healing and stabilization restore +%{constitutionModifier>?1} HP"',
+      '"Healing and stabilization performed on self restore +%{constitutionModifier>?1} hit points"',
   'Spelldriver':
-    'Section=magic Note="May cast an additional level 1 - 2 spell/rd"',
+    'Section=magic ' +
+    'Note="Can cast an additional level 1 or 2 spell once per rd"',
   'Thrown Arms Master':
     'Section=ability,combat,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
       '"+20/+40 throw range",' +
-      '"May throw any weapon (one-handed have range 20/60, two-handed 15/30); light weapon returns after a missed throw"',
+      '"Can throw any weapon; one-handed wepons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
   'Vital Sacrifice':
-    'Section=feature ' +
-    'Note="May suffer 1d6 HP necrotic to gain +1d6 attack, to inflict +2d6 HP necrotic, or to inflict -1d4 on foe Strength, Dexterity, or Constitution save w/in 1 hr"'
+    'Section=combat ' +
+    'Note="Can suffer 1d6 HP necrotic to gain +1d6 on an attack, to inflict +2d6 HP necrotic, or to inflict -1d4 on a foe Strength, Dexterity, or Constitution save, within 1 hr"'
 
 };
 TaldoreiReborn.FEATURES =
@@ -489,12 +514,12 @@ TaldoreiReborn.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=D3,R3,S3 ' +
     'Description=' +
-      '"R120\' 15\' radius inflicts 2d8 HP bludgeoning and knocks prone (Strength neg); self may teleport w/in affected area"',
+      '"R120\' 15\' radius inflicts 2d8 HP bludgeoning and knocks prone (save Strength negates; chosen creatures automatically succeed); self can teleport within the affected area"',
   'Freedom Of The Winds':
     'School=Abjuration ' +
     'Level=D5,R5,S5 ' +
     'Description=' +
-      '"Self gains 60\' flying speed and Adv vs. grapple, restraint, and paralysis for conc up to 10 min; self may teleport 60\', ending spell"'
+      '"Self gains a 60\' flying speed and advantage vs. grapple, restraint, and paralysis for concentration up to 10 min; can use a reaction in response to an attack to teleport 60\', ending the spell"'
 
 };
 TaldoreiReborn.SPELLS =
