@@ -275,7 +275,7 @@ Taldorei.FEATURES_ADDED = {
   // Sorcerer - Runechild
   'Arcane Exemplar Form':
     'Section=magic ' +
-    'Note="Can discharge 6+ runes to gain a 40\' fly speed, +2 spell DC, and resistance to spell damage, and to regain hit points equal to the spell\'s level from casting, for 3+ rd once per long rest"',
+    'Note="Can use a bonus action and discharge 6+ runes to gain a 40\' fly speed, +2 spell DC, and resistance to spell damage, and to regain hit points equal to the spell\'s level from casting, for 3+ rd once per long rest"',
   'Essence Runes':
     'Section=magic ' +
     'Note="Spending sorcery points charges an equal number of runes (maximum %{levels.Sorcerer}) and can use an action to charge a lone rune when sorcery points are exhausted; 5 charged runes emit bright light in a 5\' radius"',
@@ -341,7 +341,8 @@ Taldorei.FEATURES_ADDED = {
       '"Can quaff as a bonus action",' +
       '"Has advantage on ingestion saves"',
   'Spelldriver':
-    'Section=magic Note="Can cast an additional level 1 or 2 spell once per rd"',
+    'Section=magic ' +
+    'Note="Can cast an additional level 1 or 2 spell once per rd"',
   'Thrown Arms Master':
     'Section=ability,combat,combat ' +
     'Note=' +
