@@ -237,10 +237,10 @@ Taldorei.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
   'Bonus Proficiencies (Blood Domain)':
-    'Section=feature Note="Weapon Proficiency (Martial Weapons)"',
+    'Section=combat Note="Weapon Proficiency (Martial Weapons)"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="Can use Channel Divinity with the week-old blood of a target to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or sound for %{wisdomModifier>?1} rd (save Constitution ends)"',
+    'Note="Can use Channel Divinity with the week-old blood of a target to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or hearing for %{wisdomModifier>?1} rd (save Constitution ends)"',
   'Sanguine Recall':
     'Section=magic ' +
     'Note="Can suffer up to %{(levels.Cleric+1)//2}d6 HP to recover an equal number of spell slot levels (level 5 maximum) once per long rest"',
@@ -347,7 +347,7 @@ Taldorei.FEATURES_ADDED = {
     'Section=ability,combat,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
-      '"+20/+40 throw range",' +
+      '"+20/+40 thrown weapon range",' +
       '"Can throw any weapon; one-handed wepons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
 
   // Races

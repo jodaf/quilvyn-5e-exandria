@@ -257,12 +257,13 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="Melee weapons inflict x2 damage vs. objects and +1d8 HP vs. constructs"',
   'Hurricane Strike':
     'Section=combat ' +
-    'Note="Pushing a foe allows an adjacent ally to use a reaction for a melee attack, and self can leap to knock a pushed foe prone (save DC %{8 + proficiencyBonus + strengthModifier} Strength negates)"',
+    'Note="Can leap after pushing a foe to knock it prone (save DC %{8 + proficiencyBonus + strengthModifier} Strength negates), and pushing a foe allows an adjacent ally to use a reaction for a melee attack"',
   'Resolute Stance':
     'Section=combat ' +
     'Note="Can suffer disadvantage on weapon attacks to gain immunity to grappling and to inflict disadvantage on foe attacks"',
   'Spirit Of The Mountain':
-    'Section=combat Note="Cannot be knocked prone or pushed during rage"',
+    'Section=combat ' +
+    'Note="Cannot be knocked prone or forced to move along the ground during rage"',
   'Thunderous Blows':
     'Section=combat ' +
     'Note="Can push a foe %{levels.Barbarian<10?5:10}\' with a successful attack (save Huge foe DC %{8+proficiencyBonus+strengthModifier} Strength negates)"',
@@ -272,20 +273,20 @@ TaldoreiReborn.FEATURES_ADDED = {
 
   // Bard - College Of Tragedy
   'Impending Misfortune':
-    'Section=feature ' +
-    'Note="Can gain +10 on an attack or save and suffer -10 on the next attack or save once per short rest"',
+    'Section=combat ' +
+    'Note="Can gain +10 on an attack or save, then suffer -10 on the next attack or save, once per short rest"',
   'Nimbus Of Pathos':
     'Section=magic ' +
-    'Note="Willing touched gains +4 Armor Class, advantage on attacks and saves, and attacks that inflict +1d10 HP radiant damage for 1 min once per long rest; foe attacks on the target during this time gain a 18-20 crit range, and the target drops to 0 HP afterward"',
+    'Note="Willing touched gains +4 Armor Class, advantage on attacks and saves, and attacks that inflict +1d10 HP radiant damage for 1 min once per long rest; foe attacks on the target during this time gain a 18-20 crit range, and the target drops to 0 hit points afterward"',
   'Poetry In Misery':
-    'Section=feature ' +
+    'Section=combat ' +
     'Note="R30\' Can use a reaction when self or an ally rolls a 1 on an attack, ability check, or save to regain 1 use of Bardic Inspiration"',
   'Sorrowful Fate':
     'Section=combat ' +
     'Note="Can spend 1 Bardic Inspiration die to change a foe save to Charisma once per short rest; failure on the save inflicts +%{bardicInspirationDie} HP psychic"',
   'Tale Of Hubris':
     'Section=combat ' +
-    'Note="R60\' Can use a reaction upon a foe critical hit and spend 1 Bardic Inspiration die to give attacks on the foe a %{levels.Bard<14?18:17}-20 crit range for for 1 min or until the first critical hit"',
+    'Note="R60\' Can use a reaction upon a foe critical hit and spend 1 Bardic Inspiration die to give attacks on the foe a %{levels.Bard<14?18:17}-20 crit range for 1 min or until the first critical hit"',
 
   // Cleric - Blood Domain
   'Blood Domain':
@@ -302,10 +303,10 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Harming spells inflict +(spell level + 2) HP necrotic"',
   'Bonus Proficiencies (Blood Domain)':
-    'Section=feature Note="Weapon Proficiency (Martial Weapons)"',
+    'Section=combat Note="Weapon Proficiency (Martial Weapons)"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="Can use Channel Divinity to bond with a seen target or with a target\'s blood to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or sound for %{wisdomModifier>?1} min (save Constitution neg)"',
+    'Note="Can use Channel Divinity to bond with a seen target or with a target\'s blood to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or hearing for %{wisdomModifier>?1} min (save Constitution neg)"',
   // Divine Strike as SRD5E
   'Sanguine Recall':
     'Section=magic ' +
@@ -315,7 +316,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note="R30\' Foes suffer 3d6 HP necrotic and half healing for 1 min once per long rest"',
   // Cleric - Moon Domain
   'Blessing Of The Blood-Drenched Moon':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="R30\' Can use Channel Divinity to give a target advantage on attacks on foes that are adjacent to an ally for 10 min"',
   'Blessing Of The Watchful Moon':
     'Section=magic ' +
@@ -324,7 +325,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R30\' Can use a reaction to give a target advantage on a Wisdom save %{proficiencyBonus} times per long rest"',
   'Eclipse Of Ill Omen':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="60\' radius dim red glow blocks other light and inflicts disadvantage on saves on selected targets, and radiant damage by self also inflicts half speed and no healing to a target within the glow once per rd, for concentration up to 1 min once per long rest"',
   'Empowered Cantrips':
     'Section=magic Note="Cleric cantrips inflict +%{wisdomModifier} HP"',
@@ -349,7 +350,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can use a reaction after a creature takes damage within the Defile Ground area to summon a blighted sapling (armor class %{10+proficiencyBonus}; %{levels.Druid*2} hit points; +%{spellAttackModifier.D} attack inflicts 2d4+%{proficiencyBonus} HP piercing) adjacent to it %{proficiencyBonus} times per long rest"',
   'Defile Ground':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="R60\' %{levels.Druid<10?10:20}\' radius can move 30\' per rd, creates difficult terrain for foes, and inflicts +1d%{levels.Druid<10?4:levels.Druid<14?6:8} HP necrotic from the first hit on each creature each turn, for 1 min once per short rest"',
   'Foul Conjuration':
     'Section=magic ' +
@@ -364,10 +365,10 @@ TaldoreiReborn.FEATURES_ADDED = {
   // Monk - Way Of The Cobalt Soul
   'Debilitating Barrage':
     'Section=combat ' +
-    'Note="Can spend 3 ki points after an unarmed hit to inflict vulnerability or suppress resistance to a chosen damage type for 1 min or until the target suffers that type of damage"',
+    'Note="Can spend 3 ki points after an unarmed hit to inflict vulnerability to a chosen damage type or to suppress resistance to it for 1 min or until the target suffers that type of damage"',
   'Extort Truth':
     'Section=combat ' +
-    'Note="Can spend 1 ki point after an unarmed hit to prevent the target from lying, and to give advantage on Charisma checks vs. it, (save Charisma negates) for 10 min"',
+    'Note="Can spend 1 ki point after an unarmed hit to prevent the target from lying and to give advantage on Charisma checks directed at it (save Charisma negates) for 10 min"',
   'Extract Aspects':
     'Section=combat ' +
     'Note="Flurry Of Blows hits reveal the target\'s condition immunities and damage vulnerabilities, resistance, and immunities and, until the next rest, allow responding to missed attacks on self by the target by using a reaction for an unarmed attack"',
@@ -389,13 +390,8 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can use Channel Divinity to create a 20\' radius fog around self that obscures vision for 10 min"',
   'Mythic Swashbuckler':
-    'Section=ability,combat,feature,save,skill ' +
-    'Note=' +
-      '"Gives advantage on Dexterity and a %{speed}\' climb speed",' +
-      '"Gives advantage on attacks vs. an adjacent foe when no other foe is adjacent and allows using Dash or Disengage as bonus action",' +
-      '"Can gain Mythic Swashbuckler effects for 1 min once per long rest",' +
-      '"Gives advantage on Dexterity saves",' +
-      '"Gives advantage on Athletics"',
+    'Section=magic ' +
+    'Note="Can gain a %{speed}\' climb Speed, use of Dash or Disengage as a bonus action, and advantage on Dexterity checks, Dexterity saves, Athletics, and attacks vs. an adjacent foe when no other foe is adjacent, for 1 min once per long rest"',
   'Oath Of The Open Sea':
     'Spells=' +
       '"3:Create Or Destroy Water","3:Expeditious Retreat",' +
@@ -436,7 +432,7 @@ TaldoreiReborn.FEATURES_ADDED = {
 
   // Wizard - Blood Magic
   'Bond Of Mutual Suffering':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="Can use a reaction in response to suffering damage to inflict equal damage on the attacker %{levels.Wizard<14?\'once\':\'2 times\'} per short rest"',
   'Blood Channeling':
     'Section=magic ' +
@@ -453,7 +449,7 @@ TaldoreiReborn.FEATURES_ADDED = {
 
   // Backgrounds
   'A Favor In Turn':
-    'Section=skill ' +
+    'Section=feature ' +
     'Note="Can ask for a 20-word favor through a contact in exchange for a future favor"',
   'Academic Requisition':
     'Section=skill ' +
@@ -499,7 +495,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=ability,combat,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
-      '"+20/+40 throw range",' +
+      '"+20/+40 thrown weapon range",' +
       '"Can throw any weapon; one-handed wepons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
   'Vital Sacrifice':
     'Section=combat ' +
