@@ -337,7 +337,7 @@ Wildemount.FEATURES_ADDED = {
   // Tortle
   'Claws':
     'Section=combat Note="Claws inflict 1d4+%{strengthModifier} slashing"',
-  'Hold Breath':'Section=save Note="Can hold breath for 1 hr"',
+  'Hold Breath':'Section=ability Note="Can hold breath for 1 hr"',
   'Natural Armor':
     'Section=combat ' +
     'Note="Shell gives armor class 17; cannot wear additional armor"',
