@@ -175,9 +175,9 @@ Wildemount.FEATURES_ADDED = {
   // Backgrounds
   'Ballad Of The Grinning Fool':
     'Section=feature ' +
-    'Note="May obtain shelter for self and companions in a Menagerie Coast or Dwendallian Empire city"',
+    'Note="Can obtain shelter for self and companions in a Menagerie Coast or Dwendallian Empire city"',
   'Shadow Network':
-    'Section=feature Note="May write magically to distant Volstrucker members"',
+    'Section=feature Note="Can write magically to distant Volstrucker members"',
 
   // Feats
   'Hollow One':
@@ -185,51 +185,6 @@ Wildemount.FEATURES_ADDED = {
     'Note=' +
       '"Has the Ageless, Cling To Life, Revenance, and Unsettling Presence features",' +
       '"Has returned from death"',
-
-  // Paths
-  'Adjust Density':
-    'Section=magic ' +
-    'Note="R30\' May dbl or halve the weight of a %{levels.Wizard<10?\'Large\':\'Huge\'} target (-10/+10 Speed, Adv/Disadv on Strength) for conc up to 1 min"',
-  'Arcane Abeyance':
-    'Section=magic ' +
-    'Note="May store a level 1 - 4 spell in a bead (AC 15; HP 1) for 1 hr 1/short rest"',
-  'Chronal Shift':
-    'Section=combat ' +
-    'Note="R30\' May use Reaction to force an attack, ability, or save reroll 2/long rest"',
-  'Convergent Future':
-    'Section=combat ' +
-    'Note="R60\' May suffer 1 level of exhaustion to dictate whether an attack, ability, or save roll succeeds; exhaustion requires a long rest to remove"',
-  'Echo Avatar':
-    'Section=magic ' +
-    'Note="R1000\' May see and hear via Manifest Echo for 10 min"',
-  'Event Horizon':
-    'Section=magic ' +
-    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (Strength half HP and one-third Speed) for conc up to 1 min 1/long rest (level 3 spell slot refreshes)"',
-  'Gravity Well':
-    'Section=magic Note="May move the target of a successful spell 5\'"',
-  'Legion Of One':
-    'Section=combat ' +
-    'Note="Has a minimum 1 Unleash Incarnation use after initiative/May create 2 Manifest Echos simultaneously"',
-  'Manifest Echo':
-    'Section=combat ' +
-    'Note="R30\' May use a bonus action to create a copy of self (AC %{14+proficiencyBonus}, HP 1, MV 30\'); may swap places and make remote attacks and OAs"',
-  'Momentary Stasis':
-    'Section=magic ' +
-    'Note="R60\' May incapacitate a Large target for 1 rd (Constitution neg) %{intelligenceModifier>?1}/long rest"',
-  'Reclaim Potential':
-    'Section=combat ' +
-    'Note="May gain 2d6+%{constitutionModifier} temporary HP when Manifest Echo is destroyed %{constitutionModifier>?1}/long rest"',
-  'Shadow Martyr':
-    'Section=combat ' +
-    'Note="May use Reaction to have Manifest Echo absorb an attack 1/short rest"',
-  'Temporal Awareness':
-    'Section=combat Note="+%{intelligenceModifier} Initiative"',
-  'Unleash Incarnation':
-    'Section=combat ' +
-    'Note="May make an extra attack through Manifest Echo %{constitutionModifier>?1}/long rest"',
-  'Violent Attraction':
-    'Section=combat ' +
-    'Note="R60\' May use Reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling target %{intelligenceModifier>?1}/long rest"',
 
   // Races
 
@@ -355,7 +310,57 @@ Wildemount.FEATURES_ADDED = {
   'Revenance':'Section=feature Note="Detects as undead"',
   'Unsettling Presence':
     'Section=combat ' +
-    'Note="R15\' Can inflict disadvantage on the next target save within 1 min once per long rest"'
+    'Note="R15\' Can inflict disadvantage on the next target save within 1 min once per long rest"',
+
+  // Classes
+
+  // Fighter - Echo Knight
+  'Echo Avatar':
+    'Section=magic ' +
+    'Note="R1000\' Can see and hear through Manifest Echo for 10 min"',
+  'Legion Of One':
+    'Section=combat ' +
+    'Note="Has a minimum 1 Unleash Incarnation use after initiative and can create 2 Manifest Echos simultaneously"',
+  'Manifest Echo':
+    'Section=combat ' +
+    'Note="R30\' Can use a bonus action to create a copy of self (armor class %{14+proficiencyBonus}; 1 hit point; can move 30\') that can be used to exchange places as a bonus action and to make attacks and opportunity attacks"',
+  'Reclaim Potential':
+    'Section=combat ' +
+    'Note="Can gain 2d6+%{constitutionModifier} temporary hit points when Manifest Echo is destroyed %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
+  'Shadow Martyr':
+    'Section=combat ' +
+    'Note="Can use a reaction to have Manifest Echo absorb an attack once per short rest"',
+  'Unleash Incarnation':
+    'Section=combat ' +
+    'Note="Can make an extra attack through Manifest Echo %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
+
+  // Wizard - Chronurgy Magic
+  'Arcane Abeyance':
+    'Section=magic ' +
+    'Note="Can store a spell of up to 4th level in a bead (armor class 15; 1 hit point) that can be used to cast the spell within 1 hr once per short rest"',
+  'Chronal Shift':
+    'Section=combat ' +
+    'Note="R30\' Can use a reaction to force an attack, ability, or save reroll 2 times per long rest"',
+  'Convergent Future':
+    'Section=combat ' +
+    'Note="R60\' Can suffer 1 level of exhaustion to dictate whether an attack, ability, or save roll succeeds; the exhaustion requires a long rest to remove"',
+  'Momentary Stasis':
+    'Section=magic ' +
+    'Note="R60\' Can incapacitate a Large target for 1 rd (save Constitution neg) %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
+  'Temporal Awareness':
+    'Section=combat Note="+%{intelligenceModifier} Initiative"',
+  // Wizard - Graviturgy Magic
+  'Adjust Density':
+    'Section=magic ' +
+    'Note="R30\' Can double or halve the weight of a %{levels.Wizard<10?\'Large\':\'Huge\'} target, giving -10 or +10 Speed and advantage or disadvantage on Strength, for concentration up to 1 min"',
+  'Event Horizon':
+    'Section=magic ' +
+    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (save Strength inflicts half HP and 1/3 Speed) for concentration up to 1 min once long rest; can spend level 3 spell slots for additional uses"',
+  'Gravity Well':
+    'Section=magic Note="Can move the target of a successful spell 5\'"',
+  'Violent Attraction':
+    'Section=combat ' +
+    'Note="R60\' Can use a reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling target %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"'
 
 };
 Wildemount.FEATURES =
@@ -499,7 +504,7 @@ Wildemount.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=W5 ' +
     'AtHigherLevels="affects +1 target" ' +
-    'Description="R120\' May cast as a reaction to cause target to disappear for 1 rd, negating attack or spell cast (Wisdom neg)"',
+    'Description="R120\' Can cast as a reaction to cause target to disappear for 1 rd, negating attack or spell cast (Wisdom neg)"',
   'Tether Essence':
     'School=Necromancy ' +
     'Level=W7 ' +
@@ -511,7 +516,7 @@ Wildemount.SPELLS_ADDED = {
   'Wristpocket':
     'School=Conjuration ' +
     'Level=W2 ' +
-    'Description="Self may move touched 5 lb object to and from an extradimensional space for conc up to 1 hr"'
+    'Description="Self can move touched 5 lb object to and from an extradimensional space for conc up to 1 hr"'
 };
 Wildemount.SPELLS =
   Object.assign({}, (window.PHB5E||window.SRD5E).SPELLS, Wildemount.SPELLS_ADDED);
