@@ -339,7 +339,7 @@ Wildemount.FEATURES_ADDED = {
     'Note="R60\' Can suffer 1 level of exhaustion to dictate whether an attack, ability, or save roll succeeds; the exhaustion requires a long rest to remove"',
   'Momentary Stasis':
     'Section=magic ' +
-    'Note="R60\' Can incapacitate a Large target for 1 rd (save Constitution neg) %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
+    'Note="R60\' Can incapacitate a Large target for 1 rd (save Constitution negates) %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
   'Temporal Awareness':
     'Section=combat Note="+%{intelligenceModifier} Initiative"',
   // Wizard - Graviturgy Magic
@@ -506,7 +506,7 @@ Wildemount.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=W5 ' +
     'AtHigherLevels="affects +1 target" ' +
-    'Description="R120\' Can cast as a reaction in response to a target\'s attack or spell casting to cause it to disappear for 1 rd and negate its action (save Wisdom neg)"',
+    'Description="R120\' Can cast as a reaction in response to a target\'s attack or spell casting to cause it to disappear for 1 rd and negate its action (save Wisdom negates)"',
   'Tether Essence':
     'School=Necromancy ' +
     'Level=W7 ' +

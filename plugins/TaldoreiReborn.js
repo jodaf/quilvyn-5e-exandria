@@ -306,7 +306,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Section=combat Note="Weapon Proficiency (Martial Weapons)"',
   'Crimson Bond':
     'Section=magic ' +
-    'Note="Can use Channel Divinity to bond with a seen target or with a target\'s blood to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or hearing for %{wisdomModifier>?1} min (save Constitution neg)"',
+    'Note="Can use Channel Divinity to bond with a seen target or with a target\'s blood to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target\'s sight or hearing for %{wisdomModifier>?1} min (save Constitution negates)"',
   // Divine Strike as SRD5E
   'Sanguine Recall':
     'Section=magic ' +
