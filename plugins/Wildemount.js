@@ -172,20 +172,6 @@ Wildemount.FEATS =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, Wildemount.FEATS_ADDED);
 Wildemount.FEATURES_ADDED = {
 
-  // Backgrounds
-  'Ballad Of The Grinning Fool':
-    'Section=feature ' +
-    'Note="Can obtain shelter for self and companions in a Menagerie Coast or Dwendallian Empire city"',
-  'Shadow Network':
-    'Section=feature Note="Can write magically to distant Volstrucker members"',
-
-  // Feats
-  'Hollow One':
-    'Section=feature,feature ' +
-    'Note=' +
-      '"Has the Ageless, Cling To Life, Revenance, and Unsettling Presence features",' +
-      '"Has returned from death"',
-
   // Races
 
   // Elf - Pallid
@@ -312,6 +298,13 @@ Wildemount.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="R15\' Can inflict disadvantage on the next target save within 1 min once per long rest"',
 
+  // Feats
+  'Hollow One':
+    'Section=feature,feature ' +
+    'Note=' +
+      '"Has the Ageless, Cling To Life, Revenance, and Unsettling Presence features",' +
+      '"Has returned from death"',
+
   // Classes
 
   // Fighter - Echo Knight
@@ -360,7 +353,16 @@ Wildemount.FEATURES_ADDED = {
     'Section=magic Note="Can move the target of a successful spell 5\'"',
   'Violent Attraction':
     'Section=combat ' +
-    'Note="R60\' Can use a reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling target %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"'
+    'Note="R60\' Can use a reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling target %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
+
+  // Backgrounds
+  // Grinner
+  'Ballad Of The Grinning Fool':
+    'Section=feature ' +
+    'Note="Can obtain shelter for self and companions in a Menagerie Coast or Dwendallian Empire city"',
+  // Volstrucker Agent
+  'Shadow Network':
+    'Section=feature Note="Can write magically to distant Volstrucker members"'
 
 };
 Wildemount.FEATURES =
@@ -449,12 +451,12 @@ Wildemount.SPELLS_ADDED = {
   'Dark Star':
     'School=Evocation ' +
     'Level=W8 ' +
-    'Description="R150\' 40\' radius sphere inflicts 8d10 HP force (Constitution half), disintegrates dead, and negates sight and sound for conc up to 1 min"',
+    'Description="R150\' 40\' radius sphere inflicts 8d10 HP force (save Constitution half) and difficult terrain, disintegrates dead, and negates sound and nonmagical light for concentration up to 1 min"',
   "Fortune's Favor":
     'School=Divination ' +
     'Level=W2 ' +
     'AtHigherLevels="affects +1 target" ' +
-    'Description="R60\' Target gains Adv on 1 attack, ability, or save, or foe Disadv on 1 attack, within 1 hr"',
+    'Description="R60\' Target can reroll an attack, ability check, or save, or force a foe reroll on an attack, within 1 hr"',
   'Gift Of Alacrity':
     'School=Divination ' +
     'Level=W1 ' +
@@ -463,60 +465,60 @@ Wildemount.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=W6 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="5\'x100\' line inflicts 8d8 HP force (Constitution half) and pulls and inflicts 8d8 HP force on creatures w/in 10\' (Constitution neg)"',
+    'Description="5\'x100\' line inflicts 8d8 HP force (save Constitution half) and pulls and inflicts 8d8 HP force on creatures within 10\' (save Constitution negates)"',
   'Gravity Sinkhole':
     'School=Evocation ' +
     'Level=W4 ' +
     'AtHigherLevels="inflicts +1d10 HP" ' +
-    'Description="R120\' 20\' radius inflicts 5d10 HP force and pulls to center (Constitution half HP only)"',
+    'Description="R120\' 20\' radius inflicts 5d10 HP force and pulls toward its center (save Constitution half HP only)"',
   'Immovable Object':
     'School=Transmutation ' +
     'Level=W2 ' +
-    'AtHigherLevels="increases Strength DC +5/+10, increases object support to 8,000/20,000 lb, and extends duration to 24 hr/permanent at level 4/6" ' +
-    'Description="Touched 10 lb object movable only by specified creatures (Strength move 10\') and can support 4000 lb for 1 hr"',
+    'AtHigherLevels="increases Strength DC by +5 or +10, object support to 8,000 or 20,000 lb, and duration to 24 hr or permanent at level 4 or 6" ' +
+    'Description="Touched 10 lb object becomes movable only by specified creatures or by using a specified password (save Strength allows moving it 10\') and can support 4000 lb for 1 hr"',
   'Magnify Gravity':
     'School=Transmutation ' +
     'Level=W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="R60\' 10\' radius inflicts 2d8 HP force and half speed (Constitution half HP only) for 1 rd"',
+    'Description="R60\' 10\' radius inflicts 2d8 HP force and half speed (save Constitution half HP only), and makes objects immovable (save Strength negates), for 1 rd"',
   'Pulse Wave':
     'School=Evocation ' +
     'Level=W3 ' +
-    'AtHigherLevels="inflicts +1d6 HP and moves +5\'" ' +
-    'Description="30\' cone inflicts 6d6 HP force and pulls or pushes 15\' (Constitution half HP only)"',
+    'AtHigherLevels="inflicts +1d6 HP and a +5\' pull or push" ' +
+    'Description="30\' cone inflicts 6d6 HP force and a 15\' pull or push (save Constitution half HP only)"',
   'Ravenous Void':
     'School=Evocation ' +
     'Level=W9 ' +
-    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains, destroys dead and nonmagical objects, and creates 120\' radius difficult terrain that pulls to center for conc up to 1 min"',
+    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains (save Strength ends restraint), destroys dead and nonmagical objects, and creates a 120\' radius difficult terrain that pulls toward its center (save Strength negates the pull) for concentration up to 1 min"',
   'Reality Break':
     'School=Conjuration ' +
     'Level=W8 ' +
-    'Description="R60\' Target loses reactions and suffers random effects (Wisdom ends) for conc up to 1 min"',
+    'Description="R60\' Inflicts loss of reactions and, at the end of each turn, one of 6d12 HP psychic and stunned, 8d12 HP force (save Dexterity half), 30\' teleportation, 10d12 HP force, and knocked prone, or 10d12 HP and blinded (save Wisdom ends) for concentration up to 1 min"',
   'Sapping Sting':
     'School=Necromancy ' +
     'Level=W0 ' +
-    'Description="R30\' Target suffers %{(level+7)//6}d4 HP and knocked prone (Constitution neg)"',
+    'Description="R30\' Inflicts %{(level+7)//6}d4 HP and knocked prone (save Constitution negates)"',
   'Shape Water': // Copied from Xanathar's
     'School=Transmutation ' +
     'Level=D0,S0,W0 ' +
-    'Description="R30\' 5\' cu water moves 5\' or forms animated shapes, changes color or opacity, or freezes for 1 hr"',
+    'Description="R30\' 5\' cube of water forms animated shapes, changes color or opacity, or freezes for 1 hr or changes flow 5\'"',
   'Temporal Shunt':
     'School=Transmutation ' +
     'Level=W5 ' +
     'AtHigherLevels="affects +1 target" ' +
-    'Description="R120\' Can cast as a reaction to cause target to disappear for 1 rd, negating attack or spell cast (Wisdom neg)"',
+    'Description="R120\' Can cast as a reaction in response to the target\'s attack or spell casting to cause it to disappear for 1 rd and negate its action (save Wisdom neg)"',
   'Tether Essence':
     'School=Necromancy ' +
     'Level=W7 ' +
-    'Description="R60\' Two targets lose and gain HP identically for conc up to 1 hr or until 0 HP (Constitution neg, Disadv if w/in 30\')"',
+    'Description="R60\' Two targets lose and gain hit points identically (save Constitution negates; the save has disadvantage if the targets are within 30\' of each other) for concentration up to 1 hr or until either is reduced to 0 hit points"',
   'Time Ravage':
     'School=Necromancy ' +
     'Level=W9 ' +
-    'Description="R90\' Target suffers 10d12 HP necrotic and aging to near-death (Constitution half HP only)"',
+    'Description="R90\' Inflicts 10d12 HP necrotic, disadvantage on attacks, ability checks, and saves, half Speed, and death from old age in 30 days (save Constitution half HP only)"',
   'Wristpocket':
     'School=Conjuration ' +
     'Level=W2 ' +
-    'Description="Self can move touched 5 lb object to and from an extradimensional space for conc up to 1 hr"'
+    'Description="Self can move a touched 5 lb object to and from an extradimensional space for concentration up to 1 hr"'
 };
 Wildemount.SPELLS =
   Object.assign({}, (window.PHB5E||window.SRD5E).SPELLS, Wildemount.SPELLS_ADDED);
