@@ -221,7 +221,7 @@ Wildemount.FEATURES_ADDED = {
     'Section=ability Note="+2 Intelligence/+1 Charisma"',
   'Forceful Presence':
     'Section=skill ' +
-    'Note="Has advantage on Intimidation or Persuasion once per short rest"',
+    'Note="Can gain advantage on Intimidation or Persuasion once per short rest"',
   // Dragonborn - Ravenite
   // Darkvision as SRD5E
   'Ravenite Ability Adjustment':
@@ -278,7 +278,7 @@ Wildemount.FEATURES_ADDED = {
   // Tortle
   'Claws':
     'Section=combat Note="Claws inflict 1d4+%{strengthModifier} slashing"',
-  'Hold Breath':'Section=ability Note="Can hold breath for 1 hr"',
+  'Hold Breath':'Section=save Note="Can hold breath for 1 hr"',
   'Natural Armor':
     'Section=combat ' +
     'Note="Shell gives armor class 17; cannot wear additional armor"',
@@ -291,7 +291,7 @@ Wildemount.FEATURES_ADDED = {
   // Feats
   'Ageless':'Section=save Note="Has immunity to aging"',
   'Cling To Life':
-    'Section=combat ' +
+    'Section=save ' +
     'Note="Regains 1 hit point from a successful death saving throw above 15"',
   'Revenance':'Section=feature Note="Detects as undead"',
   'Unsettling Presence':
@@ -309,8 +309,8 @@ Wildemount.FEATURES_ADDED = {
 
   // Fighter - Echo Knight
   'Echo Avatar':
-    'Section=magic ' +
-    'Note="R1000\' Can see and hear through Manifest Echo for 10 min"',
+    'Section=combat ' +
+    'Note="R1000\' Can see and hear through a Manifest Echo for 10 min"',
   'Legion Of One':
     'Section=combat ' +
     'Note="Has a minimum 1 Unleash Incarnation use after initiative and can create 2 Manifest Echos simultaneously"',
@@ -319,13 +319,13 @@ Wildemount.FEATURES_ADDED = {
     'Note="R30\' Can use a bonus action to create a copy of self (armor class %{14+proficiencyBonus}; 1 hit point; can move 30\') that can be used to exchange places as a bonus action and to make attacks and opportunity attacks"',
   'Reclaim Potential':
     'Section=combat ' +
-    'Note="Can gain 2d6+%{constitutionModifier} temporary hit points when Manifest Echo is destroyed %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
+    'Note="Can gain 2d6+%{constitutionModifier} temporary hit points when a Manifest Echo is destroyed %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
   'Shadow Martyr':
     'Section=combat ' +
-    'Note="Can use a reaction to have Manifest Echo absorb an attack once per short rest"',
+    'Note="Can use a reaction to have a Manifest Echo absorb an attack once per short rest"',
   'Unleash Incarnation':
     'Section=combat ' +
-    'Note="Can make an extra attack through Manifest Echo %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
+    'Note="Can make an extra attack through a Manifest Echo %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
 
   // Wizard - Chronurgy Magic
   'Arcane Abeyance':
@@ -493,7 +493,7 @@ Wildemount.SPELLS_ADDED = {
   'Reality Break':
     'School=Conjuration ' +
     'Level=W8 ' +
-    'Description="R60\' Inflicts loss of reactions and, at the end of each turn, one of 6d12 HP psychic and stunned, 8d12 HP force (save Dexterity half), 30\' teleportation, 10d12 HP force, and knocked prone, or 10d12 HP and blinded (save Wisdom ends) for concentration up to 1 min"',
+    'Description="R60\' Inflicts loss of reactions and, at the end of each turn (save Wisdom ends), one of: 6d12 HP psychic and stunned; 8d12 HP force (save Dexterity half); 30\' teleportation, 10d12 HP force, and knocked prone; or 10d12 HP cold and blinded, for concentration up to 1 min"',
   'Sapping Sting':
     'School=Necromancy ' +
     'Level=W0 ' +
@@ -506,7 +506,7 @@ Wildemount.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=W5 ' +
     'AtHigherLevels="affects +1 target" ' +
-    'Description="R120\' Can cast as a reaction in response to the target\'s attack or spell casting to cause it to disappear for 1 rd and negate its action (save Wisdom neg)"',
+    'Description="R120\' Can cast as a reaction in response to a target\'s attack or spell casting to cause it to disappear for 1 rd and negate its action (save Wisdom neg)"',
   'Tether Essence':
     'School=Necromancy ' +
     'Level=W7 ' +
@@ -514,7 +514,7 @@ Wildemount.SPELLS_ADDED = {
   'Time Ravage':
     'School=Necromancy ' +
     'Level=W9 ' +
-    'Description="R90\' Inflicts 10d12 HP necrotic, disadvantage on attacks, ability checks, and saves, half Speed, and death from old age in 30 days (save Constitution half HP only)"',
+    'Description="R90\' Inflicts 10d12 HP necrotic, disadvantage on attacks, ability checks, and saves, half Speed, and death in 30 days from old age (save Constitution half HP only)"',
   'Wristpocket':
     'School=Conjuration ' +
     'Level=W2 ' +
