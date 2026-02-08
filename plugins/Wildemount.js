@@ -77,8 +77,17 @@ function Wildemount() {
   if(window.Volo != null) {
     if(Volo.CHARACTER_RACES_IN_PLAY)
       Volo('Character', rules);
-    if(Volo.MONSTROUS_RACES_IN_PLAY)
+    if(Volo.MONSTROUS_RACES_IN_PLAY) {
+      // Wildemount's Orc differs slightly from Volo's
+      let voloOrcRace = Volo.MONSTROUS_RACES.Orc;
+      let voloOrcFeature = Volo.MONSTROUS_FEATURES['Orc Ability Adjustment'];
+      Volo.MONSTROUS_RACES.Orc =
+        Volo.MONSTROUS_RACES.Orc.replace('Menacing', 'Primal Intuition');
+      delete Volo.MONSTROUS_FEATURES['Orc Ability Adjustment'];
       Volo('Monstrous', rules);
+      Volo.MONSTROUS_RACES.Orc = voloOrcRace;
+      Volo.MONSTROUS_FEATURES['Orc Ability Adjustment'] = voloOrcFeature;
+    }
   }
   if(window.Xanathar != null)
     Xanathar('Xanathar', rules);
@@ -271,6 +280,9 @@ Wildemount.FEATURES_ADDED = {
   'Water Genasi Ability Adjustment':'Section=ability Note="+1 Wisdom"',
 
   // Orc
+  'Orc Ability Adjustment':
+    // Does not share Volo's -2 Intelligence
+    'Section=ability Note="+2 Strength/+1 Constitution"',
   'Primal Intuition':
     'Section=feature ' +
     'Note="Skill Proficiency (Choose 2 from Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, Survival)"',
@@ -278,8 +290,8 @@ Wildemount.FEATURES_ADDED = {
   // Tortle
   'Claws':
     'Section=combat Note="Claws inflict 1d4+%{strengthModifier} slashing"',
-  'Hold Breath':'Section=save Note="Can hold breath for 1 hr"',
-  'Natural Armor':
+  'Hold Breath':'Section=save Note="Can hold breath %V"', // Copied from Volo
+  'Natural Armor (Tortle)':
     'Section=combat ' +
     'Note="Shell gives armor class 17; cannot wear additional armor"',
   'Shell Defense':
@@ -432,8 +444,8 @@ Wildemount.RACES_ADDED = {
     'Speed=30 ' +
     'Features=' +
       '"Language (Common; Aquan)",' +
-      '"1:Claws","1:Hold Breath","1:Natural Armor","1:Shell Defense",' +
-      '"1:Survival Instinct","1:Tortle Ability Adjustment"',
+      '"1:Claws","1:Hold Breath","1:Natural Armor (Tortle)",' +
+      '"1:Shell Defense","1:Survival Instinct","1:Tortle Ability Adjustment"',
   'Water Genasi':
     'Size=Medium ' +
     'Speed=30 ' +
@@ -442,10 +454,6 @@ Wildemount.RACES_ADDED = {
       '"1:Acid Resistance","1:Amphibious","1:Call To The Wave","1:Swim",' +
       '"1:Water Genasi Ability Adjustment"'
 };
-if(window.Volo != null) {
-  Wildemount.RACES_ADDED.Orc =
-    Volo.MONSTROUS_RACES.Orc.replace('Menacing', 'Primal Intuition');
-}
 Wildemount.RACES = Object.assign({}, (window.PHB5E||window.SRD5E).RACES, Wildemount.RACES_ADDED);
 Wildemount.SPELLS_ADDED = {
   'Dark Star':
@@ -558,21 +566,21 @@ Wildemount.featRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to raceRules.
  */
 Wildemount.raceRulesExtra = function(rules, name) {
+  let raceLevel =
+    name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') + 'Level';
   if(name == 'Aarakocra') {
     SRD5E.weaponRules(rules, 'Talons', 'Unarmed', [], '1d4', null);
     rules.defineRule('weapons.Talons', 'combatNotes.talons', '=', '1');
   } else if(name == 'Draconblood') {
-    rules.defineRule('selectableFeatureCount.Draconblood',
-      'race', '=', 'source == "Draconblood" ? 1 : null'
-    );
+    rules.defineRule('selectableFeatureCount.Draconblood', raceLevel, '=', '1');
   } else if(name == 'Ravenite') {
-    rules.defineRule('selectableFeatureCount.Ravenite',
-      'race', '=', 'source == "Ravenite" ? 1 : null'
-    );
+    rules.defineRule('selectableFeatureCount.Ravenite', raceLevel, '=', '1');
   } else if(name == 'Tortle') {
-    rules.defineRule('armorClass', 'combatNotes.naturalArmor', '=', '17');
     rules.defineRule
-      ('combatNotes.dexterityArmorClassAdjustment', 'tortleLevel', '*', '0');
+      ('armorClass', 'combatNotes.naturalArmor(Tortle)', '=', '17');
+    rules.defineRule
+      ('combatNotes.dexterityArmorClassAdjustment', raceLevel, '*', '0');
+    rules.defineRule('saveNotes.holdBreath', raceLevel, '=', '"for 1 hr"');
     SRD5E.weaponRules(rules, 'Claws', 'Unarmed', [], '1d4', null);
     rules.defineRule('weapons.Claws', 'combatNotes.claws', '=', '1');
   }
