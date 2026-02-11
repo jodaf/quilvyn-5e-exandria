@@ -496,7 +496,7 @@ TaldoreiReborn.FEATURES_ADDED = {
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
       '"+20/+40 thrown weapon range",' +
-      '"Can throw any weapon; one-handed wepons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
+      '"Can throw any weapon; one-handed weapons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
   'Vital Sacrifice':
     'Section=combat ' +
     'Note="Can suffer 1d6 HP necrotic to gain +1d6 on an attack, to inflict +2d6 HP necrotic, or to inflict -1d4 on a foe Strength, Dexterity, or Constitution save, within 1 hr"'

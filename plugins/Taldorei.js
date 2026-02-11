@@ -348,7 +348,7 @@ Taldorei.FEATURES_ADDED = {
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
       '"+20/+40 thrown weapon range",' +
-      '"Can throw any weapon; one-handed wepons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
+      '"Can throw any weapon; one-handed weapons have range 20/60, two-handed weapons 15/30, and light weapons return after a missed throw"',
 
   // Races
   'Damage Resistance (Ravenite Dragonborn)':
