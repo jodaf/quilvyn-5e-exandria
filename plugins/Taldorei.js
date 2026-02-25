@@ -61,7 +61,7 @@ function Taldorei() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  SRD5E.abilityRules(rules);
+  SRD5E.abilityRules(rules, SRD5E.ABILITIES);
   SRD5E.combatRules(rules, PHB5E.ARMORS, PHB5E.SHIELDS, PHB5E.WEAPONS);
   SRD5E.magicRules(rules, PHB5E.SCHOOLS, PHB5E.SPELLS);
   SRD5E.identityRules(

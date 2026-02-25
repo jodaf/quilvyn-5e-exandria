@@ -95,7 +95,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Fortune's Grace; Keen Mind; Lucky; Magic Initiate (Bard); Thrown Arms Master</td>
         <td><b>Forest Gnome Features</b>: Darkvision; Forest Gnome Ability Adjustment; Gnome Ability Adjustment; Gnome Cunning; Language (Common; Gnomish); Natural Illusionist; Speak With Small Beasts</td>
-        <td><b>Paladin Features</b>: Armor Proficiency (Light; Heavy; Shield); Aura Of Courage; Aura Of Liberation; Aura Of Protection; Channel Divinity; Cleansing Touch; Divine Health; Divine Sense; Divine Smite; Extra Attack; Fighting Style (Defense); Fighting Style; Fury Of The Tides; Improved Divine Smite; Lay On Hands; Marine Layer; Mythic Swashbuckler; Oath Of The Open Sea; Sacred Oath; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Stormy Waters; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Paladin Features</b>: Armor Proficiency (Light; Medium; Heavy; Shield); Aura Of Courage; Aura Of Liberation; Aura Of Protection; Channel Divinity; Cleansing Touch; Divine Health; Divine Sense; Divine Smite; Extra Attack; Fighting Style (Defense); Fighting Style; Fury Of The Tides; Improved Divine Smite; Lay On Hands; Marine Layer; Mythic Swashbuckler; Oath Of The Open Sea; Sacred Oath; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Stormy Waters; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Folk Hero Features</b>: Rustic Hospitality; Skill Proficiency (Animal Handling; Survival); Tool Proficiency (Vehicles (Land); Choose 1 from any Artisan)</td>
       </tr></table>
 </td>
@@ -110,11 +110,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Keen Mind: Always knows the direction of north and hours until sunrise or sunset/Can recall anything seen or heard during the past month</td>
       </tr><tr style="text-align:center">
-        <td>Lucky: Can gain advantage on an attack, ability, or saving throw or inflict foe disadvantage an attack on self 3 times per long rest</td>
-      </tr><tr style="text-align:center">
         <td>Rustic Hospitality: Can receive shelter from common folk</td>
-      </tr><tr style="text-align:center">
-        <td>Speak With Small Beasts: Can communicate simple ideas with small animals</td>
       </tr></table>
 </td>
     </tr></table>
@@ -161,7 +157,9 @@ var attributes = {
     <tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
     </tr><tr style="text-align:center">
-      <td>Divine Sense: R60' Can discern the location of celestials, fiends, and undead for 1 rd 5 times per long rest</td>
+      <td>Divine Sense: R60' Can discern the location of celestials, fiends, undead, consecration, and desecration until the end of the next turn 5 times per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Speak With Small Beasts: Can communicate simple ideas with small animals</td>
     </tr></table>
 </td>
   </tr></table>
@@ -182,7 +180,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="CombatProfs" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Armor Proficiency</b>: Heavy; Light; Shield</td>
+        <td><b>Armor Proficiency</b>: Heavy; Light; Medium; Shield</td>
         <td><b>Weapon Proficiency</b>: Martial Weapons; Simple Weapons</td>
       </tr></table>
 </td>
@@ -213,13 +211,15 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Thrown Arms Master: +20/+40 thrown weapon range</i></td>
       </tr><tr style="text-align:center">
-        <td>Divine Smite: Can spend a spell slot after a successful melee attack to inflict +(slot level + 1)d8 HP radiant (maximum 5d8 HP; +1d8 HP vs. undead and fiends)</td>
+        <td>Divine Smite: Can spend a spell slot after a successful melee attack to inflict 1d8 HP radiant plus 1d8 HP per slot level, up to a maximum of 5d8 HP; undead and fiends suffer an additional 1d8 HP</td>
       </tr><tr style="text-align:center">
         <td>Fortune's Grace: Can reroll an attack, ability, or saving throw, or force a reroll on an attacker, once per long rest</td>
       </tr><tr style="text-align:center">
         <td>Fury Of The Tides: Can use Channel Divinity and a bonus action to inflict a 10' push with a successful weapon attack once per rd for 1 min; this inflicts 4 HP bludgeoning if obstructed</td>
       </tr><tr style="text-align:center">
         <td>Improved Divine Smite: Melee attacks inflict +1d8 HP radiant</td>
+      </tr><tr style="text-align:center">
+        <td>Lucky: Can gain advantage on an attack, ability check, or save or inflict foe disadvantage an attack on self 3 times per long rest</td>
       </tr><tr style="text-align:center">
         <td>Small: Has disadvantage on attacks with heavy weapons</td>
       </tr><tr style="text-align:center">
@@ -339,7 +339,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Cleansing Touch: Can dispel a spell effect on a touched willing creature 4 times per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Lay On Hands: Can heal 100 hit points per long rest and can use 5 hit points' worth to cure disease or poison</td>
+      <td>Lay On Hands: Can heal 100 hit points per long rest and can use 5 hit points' worth to cure a disease or neutralize a poison</td>
     </tr><tr style="text-align:center">
       <td>Marine Layer: Can use Channel Divinity to create a 20' radius fog around self that obscures vision for 10 min</td>
     </tr><tr style="text-align:center">
