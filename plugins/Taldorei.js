@@ -189,16 +189,15 @@ Taldorei.DEITIES = {
   'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War'
 };
 Taldorei.FEATS_ADDED = {
-  'Cruel':'Type=General',
-  'Dual-Focused':'Type=General Require="casterLevel >= 1"',
-  'Flash Recall':'Type=General Require="casterLevel >= 1"',
-  "Fortune's Grace":'Type=Special',
-  'Gambler':'Type=General',
-  'Mending Affinity':'Type=General',
-  'Mystic Conflux':'Type=General',
-  'Rapid Drinker':'Type=General',
-  'Spelldriver':'Type=General Require="level >= 8"',
-  'Thrown Arms Master':'Type=General'
+  'Cruel':'',
+  'Dual-Focused':'Require="casterLevel >= 1"',
+  'Flash Recall':'Require="casterLevel >= 1"',
+  'Gambler':'',
+  'Mending Affinity':'',
+  'Mystic Conflux':'',
+  'Rapid Drinker':'',
+  'Spelldriver':'Require="level >= 8"',
+  'Thrown Arms Master':''
 };
 Taldorei.FEATS =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, Taldorei.FEATS_ADDED);
@@ -299,9 +298,6 @@ Taldorei.FEATURES_ADDED = {
   'Elemental Harmony':
     'Section=magic ' +
     'Note="Can use <i>Prestidigitation</i> to create a minor elemental effect: a puff of wind, a burst of flame, a small rock that lasts 1 min, or a cup of cold or hot water"',
-  "Fortune's Grace":
-    'Section=combat ' +
-    'Note="Can gain advantage on an attack, ability, or saving throw, or inflict disadvantage on an attacker, once per long rest"',
   'Student Privilege':
     'Section=skill Note="Can access school tools and crafting materials"',
   'Wicked Awareness':
@@ -402,12 +398,7 @@ Taldorei.classRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to featRules.
  */
 Taldorei.featRulesExtra = function(rules, name) {
-  if(name == "Fortune's Grace")
-    // Ensure that a goody note will be able to bump feat count before
-    // character level 4.
-    rules.defineRule
-      ('featCount.General', "features.Fortune's Grace", '+=', '0');
-  else if(name == 'Thrown Arms Master') {
+  if(name == 'Thrown Arms Master') {
     let allWeapons = rules.getChoices('weapons');
     for(let w in allWeapons) {
       let m = allWeapons[w].match(/range=(\d+)\/(\d+)/i);
@@ -476,13 +467,15 @@ Taldorei.ruleNotes = function() {
     '<h3>Usage Notes</h3>\n' +
     '<ul>\n' +
     '  <li>\n' +
-    '  Quilvyn makes the Fortune\'s Grace feature of the Fate Touched\n' +
-    '  background available as a special feat. To use it, add the line\n' +
-    '  "* +1 Feat" to the character notes, then select Fortune\'s Grace\n' +
-    '  in the Feats pull-down.\n' +
-    '  </li><li>\n' +
     '  The Taldorei rule set allows you to add homebrew choices for' +
     '  all of the same types discussed in the <a href="plugins/homebrew-srd5e.html">SRD 5E Homebrew Examples document</a>.' +
+    '  </li>\n' +
+    '</ul>\n' +
+    '<h3>Limitations</h3>\n' +
+    '<ul>\n' +
+    '  <li>\n' +
+    '  Quilvyn does not define the Fate-Touched special background or its' +
+    "  Fortune's Grace feature.\n" +
     '  </li>\n' +
     '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +

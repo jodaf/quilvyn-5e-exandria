@@ -234,16 +234,15 @@ TaldoreiReborn.DEITIES = {
   'The Cloaked Serpent':'Alignment="Chaotic Evil" Domain=Nature,Trickery'
 };
 TaldoreiReborn.FEATS_ADDED = {
-  'Cruel':'Type=General',
-  'Flash Recall':'Type=General Require="features.Spellcasting"',
+  'Cruel':'',
+  'Flash Recall':'Require="features.Spellcasting"',
   "Fortune's Grace":'Type=Special',
-  'Mystic Conflux':'Type=General',
-  'Remarkable Recovery':'Type=General',
+  'Mystic Conflux':'',
+  'Remarkable Recovery':'',
   'Spelldriver':
-    'Type=General ' +
     'Require="level >= 11","features.Spellcasting || features.Pact Magic"',
-  'Thrown Arms Master':'Type=General',
-  'Vital Sacrifice':'Type=General'
+  'Thrown Arms Master':'',
+  'Vital Sacrifice':''
 };
 TaldoreiReborn.FEATS =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, TaldoreiReborn.FEATS_ADDED);
