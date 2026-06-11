@@ -90,27 +90,27 @@ function Taldorei() {
 Taldorei.VERSION = '2.4.2.0';
 
 Taldorei.BACKGROUNDS_ADDED = {
-  'Ashari':
+  'Ashari': // ref TaldoreiReborn
     'Equipment=' +
       '"Traveler\'s Clothes","Hunting Gear","Staff","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Nature; Choose 1 from Arcana, Survival)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
       '"1:Language (Choose 1 from any)","1:Elemental Harmony"',
-  'Clasp Member':
+  'Clasp Member': // ref TaldoreiReborn
     'Equipment=' +
       '"Dark Hooded Clothing","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Deception; Choose 1 from Sleight Of Hand, Stealth)",' +
       '"1:Tool Proficiency (Choose 1 from Disguise Kit, Forgery Kit, Thieves\' Tools)",' +
       '"1:A Favor In Turn","1:Thieves\' Cant"',
-  'Lyceum Student':
+  'Lyceum Student': // ref TaldoreiReborn
     'Equipment=' +
       '"Fine Clothes","Student Uniform","Writing Kit","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Choose 2 from Arcana, History, Persuasion)",' +
       '"1:Language (Choose 2 from any)","1:Student Privilege"',
-  'Recovered Cultist':
+  'Recovered Cultist': // ref TaldoreiReborn
     'Equipment=' +
       '"Vestments","Holy Symbol","Common Clothes","15 GP" ' +
     'Features=' +
@@ -190,15 +190,15 @@ Taldorei.DEITIES = {
   'The Scaled Tyrant':'Alignment=LE Domain=Trickery,War'
 };
 Taldorei.FEATS_ADDED = {
-  'Cruel':'',
+  'Cruel':'', // ref TaldoreiReborn
   'Dual-Focused':'Require="casterLevel >= 1"',
-  'Flash Recall':'Require="casterLevel >= 1"',
+  'Flash Recall':'Require="casterLevel >= 1"', // ref TaldoreiReborn
   'Gambler':'',
   'Mending Affinity':'',
-  'Mystic Conflux':'',
+  'Mystic Conflux':'', // ref TaldoreiReborn
   'Rapid Drinker':'',
-  'Spelldriver':'Require="level >= 8"',
-  'Thrown Arms Master':''
+  'Spelldriver':'Require="level >= 8"', // ref TaldoreiReborn
+  'Thrown Arms Master':'' // ref TaldoreiReborn
 };
 Taldorei.FEATS =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, Taldorei.FEATS_ADDED);
@@ -206,7 +206,7 @@ Taldorei.FEATURES_ADDED = {
 
   // Class
 
-  // Barbarian - Path Of The Juggernaut
+  // Barbarian - Path Of The Juggernaut, ref TaldoreiReborn
   'Demolishing Might':
     'Section=combat ' +
     'Note="Melee attacks inflict double damage vs. objects and +1d8 HP vs. constructs"',
@@ -222,7 +222,7 @@ Taldorei.FEATURES_ADDED = {
     'Section=save ' +
     'Note="Cannot be slowed, frightened, paralyzed, or stunned during rage; suffers 1 level of exhaustion when rage ends"',
 
-  // Cleric - Blood Domain
+  // Cleric - Blood Domain, ref TaldoreiReborn
   'Blood Domain Spells':
     'Spells=' +
       '"1:Ray Of Sickness","1:Sleep",' +
@@ -248,7 +248,7 @@ Taldorei.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="30\' radius inflicts 2d6 HP necrotic and half healing on foes for 1 min once per long rest"',
 
-  // Monk - Cobalt Soul
+  // Monk - Cobalt Soul, ref TaldoreiReborn
   'Debilitating Barrage':
     'Section=combat ' +
     'Note="Can spend 3 ki points after hitting a target 3 times in a rd to inflict vulnerability to a chosen damage type (save Constitution negates) for 1 min and disadvantage on the target\'s attacks until the end of the next turn"',
@@ -272,50 +272,50 @@ Taldorei.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Can use a reaction after an attacker misses to make a melee attack on it"',
 
-  // Sorcerer - Runechild
+  // Sorcerer - Runechild, ref TaldoreiReborn
   'Arcane Exemplar Form':
     'Section=magic ' +
-    'Note="Can use a bonus action and expend 6 runes to gain a 40\' fly Speed, +2 spell DC, and resistance to spell damage, and to regain hit points equal to the spell\'s level from casting, for 3 rd once per long rest, suffering incapacity for 1 rd afterward; expending additional runes extends the effects for 1 rd each"',
+    'Note="Can use a bonus action and discharge 6 runes to gain a 40\' fly Speed, +2 spell DC, and resistance to spell damage, and to regain hit points equal to the spell\'s level from casting, for 3 rd once per long rest, suffering incapacity for 1 rd afterward; discharging additional runes extends the effects for 1 rd each"',
   'Essence Runes':
     'Section=magic ' +
-    'Note="Spending sorcery points charges an equal number of runes (maximum %{levels.Sorcerer}), and one can be charged via an action when none are charged and sorcery points are exhausted; 5 charged runes emit a 5\' bright light"',
+    'Note="Spending sorcery points charges an equal number of runes (maximum %{levels.Sorcerer}), and one can be charged via an action when none are charged and sorcery points are exhausted; 5 charged runes emit a 5\' bright light, and remaining charged runes become inert after a long rest"',
   'Glyphs Of Aegis':
     'Section=combat ' +
-    'Note="Can use a reaction in response to taking damage to expend runes, negating 1d6 HP of damage for each%{levels.Sorcerer<8?\'\':\'; touch can transfer the protection of 1 rune to another creature for 1 hr\'}"',
+    'Note="Can use a reaction in response to taking damage to discharge runes, negating 1d6 HP of damage for each%{levels.Sorcerer<8?\'\':\'; touch can transfer the protection of 1 rune to another creature for 1 hr\'}"',
   'Manifest Inscriptions':
-    'Section=magic ' +
-    'Note="R15\' Can expend 1 rune to cause hidden glyphs to glow for 1 rd"',
+    'Section=skill ' +
+    'Note="R15\' Can discharge 1 rune to cause hidden glyphs to glow for 1 rd"',
   'Runic Torrent':
     'Section=magic ' +
-    'Note="Can expend runes equal to a spell\'s level to overcome target resistance and immunity"',
+    'Note="Can discharge runes equal to a spell\'s level to overcome target resistance and immunity"',
   'Sigilic Augmentation':
     'Section=ability ' +
-    'Note="Can use a bonus action to expend 1 rune, gaining advantage on Strength, Dexterity, or Constitution checks until the start of the next turn; can expend an additional rune each turn to extend the effect"',
+    'Note="Can use a bonus action to discharge 1 rune, gaining advantage on Strength, Dexterity, or Constitution checks until the start of the next turn; can discharge an additional rune each turn to extend the effect"',
 
   // Backgrounds
-  'A Favor In Turn':
+  'A Favor In Turn': // ref TaldoreiReborn
     'Section=feature ' +
     'Note="Can ask for a 20-word favor through a contact in exchange for a future favor"',
-  'Elemental Harmony':
+  'Elemental Harmony': // ref TaldoreiReborn
     'Section=magic ' +
     'Note="Can use <i>Prestidigitation</i> to create a minor elemental effect: a puff of wind, a burst of flame, a small rock that lasts 1 min, or a cup of cold or hot water" ' +
     'Spells=Prestidigitation',
-  'Student Privilege':
+  'Student Privilege': // ref TaldoreiReborn
     'Section=skill Note="Can access school tools and crafting materials"',
   'Wicked Awareness':
     'Section=skill Note="Has advantage on checks to uncover cult activity"',
 
   // Feats
-  'Cruel':
+  'Cruel': // ref TaldoreiReborn
     'Section=combat,combat,skill ' +
     'Note=' +
       '"Can use %{proficiencyBonus} cruelty points per long rest",' +
-      '"Can spend 1 cruelty point with a successful attack to inflict +1d6 damage or after a critical hit to regain 1d6 hit points",'+
+      '"Can spend 1 cruelty point with a successful attack to inflict +1d6 HP or after a critical hit to regain 1d6 hit points",'+
       '"Can spend 1 cruelty point to gain advantage on Intimidation"',
   'Dual-Focused':
     'Section=save ' +
     'Note="Successful DC 10 + number of rd Constitution allows maintaining concentration on two spells simultaneously"',
-  'Flash Recall':
+  'Flash Recall': // ref TaldoreiReborn
     'Section=magic Note="Can replace a prepared spell once per short rest"',
   'Gambler':
     'Section=ability,skill,skill ' +
@@ -323,12 +323,12 @@ Taldorei.FEATURES_ADDED = {
       '"+1 Charisma",' +
       '"Tool Proficiency (Choose 2 from any Gaming Set)",' +
       '"Can reroll Carousing/Has advantage on Deception to bluff during games and on Persuasion to convince others to join"',
-  'Mending Affinity':
+  'Mending Affinity': // ref TaldoreiReborn (Remarkable Recovery)
     'Section=ability,combat ' +
     'Note=' +
       '"+1 Constitution",' +
       '"Regains +%{proficiencyBonus>?1} hit points from healing effects and from stabilization using a Healer\'s Kit"',
-  'Mystic Conflux':
+  'Mystic Conflux': // ref TaldoreiReborn
     'Section=skill,magic ' +
     'Note=' +
       '"Has advantage on Arcana to investigate a magic device",' +
@@ -338,10 +338,10 @@ Taldorei.FEATURES_ADDED = {
     'Note=' +
       '"Can use a bonus action to quaff a potion",' +
       '"Has advantage on ingestion saves"',
-  'Spelldriver':
+  'Spelldriver': // ref TaldoreiReborn
     'Section=magic ' +
     'Note="Can cast an additional level 1 or 2 spell once per turn"',
-  'Thrown Arms Master':
+  'Thrown Arms Master': // ref TaldoreiReborn
     'Section=ability,combat,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +

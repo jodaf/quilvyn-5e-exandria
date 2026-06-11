@@ -97,7 +97,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Elemental Adept (Thunder); Fortune's Grace; Keen Mind; Magic Initiate (Wizard); Savage Attacker</td>
         <td><b>Half-Elf Features</b>: Darkvision; Fey Ancestry; Half-Elf Ability Adjustment; Language (Common; Elvish; Choose 1 from any); Skill Versatility</td>
-        <td><b>Cleric Features</b>: Armor Proficiency (Light; Medium; Shield); Blood Domain; Blood Puppet; Bloodletting Focus; Bonus Proficiencies (Blood Domain); Channel Divinity; Crimson Bond; Destroy Undead; Divine Domain; Divine Intervention; Divine Strike; Sanguine Recall; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; Vascular Corruption Aura; Weapon Proficiency (Simple Weapons)</td>
+        <td><b>Cleric Features</b>: Armor Proficiency (Light; Medium; Shield); Blood Domain Spells; Blood Domain; Blood Puppet; Bloodletting Focus; Bonus Proficiencies (Blood Domain); Channel Divinity; Crimson Bond; Destroy Undead; Divine Domain; Divine Intervention; Divine Strike; Sanguine Recall; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; Vascular Corruption Aura; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Entertainer Features</b>: By Popular Demand; Skill Proficiency (Acrobatics; Performance); Tool Proficiency (Disguise Kit; Choose 1 from any Musical Instrument)</td>
       </tr></table>
 </td>
@@ -204,13 +204,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Divine Strike: Weapon inflicts +2d8 HP necrotic once per turn</td>
       </tr><tr style="text-align:center">
-        <td>Fortune's Grace: Can reroll an attack, ability, or saving throw, or force a reroll on an attacker, once per long rest</td>
+        <td>Fortune's Grace: Can reroll an attack, ability, or saving throw, force a reroll on an attacker, or force a reroll on a save vs. a self spell, once per long rest</td>
       </tr><tr style="text-align:center">
         <td>Savage Attacker: Can take the better of 2 melee damage rolls once per turn</td>
       </tr><tr style="text-align:center">
         <td>Turn Undead: R30' Can use Channel Divinity to make undead flee (save DC 16 Wisdom negates) for 1 min or until damaged</td>
       </tr><tr style="text-align:center">
-        <td>Vascular Corruption Aura: R30' Foes suffer 3d6 HP necrotic and half healing for 1 min once per long rest</td>
+        <td>Vascular Corruption Aura: 30' radius inflicts 3d6 HP necrotic and half healing on foes for 1 min once per long rest</td>
       </tr></table>
 </td>
     </tr></table>
@@ -253,7 +253,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Bless (C1 Ench): R30' 3 targets gain +1d4 on attacks and saves for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Blight (C4 [Blood Domain] Necr): R30' Inflicts 8d8 HP necrotic (save Constitution half; plant target has disadvantage on the save and suffers maximum damage on failure) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (C4 [Blood Domain Spells] Necr): R30' Inflicts 8d8 HP necrotic (save Constitution half; plant target has disadvantage on the save and suffers maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (C2 Necr): R30' Inflicts a choice of blindness or deafness (save Constitution negates; additional saves each rd end) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -269,11 +269,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dispel Evil And Good (C5 Abju): Celestials, elementals, fey, fiends, and undead suffer disadvantage on attacks vs. self for concentration up to 1 min; ending the spell early allows a successful spell attack on one of these creatures to return it to its home plane (save Charisma negates), or to end with a touch an enchanted, frightened, or possessed condition inflicted by one of them</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Person (C5 [Blood Domain] Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
+      <td>Dominate Person (C5 [Blood Domain Spells] Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
     </tr><tr style="text-align:left">
       <td>Etherealness (C7 Tran): Self enters Ethereal Plane for up to 8 hr [+Level affects +2 or +5 targets at level 8 or 9]</td>
     </tr><tr style="text-align:left">
-      <td>False Life (C1 [Blood Domain] Necr): Self gains 1d4+4 temporary hit points for 1 hr [+Level gives +5 temporary hit points]</td>
+      <td>False Life (C1 [Blood Domain Spells] Necr): Self gains 1d4+4 temporary hit points for 1 hr [+Level gives +5 temporary hit points]</td>
     </tr><tr style="text-align:left">
       <td>Freedom Of Movement (C4 Abju): Touched gains immunity to movement impediments and can escape from nonmagical restraints for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -287,11 +287,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Hallow (C5 Evoc): 60' radius becomes warded against celestials, elementals, fey, fiends, and undead and their effects and evokes a boon or bane effect (save Charisma negates)</td>
     </tr><tr style="text-align:left">
-      <td>Haste (C3 [Blood Domain] Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity, and an additional action each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
+      <td>Haste (C3 [Blood Domain Spells] Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity, and an additional action each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (C5 [Blood Domain] Ench): R90' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Monster (C5 [Blood Domain Spells] Ench): R90' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (C2 [Blood Domain] Ench): R60' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (C2 [Blood Domain Spells] Ench): R60' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Holy Aura (C8 Abju): Targets in a 30' radius gain advantage on saves, inflict disadvantage on attackers, and blind successful fiend and undead melee attackers (save Constitution negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -303,7 +303,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Protection From Poison (C2 Abju): Touched recovers from 1 poison and gains advantage on saves vs. being poisoned and resistance to poison for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Enfeeblement (C2 [Blood Domain] Necr): R60' Ranged spell inflicts half damage with Strength weapons (save Constitution ends) for concentration up to 1 min</td>
+      <td>Ray Of Enfeeblement (C2 [Blood Domain Spells] Necr): R60' Ranged spell inflicts half damage with Strength weapons (save Constitution ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Resistance (C0 Abju): Touched gains +1d4 on 1 save within concentration up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -313,15 +313,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Sacred Flame (C0 Evoc): R60' Inflicts 4d8 HP radiant (save Dexterity negates), ignoring cover</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (C1 [Blood Domain] Ench): R90' 20' radius puts to sleep 5d8 hit points of creatures, starting with those with the least hit points, for 1 min (damage or shaking awakens) [+Level affects +2d8 hit points of creatures]</td>
+      <td>Sleep (C1 [Blood Domain Spells] Ench): R90' 20' radius puts to sleep 5d8 hit points of creatures, starting with those with the least hit points, for 1 min (damage or shaking awakens) [+Level affects +2d8 hit points of creatures]</td>
     </tr><tr style="text-align:left">
-      <td>Slow (C3 [Blood Domain] Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 Armor Class and Dexterity saves, loss of reactions, no more than 1 action per turn, and a 50% chance of a 1-rd delay on spell effects (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
+      <td>Slow (C3 [Blood Domain Spells] Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 Armor Class and Dexterity saves, loss of reactions, no more than 1 action per turn, and a 50% chance of a 1-rd delay on spell effects (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Spare The Dying (C0 Necr): Touched dying creature becomes stable</td>
     </tr><tr style="text-align:left">
       <td>Spiritual Weapon (C2 Evoc): R60' Creates a spectral weapon that inflicts 1d8+2 HP force and can move 20' and attack as a bonus action for 1 min [+Level inflicts +1d8 HP per 2 levels]</td>
     </tr><tr style="text-align:left">
-      <td>Stoneskin (C4 [Blood Domain] Abju): Touched gains resistance to bludgeoning, piercing, and slashing for concentration up to 1 hr</td>
+      <td>Stoneskin (C4 [Blood Domain Spells] Abju): Touched gains resistance to bludgeoning, piercing, and slashing for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Tongues (C3 Divi): Touched understands any language and is universally understood for 1 hr</td>
     </tr></table>
@@ -329,13 +329,13 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td>Blood Puppet: R60' Can use Channel Divinity to force a Huge target to move at half speed and attack or to interact with an object (save Wisdom ends) for concentration up to 1 min</td>
+      <td>Blood Puppet: R60' Can use Channel Divinity to force a Huge target to move half its Speed and attack a chosen target or to interact with an object (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
     </tr><tr style="text-align:center">
       <td>Bloodletting Focus: Harming spells inflict +(spell level + 2) HP necrotic</td>
     </tr><tr style="text-align:center">
       <td>Channel Divinity: Can use a Channel Divinity effect 3 times per short rest</td>
     </tr><tr style="text-align:center">
-      <td>Crimson Bond: Can use Channel Divinity to bond with a seen target or with a target's blood to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can suffer 2d6 HP necrotic to share the target's sight or hearing for 2 min (save Constitution negates)</td>
+      <td>Crimson Bond: Can use Channel Divinity to bond with a seen target or with a target's blood to learn its distance, direction, hit points, and conditions for concentration up to 1 hr; can share the target's sight or hearing for 2 min (save Constitution negates), suffering 2d6 HP necrotic and ending the bond</td>
     </tr><tr style="text-align:center">
       <td>Divine Intervention: Has a 100% chance to gain help from The Matron Of Ravens once per week</td>
     </tr><tr style="text-align:center">
@@ -343,7 +343,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Sanguine Recall: Can suffer up to 10d8 HP necrotic to recover an equal number of spell slot levels (level 5 maximum) once per long rest</td>
+      <td>Sanguine Recall: Can recover up to 10 spell slot levels (level 5 maximum), suffering 1d8 HP necrotic per slot level, once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the cleric spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
     </tr></table>
