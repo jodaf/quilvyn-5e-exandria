@@ -186,7 +186,7 @@ Wildemount.FEATURES_ADDED = {
   // Elf - Pallid
   'Blessing Of The Moon Weaver':
     'Section=magic ' +
-    'Note="Knows the <i>Light</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Sleep</i> once per long rest\':\' and can cast <i>Sleep</i> and self <i>Invisibility</i> once per long rest\'}" ' +
+    'Note="Can cast%{level>=5?\' <i>Invisibility</i> and\':\'\'} <i>Sleep</i> without expending a spell slot once per long rest" ' +
     'SpellAbility=Wisdom ' +
     'Spells=Light,3:Sleep,5:Invisibility',
   'Incisive Sense':
@@ -205,7 +205,7 @@ Wildemount.FEATURES_ADDED = {
   // Halfling - Lotusden
   'Child Of The Wood':
     'Section=magic ' +
-    'Note="Knows the <i>Druidcraft</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Entangle</i> once per long rest\':\' and can cast <i>Entangle<i> and <i>Spike Growth</i> once per long rest\'}" ' +
+    'Note="Can cast%{level>=5?\' <i>Spike Growth</i> and\':\'\'} <i>Entangle</i> without expending a spell slot once per long rest" ' +
     'SpellAbility=Wisdom ' +
     'Spells=Druidcraft,3:Entangle,"5:Spike Growth"',
   'Lotusden Halfling Ability Adjustment':'Section=ability Note="+1 Wisdom"',
@@ -245,7 +245,7 @@ Wildemount.FEATURES_ADDED = {
   'Air Genasi Ability Adjustment':'Section=ability Note="+1 Dexterity"',
   'Mingle With The Wind':
      'Section=magic ' +
-     'Note="Can cast <i>Levitate</i> once per long rest" ' +
+     'Note="Can cast <i>Levitate</i> without expending a spell slot once per long rest" ' +
      'SpellAbility=Constitution ' +
      'Spells=Levitate',
   'Unending Breath':'Section=save Note="Can hold breath indefinitely"',
@@ -256,7 +256,7 @@ Wildemount.FEATURES_ADDED = {
     'Note="Can move normally over difficult terrain made of earth and stone"',
   'Pass Without Trace':
     'Section=magic ' +
-    'Note="Can cast <i>Pass Without Trace</i> once per long rest" ' +
+    'Note="Can cast <i>Pass Without Trace</i> without expending a spell slot once per long rest" ' +
     'SpellAbility=Constitution ' +
     'Spells="Pass Without Trace"',
   // Genasi - Fire
@@ -265,7 +265,7 @@ Wildemount.FEATURES_ADDED = {
   'Fire Resistance':'Section=save Note="Has resistance to fire"',
   'Reach To The Blaze':
     'Section=magic ' +
-    'Note="Knows the <i>Produce Flame</i> cantrip%{level<3?\'\':\' and can cast <i>Burning Hands</i> once per long rest\'}" ' +
+    'Note="Can cast <i>Burning Hands</i> without expending a spell slot once per long rest" ' +
     'SpellAbility=Constitution ' +
     'Spells="Produce Flame","3:Burning Hands"',
   // Genasi - Water
@@ -273,7 +273,7 @@ Wildemount.FEATURES_ADDED = {
   'Amphibious':'Section=ability Note="Can breathe water"',
   'Call To The Wave':
     'Section=magic ' +
-    'Note="Knows the <i>Shape Water</i> cantrip%{level<3?\'\':\' and can cast <i>Create Or Destroy Water</i> once per long rest\'}" ' +
+    'Note="Can cast <i>Create Or Destroy Water</i> without expending a spell slot once per long rest" ' +
     'SpellAbility=Constitution ' +
     'Spells="Shape Water","3:Create Or Destroy Water"',
   'Swim':'Section=ability Note="Has a 30\' swim Speed"',
@@ -293,10 +293,10 @@ Wildemount.FEATURES_ADDED = {
   'Hold Breath':'Section=save Note="Can hold breath %V"', // Copied from Volo
   'Natural Armor (Tortle)':
     'Section=combat ' +
-    'Note="Shell gives armor class 17; cannot wear additional armor"',
+    'Note="Shell gives Armor Class 17; cannot wear additional armor"',
   'Shell Defense':
     'Section=combat ' +
-    'Note="Withdrawal into shell gives +4 armor class and advantage on Strength and Constitution saves while inflicting prone, immobility, disadvantage on Dexterity saves, and loss of actions and reactions"',
+    'Note="Withdrawal into shell gives +4 Armor Class and advantage on Strength and Constitution saves while inflicting prone, immobility, disadvantage on Dexterity saves, and loss of actions and reactions"',
   'Survival Instinct':'Section=skill Note="Skill Proficiency (Survival)"',
   'Tortle Ability Adjustment':'Section=ability Note="+2 Strength/+1 Wisdom"',
 
@@ -322,13 +322,13 @@ Wildemount.FEATURES_ADDED = {
   // Fighter - Echo Knight
   'Echo Avatar':
     'Section=combat ' +
-    'Note="R1000\' Can see and hear through a Manifest Echo for 10 min"',
+    'Note="Can see and hear through a Manifest Echo, allowing it to move up to 1000\' away, for 10 min"',
   'Legion Of One':
     'Section=combat ' +
     'Note="Has a minimum 1 Unleash Incarnation use after initiative and can create 2 Manifest Echos simultaneously"',
   'Manifest Echo':
     'Section=combat ' +
-    'Note="R30\' Can use a bonus action to create a copy of self (armor class %{14+proficiencyBonus}; 1 hit point; can move 30\') that can be used to exchange places as a bonus action and to make attacks and opportunity attacks"',
+    'Note="R30\' Can use a bonus action to create a copy of self (Armor Class %{14+proficiencyBonus}; 1 hit point; can move 30\') that can be used to exchange places as a bonus action, costing 15\' of movement, and to make attacks and opportunity attacks until dismissed, destroyed, or moved more than 30\' away"',
   'Reclaim Potential':
     'Section=combat ' +
     'Note="Can gain 2d6+%{constitutionModifier} temporary hit points when a Manifest Echo is destroyed %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
@@ -337,12 +337,12 @@ Wildemount.FEATURES_ADDED = {
     'Note="Can use a reaction to have a Manifest Echo absorb an attack once per short rest"',
   'Unleash Incarnation':
     'Section=combat ' +
-    'Note="Can make an extra attack through a Manifest Echo %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
+    'Note="During an Attack action, can make an extra attack through a Manifest Echo %{constitutionModifier>1?constitutionModifier+\' times\':\'once\'} per long rest"',
 
   // Wizard - Chronurgy Magic
   'Arcane Abeyance':
     'Section=magic ' +
-    'Note="Can store a spell of up to 4th level in a bead (armor class 15; 1 hit point) that can be used to cast the spell within 1 hr once per short rest"',
+    'Note="Can store a spell of up to 4th level in a bead (Armor Class 15; 1 hit point) that can be used to cast the spell within 1 hr once per short rest"',
   'Chronal Shift':
     'Section=combat ' +
     'Note="R30\' Can use a reaction to force an attack, ability, or save reroll 2 times per long rest"',
@@ -351,7 +351,7 @@ Wildemount.FEATURES_ADDED = {
     'Note="R60\' Can suffer 1 level of exhaustion to dictate whether an attack, ability, or save roll succeeds; the exhaustion requires a long rest to remove"',
   'Momentary Stasis':
     'Section=magic ' +
-    'Note="R60\' Can incapacitate a Large target for 1 rd (save Constitution negates) %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
+    'Note="R60\' Can incapacitate a Large target (save Constitution negates) until the end of the next turn or until damaged %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
   'Temporal Awareness':
     'Section=combat Note="+%{intelligenceModifier} Initiative"',
   // Wizard - Graviturgy Magic
@@ -360,12 +360,12 @@ Wildemount.FEATURES_ADDED = {
     'Note="R30\' Can double or halve the weight of a %{levels.Wizard<10?\'Large\':\'Huge\'} target, giving -10 or +10 Speed and advantage or disadvantage on Strength, for concentration up to 1 min"',
   'Event Horizon':
     'Section=magic ' +
-    'Note="30\' radius inflicts 2d10 HP force and immobility for 1 rd on foes (save Strength inflicts half HP and 1/3 Speed) for concentration up to 1 min once long rest; can spend level 3 spell slots for additional uses"',
+    'Note="30\' radius inflicts on each foe 2d10 HP force and immobility until the start of its next turn (save Strength inflicts half HP and 1/3 Speed) for concentration up to 1 min once long rest; can expend level 3 spell slots for additional uses"',
   'Gravity Well':
     'Section=magic Note="Can move the target of a successful spell 5\'"',
   'Violent Attraction':
     'Section=combat ' +
-    'Note="R60\' Can use a reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling target %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
+    'Note="R60\' Can use a reaction to inflict +1d10 HP on a weapon target or +2d10 HP on a falling creature %{intelligenceModifier>1?intelligenceModifier+\' times\':\'once\'} per long rest"',
 
   // Backgrounds
   // Grinner
@@ -569,10 +569,17 @@ Wildemount.raceRulesExtra = function(rules, name) {
   let raceLevel =
     name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') + 'Level';
   if(name == 'Aarakocra') {
-    SRD5E.weaponRules(rules, 'Talons', 'Unarmed', [], '1d4', null);
+    SRD5E.weaponRules(rules, 'Talons', 'Unarmed', [], '1d4 S', null);
     rules.defineRule('weapons.Talons', 'combatNotes.talons', '=', '1');
   } else if(name == 'Draconblood') {
     rules.defineRule('selectableFeatureCount.Draconblood', raceLevel, '=', '1');
+  } else if(name == 'Fire Genasi') {
+    rules.defineRule('magicNotes.reachToTheBlaze', 'level', '?', 'source >= 3');
+  } else if(name == 'Lotusden Halfling') {
+    rules.defineRule('magicNotes.childOfTheWood', 'level', '?', 'source >= 3');
+  } else if(name == 'Pallid Elf') {
+    rules.defineRule
+      ('magicNotes.blessingOfTheMoonWeaver', 'level', '?', 'source >= 3');
   } else if(name == 'Ravenite') {
     rules.defineRule('selectableFeatureCount.Ravenite', raceLevel, '=', '1');
   } else if(name == 'Tortle') {
@@ -581,8 +588,10 @@ Wildemount.raceRulesExtra = function(rules, name) {
     rules.defineRule
       ('combatNotes.dexterityArmorClassAdjustment', raceLevel, '*', '0');
     rules.defineRule('saveNotes.holdBreath', raceLevel, '=', '"for 1 hr"');
-    SRD5E.weaponRules(rules, 'Claws', 'Unarmed', [], '1d4', null);
+    SRD5E.weaponRules(rules, 'Claws', 'Unarmed', [], '1d4 S', null);
     rules.defineRule('weapons.Claws', 'combatNotes.claws', '=', '1');
+  } else if(name == 'Water Genasi') {
+    rules.defineRule('magicNotes.callToTheWave', 'level', '?', 'source >= 3');
   }
 };
 
