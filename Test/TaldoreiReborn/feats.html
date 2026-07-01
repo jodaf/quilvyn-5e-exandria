@@ -235,21 +235,21 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Arcane Gate (W6 Conj): R10' Creates a portal pair that can teleport creatures 500' for concentration up to 10 min</td>
+      <td>Arcane Gate (W6 Conj): Creates one portal within 10' and another within 500' that can teleport creatures between them for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Blight (W4 Necr): R30' Inflicts 8d8 HP necrotic (save Constitution half; plant target has disadvantage on the save and suffers maximum damage on failure) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (W4 Necr): R30' Kills a nonmagical plant or inflicts 8d8 HP necrotic on a creature (save Constitution half; plant target has disadvantage on the save and suffers maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (W2 Necr): R30' Inflicts a choice of blindness or deafness (save Constitution negates; additional saves each rd end) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic and target cannot regain hit points until the start of the next turn; undead also suffer disadvantage vs. self attack for 1 rd</td>
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic, and the target cannot regain hit points until the start of the next turn; undead also suffer disadvantage vs. self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Cloudkill (W5 Conj): R120' 20' radius inflicts 5d8 HP poison (save Constitution half) and moves away 10' per rd for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Cloudkill (W5 Conj): R120' 20' radius becomes heavily obscured, inflicts 5d8 HP poison (save Constitution half), and moves away 10' at the start of each turn for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Cone Of Cold (W5 Evoc): 60' cone inflicts 8d8 HP cold (save Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Confusion (W4 Ench): R90' Creatures in a 10' radius lose reactions and randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per rd as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
+      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per turn as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
     </tr><tr style="text-align:left">
       <td>Expeditious Retreat (W1 Tran): Allows self to Dash immediately and then to use a bonus action to Dash each rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
@@ -259,7 +259,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Fire Bolt (W0 Evoc): R120' Ranged spell inflicts 4d10 HP fire or ignites an unattended flammable target</td>
     </tr><tr style="text-align:left">
-      <td>Gust Of Wind (W2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min; can use a bonus action each rd to redirect the wind</td>
+      <td>Gust Of Wind (W2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min; can use a bonus action each turn to redirect the wind</td>
     </tr><tr style="text-align:left">
       <td>Hypnotic Pattern (W3 Illu): R120' Creatures in a 30' cube become incapacitated (save Wisdom negates) for concentration up to 1 min; taking damage or being shaken ends the effects</td>
     </tr><tr style="text-align:left">
@@ -271,17 +271,17 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Magic Weapon (W2 Tran): Touched weapon gains a +1 magic bonus for concentration up to 1 hr [+Level gives a +2 or +3 bonus at level 4 or 6]</td>
     </tr><tr style="text-align:left">
-      <td>Minor Illusion (W0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
+      <td>Minor Illusion (W0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min or until cast again</td>
     </tr><tr style="text-align:left">
-      <td>Mordenkainen's Faithful Hound (W4 Conj): R30' Creates an invisible watchdog that barks at Small or larger intruders within 30' and attacks those within 5' (password negates) with a +9 bite that inflicts 4d8 HP piercing for 8 hr</td>
+      <td>Mordenkainen's Faithful Hound (W4 Conj): R30' Creates an invisible watchdog that barks at Small or larger intruders within 30' and attacks those within 5' (password negates) with a +9 bite that inflicts 4d8 HP piercing, for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Spray (W7 Evoc): 60' cone randomly inflicts one of: 10d6 HP fire, acid, lightning, poison, or cold (save Dexterity half); restrained (save Dexterity negates) and petrified after 3 failed Constitution saves (3 successes negates); blinded (save Dexterity negates) and banished to another plane (save Wisdom negates) at the start of the next turn; 2 of the preceding effects</td>
+      <td>Prismatic Spray (W7 Evoc): 60' cone randomly inflicts one of: 10d6 HP fire, acid, lightning, poison, or cold (save Dexterity half); restrained (save Dexterity negates) and petrified after 3 failed Constitution saves (3 successes negates); blinded (save Dexterity negates) and banished to another plane (save Wisdom negates and ends the blindness) at the start of the next turn; 2 of the preceding effects</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (W0 Evoc): Touch inflicts 4d8 HP lightning and loss of reactions until its next turn</td>
+      <td>Shocking Grasp (W0 Evoc): Touch inflicts 4d8 HP lightning and loss of reactions until the target's next turn</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (W1 Illu): R60' Creates a 15' cube movable illusion (Investigation detects) for concentration up to 10 min</td>
+      <td>Silent Image (W1 Illu): R60' Creates a 15' cube movable illusion (contact or Investigation detects) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (W3 Conj): R90' 20' radius inflicts loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
+      <td>Stinking Cloud (W3 Conj): R90' 20' radius becomes heavily obscured and inflicts loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Teleportation Circle (W5 Conj): R10' Creates a portal that provides a link to similar circles for 1 rd; casting on the same spot every day for 1 year makes it permanent</td>
     </tr><tr style="text-align:left">

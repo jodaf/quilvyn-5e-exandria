@@ -514,15 +514,17 @@ TaldoreiReborn.FEATURES =
 TaldoreiReborn.SPELLS_ADDED = {
 
   'Freedom Of The Waves':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=D3,R3,S3 ' +
     'Description=' +
-      '"R120\' 15\' radius inflicts 2d8 HP bludgeoning and knocks prone (save Strength negates; chosen creatures automatically succeed); self can teleport within the affected area"',
+      '"R120\' 15\' radius inflicts 2d8 HP bludgeoning and knocks prone (save Strength negates; %{mdf} designated creatures automatically succeed); self can teleport within the affected area"',
   'Freedom Of The Winds':
+    'CastingTime=Action ' +
     'School=Abjuration ' +
     'Level=D5,R5,S5 ' +
     'Description=' +
-      '"Self gains a 60\' flying speed and advantage vs. grapple, restraint, and paralysis for concentration up to 10 min; can use a reaction in response to an attack to teleport 60\', ending the spell"'
+      '"Self gains a 60\' flying speed and advantage vs. grappled, restrained, and paralyzed for concentration up to 10 min; can use a reaction in response to an attack to teleport 60\', ending the spell"'
 
 };
 TaldoreiReborn.SPELLS =

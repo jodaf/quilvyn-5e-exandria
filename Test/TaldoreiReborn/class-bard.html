@@ -9,8 +9,8 @@ var attributes = {
   "_path":"ztest/taldoreireborn/class/bard", 
   "abilityBoosts.Charisma":1, "alignment":"Chaotic Good", "armor":"Padded", "background":"Ashari", 
   "charisma":11, "constitution":14, "deity":"The Changebringer", "dexterity":13, 
-  "experience":803990, "expertise.Acrobatics":1, "expertise.Intimidation":1, 
-  "expertise.Sleight Of Hand":1, "expertise.Survival":1, "feats.Defensive Duelist":1, 
+  "experience":803990, "expertiseChosen.Acrobatics":1, "expertiseChosen.Intimidation":1, 
+  "expertiseChosen.Sleight Of Hand":1, "expertiseChosen.Survival":1, "feats.Defensive Duelist":1, 
   "feats.Elemental Adept (Thunder)":1, "feats.Lightly Armored":1, "feats.Magic Initiate (Bard)":1, 
   "feats.Shield Master":1, "gender":"Male", "hitPoints":52, "intelligence":8, 
   "languagesChosen.Draconic":1, "levels.Bard":20, "name":"Class-Bard", "race":"Human", 
@@ -253,9 +253,9 @@ var attributes = {
     <tr style="text-align:left">
       <td>Bestow Curse (B3 Necr): Touched suffers a choice of disadvantage on specified ability rolls, disadvantage on attacks on self, requiring a successful Wisdom save to take any action, or +1d8 HP necrotic from self attacks (save Wisdom negates) for concentration up to 1 min [+Level extends the maximum duration to 10 min, 8 hr, 24 hr, or permanent at level 4, 5, 7, or 9; levels above 4 require no concentration]</td>
     </tr><tr style="text-align:left">
-      <td>Calm Emotions (B2 Ench): R60' 20' radius suppresses a choice of charmed and frightened or hostility (save Charisma negates) for concentration up to 1 min</td>
+      <td>Calm Emotions (B2 Ench): R60' 20' radius suppresses a choice of charmed and frightened or hostility (save Charisma negates) for concentration up to 1 min; harm to a target of suppressed hostility or its allies ends the effects on that target</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (B1 Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates) for 1 hr or until harmed [+Level affects +1 target]</td>
+      <td>Charm Person (B1 Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates; active fighting gives advantage) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Cloud Of Daggers (B2 Conj): R60' 5' cube inflicts 4d4 HP slashing for concentration up to 1 min [+Level inflicts +2d4 HP]</td>
     </tr><tr style="text-align:left">
@@ -263,7 +263,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Confusion (B4 Ench): R90' Creatures in a 10' radius lose reactions and randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (B0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per rd as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
+      <td>Dancing Lights (B0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per turn as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
     </tr><tr style="text-align:left">
       <td>Dispel Magic (B3 Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
@@ -273,7 +273,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Healing Word (B1 Evoc): R60' Target regains 1d4+1 hit points [+Level restores +1d4 hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Heroism (B1 Ench): Touched gains immunity to becoming frightened and +1 temporary hit points each rd for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Heroism (B1 Ench): Willing touched gains immunity to frightened and 1 temporary hit points each rd for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Hold Monster (B5 Ench): R90' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -283,7 +283,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Mage Hand (B0 Conj): R30' Spectral hand performs minor tasks, moving up to 10 lb, for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Minor Illusion (B0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
+      <td>Minor Illusion (B0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min or until cast again</td>
     </tr><tr style="text-align:left">
       <td>Mislead (B5 Illu): Makes self invisible and creates an illusory duplicate that can move 60' and share senses for concentration up to 1 hr; attacking or casting ends the invisibility</td>
     </tr><tr style="text-align:left">
@@ -291,9 +291,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Sending (B3 Evoc): Self can exchange a pair of 25-word messages with a familiar target</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (B1 Illu): R60' Creates a 15' cube movable illusion (Investigation detects) for concentration up to 10 min</td>
+      <td>Silent Image (B1 Illu): R60' Creates a 15' cube movable illusion (contact or Investigation detects) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Tasha's Hideous Laughter (B1 Ench): R30' Inflicts ROFL (save Wisdom negates; additional saves each rd and in response to damage end, with damage giving advantage on the save) for concentration up to 1 min</td>
+      <td>Tasha's Hideous Laughter (B1 Ench): R30' Inflicts prone, incapacitated, and laughing (save Wisdom negates; additional saves each rd and in response to damage end, with damage giving advantage on the save) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>True Strike (B0 Divi): R30' Self gains advantage on the next attack on the target within 1 rd</td>
     </tr></table>

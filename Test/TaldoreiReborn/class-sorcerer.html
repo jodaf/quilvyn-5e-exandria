@@ -264,9 +264,9 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Arcane Gate (S6 Conj): R10' Creates a portal pair that can teleport creatures 500' for concentration up to 10 min</td>
+      <td>Arcane Gate (S6 Conj): Creates one portal within 10' and another within 500' that can teleport creatures between them for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (S0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic and target cannot regain hit points until the start of the next turn; undead also suffer disadvantage vs. self attack for 1 rd</td>
+      <td>Chill Touch (S0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic, and the target cannot regain hit points until the start of the next turn; undead also suffer disadvantage vs. self attack for 1 rd</td>
     </tr><tr style="text-align:left">
       <td>Chromatic Orb (W1 Evoc): R90' Ranged spell inflicts 3d8 HP of a choice of acid, cold, fire, lightning, poison, or thunder [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
@@ -280,7 +280,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Enhance Ability (S2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr; Constitution also gives 2d6 temporary HP, Strength doubles carrying capacity, and Dexterity negates damage from a 20' fall [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Etherealness (S7 Tran): Self enters Ethereal Plane for up to 8 hr [+Level affects +2 or +5 targets at level 8 or 9]</td>
+      <td>Etherealness (S7 Tran): Self enters Ethereal Plane for up to 8 hr [+Level affects +2 or +5 willing targets at level 8 or 9]</td>
     </tr><tr style="text-align:left">
       <td>Freedom Of Movement (S4 [Runic Magic] Abju): Touched gains immunity to movement impediments and can escape from nonmagical restraints for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -294,7 +294,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Ice Storm (S4 Evoc): R300' 20' radius inflicts 2d8 HP bludgeoning and 4d6 HP cold (save Dexterity half) and becomes difficult terrain until the end of the next turn [+Level inflicts +1d8 HP bludgeoning]</td>
     </tr><tr style="text-align:left">
-      <td>Incendiary Cloud (S8 Conj): R150' 20' radius inflicts 10d8 HP fire (save Dexterity half), obscures, and moves away 10' per rd for concentration up to 1 min</td>
+      <td>Incendiary Cloud (S8 Conj): R150' 20' radius becomes heavily obscured, inflicts 10d8 HP fire (save Dexterity half), and moves away 10' per rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Insect Plague (S5 Conj): R300' 20' radius inflicts 4d10 HP piercing (save Constitution half) for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
@@ -310,11 +310,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Magic Missile (S1 Evoc): R120' 3 darts inflict 1d4+1 HP force each [+Level creates +1 dart]</td>
     </tr><tr style="text-align:left">
-      <td>Major Image (S3 Illu): R120' Creates a 20' cube sight, sound, smell, and temperature illusion (Investigation detects) for concentration up to 10 min [+Level extends the duration to permanent at level 6]</td>
+      <td>Major Image (S3 Illu): R120' Creates a 20' cube sight, sound, smell, and temperature illusion (contact or Investigation detects) that can be changed and moved for concentration up to 10 min [+Level extends the duration to permanent at level 6]</td>
     </tr><tr style="text-align:left">
       <td>Message (W0 Tran): R120' Self and target can hold a whispered conversation for 1 rd; can be cast through objects, but 3' of wood, 1' of stone, 1" of metal, or a thin sheet of lead blocks the spell</td>
     </tr><tr style="text-align:left">
-      <td>Move Earth (S6 Tran): R120' Reshapes a 40' cube of earth each 10 minutes for concentration up to 2 hr</td>
+      <td>Move Earth (S6 Tran): R120' Reshapes a 40' cube of earth each 10 min for concentration up to 2 hr</td>
     </tr><tr style="text-align:left">
       <td>Plane Shift (S7 Conj): Target (save Charisma negates) or self and 8 willing others travel to another plane</td>
     </tr><tr style="text-align:left">
@@ -326,15 +326,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>See Invisibility (S2 Divi): Reveals invisible and ethereal creatures and objects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (S5 Illu): R30' Changes the appearance of targets (save Charisma negates; Investigation detects) for 8 hr</td>
+      <td>Seeming (S5 Illu): R30' Changes the appearance of targets (save Charisma negates; contact or Investigation detects) for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (S0 Evoc): Touch inflicts 4d8 HP lightning and loss of reactions until its next turn</td>
+      <td>Shocking Grasp (S0 Evoc): Touch inflicts 4d8 HP lightning and loss of reactions until the target's next turn</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (W0 Evoc): Touch inflicts 4d8 HP lightning and loss of reactions until its next turn</td>
+      <td>Shocking Grasp (W0 Evoc): Touch inflicts 4d8 HP lightning and loss of reactions until the target's next turn</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (S1 Ench): R90' 20' radius puts to sleep 5d8 hit points of creatures, starting with those with the least hit points, for 1 min (damage or shaking awakens) [+Level affects +2d8 hit points of creatures]</td>
+      <td>Sleep (S1 Ench): R90' 20' radius puts to sleep 5d8 hit points of creatures, starting with those with the least hit points, for 1 min; damage or shaking awakens [+Level affects +2d8 hit points of creatures]</td>
     </tr><tr style="text-align:left">
-      <td>Sleet Storm (S3 Conj): R150' 40' radius obscures, douses exposed flames, and inflicts difficult terrain and prone (save Dexterity negates) for concentration up to 1 min</td>
+      <td>Sleet Storm (S3 Conj): R150' 40' radius becomes heavily obscured, douses exposed flames, becomes difficult terrain, and inflicts prone (save Dexterity negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Stoneskin (S4 Abju): Touched gains resistance to bludgeoning, piercing, and slashing for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">

@@ -457,52 +457,63 @@ Wildemount.RACES_ADDED = {
 Wildemount.RACES = Object.assign({}, (window.PHB5E||window.SRD5E).RACES, Wildemount.RACES_ADDED);
 Wildemount.SPELLS_ADDED = {
   'Dark Star':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=W8 ' +
     'Description="R150\' 40\' radius sphere inflicts 8d10 HP force (save Constitution half) and difficult terrain, disintegrates dead, and negates sound and nonmagical light for concentration up to 1 min"',
   "Fortune's Favor":
+    'CastingTime=Minute ' +
     'School=Divination ' +
     'Level=W2 ' +
     'AtHigherLevels="affects +1 target" ' +
     'Description="R60\' Target can reroll an attack, ability check, or save, or force a foe reroll on an attack, within 1 hr"',
   'Gift Of Alacrity':
+    'CastingTime=Minute ' +
     'School=Divination ' +
     'Level=W1 ' +
     'Description="Willing touched gains +1d8 initiative for 8 hr"',
   'Gravity Fissure':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=W6 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description="5\'x100\' line inflicts 8d8 HP force (save Constitution half) and pulls and inflicts 8d8 HP force on creatures within 10\' (save Constitution negates)"',
   'Gravity Sinkhole':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=W4 ' +
     'AtHigherLevels="inflicts +1d10 HP" ' +
     'Description="R120\' 20\' radius inflicts 5d10 HP force and pulls toward its center (save Constitution half HP only)"',
   'Immovable Object':
+    'CastingTime=Action ' +
     'School=Transmutation ' +
     'Level=W2 ' +
     'AtHigherLevels="increases Strength DC by +5 or +10, object support to 8,000 or 20,000 lb, and duration to 24 hr or permanent at level 4 or 6" ' +
     'Description="Touched 10 lb object becomes movable only by specified creatures or by using a specified password (save Strength allows moving it 10\') and can support 4000 lb for 1 hr"',
   'Magnify Gravity':
+    'CastingTime=Action ' +
     'School=Transmutation ' +
     'Level=W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="R60\' 10\' radius inflicts 2d8 HP force and half speed (save Constitution half HP only), and makes objects immovable (save Strength negates), for 1 rd"',
+    'Description="R60\' 10\' radius inflicts 2d8 HP force and half Speed until the end of a creature\'s next turn (save Constitution half HP only) and makes objects immovable (save Strength negates), until the start of the next turn"',
   'Pulse Wave':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=W3 ' +
     'AtHigherLevels="inflicts +1d6 HP and a +5\' pull or push" ' +
-    'Description="30\' cone inflicts 6d6 HP force and a 15\' pull or push (save Constitution half HP only)"',
+    'Description="30\' cone inflicts 6d6 HP force and a choice of a 15\' pull or push (save Constitution half HP only)"',
   'Ravenous Void':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=W9 ' +
-    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains (save Strength ends restraint), destroys dead and nonmagical objects, and creates a 120\' radius difficult terrain that pulls toward its center (save Strength negates the pull) for concentration up to 1 min"',
+    'Description="R1000\' 20\' radius inflicts 5d10 HP force and restrains (save Strength each rd ends), destroys dead and nonmagical objects, and creates a 120\' radius difficult terrain that pulls toward its center (save Strength negates) for concentration up to 1 min"',
   'Reality Break':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=W8 ' +
-    'Description="R60\' Inflicts loss of reactions and, at the end of each turn (save Wisdom ends), one of: 6d12 HP psychic and stunned; 8d12 HP force (save Dexterity half); 30\' teleportation, 10d12 HP force, and knocked prone; or 10d12 HP cold and blinded, for concentration up to 1 min"',
+    'Description="R60\' Inflicts loss of reactions (save Wisdom negates; additional saves each rd end) and, at the end of each turn, one of: 6d12 HP psychic and stunned until the end of the turn; 8d12 HP force (save Dexterity half); 30\' teleportation, 10d12 HP force, and knocked prone; 10d12 HP cold and blinded until the end of the turn, for concentration up to 1 min"',
   'Sapping Sting':
+    'CastingTime=Action ' +
     'School=Necromancy ' +
     'Level=W0 ' +
     'Description="R30\' Inflicts %{(level+7)//6}d4 HP and knocked prone (save Constitution negates)"',
@@ -511,19 +522,24 @@ Wildemount.SPELLS_ADDED = {
     'Level=D0,S0,W0 ' +
     'Description="R30\' 5\' cube of water forms animated shapes, changes color or opacity, or freezes for 1 hr or changes flow 5\'"',
   'Temporal Shunt':
+    'CastingTime=Reaction ' +
     'School=Transmutation ' +
     'Level=W5 ' +
-    'AtHigherLevels="affects +1 target" ' +
-    'Description="R120\' Can cast as a reaction in response to a target\'s attack or spell casting to cause it to disappear for 1 rd and negate its action (save Wisdom negates)"',
+    'AtHigherLevels="affects +1 target within 30\' of the first" ' +
+    'Description="R120\' Cast as a reaction in response to a target\'s attack or spell casting, causes the target to disappear until the start of its next turn and cancels its action (save Wisdom negates)"',
   'Tether Essence':
+    'CastingTime=Action ' +
     'School=Necromancy ' +
     'Level=W7 ' +
     'Description="R60\' Two targets lose and gain hit points identically (save Constitution negates; the save has disadvantage if the targets are within 30\' of each other) for concentration up to 1 hr or until either is reduced to 0 hit points"',
   'Time Ravage':
+    'CastingTime=Action ' +
     'School=Necromancy ' +
     'Level=W9 ' +
     'Description="R90\' Inflicts 10d12 HP necrotic, disadvantage on attacks, ability checks, and saves, half Speed, and death in 30 days from old age (save Constitution half HP only)"',
   'Wristpocket':
+    'CastingTime=Action ' +
+    'Ritual=true ' +
     'School=Conjuration ' +
     'Level=W2 ' +
     'Description="Self can move a touched 5 lb object to and from an extradimensional space for concentration up to 1 hr"'
