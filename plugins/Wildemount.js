@@ -526,7 +526,7 @@ Wildemount.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=W5 ' +
     'AtHigherLevels="affects +1 target within 30\' of the first" ' +
-    'Description="R120\' Cast as a reaction in response to a target\'s attack or spell casting, causes the target to disappear until the start of its next turn and cancels its action (save Wisdom negates)"',
+    'Description="R120\' Cast in response to a target\'s attack or spell casting, causes the target to disappear until the start of its next turn and cancels its action (save Wisdom negates)"',
   'Tether Essence':
     'CastingTime=Action ' +
     'School=Necromancy ' +
