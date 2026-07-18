@@ -66,7 +66,7 @@ function TaldoreiReborn() {
   SRD5E.magicRules(rules, PHB5E.SCHOOLS, TaldoreiReborn.SPELLS);
   SRD5E.identityRules(
     rules, PHB5E.ALIGNMENTS, TaldoreiReborn.BACKGROUNDS, TaldoreiReborn.CLASSES,
-    TaldoreiReborn.DEITIES, {}, PHB5E.RACES
+    TaldoreiReborn.DEITIES, PHB5E.RACES
   );
   SRD5E.talentRules
     (rules, TaldoreiReborn.FEATS, TaldoreiReborn.FEATURES, PHB5E.GOODIES,
@@ -237,8 +237,9 @@ TaldoreiReborn.DEITIES = {
 };
 TaldoreiReborn.FEATS_ADDED = {
   'Cruel':'', // ref Taldorei
-  'Flash Recall':'Require="features.Spellcasting"', // ref Taldorei
-  "Fortune's Grace":'Type=Special',
+  'Flash Recall':
+    'Require="features.Spellcasting || features.Pact Magic"', // ref Taldorei
+  "Fortune's Grace":'Category=Special',
   'Mystic Conflux':'', // ref Taldorei
   'Remarkable Recovery':'',
   'Spelldriver': // ref Taldorei

@@ -66,7 +66,7 @@ function Taldorei() {
   SRD5E.magicRules(rules, PHB5E.SCHOOLS, PHB5E.SPELLS);
   SRD5E.identityRules(
     rules, PHB5E.ALIGNMENTS, Taldorei.BACKGROUNDS, Taldorei.CLASSES,
-    Taldorei.DEITIES, {}, Taldorei.RACES
+    Taldorei.DEITIES, Taldorei.RACES
   );
   SRD5E.talentRules
     (rules, Taldorei.FEATS, Taldorei.FEATURES, PHB5E.GOODIES, PHB5E.LANGUAGES,
@@ -191,8 +191,8 @@ Taldorei.DEITIES = {
 };
 Taldorei.FEATS_ADDED = {
   'Cruel':'', // ref TaldoreiReborn
-  'Dual-Focused':'Require="casterLevel >= 1"',
-  'Flash Recall':'Require="casterLevel >= 1"', // ref TaldoreiReborn
+  'Dual-Focused':'Require="features.Spellcasting || features.Pact Magic"',
+  'Flash Recall':'Require="features.Spellcasting || features.Pact Magic"', // ref TaldoreiReborn
   'Gambler':'',
   'Mending Affinity':'',
   'Mystic Conflux':'', // ref TaldoreiReborn

@@ -66,7 +66,7 @@ function Wildemount() {
   SRD5E.magicRules(rules, PHB5E.SCHOOLS, Wildemount.SPELLS);
   SRD5E.identityRules(
     rules, PHB5E.ALIGNMENTS, Wildemount.BACKGROUNDS, Wildemount.CLASSES,
-    Wildemount.DEITIES, {}, Wildemount.RACES
+    Wildemount.DEITIES, Wildemount.RACES
   );
   SRD5E.talentRules
     (rules, Wildemount.FEATS, Wildemount.FEATURES, PHB5E.GOODIES,
@@ -175,7 +175,7 @@ Wildemount.DEITIES = {
   'Zehir, The Cloaked Serpent':'Alignment=CE Domain=Nature,Trickery'
 };
 Wildemount.FEATS_ADDED = {
-  'Hollow One':'Type=Special'
+  'Hollow One':'Category=Special'
 };
 Wildemount.FEATS =
   Object.assign({}, (window.PHB5E||window.SRD5E).FEATS, Wildemount.FEATS_ADDED);
@@ -518,6 +518,7 @@ Wildemount.SPELLS_ADDED = {
     'Level=W0 ' +
     'Description="R30\' Inflicts %{(level+7)//6}d4 HP and knocked prone (save Constitution negates)"',
   'Shape Water': // Copied from Xanathar's
+    'CastingTime=Action ' +
     'School=Transmutation ' +
     'Level=D0,S0,W0 ' +
     'Description="R30\' 5\' cube of water forms animated shapes, changes color or opacity, or freezes for 1 hr or changes flow 5\'"',
@@ -585,7 +586,8 @@ Wildemount.raceRulesExtra = function(rules, name) {
   let raceLevel =
     name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') + 'Level';
   if(name == 'Aarakocra') {
-    SRD5E.weaponRules(rules, 'Talons', 'Unarmed', [], '1d4 S', null);
+    SRD5E.weaponRules
+      (rules, 'Talons', 'Unarmed', [], '1d4 S', null, 0, 0, true);
     rules.defineRule('weapons.Talons', 'combatNotes.talons', '=', '1');
   } else if(name == 'Draconblood') {
     rules.defineRule('selectableFeatureCount.Draconblood', raceLevel, '=', '1');
@@ -604,7 +606,7 @@ Wildemount.raceRulesExtra = function(rules, name) {
     rules.defineRule
       ('combatNotes.dexterityArmorClassAdjustment', raceLevel, '*', '0');
     rules.defineRule('saveNotes.holdBreath', raceLevel, '=', '"for 1 hr"');
-    SRD5E.weaponRules(rules, 'Claws', 'Unarmed', [], '1d4 S', null);
+    SRD5E.weaponRules(rules, 'Claws', 'Unarmed', [], '1d4 S', null, 0, 0, true);
     rules.defineRule('weapons.Claws', 'combatNotes.claws', '=', '1');
   } else if(name == 'Water Genasi') {
     rules.defineRule('magicNotes.callToTheWave', 'level', '?', 'source >= 3');
