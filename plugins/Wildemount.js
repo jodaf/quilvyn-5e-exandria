@@ -96,7 +96,7 @@ function Wildemount() {
 
 }
 
-Wildemount.VERSION = '2.4.2.0';
+Wildemount.VERSION = '2.4.3.0';
 
 Wildemount.BACKGROUNDS_ADDED = {
   'Grinner':

@@ -87,7 +87,7 @@ function TaldoreiReborn() {
 
 }
 
-TaldoreiReborn.VERSION = '2.4.2.0';
+TaldoreiReborn.VERSION = '2.4.3.0';
 
 TaldoreiReborn.BACKGROUNDS_ADDED = {
   'Ashari': // ref Taldorei
